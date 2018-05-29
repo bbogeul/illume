@@ -1,0 +1,107 @@
+<template name="application">
+<section>
+<div class="container">
+<div class="row">
+ {{> dashboards}}
+    <div class="">
+        <div class="row">
+     
+            <div class="list_of_app col s12 m12 l3">
+            <h4 class="center" style="margin-top:1em;">환영합니다</h4>
+            <br>
+              <p class='grey-text text-darken-2 center'>Applicants</p>
+              <ul class='collection'>
+                       {{#each rsvps}}
+                       <li class='collection-item'><a href='#{{_id}}'>{{name}} {{last}} from {{organization}}:</a></li>
+                       {{/each}}
+
+              </ul>
+            </div>
+         
+<div class="col s12 m12 l9">
+  <h5 class='grey-text text-darken-3'>Application Card</h5>
+  <div class="divider light-green" style="margin-bottom:.5em;"></div>
+            {{#each rsvps}}
+  <div id='{{_id}}' class=" card scrollspy light-green lighten-5" style="margin-bottom:2.5em;">
+
+    <div class="card-content">
+    
+    
+      <span class="card-title activator grey-text text-darken-4  ">{{name}} {{last}} - <b><u>{{organization}}</u></b><i class="material-icons right red-text delete">close</i><i class="material-icons right">add</i></span>
+        <ul class="collection">
+      
+       
+      <li class="collection-item">Email Address: <b class='right'>{{email}}</b></li>
+      <li class="collection-item">Phone Number: <b class='right'>{{phone}}</b></li>
+          <li class="collection-item">Applicant's website: <b class='right'>{{website}}</b></li>
+      <li class="collection-item">Approximate Budget: <b class='right'>{{budget}}</b></li>
+      <li class="collection-item">Industry the Company is in: <b class='right'>{{industry}}</b></li>
+      <li class="collection-item">Competitors for Applicant: <b class='right'>{{Competitors}}</b></li>
+      <li class="collection-item">They heard about you through: <b class='right'>{{iadSense}}</b></li>
+      <li class="collection-item">Engaged with another agent?: <b class='right'>{{another}}</b></li>
+       <li class='collection-item'>They want to work with you for: <b class='right'>{{length}}</b></li>
+              <li class='collection-item'>Application sent at: <b class='right'>{{createdAt}}</b></li>
+    </ul>
+    <p class="center">Click the plus sign for more information</p>
+    </div>
+    <div class="card-reveal light-green lighten-5">
+      <div class='center'>
+<span class='grey-text text-darken-3'>Additional Information for {{name}}<span class="card-title grey-text text-darken-4"><i class="fa fa-angle-down right"></i></span></span>
+      </div>
+    
+    <ul class='collection'>
+     <li class="collection-item">What else should you know? <b class="right">{{whatElse}}</b>
+     </li>
+     <li></li>
+      
+         
+    </ul>
+      <div class="row">
+<div class="col s6">
+<p class="center">Public Relations</p>
+<ul class="collection">
+<li class="collection-item">Full Service  <b class="right" style="font-size:12px;">{{pr}}</b></li>
+<li class="collection-item">Proj. Launch Support  <b class="right" style="font-size:12px;">{{prls}}</b></li>
+<li class="collection-item">Media Relations <b class="right" style="font-size:12px;">{{mr}}</b></li>
+<li class="collection-item">Analyst Relations <b class="right" style="font-size:12px;">{{ar}}</b></li>
+<li class="collection-item">Speaking Engagements <b class="right" style="font-size:12px;">{{se}}</b></li>
+<li class="collection-item">Awards Opportunities  <b class="right" style="font-size:12px;">{{ao}}</b></li>
+<li class="collection-item">Events & Sponsorship
+  <b class="right" style="font-size:12px;">{{es}}</b></li>
+</ul>
+</div>
+<div class="col s6">
+<p class="center">Digital & Social Servies</p>
+<ul class="collection">
+<li class="collection-item">Full Service  <b class="right" style="font-size:12px;">{{dss}}</b></li>
+<li class="collection-item">Campaign/product launch  <b class="right" style="font-size:12px;">{{cp}}</b></li>
+<li class="collection-item">Social channel management  <b class="right" style="font-size:12px;">{{scm}}</b></li>
+<li class="collection-item">Advertising and/or paid media campaigns <b class="right" style="font-size:12px;">{{adv}}</b></li>
+</ul>
+<p class="center">Strategy & Consulting Services</p>
+<ul class="collection">
+<li class="collection-item">Full Service  <b class="right" style="font-size:12px;">{{scs}}</b></li>
+<li class="collection-item">Social Analytics  <b class="right" style="font-size:12px;">{{san}}</b></li>
+<li class="collection-item">Media Analytics  <b class="right" style="font-size:12px;">{{sam}}</b></li>
+<li class="collection-item">Brand Analysis<b class="right" style="font-size:12px;">{{ba}}</b></li>
+<li class="collection-item">Messaging Development<b class="right" style="font-size:12px;">{{mdev}}</b></li>
+</ul>
+      </div>
+      </div>
+    
+    </div>
+ 
+  </div>
+
+     {{else}}
+            <p>Nothing</p>
+            {{/each}}
+            </div>
+         
+        </div>
+    </div>
+</div>
+</div>
+</section>
+</template>
+ 

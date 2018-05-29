@@ -1,0 +1,1 @@
+{"head":"","body":"","js":"\nTemplate.__checkName(\"portfolio\");\nTemplate[\"portfolio\"] = new Template(\"Template.portfolio\", (function() {\n  var view = this;\n  return \"\";\n}));\n","bodyAttrs":{}}

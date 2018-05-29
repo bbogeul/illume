@@ -1,0 +1,124 @@
+.indigos-text {
+    
+    color: '#bc45f0'
+}
+
+.illumetext {
+    color:#6f7ce7;
+    
+}
+
+.butGIf {
+    position: relative;
+    width: 870px;
+    overflow: hidden;
+}
+
+.butGIf2 {
+    position: relative;
+    width: 1110px;
+    overflow: hidden;
+}
+
+.muli {
+    font-family: 'Muli', sans-serif;
+}
+
+.butGof {
+    overflow: hidden;
+}
+
+.homeWhat {
+    font-size: 115px;
+    color: #393939;
+   
+    margin-top:-.05em;
+}
+::-webkit-scrollbar
+{
+  width: 8px;  /* for vertical scrollbars */
+  height: 8px; /* for horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track
+{
+  background: rgba(0, 0, 0, 0.78);
+}
+
+::-webkit-scrollbar-thumb
+{
+background: rgba(230, 45, 44, 0.8);
+
+}
+    
+    
+}
+@media only screen and (max-width : 600px) {
+    .homeWhat {
+         font-size: 54px;
+    }
+}
+.rale {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+} 
+.jumbotron{padding-top:30px;padding-bottom:30px;margin-bottom:30px;color:inherit;background-color:#eee}.jumbotron .h1,.jumbotron h1{color:inherit}.jumbotron p{margin-bottom:15px;font-size:21px;font-weight:200}.jumbotron>hr{border-top-color:#d5d5d5}.container .jumbotron,.container-fluid .jumbotron{border-radius:6px}.jumbotron .container{max-width:100%}@media screen and (min-width:768px){.jumbotron{padding-top:48px;padding-bottom:48px}.container .jumbotron,.container-fluid .jumbotron{padding-right:60px;padding-left:60px}.jumbotron .h1,.jumbotron h1{font-size:63px}} 
+pre {
+    background: #1a2718;
+}
+
+@font-face {
+       font-family: Aspergit;
+    src: url(/fonts/Aspergit.otf);
+}
+ 
+.reason {
+    width: 200px;
+     
+    background: url('/img/reas1.svg') no-repeat center;
+}
+
+ 
+
+.mont {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.monts {
+     font-family: 'Montserrat', sans-serif;
+     text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+}
+     
+
+
+.aspergit {
+      font-family: Aspergit;
+}
+
+.blackDrop {
+    background: rgb(31, 37, 42);
+}
+.text-shad {
+       text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+}
+.opensan {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 300;
+}
+.opensans {
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+}
+.oxygen {
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 300;
+}
+.large {
+  font-size:20px;
+}

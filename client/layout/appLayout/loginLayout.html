@@ -1,0 +1,14 @@
+<template name="loginLayout">
+ {{> fixedHeader}}
+
+  {{#if currentUser}}
+        {{> application}}
+
+    {{else}}
+        {{> login}}
+         
+    {{/if}}
+</template>
+<template name="registerTemplate">
+{{>yield}}
+</template>

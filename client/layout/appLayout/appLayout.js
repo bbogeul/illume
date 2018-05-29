@@ -1,0 +1,5 @@
+ Template.appLayout.rendered = function() {    
+  
+ 
+};
+ 
