@@ -386,6 +386,10 @@
       "path": "packages/shell-server.js"
     },
     {
+      "sourceMap": "packages/alanning_roles.js.map",
+      "path": "packages/alanning_roles.js"
+    },
+    {
       "path": "packages/livedata.js"
     },
     {

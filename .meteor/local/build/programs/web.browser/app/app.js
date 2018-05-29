@@ -1651,33 +1651,37 @@ Template["Rsvp"] = new Template("Template.Rsvp", (function() {                  
       "class": "col s12 m10 offset-m1 l8 offset-l2"                                                                    // 161
     }, "\n    ", HTML.H5({                                                                                             // 162
       "class": "center robotoIt grey-text text-darken-3 wow zoomInUp"                                                  // 163
-    }, "Thanks for choosing illume Inc. We will get back to you shortly ", Blaze.View("lookup:name", function() {      // 164
+    }, "  ", Blaze.View("lookup:name", function() {                                                                    // 164
       return Spacebars.mustache(view.lookup("name"));                                                                  // 165
-    }), ".  "), "\n    ", HTML.BR(), "\n    ", HTML.DIV({                                                              // 166
-      "class": "center"                                                                                                // 167
-    }, "\n                  ", HTML.A({                                                                                // 168
-      href: "/",                                                                                                       // 169
-      "class": "button outline"                                                                                        // 170
-    }, "BACK HOME"), "\n\n                "), "\n    "), "\n    "), "\n"), "\n    \n    " ];                           // 171
-  }, function() {                                                                                                      // 172
-    return "   \n  ";                                                                                                  // 173
-  }) ];                                                                                                                // 174
-}));                                                                                                                   // 175
-                                                                                                                       // 176
-Template.__checkName("lastRsvp");                                                                                      // 177
-Template["lastRsvp"] = new Template("Template.lastRsvp", (function() {                                                 // 178
-  var view = this;                                                                                                     // 179
-  return Blaze.Each(function() {                                                                                       // 180
-    return Spacebars.call(view.lookup("rsvps"));                                                                       // 181
-  }, function() {                                                                                                      // 182
-    return [ "\n    ", Blaze.View("lookup:name", function() {                                                          // 183
-      return Spacebars.mustache(view.lookup("name"));                                                                  // 184
-    }), " ", Blaze.View("lookup:last", function() {                                                                    // 185
-      return Spacebars.mustache(view.lookup("last"));                                                                  // 186
-    }), "\n  " ];                                                                                                      // 187
-  });                                                                                                                  // 188
-}));                                                                                                                   // 189
-                                                                                                                       // 190
+    }), " ", Blaze.View("lookup:last", function() {                                                                    // 166
+      return Spacebars.mustache(view.lookup("last"));                                                                  // 167
+    }), " Thanks for choosing illume Inc. We will get back to you shortly ", Blaze.View("lookup:name", function() {    // 168
+      return Spacebars.mustache(view.lookup("name"));                                                                  // 169
+    }), ".  "), "\n    ", HTML.BR(), "\n    ", HTML.DIV({                                                              // 170
+      "class": "center"                                                                                                // 171
+    }, "\n                  ", HTML.A({                                                                                // 172
+      href: "/",                                                                                                       // 173
+      "class": "button outline"                                                                                        // 174
+    }, "BACK HOME"), "\n\n                "), "\n    "), "\n    "), "\n"), "\n    \n    " ];                           // 175
+  }, function() {                                                                                                      // 176
+    return "   \n  ";                                                                                                  // 177
+  }) ];                                                                                                                // 178
+}));                                                                                                                   // 179
+                                                                                                                       // 180
+Template.__checkName("lastRsvp");                                                                                      // 181
+Template["lastRsvp"] = new Template("Template.lastRsvp", (function() {                                                 // 182
+  var view = this;                                                                                                     // 183
+  return Blaze.Each(function() {                                                                                       // 184
+    return Spacebars.call(view.lookup("rsvps"));                                                                       // 185
+  }, function() {                                                                                                      // 186
+    return [ "\n    ", Blaze.View("lookup:name", function() {                                                          // 187
+      return Spacebars.mustache(view.lookup("name"));                                                                  // 188
+    }), " ", Blaze.View("lookup:last", function() {                                                                    // 189
+      return Spacebars.mustache(view.lookup("last"));                                                                  // 190
+    }), "\n  " ];                                                                                                      // 191
+  });                                                                                                                  // 192
+}));                                                                                                                   // 193
+                                                                                                                       // 194
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 },"application.js":function(){
@@ -1752,279 +1756,297 @@ Template.applications.rendered = function () {                                  
 Template.__checkName("application");                                                                                   // 2
 Template["application"] = new Template("Template.application", (function() {                                           // 3
   var view = this;                                                                                                     // 4
-  return HTML.SECTION("\n", HTML.DIV({                                                                                 // 5
-    "class": "container"                                                                                               // 6
-  }, "\n", HTML.DIV({                                                                                                  // 7
-    "class": "row"                                                                                                     // 8
-  }, "\n ", Spacebars.include(view.lookupTemplate("dashboards")), "\n    ", HTML.DIV({                                 // 9
-    "class": ""                                                                                                        // 10
-  }, "\n        ", HTML.DIV({                                                                                          // 11
-    "class": "row"                                                                                                     // 12
-  }, "\n     \n            ", HTML.DIV({                                                                               // 13
-    "class": "list_of_app col s12 m12 l3"                                                                              // 14
-  }, "\n            ", HTML.Raw('<h4 class="center" style="margin-top:1em;">환영합니다</h4>'), "\n            ", HTML.Raw("<br>"), "\n              ", HTML.Raw('<p class="grey-text text-darken-2 center">Applicants</p>'), "\n              ", HTML.UL({
-    "class": "collection"                                                                                              // 16
-  }, "\n                       ", Blaze.Each(function() {                                                              // 17
-    return Spacebars.call(view.lookup("rsvps"));                                                                       // 18
-  }, function() {                                                                                                      // 19
-    return [ "\n                       ", HTML.LI({                                                                    // 20
-      "class": "collection-item"                                                                                       // 21
-    }, HTML.A({                                                                                                        // 22
-      href: function() {                                                                                               // 23
-        return [ "#", Spacebars.mustache(view.lookup("_id")) ];                                                        // 24
-      }                                                                                                                // 25
-    }, Blaze.View("lookup:name", function() {                                                                          // 26
-      return Spacebars.mustache(view.lookup("name"));                                                                  // 27
-    }), " ", Blaze.View("lookup:last", function() {                                                                    // 28
-      return Spacebars.mustache(view.lookup("last"));                                                                  // 29
-    }), " from ", Blaze.View("lookup:organization", function() {                                                       // 30
-      return Spacebars.mustache(view.lookup("organization"));                                                          // 31
-    }), ":")), "\n                       " ];                                                                          // 32
-  }), "\n\n              "), "\n            "), "\n         \n", HTML.DIV({                                            // 33
-    "class": "col s12 m12 l9"                                                                                          // 34
-  }, "\n  ", HTML.Raw('<h5 class="grey-text text-darken-3">Application Card</h5>'), "\n  ", HTML.Raw('<div class="divider light-green" style="margin-bottom:.5em;"></div>'), "\n            ", Blaze.Each(function() {
-    return Spacebars.call(view.lookup("rsvps"));                                                                       // 36
-  }, function() {                                                                                                      // 37
-    return [ "\n  ", HTML.DIV({                                                                                        // 38
-      id: function() {                                                                                                 // 39
-        return Spacebars.mustache(view.lookup("_id"));                                                                 // 40
-      },                                                                                                               // 41
-      "class": " card scrollspy light-green lighten-5",                                                                // 42
-      style: "margin-bottom:2.5em;"                                                                                    // 43
-    }, "\n\n    ", HTML.DIV({                                                                                          // 44
-      "class": "card-content"                                                                                          // 45
-    }, "\n    \n    \n      ", HTML.SPAN({                                                                             // 46
-      "class": "card-title activator grey-text text-darken-4  "                                                        // 47
-    }, Blaze.View("lookup:name", function() {                                                                          // 48
-      return Spacebars.mustache(view.lookup("name"));                                                                  // 49
-    }), " ", Blaze.View("lookup:last", function() {                                                                    // 50
-      return Spacebars.mustache(view.lookup("last"));                                                                  // 51
-    }), " - ", HTML.B(HTML.U(Blaze.View("lookup:organization", function() {                                            // 52
-      return Spacebars.mustache(view.lookup("organization"));                                                          // 53
-    }))), HTML.I({                                                                                                     // 54
-      "class": "material-icons right red-text delete"                                                                  // 55
-    }, "close"), HTML.I({                                                                                              // 56
-      "class": "material-icons right"                                                                                  // 57
-    }, "add")), "\n        ", HTML.UL({                                                                                // 58
-      "class": "collection"                                                                                            // 59
-    }, "\n      \n       \n      ", HTML.LI({                                                                          // 60
-      "class": "collection-item"                                                                                       // 61
-    }, "Email Address: ", HTML.B({                                                                                     // 62
-      "class": "right"                                                                                                 // 63
-    }, Blaze.View("lookup:email", function() {                                                                         // 64
-      return Spacebars.mustache(view.lookup("email"));                                                                 // 65
-    }))), "\n      ", HTML.LI({                                                                                        // 66
-      "class": "collection-item"                                                                                       // 67
-    }, "Phone Number: ", HTML.B({                                                                                      // 68
-      "class": "right"                                                                                                 // 69
-    }, Blaze.View("lookup:phone", function() {                                                                         // 70
-      return Spacebars.mustache(view.lookup("phone"));                                                                 // 71
-    }))), "\n          ", HTML.LI({                                                                                    // 72
-      "class": "collection-item"                                                                                       // 73
-    }, "Applicant's website: ", HTML.B({                                                                               // 74
-      "class": "right"                                                                                                 // 75
-    }, Blaze.View("lookup:website", function() {                                                                       // 76
-      return Spacebars.mustache(view.lookup("website"));                                                               // 77
-    }))), "\n      ", HTML.LI({                                                                                        // 78
-      "class": "collection-item"                                                                                       // 79
-    }, "Approximate Budget: ", HTML.B({                                                                                // 80
-      "class": "right"                                                                                                 // 81
-    }, Blaze.View("lookup:budget", function() {                                                                        // 82
-      return Spacebars.mustache(view.lookup("budget"));                                                                // 83
-    }))), "\n      ", HTML.LI({                                                                                        // 84
-      "class": "collection-item"                                                                                       // 85
-    }, "Industry the Company is in: ", HTML.B({                                                                        // 86
-      "class": "right"                                                                                                 // 87
-    }, Blaze.View("lookup:industry", function() {                                                                      // 88
-      return Spacebars.mustache(view.lookup("industry"));                                                              // 89
-    }))), "\n      ", HTML.LI({                                                                                        // 90
-      "class": "collection-item"                                                                                       // 91
-    }, "Competitors for Applicant: ", HTML.B({                                                                         // 92
-      "class": "right"                                                                                                 // 93
-    }, Blaze.View("lookup:Competitors", function() {                                                                   // 94
-      return Spacebars.mustache(view.lookup("Competitors"));                                                           // 95
-    }))), "\n      ", HTML.LI({                                                                                        // 96
-      "class": "collection-item"                                                                                       // 97
-    }, "They heard about you through: ", HTML.B({                                                                      // 98
-      "class": "right"                                                                                                 // 99
-    }, Blaze.View("lookup:iadSense", function() {                                                                      // 100
-      return Spacebars.mustache(view.lookup("iadSense"));                                                              // 101
-    }))), "\n      ", HTML.LI({                                                                                        // 102
-      "class": "collection-item"                                                                                       // 103
-    }, "Engaged with another agent?: ", HTML.B({                                                                       // 104
-      "class": "right"                                                                                                 // 105
-    }, Blaze.View("lookup:another", function() {                                                                       // 106
-      return Spacebars.mustache(view.lookup("another"));                                                               // 107
-    }))), "\n       ", HTML.LI({                                                                                       // 108
-      "class": "collection-item"                                                                                       // 109
-    }, "They want to work with you for: ", HTML.B({                                                                    // 110
-      "class": "right"                                                                                                 // 111
-    }, Blaze.View("lookup:length", function() {                                                                        // 112
-      return Spacebars.mustache(view.lookup("length"));                                                                // 113
-    }))), "\n              ", HTML.LI({                                                                                // 114
-      "class": "collection-item"                                                                                       // 115
-    }, "Application sent at: ", HTML.B({                                                                               // 116
-      "class": "right"                                                                                                 // 117
-    }, Blaze.View("lookup:createdAt", function() {                                                                     // 118
-      return Spacebars.mustache(view.lookup("createdAt"));                                                             // 119
-    }))), "\n    "), "\n    ", HTML.P({                                                                                // 120
-      "class": "center"                                                                                                // 121
-    }, "Click the plus sign for more information"), "\n    "), "\n    ", HTML.DIV({                                    // 122
-      "class": "card-reveal light-green lighten-5"                                                                     // 123
-    }, "\n      ", HTML.DIV({                                                                                          // 124
-      "class": "center"                                                                                                // 125
-    }, "\n", HTML.SPAN({                                                                                               // 126
-      "class": "grey-text text-darken-3"                                                                               // 127
-    }, "Additional Information for ", Blaze.View("lookup:name", function() {                                           // 128
-      return Spacebars.mustache(view.lookup("name"));                                                                  // 129
-    }), HTML.SPAN({                                                                                                    // 130
-      "class": "card-title grey-text text-darken-4"                                                                    // 131
-    }, HTML.I({                                                                                                        // 132
-      "class": "fa fa-angle-down right"                                                                                // 133
-    }))), "\n      "), "\n    \n    ", HTML.UL({                                                                       // 134
-      "class": "collection"                                                                                            // 135
-    }, "\n     ", HTML.LI({                                                                                            // 136
-      "class": "collection-item"                                                                                       // 137
-    }, "What else should you know? ", HTML.B({                                                                         // 138
-      "class": "right"                                                                                                 // 139
-    }, Blaze.View("lookup:whatElse", function() {                                                                      // 140
-      return Spacebars.mustache(view.lookup("whatElse"));                                                              // 141
-    })), "\n     "), "\n     ", HTML.LI(), "\n      \n         \n    "), "\n      ", HTML.DIV({                        // 142
-      "class": "row"                                                                                                   // 143
-    }, "\n", HTML.DIV({                                                                                                // 144
-      "class": "col s6"                                                                                                // 145
-    }, "\n", HTML.P({                                                                                                  // 146
-      "class": "center"                                                                                                // 147
-    }, "Public Relations"), "\n", HTML.UL({                                                                            // 148
-      "class": "collection"                                                                                            // 149
-    }, "\n", HTML.LI({                                                                                                 // 150
-      "class": "collection-item"                                                                                       // 151
-    }, "Full Service  ", HTML.B({                                                                                      // 152
-      "class": "right",                                                                                                // 153
-      style: "font-size:12px;"                                                                                         // 154
-    }, Blaze.View("lookup:pr", function() {                                                                            // 155
-      return Spacebars.mustache(view.lookup("pr"));                                                                    // 156
-    }))), "\n", HTML.LI({                                                                                              // 157
-      "class": "collection-item"                                                                                       // 158
-    }, "Proj. Launch Support  ", HTML.B({                                                                              // 159
-      "class": "right",                                                                                                // 160
-      style: "font-size:12px;"                                                                                         // 161
-    }, Blaze.View("lookup:prls", function() {                                                                          // 162
-      return Spacebars.mustache(view.lookup("prls"));                                                                  // 163
-    }))), "\n", HTML.LI({                                                                                              // 164
-      "class": "collection-item"                                                                                       // 165
-    }, "Media Relations ", HTML.B({                                                                                    // 166
-      "class": "right",                                                                                                // 167
-      style: "font-size:12px;"                                                                                         // 168
-    }, Blaze.View("lookup:mr", function() {                                                                            // 169
-      return Spacebars.mustache(view.lookup("mr"));                                                                    // 170
-    }))), "\n", HTML.LI({                                                                                              // 171
-      "class": "collection-item"                                                                                       // 172
-    }, "Analyst Relations ", HTML.B({                                                                                  // 173
-      "class": "right",                                                                                                // 174
-      style: "font-size:12px;"                                                                                         // 175
-    }, Blaze.View("lookup:ar", function() {                                                                            // 176
-      return Spacebars.mustache(view.lookup("ar"));                                                                    // 177
-    }))), "\n", HTML.LI({                                                                                              // 178
-      "class": "collection-item"                                                                                       // 179
-    }, "Speaking Engagements ", HTML.B({                                                                               // 180
-      "class": "right",                                                                                                // 181
-      style: "font-size:12px;"                                                                                         // 182
-    }, Blaze.View("lookup:se", function() {                                                                            // 183
-      return Spacebars.mustache(view.lookup("se"));                                                                    // 184
-    }))), "\n", HTML.LI({                                                                                              // 185
-      "class": "collection-item"                                                                                       // 186
-    }, "Awards Opportunities  ", HTML.B({                                                                              // 187
-      "class": "right",                                                                                                // 188
-      style: "font-size:12px;"                                                                                         // 189
-    }, Blaze.View("lookup:ao", function() {                                                                            // 190
-      return Spacebars.mustache(view.lookup("ao"));                                                                    // 191
-    }))), "\n", HTML.LI({                                                                                              // 192
-      "class": "collection-item"                                                                                       // 193
-    }, "Events & Sponsorship\n  ", HTML.B({                                                                            // 194
-      "class": "right",                                                                                                // 195
-      style: "font-size:12px;"                                                                                         // 196
-    }, Blaze.View("lookup:es", function() {                                                                            // 197
-      return Spacebars.mustache(view.lookup("es"));                                                                    // 198
-    }))), "\n"), "\n"), "\n", HTML.DIV({                                                                               // 199
-      "class": "col s6"                                                                                                // 200
-    }, "\n", HTML.P({                                                                                                  // 201
-      "class": "center"                                                                                                // 202
-    }, "Digital & Social Servies"), "\n", HTML.UL({                                                                    // 203
-      "class": "collection"                                                                                            // 204
-    }, "\n", HTML.LI({                                                                                                 // 205
-      "class": "collection-item"                                                                                       // 206
-    }, "Full Service  ", HTML.B({                                                                                      // 207
-      "class": "right",                                                                                                // 208
-      style: "font-size:12px;"                                                                                         // 209
-    }, Blaze.View("lookup:dss", function() {                                                                           // 210
-      return Spacebars.mustache(view.lookup("dss"));                                                                   // 211
-    }))), "\n", HTML.LI({                                                                                              // 212
-      "class": "collection-item"                                                                                       // 213
-    }, "Campaign/product launch  ", HTML.B({                                                                           // 214
-      "class": "right",                                                                                                // 215
-      style: "font-size:12px;"                                                                                         // 216
-    }, Blaze.View("lookup:cp", function() {                                                                            // 217
-      return Spacebars.mustache(view.lookup("cp"));                                                                    // 218
-    }))), "\n", HTML.LI({                                                                                              // 219
-      "class": "collection-item"                                                                                       // 220
-    }, "Social channel management  ", HTML.B({                                                                         // 221
-      "class": "right",                                                                                                // 222
-      style: "font-size:12px;"                                                                                         // 223
-    }, Blaze.View("lookup:scm", function() {                                                                           // 224
-      return Spacebars.mustache(view.lookup("scm"));                                                                   // 225
-    }))), "\n", HTML.LI({                                                                                              // 226
-      "class": "collection-item"                                                                                       // 227
-    }, "Advertising and/or paid media campaigns ", HTML.B({                                                            // 228
-      "class": "right",                                                                                                // 229
-      style: "font-size:12px;"                                                                                         // 230
-    }, Blaze.View("lookup:adv", function() {                                                                           // 231
-      return Spacebars.mustache(view.lookup("adv"));                                                                   // 232
-    }))), "\n"), "\n", HTML.P({                                                                                        // 233
-      "class": "center"                                                                                                // 234
-    }, "Strategy & Consulting Services"), "\n", HTML.UL({                                                              // 235
-      "class": "collection"                                                                                            // 236
-    }, "\n", HTML.LI({                                                                                                 // 237
-      "class": "collection-item"                                                                                       // 238
-    }, "Full Service  ", HTML.B({                                                                                      // 239
-      "class": "right",                                                                                                // 240
-      style: "font-size:12px;"                                                                                         // 241
-    }, Blaze.View("lookup:scs", function() {                                                                           // 242
-      return Spacebars.mustache(view.lookup("scs"));                                                                   // 243
-    }))), "\n", HTML.LI({                                                                                              // 244
-      "class": "collection-item"                                                                                       // 245
-    }, "Social Analytics  ", HTML.B({                                                                                  // 246
-      "class": "right",                                                                                                // 247
-      style: "font-size:12px;"                                                                                         // 248
-    }, Blaze.View("lookup:san", function() {                                                                           // 249
-      return Spacebars.mustache(view.lookup("san"));                                                                   // 250
-    }))), "\n", HTML.LI({                                                                                              // 251
-      "class": "collection-item"                                                                                       // 252
-    }, "Media Analytics  ", HTML.B({                                                                                   // 253
-      "class": "right",                                                                                                // 254
-      style: "font-size:12px;"                                                                                         // 255
-    }, Blaze.View("lookup:sam", function() {                                                                           // 256
-      return Spacebars.mustache(view.lookup("sam"));                                                                   // 257
-    }))), "\n", HTML.LI({                                                                                              // 258
-      "class": "collection-item"                                                                                       // 259
-    }, "Brand Analysis", HTML.B({                                                                                      // 260
-      "class": "right",                                                                                                // 261
-      style: "font-size:12px;"                                                                                         // 262
-    }, Blaze.View("lookup:ba", function() {                                                                            // 263
-      return Spacebars.mustache(view.lookup("ba"));                                                                    // 264
-    }))), "\n", HTML.LI({                                                                                              // 265
-      "class": "collection-item"                                                                                       // 266
-    }, "Messaging Development", HTML.B({                                                                               // 267
-      "class": "right",                                                                                                // 268
-      style: "font-size:12px;"                                                                                         // 269
-    }, Blaze.View("lookup:mdev", function() {                                                                          // 270
-      return Spacebars.mustache(view.lookup("mdev"));                                                                  // 271
-    }))), "\n"), "\n      "), "\n      "), "\n    \n    "), "\n \n  "), "\n\n     " ];                                 // 272
-  }, function() {                                                                                                      // 273
-    return [ "\n            ", HTML.P("Nothing"), "\n            " ];                                                  // 274
-  }), "\n            "), "\n         \n        "), "\n    "), "\n"), "\n"), "\n");                                     // 275
-}));                                                                                                                   // 276
-                                                                                                                       // 277
+  return Blaze.If(function() {                                                                                         // 5
+    return Spacebars.dataMustache(view.lookup("isInRole"), "admin");                                                   // 6
+  }, function() {                                                                                                      // 7
+    return [ "\n ", HTML.SECTION("\n", HTML.DIV({                                                                      // 8
+      "class": "container"                                                                                             // 9
+    }, "\n", HTML.DIV({                                                                                                // 10
+      "class": "row"                                                                                                   // 11
+    }, "\n ", Spacebars.include(view.lookupTemplate("dashboards")), "\n    ", HTML.DIV({                               // 12
+      "class": ""                                                                                                      // 13
+    }, "\n        ", HTML.DIV({                                                                                        // 14
+      "class": "row"                                                                                                   // 15
+    }, "\n     \n            ", HTML.DIV({                                                                             // 16
+      "class": "list_of_app col s12 m12 l3"                                                                            // 17
+    }, "\n            ", HTML.H4({                                                                                     // 18
+      "class": "center",                                                                                               // 19
+      style: "margin-top:1em;"                                                                                         // 20
+    }, "환영합니다"), "\n            ", HTML.BR(), "\n              ", HTML.P({                                             // 21
+      "class": "grey-text text-darken-2 center"                                                                        // 22
+    }, "Applicants"), "\n              ", HTML.UL({                                                                    // 23
+      "class": "collection"                                                                                            // 24
+    }, "\n                       ", Blaze.Each(function() {                                                            // 25
+      return Spacebars.call(view.lookup("rsvps"));                                                                     // 26
+    }, function() {                                                                                                    // 27
+      return [ "\n                       ", HTML.LI({                                                                  // 28
+        "class": "collection-item"                                                                                     // 29
+      }, HTML.A({                                                                                                      // 30
+        href: function() {                                                                                             // 31
+          return [ "#", Spacebars.mustache(view.lookup("_id")) ];                                                      // 32
+        }                                                                                                              // 33
+      }, Blaze.View("lookup:name", function() {                                                                        // 34
+        return Spacebars.mustache(view.lookup("name"));                                                                // 35
+      }), " ", Blaze.View("lookup:last", function() {                                                                  // 36
+        return Spacebars.mustache(view.lookup("last"));                                                                // 37
+      }), " from ", Blaze.View("lookup:organization", function() {                                                     // 38
+        return Spacebars.mustache(view.lookup("organization"));                                                        // 39
+      }), ":")), "\n                       " ];                                                                        // 40
+    }), "\n\n              "), "\n            "), "\n         \n", HTML.DIV({                                          // 41
+      "class": "col s12 m12 l9"                                                                                        // 42
+    }, "\n  ", HTML.H5({                                                                                               // 43
+      "class": "grey-text text-darken-3"                                                                               // 44
+    }, "Application Card"), "\n  ", HTML.DIV({                                                                         // 45
+      "class": "divider light-green",                                                                                  // 46
+      style: "margin-bottom:.5em;"                                                                                     // 47
+    }), "\n            ", Blaze.Each(function() {                                                                      // 48
+      return Spacebars.call(view.lookup("rsvps"));                                                                     // 49
+    }, function() {                                                                                                    // 50
+      return [ "\n  ", HTML.DIV({                                                                                      // 51
+        id: function() {                                                                                               // 52
+          return Spacebars.mustache(view.lookup("_id"));                                                               // 53
+        },                                                                                                             // 54
+        "class": " card scrollspy light-green lighten-5",                                                              // 55
+        style: "margin-bottom:2.5em;"                                                                                  // 56
+      }, "\n\n    ", HTML.DIV({                                                                                        // 57
+        "class": "card-content"                                                                                        // 58
+      }, "\n    \n    \n      ", HTML.SPAN({                                                                           // 59
+        "class": "card-title activator grey-text text-darken-4  "                                                      // 60
+      }, Blaze.View("lookup:name", function() {                                                                        // 61
+        return Spacebars.mustache(view.lookup("name"));                                                                // 62
+      }), " ", Blaze.View("lookup:last", function() {                                                                  // 63
+        return Spacebars.mustache(view.lookup("last"));                                                                // 64
+      }), " - ", HTML.B(HTML.U(Blaze.View("lookup:organization", function() {                                          // 65
+        return Spacebars.mustache(view.lookup("organization"));                                                        // 66
+      }))), HTML.I({                                                                                                   // 67
+        "class": "material-icons right red-text delete"                                                                // 68
+      }, "close"), HTML.I({                                                                                            // 69
+        "class": "material-icons right"                                                                                // 70
+      }, "add")), "\n        ", HTML.UL({                                                                              // 71
+        "class": "collection"                                                                                          // 72
+      }, "\n      \n       \n      ", HTML.LI({                                                                        // 73
+        "class": "collection-item"                                                                                     // 74
+      }, "Email Address: ", HTML.B({                                                                                   // 75
+        "class": "right"                                                                                               // 76
+      }, Blaze.View("lookup:email", function() {                                                                       // 77
+        return Spacebars.mustache(view.lookup("email"));                                                               // 78
+      }))), "\n      ", HTML.LI({                                                                                      // 79
+        "class": "collection-item"                                                                                     // 80
+      }, "Phone Number: ", HTML.B({                                                                                    // 81
+        "class": "right"                                                                                               // 82
+      }, Blaze.View("lookup:phone", function() {                                                                       // 83
+        return Spacebars.mustache(view.lookup("phone"));                                                               // 84
+      }))), "\n          ", HTML.LI({                                                                                  // 85
+        "class": "collection-item"                                                                                     // 86
+      }, "Applicant's website: ", HTML.B({                                                                             // 87
+        "class": "right"                                                                                               // 88
+      }, Blaze.View("lookup:website", function() {                                                                     // 89
+        return Spacebars.mustache(view.lookup("website"));                                                             // 90
+      }))), "\n      ", HTML.LI({                                                                                      // 91
+        "class": "collection-item"                                                                                     // 92
+      }, "Approximate Budget: ", HTML.B({                                                                              // 93
+        "class": "right"                                                                                               // 94
+      }, Blaze.View("lookup:budget", function() {                                                                      // 95
+        return Spacebars.mustache(view.lookup("budget"));                                                              // 96
+      }))), "\n      ", HTML.LI({                                                                                      // 97
+        "class": "collection-item"                                                                                     // 98
+      }, "Industry the Company is in: ", HTML.B({                                                                      // 99
+        "class": "right"                                                                                               // 100
+      }, Blaze.View("lookup:industry", function() {                                                                    // 101
+        return Spacebars.mustache(view.lookup("industry"));                                                            // 102
+      }))), "\n      ", HTML.LI({                                                                                      // 103
+        "class": "collection-item"                                                                                     // 104
+      }, "Competitors for Applicant: ", HTML.B({                                                                       // 105
+        "class": "right"                                                                                               // 106
+      }, Blaze.View("lookup:Competitors", function() {                                                                 // 107
+        return Spacebars.mustache(view.lookup("Competitors"));                                                         // 108
+      }))), "\n      ", HTML.LI({                                                                                      // 109
+        "class": "collection-item"                                                                                     // 110
+      }, "They heard about you through: ", HTML.B({                                                                    // 111
+        "class": "right"                                                                                               // 112
+      }, Blaze.View("lookup:iadSense", function() {                                                                    // 113
+        return Spacebars.mustache(view.lookup("iadSense"));                                                            // 114
+      }))), "\n      ", HTML.LI({                                                                                      // 115
+        "class": "collection-item"                                                                                     // 116
+      }, "Engaged with another agent?: ", HTML.B({                                                                     // 117
+        "class": "right"                                                                                               // 118
+      }, Blaze.View("lookup:another", function() {                                                                     // 119
+        return Spacebars.mustache(view.lookup("another"));                                                             // 120
+      }))), "\n       ", HTML.LI({                                                                                     // 121
+        "class": "collection-item"                                                                                     // 122
+      }, "They want to work with you for: ", HTML.B({                                                                  // 123
+        "class": "right"                                                                                               // 124
+      }, Blaze.View("lookup:length", function() {                                                                      // 125
+        return Spacebars.mustache(view.lookup("length"));                                                              // 126
+      }))), "\n              ", HTML.LI({                                                                              // 127
+        "class": "collection-item"                                                                                     // 128
+      }, "Application sent at: ", HTML.B({                                                                             // 129
+        "class": "right"                                                                                               // 130
+      }, Blaze.View("lookup:createdAt", function() {                                                                   // 131
+        return Spacebars.mustache(view.lookup("createdAt"));                                                           // 132
+      }))), "\n    "), "\n    ", HTML.P({                                                                              // 133
+        "class": "center"                                                                                              // 134
+      }, "Click the plus sign for more information"), "\n    "), "\n    ", HTML.DIV({                                  // 135
+        "class": "card-reveal light-green lighten-5"                                                                   // 136
+      }, "\n      ", HTML.DIV({                                                                                        // 137
+        "class": "center"                                                                                              // 138
+      }, "\n", HTML.SPAN({                                                                                             // 139
+        "class": "grey-text text-darken-3"                                                                             // 140
+      }, "Additional Information for ", Blaze.View("lookup:name", function() {                                         // 141
+        return Spacebars.mustache(view.lookup("name"));                                                                // 142
+      }), HTML.SPAN({                                                                                                  // 143
+        "class": "card-title grey-text text-darken-4"                                                                  // 144
+      }, HTML.I({                                                                                                      // 145
+        "class": "fa fa-angle-down right"                                                                              // 146
+      }))), "\n      "), "\n    \n    ", HTML.UL({                                                                     // 147
+        "class": "collection"                                                                                          // 148
+      }, "\n     ", HTML.LI({                                                                                          // 149
+        "class": "collection-item"                                                                                     // 150
+      }, "What else should you know? ", HTML.B({                                                                       // 151
+        "class": "right"                                                                                               // 152
+      }, Blaze.View("lookup:whatElse", function() {                                                                    // 153
+        return Spacebars.mustache(view.lookup("whatElse"));                                                            // 154
+      })), "\n     "), "\n     ", HTML.LI(), "\n      \n         \n    "), "\n      ", HTML.DIV({                      // 155
+        "class": "row"                                                                                                 // 156
+      }, "\n", HTML.DIV({                                                                                              // 157
+        "class": "col s6"                                                                                              // 158
+      }, "\n", HTML.P({                                                                                                // 159
+        "class": "center"                                                                                              // 160
+      }, "Public Relations"), "\n", HTML.UL({                                                                          // 161
+        "class": "collection"                                                                                          // 162
+      }, "\n", HTML.LI({                                                                                               // 163
+        "class": "collection-item"                                                                                     // 164
+      }, "Full Service  ", HTML.B({                                                                                    // 165
+        "class": "right",                                                                                              // 166
+        style: "font-size:12px;"                                                                                       // 167
+      }, Blaze.View("lookup:pr", function() {                                                                          // 168
+        return Spacebars.mustache(view.lookup("pr"));                                                                  // 169
+      }))), "\n", HTML.LI({                                                                                            // 170
+        "class": "collection-item"                                                                                     // 171
+      }, "Proj. Launch Support  ", HTML.B({                                                                            // 172
+        "class": "right",                                                                                              // 173
+        style: "font-size:12px;"                                                                                       // 174
+      }, Blaze.View("lookup:prls", function() {                                                                        // 175
+        return Spacebars.mustache(view.lookup("prls"));                                                                // 176
+      }))), "\n", HTML.LI({                                                                                            // 177
+        "class": "collection-item"                                                                                     // 178
+      }, "Media Relations ", HTML.B({                                                                                  // 179
+        "class": "right",                                                                                              // 180
+        style: "font-size:12px;"                                                                                       // 181
+      }, Blaze.View("lookup:mr", function() {                                                                          // 182
+        return Spacebars.mustache(view.lookup("mr"));                                                                  // 183
+      }))), "\n", HTML.LI({                                                                                            // 184
+        "class": "collection-item"                                                                                     // 185
+      }, "Analyst Relations ", HTML.B({                                                                                // 186
+        "class": "right",                                                                                              // 187
+        style: "font-size:12px;"                                                                                       // 188
+      }, Blaze.View("lookup:ar", function() {                                                                          // 189
+        return Spacebars.mustache(view.lookup("ar"));                                                                  // 190
+      }))), "\n", HTML.LI({                                                                                            // 191
+        "class": "collection-item"                                                                                     // 192
+      }, "Speaking Engagements ", HTML.B({                                                                             // 193
+        "class": "right",                                                                                              // 194
+        style: "font-size:12px;"                                                                                       // 195
+      }, Blaze.View("lookup:se", function() {                                                                          // 196
+        return Spacebars.mustache(view.lookup("se"));                                                                  // 197
+      }))), "\n", HTML.LI({                                                                                            // 198
+        "class": "collection-item"                                                                                     // 199
+      }, "Awards Opportunities  ", HTML.B({                                                                            // 200
+        "class": "right",                                                                                              // 201
+        style: "font-size:12px;"                                                                                       // 202
+      }, Blaze.View("lookup:ao", function() {                                                                          // 203
+        return Spacebars.mustache(view.lookup("ao"));                                                                  // 204
+      }))), "\n", HTML.LI({                                                                                            // 205
+        "class": "collection-item"                                                                                     // 206
+      }, "Events & Sponsorship\n  ", HTML.B({                                                                          // 207
+        "class": "right",                                                                                              // 208
+        style: "font-size:12px;"                                                                                       // 209
+      }, Blaze.View("lookup:es", function() {                                                                          // 210
+        return Spacebars.mustache(view.lookup("es"));                                                                  // 211
+      }))), "\n"), "\n"), "\n", HTML.DIV({                                                                             // 212
+        "class": "col s6"                                                                                              // 213
+      }, "\n", HTML.P({                                                                                                // 214
+        "class": "center"                                                                                              // 215
+      }, "Digital & Social Servies"), "\n", HTML.UL({                                                                  // 216
+        "class": "collection"                                                                                          // 217
+      }, "\n", HTML.LI({                                                                                               // 218
+        "class": "collection-item"                                                                                     // 219
+      }, "Full Service  ", HTML.B({                                                                                    // 220
+        "class": "right",                                                                                              // 221
+        style: "font-size:12px;"                                                                                       // 222
+      }, Blaze.View("lookup:dss", function() {                                                                         // 223
+        return Spacebars.mustache(view.lookup("dss"));                                                                 // 224
+      }))), "\n", HTML.LI({                                                                                            // 225
+        "class": "collection-item"                                                                                     // 226
+      }, "Campaign/product launch  ", HTML.B({                                                                         // 227
+        "class": "right",                                                                                              // 228
+        style: "font-size:12px;"                                                                                       // 229
+      }, Blaze.View("lookup:cp", function() {                                                                          // 230
+        return Spacebars.mustache(view.lookup("cp"));                                                                  // 231
+      }))), "\n", HTML.LI({                                                                                            // 232
+        "class": "collection-item"                                                                                     // 233
+      }, "Social channel management  ", HTML.B({                                                                       // 234
+        "class": "right",                                                                                              // 235
+        style: "font-size:12px;"                                                                                       // 236
+      }, Blaze.View("lookup:scm", function() {                                                                         // 237
+        return Spacebars.mustache(view.lookup("scm"));                                                                 // 238
+      }))), "\n", HTML.LI({                                                                                            // 239
+        "class": "collection-item"                                                                                     // 240
+      }, "Advertising and/or paid media campaigns ", HTML.B({                                                          // 241
+        "class": "right",                                                                                              // 242
+        style: "font-size:12px;"                                                                                       // 243
+      }, Blaze.View("lookup:adv", function() {                                                                         // 244
+        return Spacebars.mustache(view.lookup("adv"));                                                                 // 245
+      }))), "\n"), "\n", HTML.P({                                                                                      // 246
+        "class": "center"                                                                                              // 247
+      }, "Strategy & Consulting Services"), "\n", HTML.UL({                                                            // 248
+        "class": "collection"                                                                                          // 249
+      }, "\n", HTML.LI({                                                                                               // 250
+        "class": "collection-item"                                                                                     // 251
+      }, "Full Service  ", HTML.B({                                                                                    // 252
+        "class": "right",                                                                                              // 253
+        style: "font-size:12px;"                                                                                       // 254
+      }, Blaze.View("lookup:scs", function() {                                                                         // 255
+        return Spacebars.mustache(view.lookup("scs"));                                                                 // 256
+      }))), "\n", HTML.LI({                                                                                            // 257
+        "class": "collection-item"                                                                                     // 258
+      }, "Social Analytics  ", HTML.B({                                                                                // 259
+        "class": "right",                                                                                              // 260
+        style: "font-size:12px;"                                                                                       // 261
+      }, Blaze.View("lookup:san", function() {                                                                         // 262
+        return Spacebars.mustache(view.lookup("san"));                                                                 // 263
+      }))), "\n", HTML.LI({                                                                                            // 264
+        "class": "collection-item"                                                                                     // 265
+      }, "Media Analytics  ", HTML.B({                                                                                 // 266
+        "class": "right",                                                                                              // 267
+        style: "font-size:12px;"                                                                                       // 268
+      }, Blaze.View("lookup:sam", function() {                                                                         // 269
+        return Spacebars.mustache(view.lookup("sam"));                                                                 // 270
+      }))), "\n", HTML.LI({                                                                                            // 271
+        "class": "collection-item"                                                                                     // 272
+      }, "Brand Analysis", HTML.B({                                                                                    // 273
+        "class": "right",                                                                                              // 274
+        style: "font-size:12px;"                                                                                       // 275
+      }, Blaze.View("lookup:ba", function() {                                                                          // 276
+        return Spacebars.mustache(view.lookup("ba"));                                                                  // 277
+      }))), "\n", HTML.LI({                                                                                            // 278
+        "class": "collection-item"                                                                                     // 279
+      }, "Messaging Development", HTML.B({                                                                             // 280
+        "class": "right",                                                                                              // 281
+        style: "font-size:12px;"                                                                                       // 282
+      }, Blaze.View("lookup:mdev", function() {                                                                        // 283
+        return Spacebars.mustache(view.lookup("mdev"));                                                                // 284
+      }))), "\n"), "\n      "), "\n      "), "\n    \n    "), "\n \n  "), "\n\n     " ];                               // 285
+    }, function() {                                                                                                    // 286
+      return [ "\n            ", HTML.P("Nothing"), "\n            " ];                                                // 287
+    }), "\n            "), "\n         \n        "), "\n    "), "\n"), "\n"), "\n"), "\n " ];                          // 288
+  }, function() {                                                                                                      // 289
+    return [ "\n ", HTML.DIV({                                                                                         // 290
+      "class": "center"                                                                                                // 291
+    }, "\n   No access\n "), "\n " ];                                                                                  // 292
+  });                                                                                                                  // 293
+}));                                                                                                                   // 294
+                                                                                                                       // 295
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 },"template.login.js":function(){

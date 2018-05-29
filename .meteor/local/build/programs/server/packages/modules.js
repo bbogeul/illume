@@ -173,6 +173,7 @@ install("gildaspk:autoform-materialize");
 install("gadicohen:robots-txt");
 install("gadicohen:sitemaps");
 install("shell-server", "meteor/shell-server/main.js");
+install("alanning:roles");
 install("livedata");
 install("hot-code-push");
 install("launch-screen");

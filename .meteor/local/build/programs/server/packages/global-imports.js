@@ -11,6 +11,7 @@ RouteController = Package['iron:router'].RouteController;
 Accounts = Package['accounts-base'].Accounts;
 CollectionHooks = Package['matb33:collection-hooks'].CollectionHooks;
 sitemaps = Package['gadicohen:sitemaps'].sitemaps;
+Roles = Package['alanning:roles'].Roles;
 Meteor = Package.meteor.Meteor;
 global = Package.meteor.global;
 meteorEnv = Package.meteor.meteorEnv;

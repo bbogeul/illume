@@ -15,6 +15,7 @@ RouterAutoscroll = Package['okgrow:router-autoscroll'].RouterAutoscroll;
 Accounts = Package['accounts-base'].Accounts;
 GAnalytics = Package['datariot:ganalytics'].GAnalytics;
 CollectionHooks = Package['matb33:collection-hooks'].CollectionHooks;
+Roles = Package['alanning:roles'].Roles;
 Meteor = Package.meteor.Meteor;
 global = Package.meteor.global;
 meteorEnv = Package.meteor.meteorEnv;

@@ -1,5 +1,6 @@
 <template name="application">
-<section>
+ {{#if isInRole 'admin'}}
+ <section>
 <div class="container">
 <div class="row">
  {{> dashboards}}
@@ -103,5 +104,10 @@
 </div>
 </div>
 </section>
+ {{else}}
+ <div class="center">
+   No access
+ </div>
+ {{/if}}
 </template>
  

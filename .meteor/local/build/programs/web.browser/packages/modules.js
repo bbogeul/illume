@@ -207,13 +207,14 @@ install("matb33:collection-hooks");                                          // 
 install("gildaspk:autoform-materialize");                                    // 113
 install("gadicohen:sitemaps");                                               // 114
 install("shell-server");                                                     // 115
-install("webapp");                                                           // 116
-install("hot-code-push");                                                    // 117
-install("launch-screen");                                                    // 118
-install("autoupdate");                                                       // 119
-install("mdg:validation-error");                                             // 120
-install("service-configuration");                                            // 121
-                                                                             // 122
+install("alanning:roles");                                                   // 116
+install("webapp");                                                           // 117
+install("hot-code-push");                                                    // 118
+install("launch-screen");                                                    // 119
+install("autoupdate");                                                       // 120
+install("mdg:validation-error");                                             // 121
+install("service-configuration");                                            // 122
+                                                                             // 123
 ///////////////////////////////////////////////////////////////////////////////
 
 },"process.js":["process",function(require,exports,module){
