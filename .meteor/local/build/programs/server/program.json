@@ -390,6 +390,18 @@
       "path": "packages/alanning_roles.js"
     },
     {
+      "sourceMap": "packages/meteorspark_util.js.map",
+      "path": "packages/meteorspark_util.js"
+    },
+    {
+      "sourceMap": "packages/cfs_http-methods.js.map",
+      "path": "packages/cfs_http-methods.js"
+    },
+    {
+      "sourceMap": "packages/tap_i18n.js.map",
+      "path": "packages/tap_i18n.js"
+    },
+    {
       "path": "packages/livedata.js"
     },
     {

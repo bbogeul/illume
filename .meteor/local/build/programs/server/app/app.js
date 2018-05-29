@@ -353,7 +353,32 @@ Router.route('policy', {                                                        
                                                                                                      //
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
-}},"backend":{"backend.js":function(){
+}},"localization":{"english":{"header.en.i18n.json":function(){
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                   //
+// localization/english/header.en.i18n.json                                                          //
+//                                                                                                   //
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                                                                     //
+var _ = Package.underscore._,
+    package_name = "project",
+    namespace = "project";
+
+if (package_name != "project") {
+    namespace = TAPi18n.packages[package_name].namespace;
+}
+TAPi18n._enable({"helper_name":"_","supported_languages":null,"i18n_files_route":"/tap-i18n","preloaded_langs":[],"cdn_path":null});
+TAPi18n.languages_names["en"] = ["English","English"];
+// integrate the fallback language translations 
+translations = {};
+translations[namespace] = null;
+TAPi18n._loadLangFileObject("en", translations);
+TAPi18n._registerServerTranslator("en", namespace);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+}}},"backend":{"backend.js":function(){
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 //                                                                                                   //
@@ -734,6 +759,7 @@ sitemaps.add('/sitemap.xml', function () {                                      
 }}},{"extensions":[".js",".json",".coffee"]});
 require("./lib/config.js");
 require("./lib/route.coffee.js");
+require("./localization/english/header.en.i18n.json");
 require("./backend/backend.js");
 require("./backend/login.js");
 require("./collections/schemas.js");

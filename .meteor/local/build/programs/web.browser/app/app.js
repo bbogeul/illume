@@ -2507,7 +2507,31 @@ Router.route('policy', {                                                        
                                                                                                                        //
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-}},"collections":{"schemas.js":function(){
+}},"localization":{"english":{"header.en.i18n.json":function(){
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                                     //
+// localization/english/header.en.i18n.json                                                                            //
+//                                                                                                                     //
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                                                                                       //
+var _ = Package.underscore._,                                                                                          // 1
+    package_name = "project",                                                                                          // 2
+    namespace = "project";                                                                                             // 3
+                                                                                                                       // 4
+if (package_name != "project") {                                                                                       // 5
+    namespace = TAPi18n.packages[package_name].namespace;                                                              // 6
+}                                                                                                                      // 7
+TAPi18n._enable({"helper_name":"_","supported_languages":null,"i18n_files_route":"/tap-i18n","preloaded_langs":[],"cdn_path":null});
+TAPi18n.languages_names["en"] = ["English","English"];                                                                 // 9
+// integrate the fallback language translations                                                                        // 10
+translations = {};                                                                                                     // 11
+translations[namespace] = null;                                                                                        // 12
+TAPi18n._loadLangFileObject("en", translations);                                                                       // 13
+                                                                                                                       // 14
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+}}},"collections":{"schemas.js":function(){
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //                                                                                                                     //
@@ -2868,6 +2892,7 @@ require("./client/templates/hybrid/hybrid.js");
 require("./client/templates/portfolio/portfolio.js");
 require("./client/templates/services/service.js");
 require("./client/templates/work/application.js");
+require("./localization/english/header.en.i18n.json");
 require("./backend/backend.js");
 require("./backend/login.js");
 require("./collections/schemas.js");

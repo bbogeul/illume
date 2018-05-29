@@ -208,13 +208,15 @@ install("gildaspk:autoform-materialize");                                    // 
 install("gadicohen:sitemaps");                                               // 114
 install("shell-server");                                                     // 115
 install("alanning:roles");                                                   // 116
-install("webapp");                                                           // 117
-install("hot-code-push");                                                    // 118
-install("launch-screen");                                                    // 119
-install("autoupdate");                                                       // 120
-install("mdg:validation-error");                                             // 121
-install("service-configuration");                                            // 122
-                                                                             // 123
+install("meteorspark:util");                                                 // 117
+install("tap:i18n");                                                         // 118
+install("webapp");                                                           // 119
+install("hot-code-push");                                                    // 120
+install("launch-screen");                                                    // 121
+install("autoupdate");                                                       // 122
+install("mdg:validation-error");                                             // 123
+install("service-configuration");                                            // 124
+                                                                             // 125
 ///////////////////////////////////////////////////////////////////////////////
 
 },"process.js":["process",function(require,exports,module){
