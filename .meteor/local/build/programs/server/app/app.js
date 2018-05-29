@@ -353,6 +353,42 @@ Router.route('policy', {                                                        
                                                                                                      //
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
+}},"both":{"i18n":{"en":{"header.en.i18n.json":function(){
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                   //
+// both/i18n/en/header.en.i18n.json                                                                  //
+//                                                                                                   //
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                                                                     //
+var _ = Package.underscore._,
+    package_name = "project",
+    namespace = "project";
+
+if (package_name != "project") {
+    namespace = TAPi18n.packages[package_name].namespace;
+}
+TAPi18n._enable({"helper_name":"_","supported_languages":null,"i18n_files_route":"/tap-i18n","preloaded_langs":[],"cdn_path":null});
+TAPi18n.languages_names["en"] = ["English","English"];
+// integrate the fallback language translations 
+translations = {};
+translations[namespace] = {"about":"ABOUT US","howWeWork":"HOW WE WORK","ourServices":"OUR SERVICES","portfolio":"PORTFOLIO","reachUs":"REACH US"};
+TAPi18n._loadLangFileObject("en", translations);
+TAPi18n._registerServerTranslator("en", namespace);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+}}},"i18n.js":function(){
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                   //
+// both/i18n.js                                                                                      //
+//                                                                                                   //
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                                                                     //
+                                                                                                     //
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
 }},"backend":{"backend.js":function(){
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -689,60 +725,6 @@ mainController = RouteController.extend({                                       
 });                                                                                                  // 1
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
-}},"i18n":{"en.i18n.json":function(){
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-//                                                                                                   //
-// i18n/en.i18n.json                                                                                 //
-//                                                                                                   //
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-                                                                                                     //
-var _ = Package.underscore._,
-    package_name = "project",
-    namespace = "project";
-
-if (package_name != "project") {
-    namespace = TAPi18n.packages[package_name].namespace;
-}
-TAPi18n._enable({"helper_name":"_","supported_languages":null,"i18n_files_route":"/tap-i18n","preloaded_langs":[],"cdn_path":null});
-TAPi18n.languages_names["en"] = ["English","English"];
-// integrate the fallback language translations 
-translations = {};
-translations[namespace] = {"hello":"hello","made":"Made with Javascript and"};
-TAPi18n._loadLangFileObject("en", translations);
-TAPi18n._registerServerTranslator("en", namespace);
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-
-},"ko.i18n.json":function(){
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-//                                                                                                   //
-// i18n/ko.i18n.json                                                                                 //
-//                                                                                                   //
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-                                                                                                     //
-var _ = Package.underscore._,
-    package_name = "project",
-    namespace = "project";
-
-if (package_name != "project") {
-    namespace = TAPi18n.packages[package_name].namespace;
-}
-TAPi18n.languages_names["ko"] = ["Korean","한국어"];
-if(_.isUndefined(TAPi18n.translations["ko"])) {
-  TAPi18n.translations["ko"] = {};
-}
-
-if(_.isUndefined(TAPi18n.translations["ko"][namespace])) {
-  TAPi18n.translations["ko"][namespace] = {};
-}
-
-_.extend(TAPi18n.translations["ko"][namespace], {"hello":"안녕하세요","made":"정성으로 다해서 코딩"});
-TAPi18n._registerServerTranslator("ko", namespace);
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-
 }},"server":{"application.js":function(){
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -788,14 +770,14 @@ sitemaps.add('/sitemap.xml', function () {                                      
 }}},{"extensions":[".js",".json",".coffee"]});
 require("./lib/config.js");
 require("./lib/route.coffee.js");
+require("./both/i18n/en/header.en.i18n.json");
 require("./backend/backend.js");
 require("./backend/login.js");
+require("./both/i18n.js");
 require("./collections/schemas.js");
 require("./controller/applicationcontroller.js");
 require("./controller/ga.js");
 require("./controller/mainController.js");
-require("./i18n/en.i18n.json");
-require("./i18n/ko.i18n.json");
 require("./server/application.js");
 require("./server/sitemaps.js");
 //# sourceMappingURL=app.js.map
