@@ -1,0 +1,18 @@
+<template name="languageSwitcher">
+  
+  
+  
+  {{#each languages}}
+        <li><a href="#" data-action="change-language" data-language="{{code}}">{{labels.name}}  </a></li>
+      {{/each}}
+ 
+</template>
+<template name="languageSwitcher2">
+  
+  
+  
+  {{#each languages}}
+        <li><a href="#" class="grey-text text-darken-3" data-action="change-language" data-language="{{code}}">{{labels.name}}  </a></li>
+      {{/each}}
+ 
+</template>

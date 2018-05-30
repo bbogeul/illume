@@ -1,7 +1,7 @@
 <template name="about">
     {{>fixedHeader}}
  <div class="center">
-<h2><b>ABOUT US</b></h2>
+<h2 class="nanum"><b>{{_"about"}}</b></h2>
  </div>
  <div class="divider red lighten-1" style="margin:0 auto;width:120px"></div>
  <div class="container" style="margin-top:3em">
@@ -53,25 +53,15 @@ A Santa Barbara, CA based group, we are a new breed of engineers and designers s
               </section>
                         <div class="row" style="margin-top:2em;">
                         <div class="container">
-                               <div class="col s12 m12 l6">
+             
+                                                  <div class="col s12 m12 l6 offset-l3">
         <div class="card-panel grey lighten-5 z-depth-1">
           <div class="row valign-wrapper">
      
             <div class="col s12">
-             <p class="leadDev rale red-text">이동섭<BR> <span class="black-text">CFO</span></p>
-                <p class="rale"><i> 미티어는 클라이언트와 서버  양쪽의 환경사이에서 코드(자바스크립트)를 공유할 수 있습니다. 그 결과 미티어는 웹 개발 과정의 많은 일상적인 귀찮고 어려운 일들을 간결하게 함으로써 웹개발의 새로운 장을 열었습니다. 이제 더이상 수학 공식에 대입하듯 만드는 웹사이트 제작을 지양하고, 나만의 개성있는 웹사이트 제작을 지향하겠습니다. 여러분의 든든한 사업 파트너가 되겠습니다.
-감사합니다.
-                </i></p>
+            <div class=" ">
+              <img src="/img/joe.png" width="85px" alt="">
             </div>
-          </div>
-          </div>           
- 
-      </div>
-                                                  <div class="col s12 m12 l6">
-        <div class="card-panel grey lighten-5 z-depth-1">
-          <div class="row valign-wrapper">
-     
-            <div class="col s12">
              <p class="leadDev rale red-text">JOE LEE<BR> <span class="black-text">LEAD DEVELOPER &  FOUNDER</span></p>
                 <p class="rale"><i> We believe a strong background in successful customer relation is essential in developing a powerful application fit for your business, all within the boundaries of our imagination. We strive to maintain constant communication between you and our team to ensure the optimal health of your product for your business. Thanks for choosing illume Inc. 
                 </i></p>
@@ -91,7 +81,7 @@ A Santa Barbara, CA based group, we are a new breed of engineers and designers s
       
              <h3 class="center muli grey-text text-darken-3">What are you waiting for?</h3>
              <div class="center">
-                  <a  href="{{pathFor 'applications'}}" class="button outline">GET STARTED WITH ILLUME INC.</a>
+                  <a  href="{{pathFor 'applications'}}" class="button outline">{{_"getStarted"}}</a>
 
                 </div>
             </div>

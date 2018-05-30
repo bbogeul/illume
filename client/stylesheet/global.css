@@ -20,6 +20,11 @@
     overflow: hidden;
 }
 
+.nanum {
+    font-family: 'Nanum Gothic', sans-serif;
+
+}
+
 .muli {
     font-family: 'Muli', sans-serif;
 }

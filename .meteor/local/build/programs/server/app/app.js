@@ -353,11 +353,11 @@ Router.route('policy', {                                                        
                                                                                                      //
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
-}},"both":{"i18n":{"en":{"header.en.i18n.json":function(){
+}},"both":{"i18n":{"en":{"about.en.i18n.json":function(){
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 //                                                                                                   //
-// both/i18n/en/header.en.i18n.json                                                                  //
+// both/i18n/en/about.en.i18n.json                                                                   //
 //                                                                                                   //
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
                                                                                                      //
@@ -372,9 +372,142 @@ TAPi18n._enable({"helper_name":"_","supported_languages":null,"i18n_files_route"
 TAPi18n.languages_names["en"] = ["English","English"];
 // integrate the fallback language translations 
 translations = {};
+translations[namespace] = null;
+TAPi18n._loadLangFileObject("en", translations);
+TAPi18n._registerServerTranslator("en", namespace);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+},"header.en.i18n.json":function(){
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                   //
+// both/i18n/en/header.en.i18n.json                                                                  //
+//                                                                                                   //
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                                                                     //
+var _ = Package.underscore._,
+    package_name = "project",
+    namespace = "project";
+
+if (package_name != "project") {
+    namespace = TAPi18n.packages[package_name].namespace;
+}
+// integrate the fallback language translations 
+translations = {};
 translations[namespace] = {"about":"ABOUT US","howWeWork":"HOW WE WORK","ourServices":"OUR SERVICES","portfolio":"PORTFOLIO","reachUs":"REACH US"};
 TAPi18n._loadLangFileObject("en", translations);
 TAPi18n._registerServerTranslator("en", namespace);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+},"home.en.i18n.json":function(){
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                   //
+// both/i18n/en/home.en.i18n.json                                                                    //
+//                                                                                                   //
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                                                                     //
+var _ = Package.underscore._,
+    package_name = "project",
+    namespace = "project";
+
+if (package_name != "project") {
+    namespace = TAPi18n.packages[package_name].namespace;
+}
+// integrate the fallback language translations 
+translations = {};
+translations[namespace] = {"whatWeDo":"WHAT WE DO","mission1":"is a full business idea & web product development workshop located in the heart of Santa Barbara, California. Weaving together branding, visual design, lean user interface experience, and information architecture, illume Inc. takes you through every phase of validating your idea and building an","koreaAdd":"","mission2":"You’ll finish with a data-driven product roadmap that outlines your path to successful launch all before a single line of code is written. Once that is done, we get to work.","innovative":"Innovative","bridging":"Bridging Mobil다 & Web","tailored":"Tailored For You","learnMore":"LEARN MORE ABOUT ILLUME INC.","viewMore":"VIEW MORE","someOfOurWork":"SOME OF OUR WORK","allOfOurWebsites":"All of our websites and hybrid applications are based on Meteor.","fastSleek":"They are all fast, sleek, and ready to make a change in their respective industries.","madeWith":"Made with ","madeWithK":"","insteadOf":"Instead of just handing over a set of deliverables, we work with you to achieve the results you want. We’ll test your idea in the marketplace, gather real data, and discover the key benefits of your concept, then we’ll create stunning visuals and a comprehensive backlog to serve as an investor-ready MVP. Setting this foundation means you’re not just walking away with a roadmap to a product","walkAway":"you’re walking away with the peace of mind that your product is what people want.","areYouGame":"ARE YOU GAME?","loveToHear":"We would love to hear more.","getStarted":"GET STARTED WITH ILLUME INC."};
+TAPi18n._loadLangFileObject("en", translations);
+TAPi18n._registerServerTranslator("en", namespace);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+}},"ko":{"about.ko.i18n.json":function(){
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                   //
+// both/i18n/ko/about.ko.i18n.json                                                                   //
+//                                                                                                   //
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                                                                     //
+var _ = Package.underscore._,
+    package_name = "project",
+    namespace = "project";
+
+if (package_name != "project") {
+    namespace = TAPi18n.packages[package_name].namespace;
+}
+TAPi18n.languages_names["ko"] = ["Korean","한국어"];
+if(_.isUndefined(TAPi18n.translations["ko"])) {
+  TAPi18n.translations["ko"] = {};
+}
+
+if(_.isUndefined(TAPi18n.translations["ko"][namespace])) {
+  TAPi18n.translations["ko"][namespace] = {};
+}
+
+_.extend(TAPi18n.translations["ko"][namespace], null);
+TAPi18n._registerServerTranslator("ko", namespace);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+},"header.ko.i18n.json":function(){
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                   //
+// both/i18n/ko/header.ko.i18n.json                                                                  //
+//                                                                                                   //
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                                                                     //
+var _ = Package.underscore._,
+    package_name = "project",
+    namespace = "project";
+
+if (package_name != "project") {
+    namespace = TAPi18n.packages[package_name].namespace;
+}
+TAPi18n.languages_names["ko"] = ["Korean","한국어"];
+if(_.isUndefined(TAPi18n.translations["ko"])) {
+  TAPi18n.translations["ko"] = {};
+}
+
+if(_.isUndefined(TAPi18n.translations["ko"][namespace])) {
+  TAPi18n.translations["ko"][namespace] = {};
+}
+
+_.extend(TAPi18n.translations["ko"][namespace], {"about":"일룸의 대해서","howWeWork":"성공비결","ourServices":"일룸 서비스","portfolio":"PORTFOLIO","reachUs":"연락"});
+TAPi18n._registerServerTranslator("ko", namespace);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+},"home.ko.i18n.json":function(){
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                   //
+// both/i18n/ko/home.ko.i18n.json                                                                    //
+//                                                                                                   //
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                                                                     //
+var _ = Package.underscore._,
+    package_name = "project",
+    namespace = "project";
+
+if (package_name != "project") {
+    namespace = TAPi18n.packages[package_name].namespace;
+}
+TAPi18n.languages_names["ko"] = ["Korean","한국어"];
+if(_.isUndefined(TAPi18n.translations["ko"])) {
+  TAPi18n.translations["ko"] = {};
+}
+
+if(_.isUndefined(TAPi18n.translations["ko"][namespace])) {
+  TAPi18n.translations["ko"][namespace] = {};
+}
+
+_.extend(TAPi18n.translations["ko"][namespace], {"whatWeDo":"일룸의 미션","mission1":"미국 캘로포니아주, 산타바바라에서 시작된 Full Idea Business 및 웹 개발 그룹입니다. 브랜딩, 비쥬얼 디자인, 간단하면서도 강력한 유저 인터페이스를 활용하며 당신의 비즈니스 아이더를 진정한 ","koreaAdd":"로 개발하는 것이 일룸의 미션입니다","mission2":"비즈니스 성공을 위한 Roadmap 형성하고 모든 준비를 마친 다음 코드로 당신의 비즈니스 아이더를 활용적인 어플로 만들겠습니다.","innovative":"혁신적인","bridging":"모바일과 웹의 결합","tailored":"당신만을 위한","learnMore":"일룸의 대해서 더 알아보기","viewMore":"더 보기","someOfOurWork":"일룸 작품들 만나보세요","allOfOurWebsites":"일룸 작품들은 모두 미티어로 개발 되어 있습니다.","fastSleek":"빠르면서 가늘고, 속해 있는 분야에 큰 변화를 일으킬 준비가 되어 있습니다.","madeWith":"","madeWithK":"과 정성으로 만듭니다","insteadOf":"단순히 사이트 제공하고 끝나는게 아니고, 당신이 원하는 결과를 성취하기 전까지는 포기하지 않습니다. 당신의 아이디어를 실험해 보고, 정보를 수집하고, 그 컨셉의 하이라이트들을 살리면서 아름다운 비주얼과 강력한 백엔드를 갖춘 상품을 개발하여 투자 준비의 MVP를 만들어 보겠습니다.","walkAway":"결과로는 모든 사람들이 원하는 서비스를 제공할 수 있는 마인드로 비즈니스를 시작할 수 있을 것입니다.","areYouGame":"준비됐습니까?","loveToHear":"같이 이야기를 나눠봅시다","getStarted":"지금 바로 시작"});
+TAPi18n._registerServerTranslator("ko", namespace);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -770,7 +903,12 @@ sitemaps.add('/sitemap.xml', function () {                                      
 }}},{"extensions":[".js",".json",".coffee"]});
 require("./lib/config.js");
 require("./lib/route.coffee.js");
+require("./both/i18n/en/about.en.i18n.json");
 require("./both/i18n/en/header.en.i18n.json");
+require("./both/i18n/en/home.en.i18n.json");
+require("./both/i18n/ko/about.ko.i18n.json");
+require("./both/i18n/ko/header.ko.i18n.json");
+require("./both/i18n/ko/home.ko.i18n.json");
 require("./backend/backend.js");
 require("./backend/login.js");
 require("./both/i18n.js");

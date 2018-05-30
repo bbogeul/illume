@@ -4,7 +4,7 @@
 
  
       <div class="navbar-fixed">
-  <nav style="background:#115F9A;">
+  <nav style="background:#2f363b;">
      
     <div class="nav-wrapper">
         <div class="">
@@ -25,6 +25,7 @@
         <li class="muli"><a href="{{pathFor 'service'}}">{{_"ourServices"}}</a></li>
              <li class="muli"><a href="{{pathFor 'portfolio'}}">{{_"portfolio"}}</a></li>
            <li class="muli"><a href="{{pathFor 'applications'}}">{{_"reachUs"}}</a></li>
+ {{>languageSwitcher}}
 
       </ul>
         <ul class="right hide-on-med-and-down">
@@ -37,6 +38,7 @@
       </div>
        
           </nav>
+
       </div>
 </header>
     <ul id="slide-outs" class="side-nav">
@@ -49,6 +51,7 @@
         <li class="muli"><a href="{{pathFor 'service'}}">{{_"ourServices"}}</a></li>
              <li class="muli"><a href="{{pathFor 'portfolio'}}">{{_"portfolio"}}</a></li>
            <li class="muli"><a href="{{pathFor 'applications'}}">{{_"reachUs"}}</a></li>
+           {{> languageSwitcher2}}
         </div>
   </ul>
 </template>
