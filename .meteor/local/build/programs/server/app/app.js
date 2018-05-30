@@ -372,7 +372,7 @@ TAPi18n._enable({"helper_name":"_","supported_languages":null,"i18n_files_route"
 TAPi18n.languages_names["en"] = ["English","English"];
 // integrate the fallback language translations 
 translations = {};
-translations[namespace] = null;
+translations[namespace] = {"aboutIllume":"A Santa Barbara, CA based group, or purpose is to help create or refine your product vision and aim your business towards success. From research to solutions, we drive the lifecycle of your idea to be successful in the online arena with our powerful websites. One size does not fit all so we try our best to understand your current situation to build a comprehensive plan to bring additiional value to your idea.","webAndMobile":"Web & Mobile Apps, ","intoOne":"into One","secretWeapon":"Secret Weapon,","meteor":"METEOR","learnMoreHybrid":"LEARN MORE ON HYBRID APPS"};
 TAPi18n._loadLangFileObject("en", translations);
 TAPi18n._registerServerTranslator("en", namespace);
 
@@ -448,7 +448,7 @@ if(_.isUndefined(TAPi18n.translations["ko"][namespace])) {
   TAPi18n.translations["ko"][namespace] = {};
 }
 
-_.extend(TAPi18n.translations["ko"][namespace], null);
+_.extend(TAPi18n.translations["ko"][namespace], {"aboutIllume":"저희 목표는 간단합니다. 당신의 비즈니스 아이디어를 성공의 길을 걷게끔 도와드리는겁니다. 연구에서 해결방안까지, 성공하기 힘든 경쟁에서 저희 웹사이트로 성공할 수 있도록 끝까지 노력하는 것이 일룸의 미션입니다. 당신의 상황에 맞는 해결방안을 제시하면서 경쟁자들과 승부할 수 있는 비밀병기를 만들 수 있도록 저희 일룸이 도와드리겠습니다.","webAndMobile":"웹과 모바일을, ","intoOne":"하나로","secretWeapon":"비밀병기,","meteor":"미티어","learnMoreHybrid":"하이브리드 어플의 대해서 더 알아보기"});
 TAPi18n._registerServerTranslator("ko", namespace);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
