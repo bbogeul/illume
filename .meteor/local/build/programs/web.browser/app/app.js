@@ -294,45 +294,77 @@ Template["about"] = new Template("Template.about", (function() {                
     "class": "red-text text-lighten-1"                                                                                 // 33
   }, Blaze.View("lookup:_", function() {                                                                               // 34
     return Spacebars.mustache(view.lookup("_"), "intoOne");                                                            // 35
-  }))), "\n         ", HTML.Raw('<div class="divider red lighten-1" style="margin:0 auto;width:40px"></div>'), "\n         ", HTML.Raw('<p class="flow-text ">In December of 2010, Samsung SDS predicted that a native container platform that can merge the intricacies of the web and the dynamics of mobile apps will bring about a new future in software engineering. This so called "hybrid apps" will bring ideas across all platforms of all devices; breaking down  walls for ideas to permeate into the marketspace. The good news is: We offer it right here at illume Inc. Experience the best of both worlds   and spark your ideas to life.</p>'), "\n         ", HTML.Raw("<br>"), "\n             ", HTML.DIV({
-    "class": "center"                                                                                                  // 37
-  }, "\n                  ", HTML.A({                                                                                  // 38
-    href: function() {                                                                                                 // 39
-      return Spacebars.mustache(view.lookup("pathFor"), "hybrid");                                                     // 40
-    },                                                                                                                 // 41
-    "class": "button outline"                                                                                          // 42
-  }, Blaze.View("lookup:_", function() {                                                                               // 43
-    return Spacebars.mustache(view.lookup("_"), "learnMoreHybrid");                                                    // 44
-  })), "\n\n                "), "\n            "), "\n                ", HTML.DIV({                                    // 45
-    "class": "col s12 m12 l6  center"                                                                                  // 46
-  }, "\n        \n     \n        ", HTML.H5({                                                                          // 47
-    "class": "rale grey-text text-darken-3"                                                                            // 48
-  }, Blaze.View("lookup:_", function() {                                                                               // 49
-    return Spacebars.mustache(view.lookup("_"), "secretWeapon");                                                       // 50
-  }), " ", HTML.B({                                                                                                    // 51
-    "class": "red-text text-lighten-1"                                                                                 // 52
+  }))), "\n         ", HTML.Raw('<div class="divider red lighten-1" style="margin:0 auto;width:40px"></div>'), "\n         ", HTML.P({
+    "class": "flow-text "                                                                                              // 37
+  }, Blaze.View("lookup:_", function() {                                                                               // 38
+    return Spacebars.mustache(view.lookup("_"), "webDesc");                                                            // 39
+  })), "\n         ", HTML.Raw("<br>"), "\n             ", HTML.DIV({                                                  // 40
+    "class": "center"                                                                                                  // 41
+  }, "\n                  ", HTML.A({                                                                                  // 42
+    href: function() {                                                                                                 // 43
+      return Spacebars.mustache(view.lookup("pathFor"), "hybrid");                                                     // 44
+    },                                                                                                                 // 45
+    "class": "button outline"                                                                                          // 46
+  }, Blaze.View("lookup:_", function() {                                                                               // 47
+    return Spacebars.mustache(view.lookup("_"), "learnMoreHybrid");                                                    // 48
+  })), "\n\n                "), "\n            "), "\n                ", HTML.DIV({                                    // 49
+    "class": "col s12 m12 l6  center"                                                                                  // 50
+  }, "\n        \n     \n        ", HTML.H5({                                                                          // 51
+    "class": "rale grey-text text-darken-3"                                                                            // 52
   }, Blaze.View("lookup:_", function() {                                                                               // 53
-    return Spacebars.mustache(view.lookup("_"), "meteor");                                                             // 54
-  }), " JS")), "\n        ", HTML.Raw('<div class="divider red lighten-1" style="margin:0 auto;width:40px"></div>'), "\n        ", HTML.Raw('<p class="flow-text ">We cut out the silos and cookie-cutter solutions because we know they will ultimately fail. We are eager to find out what makes your business tick so we can build you a custom high-end website that works for you. <br>Meteor is a Node.JS platform that offers robust flexibility in creating beautiful and powerful applications. We are proud to be part of a growing community of engineers willing to embrace the web-revolution that is about to come. Don\'t wait.</p>'), "\n        ", HTML.Raw("<br>"), "\n       ", HTML.Raw('<div class="center">\n                  <a href="https://www.meteor.com" class="button outline">DISCOVER METEOR</a>\n\n                </div>'), "\n        "), "\n        "), "\n    "), "\n              "), HTML.Raw('\n                        <div class="row" style="margin-top:2em;">\n                        <div class="container">\n             \n                                                  <div class="col s12 m12 l6 offset-l3">\n        <div class="card-panel grey lighten-5 z-depth-1">\n          <div class="row valign-wrapper">\n     \n            <div class="col s12">\n            <div class=" ">\n              <img src="/img/joe.png" width="85px" alt="">\n            </div>\n             <p class="leadDev rale red-text">JOE LEE<br> <span class="black-text">LEAD DEVELOPER </span></p>\n                <p class="rale"><i> We believe a strong background in successful customer relation is essential in developing a powerful application fit for your business, all within the boundaries of our imagination. We strive to maintain constant communication between you and our team to ensure the optimal health of your product for your business. Thanks for choosing illume Inc. \n                </i></p>\n            </div>\n          </div>\n          </div>           \n \n      </div>\n                            </div>    \n                </div>  \n                          '), HTML.SECTION({
-    style: "margin-top:8em;padding:1.6em;margin-bottom:-1.4em;"                                                        // 56
-  }, "\n                ", HTML.DIV({                                                                                  // 57
-    "class": "row"                                                                                                     // 58
-  }, "\n        ", HTML.DIV({                                                                                          // 59
-    "class": "container"                                                                                               // 60
-  }, "\n        ", HTML.DIV({                                                                                          // 61
-    "class": "col s12 m12 l12"                                                                                         // 62
-  }, "\n            ", HTML.Raw('<h1 class="mont center homeWhat">READY, SET, GO.</h1>'), "\n            ", HTML.Raw('<div class="divider blue lighten-1"></div>'), "\n      \n             ", HTML.Raw('<h3 class="center muli grey-text text-darken-3">What are you waiting for?</h3>'), "\n             ", HTML.DIV({
+    return Spacebars.mustache(view.lookup("_"), "secretWeapon");                                                       // 54
+  }), " ", HTML.B({                                                                                                    // 55
+    "class": "red-text text-lighten-1"                                                                                 // 56
+  }, Blaze.View("lookup:_", function() {                                                                               // 57
+    return Spacebars.mustache(view.lookup("_"), "meteor");                                                             // 58
+  }), " JS")), "\n        ", HTML.Raw('<div class="divider red lighten-1" style="margin:0 auto;width:40px"></div>'), "\n        ", HTML.P({
+    "class": "flow-text "                                                                                              // 60
+  }, Blaze.View("lookup:_", function() {                                                                               // 61
+    return Spacebars.mustache(view.lookup("_"), "silos");                                                              // 62
+  })), "\n        ", HTML.Raw("<br>"), "\n       ", HTML.DIV({                                                         // 63
     "class": "center"                                                                                                  // 64
   }, "\n                  ", HTML.A({                                                                                  // 65
-    href: function() {                                                                                                 // 66
-      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 67
-    },                                                                                                                 // 68
-    "class": "button outline"                                                                                          // 69
-  }, Blaze.View("lookup:_", function() {                                                                               // 70
-    return Spacebars.mustache(view.lookup("_"), "getStarted");                                                         // 71
+    href: "https://www.meteor.com",                                                                                    // 66
+    "class": "button outline"                                                                                          // 67
+  }, Blaze.View("lookup:_", function() {                                                                               // 68
+    return Spacebars.mustache(view.lookup("_"), "discoverMeteor");                                                     // 69
+  })), "\n\n                "), "\n        "), "\n        "), "\n    "), "\n              "), "\n                        ", HTML.DIV({
+    "class": "row",                                                                                                    // 71
+    style: "margin-top:2em;"                                                                                           // 72
+  }, "\n                        ", HTML.DIV({                                                                          // 73
+    "class": "container"                                                                                               // 74
+  }, "\n             \n                                                  ", HTML.DIV({                                 // 75
+    "class": "col s12 m12 l6 offset-l3"                                                                                // 76
+  }, "\n        ", HTML.DIV({                                                                                          // 77
+    "class": "card-panel grey lighten-5 z-depth-1"                                                                     // 78
+  }, "\n          ", HTML.DIV({                                                                                        // 79
+    "class": "row valign-wrapper"                                                                                      // 80
+  }, "\n     \n            ", HTML.DIV({                                                                               // 81
+    "class": "col s12"                                                                                                 // 82
+  }, "\n            ", HTML.Raw('<div class=" ">\n              <img src="/img/joe.png" width="85px" alt="">\n            </div>'), "\n             ", HTML.P({
+    "class": "leadDev rale red-text"                                                                                   // 84
+  }, Blaze.View("lookup:_", function() {                                                                               // 85
+    return Spacebars.mustache(view.lookup("_"), "leeSang");                                                            // 86
+  }), HTML.Raw("<br>"), HTML.Raw("<br>"), " ", HTML.Raw('<span class="black-text">LEAD DEVELOPER </span>')), "\n                ", HTML.Raw('<p class="rale"><i> We believe a strong background in successful customer relation is essential in developing a powerful application fit for your business, all within the boundaries of our imagination. We strive to maintain constant communication between you and our team to ensure the optimal health of your product for your business. Thanks for choosing illume Inc. \n                </i></p>'), "\n            "), "\n          "), "\n          "), "           \n \n      "), "\n                            "), "    \n                "), "  \n                          ", HTML.SECTION({
+    style: "margin-top:8em;padding:1.6em;margin-bottom:-1.4em;"                                                        // 88
+  }, "\n                ", HTML.DIV({                                                                                  // 89
+    "class": "row"                                                                                                     // 90
+  }, "\n        ", HTML.DIV({                                                                                          // 91
+    "class": "container"                                                                                               // 92
+  }, "\n        ", HTML.DIV({                                                                                          // 93
+    "class": "col s12 m12 l12"                                                                                         // 94
+  }, "\n            ", HTML.Raw('<h1 class="mont center homeWhat">READY, SET, GO.</h1>'), "\n            ", HTML.Raw('<div class="divider blue lighten-1"></div>'), "\n      \n             ", HTML.Raw('<h3 class="center muli grey-text text-darken-3">What are you waiting for?</h3>'), "\n             ", HTML.DIV({
+    "class": "center"                                                                                                  // 96
+  }, "\n                  ", HTML.A({                                                                                  // 97
+    href: function() {                                                                                                 // 98
+      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 99
+    },                                                                                                                 // 100
+    "class": "button outline"                                                                                          // 101
+  }, Blaze.View("lookup:_", function() {                                                                               // 102
+    return Spacebars.mustache(view.lookup("_"), "getStarted");                                                         // 103
   })), "\n\n                "), "\n            "), "\n        "), "\n                              "), "\n            ") ];
-}));                                                                                                                   // 73
-                                                                                                                       // 74
+}));                                                                                                                   // 105
+                                                                                                                       // 106
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 },"about.js":function(){
@@ -426,7 +458,7 @@ Template["home"] = new Template("Template.home", (function() {                  
   var view = this;                                                                                                     // 4
   return [ HTML.DIV({                                                                                                  // 5
     "class": "code "                                                                                                   // 6
-  }, "\n    ", HTML.Raw('<div class="container wow fadeInDown">\n <div class="center" style="margin-top:3.4em;">\n     <h3 class="white-text opensan">CREATING POWERFUL<br><span class="mont">APP<span class="hide-on-small-only">LICATION</span>S FOR WEB &amp; MOBILE</span></h3>\n     <span class="opensan white-text flow-text">Made with Javascript and <i class="fa fa-heart red-text"></i></span>\n</div>\n    </div>'), "\n  ", HTML.DIV({
+  }, "\n    ", HTML.Raw('<div class="container wow fadeInDown">\n <div class="center" style="margin-top:3.4em;">\n     <h3 class="white-text opensan">CREATING POWERFUL<br><span class="mont">APP<span class="hide-on-small-only">LICATION</span>S FOR WEB &amp; MOBILE</span></h3>\n     <span class="opensan white-text flow-text">Made with Javascript and <i class="fa fa-heart red-text"></i></span>\n     <p class="mont white-text">#lightupyourbrand</p>\n</div>\n    </div>'), "\n  ", HTML.DIV({
     "class": "svg"                                                                                                     // 8
   }, "\n \n    ", HTML.Raw("<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->"), "\n    ", HTML.SVG({
     version: "1.1",                                                                                                    // 10
@@ -2852,7 +2884,7 @@ TAPi18n._enable({"helper_name":"_","supported_languages":null,"i18n_files_route"
 TAPi18n.languages_names["en"] = ["English","English"];                                                                 // 9
 // integrate the fallback language translations                                                                        // 10
 translations = {};                                                                                                     // 11
-translations[namespace] = {"aboutIllume":"A Santa Barbara, CA based group, or purpose is to help create or refine your product vision and aim your business towards success. From research to solutions, we drive the lifecycle of your idea to be successful in the online arena with our powerful websites. One size does not fit all so we try our best to understand your current situation to build a comprehensive plan to bring additiional value to your idea.","webAndMobile":"Web & Mobile Apps, ","intoOne":"into One","secretWeapon":"Secret Weapon,","meteor":"METEOR","learnMoreHybrid":"LEARN MORE ON HYBRID APPS"};
+translations[namespace] = {"aboutIllume":"A Santa Barbara, CA based group, or purpose is to help create or refine your product vision and aim your business towards success. From research to solutions, we drive the lifecycle of your idea to be successful in the online arena with our powerful websites. One size does not fit all so we try our best to understand your current situation to build a comprehensive plan to bring additiional value to your idea.","webAndMobile":"Web & Mobile Apps, ","intoOne":"into One","secretWeapon":"Secret Weapon,","meteor":"METEOR","learnMoreHybrid":"LEARN MORE ON HYBRID APPS","webDesc":"In December of 2010, Samsung SDS predicted that a native container platform that can merge the intricacies of the web and the dynamics of mobile apps will bring about a new future in software engineering. This so called 'hybrid apps' will bring ideas across all platforms of all devices; breaking down  walls for ideas to permeate into the marketspace. The good news is: We offer it right here at illume Inc. Experience the best of both worlds   and spark your ideas to life.","silos":"We cut out the silos and cookie-cutter solutions because we know they will ultimately fail. We are eager to find out what makes your business tick so we can build you a custom high-end website that works for you. Meteor is a Node.JS platform that offers robust flexibility in creating beautiful and powerful applications. We are proud to be part of a growing community of engineers willing to embrace the web-revolution that is about to come. Don't wait.","discoverMeteor":"DISCOVER METEOR","leeSang":"JOE LEE"};
 TAPi18n._loadLangFileObject("en", translations);                                                                       // 13
                                                                                                                        // 14
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

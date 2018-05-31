@@ -978,11 +978,11 @@
       "where": "client",
       "type": "js",
       "cacheable": true,
-      "url": "/app/app.js?hash=2706ca63983d4679209657577853a8336a7cbd75",
+      "url": "/app/app.js?hash=bbce033e5ce3ca1cf74e5abfd0770ab36acfb626",
       "sourceMap": "app/app.js.map",
-      "sourceMapUrl": "/app/2706ca63983d4679209657577853a8336a7cbd75.map",
-      "size": 443686,
-      "hash": "2706ca63983d4679209657577853a8336a7cbd75"
+      "sourceMapUrl": "/app/bbce033e5ce3ca1cf74e5abfd0770ab36acfb626.map",
+      "size": 446879,
+      "hash": "bbce033e5ce3ca1cf74e5abfd0770ab36acfb626"
     },
     {
       "path": "packages/mdg_validation-error.js",
