@@ -45,12 +45,12 @@ Router.route 'home',
   template: 'home'
    
   path: '/'
-  title: 'Illume Inc. Web Design and Development'
+  title: 'Joseph Lee | Designer & Developer using Meteor.JS'
   meta:
     url:
       property: 'og:url'
       itemprop: 'url'
-      content: 'http://www.illumeweb.com/'
+      content: 'http://www.j-lee.com/'
 
 Router.route 'about',
   template: 'about'

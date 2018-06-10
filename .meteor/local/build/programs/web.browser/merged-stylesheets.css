@@ -14850,6 +14850,10 @@ body {
   text-transform: uppercase;
 }
 
+.bold {
+  font-weight: 700;
+}
+
 .brand-logos a {
   padding-left: 20px;
   padding-right: 20px;
@@ -14857,7 +14861,7 @@ body {
 
 .code {
   width: 100%;
-  background: #2f363b;
+  background: #ffffff;
   overflow: hidden;
   position: relative;
   height: 100vh;

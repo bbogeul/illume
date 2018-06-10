@@ -59,12 +59,12 @@ Router.configure({                                                              
 Router.route('home', {                                                                               // 44
   template: 'home',                                                                                  //
   path: '/',                                                                                         //
-  title: 'Illume Inc. Web Design and Development',                                                   //
+  title: 'Joseph Lee | Designer & Developer using Meteor.JS',                                        //
   meta: {                                                                                            //
     url: {                                                                                           //
       property: 'og:url',                                                                            //
       itemprop: 'url',                                                                               //
-      content: 'http://www.illumeweb.com/'                                                           //
+      content: 'http://www.j-lee.com/'                                                               //
     }                                                                                                //
   }                                                                                                  //
 });                                                                                                  //
@@ -372,7 +372,7 @@ TAPi18n._enable({"helper_name":"_","supported_languages":null,"i18n_files_route"
 TAPi18n.languages_names["en"] = ["English","English"];
 // integrate the fallback language translations 
 translations = {};
-translations[namespace] = {"aboutIllume":"A Santa Barbara, CA based group, or purpose is to help create or refine your product vision and aim your business towards success. From research to solutions, we drive the lifecycle of your idea to be successful in the online arena with our powerful websites. One size does not fit all so we try our best to understand your current situation to build a comprehensive plan to bring additiional value to your idea.","webAndMobile":"Web & Mobile Apps, ","intoOne":"into One","secretWeapon":"Secret Weapon,","meteor":"METEOR","learnMoreHybrid":"LEARN MORE ON HYBRID APPS","webDesc":"In December of 2010, Samsung SDS predicted that a native container platform that can merge the intricacies of the web and the dynamics of mobile apps will bring about a new future in software engineering. This so called 'hybrid apps' will bring ideas across all platforms of all devices; breaking down  walls for ideas to permeate into the marketspace. The good news is: We offer it right here at illume Inc. Experience the best of both worlds   and spark your ideas to life.","silos":"We cut out the silos and cookie-cutter solutions because we know they will ultimately fail. We are eager to find out what makes your business tick so we can build you a custom high-end website that works for you. Meteor is a Node.JS platform that offers robust flexibility in creating beautiful and powerful applications. We are proud to be part of a growing community of engineers willing to embrace the web-revolution that is about to come. Don't wait.","discoverMeteor":"DISCOVER METEOR","leeSang":"JOE LEE"};
+translations[namespace] = {"aboutIllume":"A Santa Barbara, CA based group, or purpose is to help create or refine your product vision and aim your business towards success. From research to solutions, we drive the lifecycle of your idea to be successful in the online arena with our powerful websites. One size does not fit all so we try our best to understand your current situation to build a comprehensive plan to bring additiional value to your idea.","webAndMobile":"Web & Mobile Apps, ","intoOne":"into One","secretWeapon":"Secret Weapon,","meteor":"METEOR","learnMoreHybrid":"LEARN MORE ON HYBRID APPS","webDesc":"In December of 2010, Samsung SDS predicted that a native container platform that can merge the intricacies of the web and the dynamics of mobile apps will bring about a new future in software engineering. This so called 'hybrid apps' will bring ideas across all platforms of all devices; breaking down  walls for ideas to permeate into the marketspace. The good news is: We offer it right here at illume Inc. Experience the best of both worlds   and spark your ideas to life.","silos":"We cut out the silos and cookie-cutter solutions because we know they will ultimately fail. We are eager to find out what makes your business tick so we can build you a custom high-end website that works for you. Meteor is a Node.JS platform that offers robust flexibility in creating beautiful and powerful applications. We are proud to be part of a growing community of engineers willing to embrace the web-revolution that is about to come. Don't wait.","discoverMeteor":"DISCOVER METEOR","leeSang":"JOE LEE","leadDeveloper":"I believe a strong background in successful customer relation is essential in developing a powerful application fit for your business, all within the boundaries of our imagination. I strive to maintain constant communication between you and our team to ensure the optimal health of your product for your business. Thanks for choosing to work with me.","aLittleAboutMeteor":"A little about Meteor.JS","readySetGo":"READY, SET, GO."};
 TAPi18n._loadLangFileObject("en", translations);
 TAPi18n._registerServerTranslator("en", namespace);
 
@@ -395,7 +395,7 @@ if (package_name != "project") {
 }
 // integrate the fallback language translations 
 translations = {};
-translations[namespace] = {"about":"ABOUT US","howWeWork":"HOW WE WORK","ourServices":"OUR SERVICES","portfolio":"PORTFOLIO","reachUs":"REACH US"};
+translations[namespace] = {"about":"About me","howWeWork":"How I work","ourServices":"Services","portfolio":"My work","reachUs":"Reach me"};
 TAPi18n._loadLangFileObject("en", translations);
 TAPi18n._registerServerTranslator("en", namespace);
 
@@ -418,7 +418,30 @@ if (package_name != "project") {
 }
 // integrate the fallback language translations 
 translations = {};
-translations[namespace] = {"whatWeDo":"WHAT WE DO","mission1":"is a full business idea & web product development workshop located in the heart of Santa Barbara, California. Weaving together branding, visual design, lean user interface experience, and information architecture, illume Inc. takes you through every phase of validating your idea and building an","koreaAdd":"","mission2":"You’ll finish with a data-driven product roadmap that outlines your path to successful launch all before a single line of code is written. Once that is done, we get to work.","innovative":"Innovative","bridging":"Bridging Mobil다 & Web","tailored":"Tailored For You","learnMore":"LEARN MORE ABOUT ILLUME INC.","viewMore":"VIEW MORE","someOfOurWork":"SOME OF OUR WORK","allOfOurWebsites":"All of our websites and hybrid applications are based on Meteor.","fastSleek":"They are all fast, sleek, and ready to make a change in their respective industries.","madeWith":"Made with ","madeWithK":"","insteadOf":"Instead of just handing over a set of deliverables, we work with you to achieve the results you want. We’ll test your idea in the marketplace, gather real data, and discover the key benefits of your concept, then we’ll create stunning visuals and a comprehensive backlog to serve as an investor-ready MVP. Setting this foundation means you’re not just walking away with a roadmap to a product","walkAway":"you’re walking away with the peace of mind that your product is what people want.","areYouGame":"ARE YOU GAME?","loveToHear":"We would love to hear more.","getStarted":"GET STARTED WITH ILLUME INC."};
+translations[namespace] = {"whatWeDo":"Hey, I'm Joe. Pleasure to meet you.","mission1":"Since beginning my journey as a freelance designer nearly 5 years ago, I've done remote work for businesses, consulted for startups, non-profit orgs, and collaborated with talented people to create digital products for both business and personal use. I'm quietly confident, naturally curious, and perpetually improving my chops.","koreaAdd":"","mission2":"You’ll finish with a data-driven product roadmap that outlines your path to successful launch all before a single line of code is written. Once that is done, we get to work.","innovative":"Innovative","bridging":"Bridging Mobile & Web","tailored":"Tailored For You","learnMore":"More about me","viewMore":"Want to see more?","roadTo":"Let's make you a","someOfOurWork":"SOME OF MY RECENT WORK","allOfOurWebsites":"All of the websites and hybrid applications are based on Meteor.","fastSleek":"They are all fast, sleek, and ready to make a change in their respective industries.","madeWith":"Made with ","madeWithK":"","weBuild":"Building with reactivity in mind","reactiveJavascript":"and utilizing JavaScript","fullest":"to its fullest","embrace":"Embracing the 21st century,","dynamicReactive":"dynamic reactivity is now ","21stC":"in the palm of your hands.","createProducts":"Creating the products with ","youInMind":"with YOU in mind ","createSuccess":"to create success.","insteadOf":"Instead of just handing over a set of deliverables, I work with you to achieve the results you want. We’ll test your ideas together in the marketplace, gather real data, and discover the key benefits of your concept, then create stunning visuals and a comprehensive backlog to serve as an investor-ready MVP. Setting this foundation means you’re not just walking away with a roadmap to a product","walkAway":"you’re walking away with the peace of mind that your product is what people want.","areYouGame":"ARE YOU GAME?","coffee":"First coffee is on me.","loveToHear":"Would love to hear more?","alwaysOpen":"I’m always open to discussing product design work or partnership opportunities.","getStarted":"Start a conversation"};
+TAPi18n._loadLangFileObject("en", translations);
+TAPi18n._registerServerTranslator("en", namespace);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+},"service.en.i18n.json":function(){
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                   //
+// both/i18n/en/service.en.i18n.json                                                                 //
+//                                                                                                   //
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                                                                     //
+var _ = Package.underscore._,
+    package_name = "project",
+    namespace = "project";
+
+if (package_name != "project") {
+    namespace = TAPi18n.packages[package_name].namespace;
+}
+// integrate the fallback language translations 
+translations = {};
+translations[namespace] = {"reactivity":"reactivity","collaborate":"Let's collaborate to give you","unparalleled":"and unparalleled performance.","meteorFirst":"Meteor gives us developers a radically simpler way to build realtime web apps, entirely in JavaScript from one code base. We are able to leverage Javascript like never before and provide you with blazing reactivity in your web application's core. ","meteorSecond":"  Because the same code runs from the client to the cloud, from packages to database APIs, we are not restricted to our weakest link but can be judged based on our strongest one."};
 TAPi18n._loadLangFileObject("en", translations);
 TAPi18n._registerServerTranslator("en", namespace);
 
@@ -448,7 +471,7 @@ if(_.isUndefined(TAPi18n.translations["ko"][namespace])) {
   TAPi18n.translations["ko"][namespace] = {};
 }
 
-_.extend(TAPi18n.translations["ko"][namespace], {"aboutIllume":"저희 목표는 간단합니다. 당신의 비즈니스 아이디어를 성공의 길을 걷게끔 도와드리는겁니다. 연구에서 해결방안까지, 성공하기 힘든 경쟁에서 저희 웹사이트로 성공할 수 있도록 끝까지 노력하는 것이 일룸의 미션입니다. 당신의 상황에 맞는 해결방안을 제시하면서 경쟁자들과 승부할 수 있는 비밀병기를 만들 수 있도록 저희 일룸이 도와드리겠습니다.","webAndMobile":"웹과 모바일을, ","intoOne":"하나로","secretWeapon":"비밀병기,","meteor":"미티어","learnMoreHybrid":"하이브리드 어플의 대해서 더 알아보기","webDesc":"삼성 SDS는 2010년 12월, 웹의 다양성과 모바일 앱의 역학을 융합 할 수있는 네이티브 컨테이너 플랫폼이 소프트웨어 엔지니어링의 새로운 미래를 가져올 것이라고 예측했습니다. 이른바 '하이브리드 앱'은 모든 기기의 모든 플랫폼에서 아이디어를 가져옵니다. 시장을 침투하기위한 벽을 무너 뜨리며 새로운 혁신을 가져올 수 있는 기회라고 기대했습니다. 희소식은 illume Inc.에서 바로 그 하이브리드 앱을 제공하는 것입니다.이 두 가지 장점을 모두 경험하고 아이디어를 통해 활력이 있는 어플을 만들어 봅시다.","silos":"우리는 궁극적으로 실패 할 것이라는 것을 알고 있기 때문에 필요하지 않은 모든 부분들을 잘라 냈습니다. 우리는 귀하의 비즈니스를 진실하게 만드는 요소를 찾으려고 노력하므로 귀하에게 적합한 맞춤형 하이엔드 웹 사이트를 구축 할 수 있도록 최선을 다할 것입니다. Meteor는 아름답고 강력한 응용 프로그램을 만드는 데있어 강력한 유연성을 제공하는 Node.JS 플랫폼입니다. 우리는 앞으로 웹-혁명을 기꺼이 받아들이는 엔지니어 공동체의 일원임을 자랑스럽게 기여하고 있습니다. 기다리지 말고 미티어를 만나보세요.","discoverMeteor":"미티어 만나보세요","leeSang":"이상준"});
+_.extend(TAPi18n.translations["ko"][namespace], {"aboutIllume":"저희 목표는 간단합니다. 당신의 비즈니스 아이디어를 성공의 길을 걷게끔 도와드리는겁니다. 연구에서 해결방안까지, 성공하기 힘든 경쟁에서 저희 웹사이트로 성공할 수 있도록 끝까지 노력하는 것이 일룸의 미션입니다. 당신의 상황에 맞는 해결방안을 제시하면서 경쟁자들과 승부할 수 있는 비밀병기를 만들 수 있도록 저희 일룸이 도와드리겠습니다.","webAndMobile":"웹과 모바일을, ","intoOne":"하나로","secretWeapon":"비밀병기,","meteor":"미티어","learnMoreHybrid":"하이브리드 어플의 대해서 더 알아보기","webDesc":"삼성 SDS는 2010년 12월, 웹의 다양성과 모바일 앱의 역학을 융합 할 수있는 네이티브 컨테이너 플랫폼이 소프트웨어 엔지니어링의 새로운 미래를 가져올 것이라고 예측했습니다. 이른바 '하이브리드 앱'은 모든 기기의 모든 플랫폼에서 아이디어를 가져옵니다. 시장을 침투하기위한 벽을 무너 뜨리며 새로운 혁신을 가져올 수 있는 기회라고 기대했습니다. 희소식은 illume Inc.에서 바로 그 하이브리드 앱을 제공하는 것입니다.이 두 가지 장점을 모두 경험하고 아이디어를 통해 활력이 있는 어플을 만들어 봅시다.","silos":"우리는 궁극적으로 실패 할 것이라는 것을 알고 있기 때문에 필요하지 않은 모든 부분들을 잘라 냈습니다. 우리는 귀하의 비즈니스를 진실하게 만드는 요소를 찾으려고 노력하므로 귀하에게 적합한 맞춤형 하이엔드 웹 사이트를 구축 할 수 있도록 최선을 다할 것입니다. Meteor는 아름답고 강력한 응용 프로그램을 만드는 데있어 강력한 유연성을 제공하는 Node.JS 플랫폼입니다. 우리는 앞으로 웹-혁명을 기꺼이 받아들이는 엔지니어 공동체의 일원임을 자랑스럽게 기여하고 있습니다. 기다리지 말고 미티어를 만나보세요.","discoverMeteor":"미티어 만나보세요","leeSang":"이상준","leadDeveloper":"성공적인 상거래에 대한 강한 배경은 귀하의 비즈니스에 적합한 강력한 애플리케이션을 개발하는 데 필수적이며 모든 것이 상상의 한계에 있다고 생각합니다. 귀하의 비즈니스에 최적의 제품 상태를 보장하기 위해 귀하와 당사 팀 간의 지속적인 커뮤니케이션을 유지하기 위해 노력합니다. 최선을 다하겠습니다.","aLittleAboutMeteor":"미티어의 대해서 잠깐!","readySetGo":"준비~, 시작!"});
 TAPi18n._registerServerTranslator("ko", namespace);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -477,7 +500,7 @@ if(_.isUndefined(TAPi18n.translations["ko"][namespace])) {
   TAPi18n.translations["ko"][namespace] = {};
 }
 
-_.extend(TAPi18n.translations["ko"][namespace], {"about":"일룸의 대해서","howWeWork":"성공비결","ourServices":"일룸 서비스","portfolio":"PORTFOLIO","reachUs":"연락"});
+_.extend(TAPi18n.translations["ko"][namespace], {"about":"환영합니다","howWeWork":"성공비결","ourServices":"서비스","portfolio":"Portfolio","reachUs":"연락처"});
 TAPi18n._registerServerTranslator("ko", namespace);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -506,7 +529,36 @@ if(_.isUndefined(TAPi18n.translations["ko"][namespace])) {
   TAPi18n.translations["ko"][namespace] = {};
 }
 
-_.extend(TAPi18n.translations["ko"][namespace], {"whatWeDo":"일룸의 미션","mission1":"미국 캘로포니아주, 산타바바라에서 시작된 Full Idea Business 및 웹 개발 그룹입니다. 브랜딩, 비쥬얼 디자인, 간단하면서도 강력한 유저 인터페이스를 활용하며 당신의 비즈니스 아이더를 진정한 ","koreaAdd":"로 개발하는 것이 일룸의 미션입니다","mission2":"비즈니스 성공을 위한 Roadmap 형성하고 모든 준비를 마친 다음 코드로 당신의 비즈니스 아이더를 활용적인 어플로 만들겠습니다.","innovative":"혁신적인","bridging":"모바일과 웹의 결합","tailored":"당신만을 위한","learnMore":"일룸의 대해서 더 알아보기","viewMore":"더 보기","someOfOurWork":"일룸 작품들 만나보세요","allOfOurWebsites":"일룸 작품들은 모두 미티어로 개발 되어 있습니다.","fastSleek":"빠르면서 가늘고, 속해 있는 분야에 큰 변화를 일으킬 준비가 되어 있습니다.","madeWith":"","madeWithK":"과 정성으로 만듭니다","insteadOf":"단순히 사이트 제공하고 끝나는게 아니고, 당신이 원하는 결과를 성취하기 전까지는 포기하지 않습니다. 당신의 아이디어를 실험해 보고, 정보를 수집하고, 그 컨셉의 하이라이트들을 살리면서 아름다운 비주얼과 강력한 백엔드를 갖춘 상품을 개발하여 투자 준비의 MVP를 만들어 보겠습니다.","walkAway":"결과로는 모든 사람들이 원하는 서비스를 제공할 수 있는 마인드로 비즈니스를 시작할 수 있을 것입니다.","areYouGame":"준비됐습니까?","loveToHear":"같이 이야기를 나눠봅시다","getStarted":"지금 바로 시작"});
+_.extend(TAPi18n.translations["ko"][namespace], {"whatWeDo":"반갑습니다","mission1":"거의 5 년 전에 프리랜서 디자이너로서의 여정을 시작한 이래 저는 사업을위한 원격 업무를 수행하고 신생 기업, 비영리 조직과 협의했으며 재능있는 사람들과 협력하여 비즈니스 및 개인용 디지털 제품을 만들었습니다. 나는 조용히 자신감이 있으며 자연스럽게 호기심이 많으며 끊임없이 내 실력을 개선하고 있습니다. ","koreaAdd":"를 개발해봅시다.","mission2":"비즈니스 성공을 위한 Roadmap 형성하고 모든 준비를 마친 다음 코드로 당신의 비즈니스 아이더를 활용적인 어플로 만들겠습니다.","innovative":"혁신적인","bridging":"모바일과 웹의 결합","tailored":"당신만을 위한","learnMore":"저의 대해서 더 알고 싶으시죠?","viewMore":"더 보기","roadTo":"","someOfOurWork":"일하고 있는 작품들","allOfOurWebsites":"모든 사이트들은 미티어로 개발 되어 가고 있습니다.","fastSleek":"빠르면서 가늘고, 속해 있는 분야에 큰 변화를 일으킬 준비가 되어 있습니다.","madeWith":"","madeWithK":"과 정성으로 만듭니다","weBuild":"실시간 반응성을 염두에 두면서","reactiveJavascript":"최대의 작품을","fullest":"Javascript로","embrace":"21 세기를 맞이하여,","dynamicReactive":"이제 당신도","21stC":"실시간 반응성의 힘을 경험할 수 있습니다.","createProducts":"성공비결:","youInMind":"당신이 성곡하기 위해 ","createSuccess":"비즈니스에 맞는 계획 및 사이트를 만들겠습니다.","insteadOf":"단순히 사이트 제공하고 끝나는게 아니고, 당신이 원하는 결과를 성취하기 전까지는 포기하지 않습니다. 당신의 아이디어를 실험해 보고, 정보를 수집하고, 그 컨셉의 하이라이트들을 살리면서 아름다운 비주얼과 강력한 백엔드를 갖춘 상품을 개발하여 투자 준비의 MVP를 만들어 보겠습니다.","walkAway":"결과로는 모든 사람들이 원하는 서비스를 제공할 수 있는 마인드로 비즈니스를 시작할 수 있을 것입니다.","areYouGame":"준비됐습니까?","loveToHear":"같이 이야기를 나눠봅시다","getStarted":"시작해볼까요?","alwaysOpen":"저는 항상 제품 디자인 작업이나 파트너십 기회에 대해 이야기를 나누고 싶어합니다.","coffee":"커피는 제가 살게요 :)"});
+TAPi18n._registerServerTranslator("ko", namespace);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+},"service.ko.i18n.json":function(){
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                   //
+// both/i18n/ko/service.ko.i18n.json                                                                 //
+//                                                                                                   //
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                                                                     //
+var _ = Package.underscore._,
+    package_name = "project",
+    namespace = "project";
+
+if (package_name != "project") {
+    namespace = TAPi18n.packages[package_name].namespace;
+}
+TAPi18n.languages_names["ko"] = ["Korean","한국어"];
+if(_.isUndefined(TAPi18n.translations["ko"])) {
+  TAPi18n.translations["ko"] = {};
+}
+
+if(_.isUndefined(TAPi18n.translations["ko"][namespace])) {
+  TAPi18n.translations["ko"][namespace] = {};
+}
+
+_.extend(TAPi18n.translations["ko"][namespace], {"reactivity":"실시간 반응성","collaborate":"강력하고 뛰어난","unparalleled":"을 갖춘 사이트를 만들어봅시다.","meteorFirst":"Meteor를 사용하면 개발자가 실시간 웹 앱을 구축 할 수있는 근본적으로 간단한 방법을 제공 할 수 있습니다. 전적으로 하나의 코드베이스에서 JavaScript로 작성되었습니다. 우리는 예전과 다른 방향으로 Javascript를 활용할 수 있으며 웹 애플리케이션의 핵심 부분에서 놀라운 반응을 제공합니다.","meteorSecond":"동일한 코드가 클라이언트에서 클라우드, 패키지에서 데이터베이스 API로 실행되기 때문에 우리는 가장 약한 링크에 국한되지 않고 가장 강력한 링크 기준으로 작품을 판단 할 수 있을 것입니다."});
 TAPi18n._registerServerTranslator("ko", namespace);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -519,7 +571,22 @@ TAPi18n._registerServerTranslator("ko", namespace);
 //                                                                                                   //
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
                                                                                                      //
+getUserLanguage = function getUserLanguage() {                                                       // 1
+  return "en";                                                                                       // 2
+};                                                                                                   // 3
                                                                                                      //
+if (Meteor.isClient) {                                                                               // 5
+  Meteor.startup(function () {                                                                       // 6
+    Session.set("showLoadingIndicator", true);                                                       // 7
+                                                                                                     //
+    TAPi18n.setLanguage(getUserLanguage()).done(function () {                                        // 9
+      Session.set("showLoadingIndicator", false);                                                    // 11
+    }).fail(function (error_message) {                                                               // 12
+      // Handle the situation                                                                        //
+      console.log(error_message);                                                                    // 15
+    });                                                                                              // 16
+  });                                                                                                // 17
+}                                                                                                    // 18
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 }},"backend":{"backend.js":function(){
@@ -906,9 +973,11 @@ require("./lib/route.coffee.js");
 require("./both/i18n/en/about.en.i18n.json");
 require("./both/i18n/en/header.en.i18n.json");
 require("./both/i18n/en/home.en.i18n.json");
+require("./both/i18n/en/service.en.i18n.json");
 require("./both/i18n/ko/about.ko.i18n.json");
 require("./both/i18n/ko/header.ko.i18n.json");
 require("./both/i18n/ko/home.ko.i18n.json");
+require("./both/i18n/ko/service.ko.i18n.json");
 require("./backend/backend.js");
 require("./backend/login.js");
 require("./both/i18n.js");

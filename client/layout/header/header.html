@@ -8,27 +8,28 @@
      
     <div class="nav-wrapper">
         <div class="">
-        <div class="brand-logo hide-on-small-only">
-            <a href="/" class=" aspergit"><b>illume</b></a>
+        <div class="brand-logo center hide-on-small-only">
+            <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35" alt=""></a>
             </div>
               <div class="brand-logos brand-logo show-on-small-only hide-on-med-and-up">
-            <a href="/" class=" aspergit"><b>illume</b></a>
+            <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35"  alt=""></a>
             </div>
             <a href="#" data-activates="slide-outs" class="white-text button-collapse left" style="margin-left:5px;"><i class="material-icons">reorder</i></a>
            
          
             
       
-      <ul id="nav-mobiles" class="hide-on-med-and-down">
-        <li class="muli"><a href="{{pathFor 'about'}}">{{_"about"}}</a></li>
-        <li class="muli"><a href="{{pathFor 'approach'}}">{{_"howWeWork"}}</a></li>
-        <li class="muli"><a href="{{pathFor 'service'}}">{{_"ourServices"}}</a></li>
-             <li class="muli"><a href="{{pathFor 'portfolio'}}">{{_"portfolio"}}</a></li>
-           <li class="muli"><a href="{{pathFor 'applications'}}">{{_"reachUs"}}</a></li>
- {{>languageSwitcher}}
+      <ul   class="hide-on-med-and-down left">
+        <li class="nanum"><a href="{{pathFor 'about'}}">{{_"about"}}</a></li>
+        <li class="nanum"><a href="{{pathFor 'approach'}}">{{_"howWeWork"}}</a></li>
+        <li class="nanum"><a href="{{pathFor 'service'}}">{{_"ourServices"}}</a></li>
+             <li class="nanum"><a href="{{pathFor 'portfolio'}}">{{_"portfolio"}}</a></li>
+           <li class="nanum"><a href="{{pathFor 'applications'}}">{{_"reachUs"}}</a></li>
+ 
 
       </ul>
         <ul class="right hide-on-med-and-down">
+           {{>languageSwitcher}}
             <li><a class="white-text center" href="https://urlgeni.us/facebook/4U1B"><i class="fa fa-facebook  fa-2x"></i></a></li>
                          <li class="divider"></li>
     <li><a class="center white-text" href="https://instagram.com/illumeinc/"><i class="fa fa-instagram  fa-2x"></i></a></li>
@@ -46,11 +47,11 @@
             <br>
             <img src="/img/badge.png"  width="150"><br>
             <span class="bold">#lightupyourbrand</span>
-     <li class="muli" style="margin-top:1em;"><a href="{{pathFor 'about'}}">{{_"about"}}</a></li>
-     <li class="muli"><a href="{{pathFor 'approach'}}">{{_"howWeWork"}}</a></li>
-        <li class="muli"><a href="{{pathFor 'service'}}">{{_"ourServices"}}</a></li>
-             <li class="muli"><a href="{{pathFor 'portfolio'}}">{{_"portfolio"}}</a></li>
-           <li class="muli"><a href="{{pathFor 'applications'}}">{{_"reachUs"}}</a></li>
+     <li class="nanum" style="margin-top:1em;"><a href="{{pathFor 'about'}}">{{_"about"}}</a></li>
+     <li class="nanum"><a href="{{pathFor 'approach'}}">{{_"howWeWork"}}</a></li>
+        <li class="nanum"><a href="{{pathFor 'service'}}">{{_"ourServices"}}</a></li>
+             <li class="nanum"><a href="{{pathFor 'portfolio'}}">{{_"portfolio"}}</a></li>
+           <li class="nanum"><a href="{{pathFor 'applications'}}">{{_"reachUs"}}</a></li>
            {{> languageSwitcher2}}
         </div>
   </ul>

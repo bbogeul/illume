@@ -978,11 +978,11 @@
       "where": "client",
       "type": "js",
       "cacheable": true,
-      "url": "/app/app.js?hash=bbce033e5ce3ca1cf74e5abfd0770ab36acfb626",
+      "url": "/app/app.js?hash=71bcfbf0c737a731e652d42cb2518999100212a3",
       "sourceMap": "app/app.js.map",
-      "sourceMapUrl": "/app/bbce033e5ce3ca1cf74e5abfd0770ab36acfb626.map",
-      "size": 446879,
-      "hash": "bbce033e5ce3ca1cf74e5abfd0770ab36acfb626"
+      "sourceMapUrl": "/app/71bcfbf0c737a731e652d42cb2518999100212a3.map",
+      "size": 460139,
+      "hash": "71bcfbf0c737a731e652d42cb2518999100212a3"
     },
     {
       "path": "packages/mdg_validation-error.js",
@@ -1011,11 +1011,11 @@
       "where": "client",
       "type": "css",
       "cacheable": true,
-      "url": "/merged-stylesheets.css?hash=494ab344b5922d411c958d779e9bd63d87849c38",
+      "url": "/merged-stylesheets.css?hash=55d2d675a93a97e66e36bf1544c5adf6562a14e1",
       "sourceMap": "merged-stylesheets.css.map",
-      "sourceMapUrl": "/494ab344b5922d411c958d779e9bd63d87849c38.map",
-      "size": 274121,
-      "hash": "494ab344b5922d411c958d779e9bd63d87849c38"
+      "sourceMapUrl": "/55d2d675a93a97e66e36bf1544c5adf6562a14e1.map",
+      "size": 274152,
+      "hash": "55d2d675a93a97e66e36bf1544c5adf6562a14e1"
     },
     {
       "path": "packages/materialize_materialize/dist/fonts/roboto/Roboto-Bold.ttf",
@@ -1639,6 +1639,15 @@
       "hash": "9fe0fcdac772ed2b686be55a01a69375ab56bc74"
     },
     {
+      "path": "app/img/drawnPic.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/drawnPic.jpg",
+      "size": 22516,
+      "hash": "2016c1e28a21a639c73a58cd5d9188f6259ca7f0"
+    },
+    {
       "path": "app/img/epic.png",
       "where": "client",
       "type": "asset",
@@ -1729,13 +1738,31 @@
       "hash": "febad3bbf04d5188e3b8c65262904b27a01c32e7"
     },
     {
-      "path": "app/img/logo.png",
+      "path": "app/img/logo1 - Copy.png",
       "where": "client",
       "type": "asset",
       "cacheable": false,
-      "url": "/img/logo.png",
-      "size": 15739,
-      "hash": "ab5867a26b947eec4c447069b17e9b5ecc6e75c4"
+      "url": "/img/logo1 - Copy.png",
+      "size": 14997,
+      "hash": "6ff25d5f512d285f349f71d791674337e28c7d29"
+    },
+    {
+      "path": "app/img/logo1.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/logo1.png",
+      "size": 14997,
+      "hash": "6ff25d5f512d285f349f71d791674337e28c7d29"
+    },
+    {
+      "path": "app/img/logo2 copy.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/logo2 copy.png",
+      "size": 14697,
+      "hash": "1973ccac68a1cb854e1ecf91f1202b300098f60c"
     },
     {
       "path": "app/img/logo2.png",
@@ -1790,6 +1817,15 @@
       "url": "/img/webd.jpg",
       "size": 176469,
       "hash": "f70562218786e20fae2de6e9512312c2a88ec720"
+    },
+    {
+      "path": "app/img/wlogo.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/wlogo.png",
+      "size": 13173,
+      "hash": "cd42aa9356694979600dc7bc3ef4915ba5c32d39"
     },
     {
       "path": "app/work/bpbanner.png",

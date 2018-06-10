@@ -2,11 +2,12 @@
  
 
 <div class="code ">
-    <div class="container wow fadeInDown">
- <div class="center" style="margin-top:3.4em;" >
-     <h3 class="white-text opensan">CREATING POWERFUL<br><span class="mont">APP<span class="hide-on-small-only">LICATION</span>S FOR WEB & MOBILE</span></h3>
-     <span class="opensan white-text flow-text">Made with Javascript and <i class="fa fa-heart red-text"></i></span>
-     <p class="mont white-text">#lightupyourbrand</p>
+    <div class="container ">
+ <div class="center" style="margin-top:4.4em;" >
+ 	<img class="wow bounceIn" src="img/drawnPic.jpg" alt="" width="120px">
+    <h3 class="opensan bold wow fadeInDown">Developer, Designer, and Coffee Addict</h3>
+    <p class="nanum flow-text wow fadeInUp">I <b class="bold">create powerful applications</b> and I <i class="fa fa-heart red-text"></i> what I do.</p>
+    
 </div>
     </div>
   <div class="svg">
@@ -20,7 +21,7 @@
 	.st3{opacity:0.5;fill:#9E9E9E;}
 	.st4{fill:#5C5E60;}
 	.st5{fill:#404244;}
-	.st6{fill:#EBECED;}
+	.st6{fill:#b8babc;}
 	.st7{fill:#FFFFFF;}
 	.st8{fill:#3C2415;}
 	.st9{fill:#432818;}
@@ -28,7 +29,7 @@
 	.st11{fill:#FCFCFC;}
 	.st12{opacity:0.5;fill:#FCFCFC;}
 	.st13{fill:none;stroke:#EBECED;stroke-width:5;stroke-miterlimit:10;}
-	.st14{fill:#FEFEFE;}
+	.st14{fill:#b5b5b5;}
 	.st15{fill:#EF7665;}
 	.st16{fill:#A4D9E4;}
 	.st17{fill:#B8C7CD;}
@@ -466,35 +467,39 @@
     <section>
     <div class="row">
         <div class="container">
+      
         <div class="col s12 m12 l10 offset-l1">
             <h4 class="  center  nanum">{{_"whatWeDo"}}</h4>
             <div class="divider red  lighten-1" style="margin:0 auto;width:120px"></div>
-            <p class="flow-text center"><b>illume Inc.</b> {{_"mission1"}} <b>MVP (Most Valued Product){{_"koreaAdd"}}</b>. {{_"mission2"}} </p>            
+            <p class="flow-text center">{{_"mission1"}} </p>            
             </div>
         </div>
         </div>
     </section>
+    <div class="center">
+       <h4 class="nanum">  {{_"roadTo"}} <b>MVP (Most Valued Product){{_"koreaAdd"}}</b> How?</h4>
+    </div>
     <section class="iconset">
     <div class="row">
         <div class="col s12 m12 l4">
         <div class="center">
             <img src="/img/commandline.svg" height="120">
             <h5 class="grey-text text-darken-2 rale"><b>{{_"innovative"}} Native Container</b></h5>
-            <p>We build with reactivity in mind <bR> and utilize JavaScript <Br> to its fullest</p>
+            <p>{{_"weBuild"}} <bR> {{_"reactiveJavascript"}} <Br> {{_"fullest"}}</p>
             </div>
         </div>
          <div class="col s12 m12 l4">
         <div class="center">
               <img src="/img/reactive.svg" height="120">
              <h5 class="grey-text text-darken-2 rale"><b>{{_"bridging"}}</b></h5>
-             <p>Embracing the 21st century,<bR>dynamic reactivity is now <Br>in the palm of your hands.</p>
+             <p>{{_"embrace"}}<bR>{{_"dynamicReactive"}} <Br>{{_"21stC"}}</p>
              </div>
         </div>
          <div class="col s12 m12 l4">
         <div class="center">
               <img src="/img/dragndrop.svg" height="120">
              <h5 class="grey-text text-darken-2 rale"><b>{{_"tailored"}}</b></h5>
-              <p>We create our products with <bR> with YOU in mind <Br> to create success</p>
+              <p>{{_"createProducts"}}<bR> {{_"youInMind"}} <Br> {{_"createSuccess"}}</p>
              </div>
         </div>
         </div>
@@ -604,11 +609,15 @@
                 <div class="row">
         <div class="container">
         <div class="col s12 m12 l12">
-            <h1 class="mont center homeWhat">{{_"areYouGame"}}</h1>
+            <h1 class="nanum center homeWhat">{{_"areYouGame"}}</h1>
             <div class="divider red lighten-1"></div>
       
-             <h3 class="center muli grey-text text-darken-3">{{_"loveToHear"}}</h3>
+             <h3 class="center nanum grey-text text-darken-3">{{_"loveToHear"}}</h3>
                 <div class="center">
+                 <p class="flow-text nanum">{{_"alwaysOpen"}}
+                 <br>
+                 {{_"coffee"}}
+                 </p>
                   <a  href="{{pathFor 'applications'}}" class="button outline">{{_"getStarted"}}</a>
 
                 </div>
@@ -622,46 +631,48 @@
     
   <nav class="white">
      
-    <div class="nav-wrapper">
+  <div class="nav-wrapper">
         <div class="">
-        <div class="brand-logo brand-logos">
-            <a href="/" class=" aspergit red-text text-lighten-1"><b>illume </b></a>
+        <div class="brand-logo center hide-on-small-only">
+            <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35" alt=""></a>
             </div>
-            
-         
+              <div class="brand-logos brand-logo show-on-small-only hide-on-med-and-up">
+            <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35"  alt=""></a>
+            </div>
+            <a href="#" data-activates="slide-outs" class="red-text button-collapse left" style="margin-left:5px;"><i class="material-icons">reorder</i></a>
            
          
-             <a href="#" data-activates="slide-out2" class="button-collapse grey-text"><i class="material-icons">reorder</i></a>
+            
       
-      <ul id="nav-mobiles" class="hide-on-med-and-down">
-        <li class="muli"><a href="{{pathFor 'about'}}" class="grey-text text-darken-3 ">{{_"about"}}</a></li>
-        <li class="muli"><a href="{{pathFor 'approach'}}"  class="grey-text text-darken-3 ">{{_"howWeWork"}}</a></li>
-        <li class="muli"><a href="{{pathFor 'service'}}"  class="grey-text text-darken-3">{{_"ourServices"}}</a></li>
-                <li class="muli"><a href="{{pathFor 'portfolio'}}"  class="grey-text text-darken-3">{{_"portfolio"}}</a></li>
-           <li class="muli"><a href="{{pathFor 'applications'}}"  class="grey-text text-darken-3">{{_"reachUs"}}</a></li>
-           {{>languageSwitcher2}}
-        
+      <ul   class="hide-on-med-and-down left">
+        <li class="nanum"><a href="{{pathFor 'about'}}" class="grey-text  text-darken-2 ">{{_"about"}}</a></li>
+        <li class="nanum"><a href="{{pathFor 'approach'}}" class="grey-text  text-darken-2">{{_"howWeWork"}}</a></li>
+        <li class="nanum"><a href="{{pathFor 'service'}}"  class="grey-text text-darken-2"> {{_"ourServices"}}</a></li>
+             <li class="nanum"><a href="{{pathFor 'portfolio'}}" class="grey-text text-darken-2">{{_"portfolio"}}</a></li>
+           <li class="nanum"><a href="{{pathFor 'applications'}}" class="grey-text text-darken-2">{{_"reachUs"}}</a></li>
+ 
+
       </ul>
         <ul class="right hide-on-med-and-down">
-             <li><a class="grey-text center" href="https://urlgeni.us/facebook/4U1B"><i class="fa fa-facebook fa-2x"></i></a></li>
+           {{>languageSwitcher2}}
+            <li><a class=" grey-text center" href="https://urlgeni.us/facebook/4U1B"><i class="fa fa-facebook  fa-2x"></i></a></li>
                          <li class="divider"></li>
-    <li><a class="center grey-text" href="https://instagram.com/illumeinc/"><i class="fa fa-instagram fa-2x"></i></a></li>
+    <li><a class="center grey-text" href="https://instagram.com/illumeinc/"><i class="fa fa-instagram  fa-2x"></i></a></li>
             </ul>
        
     </div>
       </div>
-        
  
  
   <ul id="slide-out2" class="side-nav center">
          <div class="center">
             
              
-      <li class="muli"><a href="{{pathFor 'about'}}" class="grey-text text-darken-3 ">{{_"about"}}</a></li>
-        <li class="muli"><a href="{{pathFor 'approach'}}"  class="grey-text text-darken-3 ">{{_"howWeWork"}}</a></li>
-        <li class="muli"><a href="{{pathFor 'service'}}"  class="grey-text text-darken-3">{{_"ourServices"}}</a></li>
-                <li class="muli"><a href="{{pathFor 'portfolio'}}"  class="grey-text text-darken-3">{{_"portfolio"}}</a></li>
-           <li class="muli"><a href="{{pathFor 'applications'}}"  class="grey-text text-darken-3">{{_"reachUs"}}</a></li>
+      <li class="nanum"><a href="{{pathFor 'about'}}" class="grey-text text-darken-3 ">{{_"about"}}</a></li>
+        <li class="nanum"><a href="{{pathFor 'approach'}}"  class="grey-text text-darken-3 ">{{_"howWeWork"}}</a></li>
+        <li class="nanum"><a href="{{pathFor 'service'}}"  class="grey-text text-darken-3">{{_"ourServices"}}</a></li>
+                <li class="nanum"><a href="{{pathFor 'portfolio'}}"  class="grey-text text-darken-3">{{_"portfolio"}}</a></li>
+           <li class="nanum"><a href="{{pathFor 'applications'}}"  class="grey-text text-darken-3">{{_"reachUs"}}</a></li>
            {{>languageSwitcher2}}
         </div>
  </ul>
