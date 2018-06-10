@@ -441,7 +441,7 @@ if (package_name != "project") {
 }
 // integrate the fallback language translations 
 translations = {};
-translations[namespace] = {"reactivity":"reactivity","collaborate":"Let's collaborate to give you","unparalleled":"and unparalleled performance.","meteorFirst":"Meteor gives us developers a radically simpler way to build realtime web apps, entirely in JavaScript from one code base. We are able to leverage Javascript like never before and provide you with blazing reactivity in your web application's core. ","meteorSecond":"  Because the same code runs from the client to the cloud, from packages to database APIs, we are not restricted to our weakest link but can be judged based on our strongest one."};
+translations[namespace] = {"reactivity":"reactivity","collaborate":"Let's collaborate to give you","unparalleled":"and unparalleled performance.","meteorFirst":"Meteor gives us developers a radically simpler way to build realtime web apps, entirely in JavaScript from one code base. We are able to leverage Javascript like never before and provide you with blazing reactivity in your web application's core. ","meteorSecond":"  Because the same code runs from the client to the cloud, from packages to database APIs, we are not restricted to our weakest link but can be judged based on our strongest one.","simpleSleek":"Simple, Sleek, yet Powerful","iDevelopWith":"I develop with Meteor to create robust, realtime websites and web applications that are as beautiful as they are powerful. As sleek as they are practical."};
 TAPi18n._loadLangFileObject("en", translations);
 TAPi18n._registerServerTranslator("en", namespace);
 
@@ -558,7 +558,7 @@ if(_.isUndefined(TAPi18n.translations["ko"][namespace])) {
   TAPi18n.translations["ko"][namespace] = {};
 }
 
-_.extend(TAPi18n.translations["ko"][namespace], {"reactivity":"실시간 반응성","collaborate":"강력하고 뛰어난","unparalleled":"을 갖춘 사이트를 만들어봅시다.","meteorFirst":"Meteor를 사용하면 개발자가 실시간 웹 앱을 구축 할 수있는 근본적으로 간단한 방법을 제공 할 수 있습니다. 전적으로 하나의 코드베이스에서 JavaScript로 작성되었습니다. 우리는 예전과 다른 방향으로 Javascript를 활용할 수 있으며 웹 애플리케이션의 핵심 부분에서 놀라운 반응을 제공합니다.","meteorSecond":"동일한 코드가 클라이언트에서 클라우드, 패키지에서 데이터베이스 API로 실행되기 때문에 우리는 가장 약한 링크에 국한되지 않고 가장 강력한 링크 기준으로 작품을 판단 할 수 있을 것입니다."});
+_.extend(TAPi18n.translations["ko"][namespace], {"reactivity":"실시간 반응성","collaborate":"강력하고 뛰어난","unparalleled":"을 갖춘 사이트를 만들어봅시다.","meteorFirst":"Meteor를 사용하면 개발자가 실시간 웹 앱을 구축 할 수있는 근본적으로 간단한 방법을 제공 할 수 있습니다. 전적으로 하나의 코드베이스에서 JavaScript로 작성되었습니다. 우리는 예전과 다른 방향으로 Javascript를 활용할 수 있으며 웹 애플리케이션의 핵심 부분에서 놀라운 반응을 제공합니다.","meteorSecond":"동일한 코드가 클라이언트에서 클라우드, 패키지에서 데이터베이스 API로 실행되기 때문에 우리는 가장 약한 링크에 국한되지 않고 가장 강력한 링크 기준으로 작품을 판단 할 수 있을 것입니다.","simpleSleek":"가늘고, 빠르면서도 강력한 Meteor.js","iDevelopWith":"Meteor로 개발하여 강력한 웹 사이트와 웹 애플리케이션을 실용성 있고 아름답게 만듭니다. 실용적인 것처럼 매끄러운 작품을 만나보세요."});
 TAPi18n._registerServerTranslator("ko", namespace);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
