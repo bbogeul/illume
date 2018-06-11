@@ -1221,8 +1221,8 @@
       "type": "asset",
       "cacheable": false,
       "url": "/android-icon-144x144.png",
-      "size": 14065,
-      "hash": "0f487f9db6ec67e406496ab43bb4b752bb375ebf"
+      "size": 2165,
+      "hash": "0ab0ff9f0ecea572e5086d0bbc3066d5ce0e69b3"
     },
     {
       "path": "app/android-icon-192x192.png",
@@ -1230,8 +1230,8 @@
       "type": "asset",
       "cacheable": false,
       "url": "/android-icon-192x192.png",
-      "size": 17591,
-      "hash": "14fea1ad8631812969d60fdd6328b6d7f1849d06"
+      "size": 1999,
+      "hash": "40b813553a9c00f184d9aeab52c8c87b250165b7"
     },
     {
       "path": "app/android-icon-36x36.png",
@@ -1239,8 +1239,8 @@
       "type": "asset",
       "cacheable": false,
       "url": "/android-icon-36x36.png",
-      "size": 2686,
-      "hash": "5185c8fc58c429c092f911061664aef196b7c97d"
+      "size": 1223,
+      "hash": "a824e800a9235727961e58419c7099c3b2805914"
     },
     {
       "path": "app/android-icon-48x48.png",
@@ -1248,8 +1248,8 @@
       "type": "asset",
       "cacheable": false,
       "url": "/android-icon-48x48.png",
-      "size": 3790,
-      "hash": "3dd7af4fa4f7c8444f22b6020c784d9a1ead4ff1"
+      "size": 1312,
+      "hash": "bc284446516a26938773fe8da14cd1ac657c3641"
     },
     {
       "path": "app/android-icon-72x72.png",
@@ -1257,8 +1257,8 @@
       "type": "asset",
       "cacheable": false,
       "url": "/android-icon-72x72.png",
-      "size": 5596,
-      "hash": "250e3968da29a4409c509ae7c2d63a8c9bf3460e"
+      "size": 1415,
+      "hash": "5e2cb47004478190554f7f0cda762da8538e33fd"
     },
     {
       "path": "app/android-icon-96x96.png",
@@ -1266,8 +1266,8 @@
       "type": "asset",
       "cacheable": false,
       "url": "/android-icon-96x96.png",
-      "size": 7932,
-      "hash": "9ff3a5ed43423c164098bb468e45cef45e52af3f"
+      "size": 1640,
+      "hash": "99702328423bcbc3e296b67015b338d6773e68b8"
     },
     {
       "path": "app/apple-icon-114x114.png",
@@ -1275,8 +1275,8 @@
       "type": "asset",
       "cacheable": false,
       "url": "/apple-icon-114x114.png",
-      "size": 10405,
-      "hash": "4729a6d31d7867e0b5d82c8dfbfb723157d8ab8e"
+      "size": 1759,
+      "hash": "890d7c0c677754cfefabf17df1c5cee30a12dfcf"
     },
     {
       "path": "app/apple-icon-120x120.png",
@@ -1284,8 +1284,8 @@
       "type": "asset",
       "cacheable": false,
       "url": "/apple-icon-120x120.png",
-      "size": 10969,
-      "hash": "570ccb85b92320d29e124963291a2748c6d4d07d"
+      "size": 1785,
+      "hash": "cb5d192b57c0e5cd38a17da7d87a3e51fcaaa3e5"
     },
     {
       "path": "app/apple-icon-144x144.png",
@@ -1293,8 +1293,8 @@
       "type": "asset",
       "cacheable": false,
       "url": "/apple-icon-144x144.png",
-      "size": 14065,
-      "hash": "0f487f9db6ec67e406496ab43bb4b752bb375ebf"
+      "size": 2165,
+      "hash": "0ab0ff9f0ecea572e5086d0bbc3066d5ce0e69b3"
     },
     {
       "path": "app/apple-icon-152x152.png",
@@ -1302,8 +1302,8 @@
       "type": "asset",
       "cacheable": false,
       "url": "/apple-icon-152x152.png",
-      "size": 14854,
-      "hash": "70f23bf5d5665cf2e7f338174df74fc38b848a11"
+      "size": 2272,
+      "hash": "12c0c22afb9e05470b22e75eaaadc31a270a5de2"
     },
     {
       "path": "app/apple-icon-180x180.png",
@@ -1311,8 +1311,8 @@
       "type": "asset",
       "cacheable": false,
       "url": "/apple-icon-180x180.png",
-      "size": 18653,
-      "hash": "832e2f26f5d916fc061f55d3097123a7ce1f2322"
+      "size": 2699,
+      "hash": "454a49e6b0c57aa8399b4ca8673ab3fb6c6a6fd1"
     },
     {
       "path": "app/apple-icon-57x57.png",
@@ -1320,8 +1320,8 @@
       "type": "asset",
       "cacheable": false,
       "url": "/apple-icon-57x57.png",
-      "size": 4448,
-      "hash": "7807b2c37f0469fe301dd864cbd2848d19e45802"
+      "size": 1362,
+      "hash": "2945e3cbaddddf11032a5509bf60e1768df4fd1d"
     },
     {
       "path": "app/apple-icon-60x60.png",
@@ -1329,8 +1329,8 @@
       "type": "asset",
       "cacheable": false,
       "url": "/apple-icon-60x60.png",
-      "size": 4693,
-      "hash": "edfad8b85c0ab312829f467f95f8ed1d75366872"
+      "size": 1354,
+      "hash": "b60fa4087145b3576e548eba99c0cf1554628247"
     },
     {
       "path": "app/apple-icon-72x72.png",
@@ -1338,8 +1338,8 @@
       "type": "asset",
       "cacheable": false,
       "url": "/apple-icon-72x72.png",
-      "size": 5596,
-      "hash": "250e3968da29a4409c509ae7c2d63a8c9bf3460e"
+      "size": 1415,
+      "hash": "5e2cb47004478190554f7f0cda762da8538e33fd"
     },
     {
       "path": "app/apple-icon-76x76.png",
@@ -1347,8 +1347,8 @@
       "type": "asset",
       "cacheable": false,
       "url": "/apple-icon-76x76.png",
-      "size": 6094,
-      "hash": "31027d9f8d0510b05d135f6252b2ce6b083624b4"
+      "size": 1517,
+      "hash": "4ac7809a2dc5d05b74fea6251daf92f440f79666"
     },
     {
       "path": "app/apple-icon-precomposed.png",
@@ -1356,8 +1356,8 @@
       "type": "asset",
       "cacheable": false,
       "url": "/apple-icon-precomposed.png",
-      "size": 18165,
-      "hash": "117217f9808bcc18630214b09d374d17b49bc747"
+      "size": 2483,
+      "hash": "bc1942674537ea58c07bc339f2536a5698bd5855"
     },
     {
       "path": "app/apple-icon.png",
@@ -1365,8 +1365,8 @@
       "type": "asset",
       "cacheable": false,
       "url": "/apple-icon.png",
-      "size": 18165,
-      "hash": "117217f9808bcc18630214b09d374d17b49bc747"
+      "size": 2483,
+      "hash": "bc1942674537ea58c07bc339f2536a5698bd5855"
     },
     {
       "path": "app/browserconfig.xml",
@@ -1383,8 +1383,8 @@
       "type": "asset",
       "cacheable": false,
       "url": "/favicon-16x16.png",
-      "size": 1572,
-      "hash": "2f088592ac1f9184c8881510028b95cb0fc91ca9"
+      "size": 968,
+      "hash": "ca6c69a7c82c3c1de254ee9c8716d5ef2c1005dd"
     },
     {
       "path": "app/favicon-32x32.png",
@@ -1392,8 +1392,8 @@
       "type": "asset",
       "cacheable": false,
       "url": "/favicon-32x32.png",
-      "size": 2484,
-      "hash": "fef8d6aa5a2dc01477b285983e5ec955c9fac8f8"
+      "size": 1199,
+      "hash": "bd4ea108eceaa085fced98eed2fb7cee2e009fa3"
     },
     {
       "path": "app/favicon-96x96.png",
@@ -1401,8 +1401,8 @@
       "type": "asset",
       "cacheable": false,
       "url": "/favicon-96x96.png",
-      "size": 7932,
-      "hash": "9ff3a5ed43423c164098bb468e45cef45e52af3f"
+      "size": 1640,
+      "hash": "99702328423bcbc3e296b67015b338d6773e68b8"
     },
     {
       "path": "app/favicon.ico",
@@ -1411,7 +1411,7 @@
       "cacheable": false,
       "url": "/favicon.ico",
       "size": 1150,
-      "hash": "bae02b22d9bef00f2524eef38f8373c5781b633d"
+      "hash": "c66a710e81db360b31c01c2a7e222b74af776de0"
     },
     {
       "path": "app/manifest.json",
@@ -1428,8 +1428,8 @@
       "type": "asset",
       "cacheable": false,
       "url": "/ms-icon-144x144.png",
-      "size": 14065,
-      "hash": "0f487f9db6ec67e406496ab43bb4b752bb375ebf"
+      "size": 2165,
+      "hash": "0ab0ff9f0ecea572e5086d0bbc3066d5ce0e69b3"
     },
     {
       "path": "app/ms-icon-150x150.png",
@@ -1437,8 +1437,8 @@
       "type": "asset",
       "cacheable": false,
       "url": "/ms-icon-150x150.png",
-      "size": 14731,
-      "hash": "171355ef087ca0e3cce18908ee7b4419e0f1b9d6"
+      "size": 2214,
+      "hash": "57e5f36e5c0589a5fdf40dda55c2bd48918bd1bb"
     },
     {
       "path": "app/ms-icon-310x310.png",
@@ -1446,8 +1446,8 @@
       "type": "asset",
       "cacheable": false,
       "url": "/ms-icon-310x310.png",
-      "size": 42135,
-      "hash": "55b785830392b9cf0287ccf46224ba5fb85d50f1"
+      "size": 7003,
+      "hash": "d86e73d77227a05a68a11c403d4b9905eb8c7a6e"
     },
     {
       "path": "app/ms-icon-70x70.png",
@@ -1455,8 +1455,8 @@
       "type": "asset",
       "cacheable": false,
       "url": "/ms-icon-70x70.png",
-      "size": 5440,
-      "hash": "dd30ecbcf4f1dcea54b36e0dfad454ea05e9886b"
+      "size": 1424,
+      "hash": "58ce7f73477f8b8e5819e196e0a050d1f3513d06"
     },
     {
       "path": "app/fonts/Aspergit Bold Italic.otf",
@@ -1894,7 +1894,7 @@
       "path": "head.html",
       "where": "internal",
       "type": "head",
-      "hash": "ab52aaa614b6173ac1a6e92aa7d4a9bf87d501dc"
+      "hash": "d0f8c15a3a850ba9749484f66a91b3187414a69b"
     }
   ]
 }
