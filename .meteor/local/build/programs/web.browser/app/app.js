@@ -392,40 +392,56 @@ Template.about.rendered = function () {                                         
 Template.__checkName("approach");                                                                                      // 2
 Template["approach"] = new Template("Template.approach", (function() {                                                 // 3
   var view = this;                                                                                                     // 4
-  return [ Spacebars.include(view.lookupTemplate("fixedHeader")), HTML.Raw('\n    <section style="margin-top:3.2em">\n    <div class="container">\n        <div class="row">\n    <div class="col s12 m6 l6">\n        \n         \n        <h4 class="rale grey-text text-darken-3"><b class="mont red-text text-lighten-1">Success Doesn\'t Come Easy.    </b> It is a Combination of A,B, and C.</h4>\n        <br>\n        <p class="flow-text  grey-text text-darken-3">\n             \nBuilding success is not for the feint of heart. It is for people who work tirelessly towards their goal. That is our philosophy here. We strive in providing you with the best of our abilities.\n            Our purpose is to be <b>aware</b> to your needs and to be <b>bold to the challenge</b>. We do this in order to <b>create success</b> along with you.\n<br>\nWhen you work with Illume Inc, you are working with a new breed of engineers and designers. We are the next step in the web space. We know what comes next, how to get there, and what must be done to proceed.\n            </p>\n          \n    \n             \n        </div>\n        <div class="col s12 m6 l5 offset-l1 hide-on-small-only">\n        <div class="center" style="margin-top:3em">\n            <img src="/img/approach.png" height="550" class="shake wow">\n            <p><i class="fa fa-quote-left fa-2x red-text text-lighten-1 center"></i></p>\n            <p class="muli">Our purpose is to be aware of your needs and to be bold to the challenge. We do this in order to create success along with you. </p>\n            <p><i class="fa fa-quote-right fa-2x red-text text-lighten-1 center"></i></p>\n            </div>\n        </div>\n        </div>\n    </div>\n    </section>\n           \n    \n        <div class="parallax-container" style="height:270px;margin-top:4em">\n      <div class="parallax" style="background:#0f0f0f"><img src="/img/header.jpg"></div>\n <div class="container" style="margin-top:3em;">\n                  <div class="center">\n            <i class="fa fa-cubes fa-4x white-text"></i>\n\n            <h3 class="grey-text text-lighten-3 muli">DEV<span class="hide-on-small-only">ELOPMENT</span> ROADMAP</h3>\n    </div>\n            </div>\n     \n    </div>\n        '), HTML.SECTION({
-    style: "margin-top:4em"                                                                                            // 6
-  }, "\n        ", HTML.DIV({                                                                                          // 7
+  return [ Spacebars.include(view.lookupTemplate("fixedHeader")), "\n    ", HTML.SECTION({                             // 5
+    style: "margin-top:3.2em"                                                                                          // 6
+  }, "\n    ", HTML.DIV({                                                                                              // 7
     "class": "container"                                                                                               // 8
-  }, "\n            ", HTML.DIV({                                                                                      // 9
-    id: "timeline"                                                                                                     // 10
+  }, "\n        ", HTML.DIV({                                                                                          // 9
+    "class": "row"                                                                                                     // 10
+  }, "\n    ", HTML.DIV({                                                                                              // 11
+    "class": "col s12 m6 l6"                                                                                           // 12
+  }, "\n        \n         \n        ", HTML.H4({                                                                      // 13
+    "class": "nanum grey-text text-darken-3"                                                                           // 14
+  }, HTML.B({                                                                                                          // 15
+    "class": "  red-text text-lighten-1"                                                                               // 16
+  }, Blaze.View("lookup:_", function() {                                                                               // 17
+    return Spacebars.mustache(view.lookup("_"), "successDoesnt");                                                      // 18
+  }), " "), " ", Blaze.View("lookup:_", function() {                                                                   // 19
+    return Spacebars.mustache(view.lookup("_"), "combinationOf");                                                      // 20
+  })), "\n        ", HTML.Raw("<br>"), "\n        ", HTML.Raw('<p class="flow-text  grey-text text-darken-3">\n             \nBuilding success is not for the feint of heart. It is for people who work tirelessly towards their goal. That is our philosophy here. We strive in providing you with the best of our abilities.\n            Our purpose is to be aware to your needs and to be bold to the challenge. We do this in order to create success along with you.\n<br>\nWhen you work with Illume Inc, you are working with a new breed of engineers and designers. We are the next step in the web space. We know what comes next, how to get there, and what must be done to proceed.\n            </p>'), "\n          \n    \n             \n        "), "\n        ", HTML.Raw('<div class="col s12 m6 l5 offset-l1 hide-on-small-only">\n        <div class="center" style="margin-top:3em">\n            <img src="/img/approach.png" height="550" class="shake wow">\n            <p><i class="fa fa-quote-left fa-2x red-text text-lighten-1 center"></i></p>\n            <p>Our purpose is to be aware of your needs and to be bold to the challenge. We do this in order to create success along with you. </p>\n            <p><i class="fa fa-quote-right fa-2x red-text text-lighten-1 center"></i></p>\n            </div>\n        </div>'), "\n        "), "\n    "), "\n    "), HTML.Raw('\n           \n    \n        <div class="parallax-container" style="height:270px;margin-top:4em">\n      <div class="parallax" style="background:#0f0f0f"><img src="/img/header.jpg"></div>\n <div class="container" style="margin-top:3em;">\n                  <div class="center">\n            <i class="fa fa-cubes fa-4x white-text"></i>\n\n            <h3 class="grey-text text-lighten-3 muli">DEV<span class="hide-on-small-only">ELOPMENT</span> ROADMAP</h3>\n    </div>\n            </div>\n     \n    </div>\n        '), HTML.SECTION({
+    style: "margin-top:4em"                                                                                            // 22
+  }, "\n        ", HTML.DIV({                                                                                          // 23
+    "class": "container"                                                                                               // 24
+  }, "\n            ", HTML.DIV({                                                                                      // 25
+    id: "timeline"                                                                                                     // 26
   }, "\n    ", HTML.Raw('<div class="timeline-item  ">\n      <div class="timeline-icon ">\n \n\n      </div>\n      <div class="timeline-content wow zoomIn">\n        <h3 class="mont amber ">The Initial Contact</h3>\n<div class="center" style="padding:1em">\n          <img src="/img/brain.svg" width="75">\n          </div>\n          <p style="margin-top:-.15em">\n        Once we get in touch, we will be discussing our services in detail to you. During this stage, we will be brainstorming together to build a viable, yet powerful solution to your website needs.\n        </p>\n         \n      </div>\n    </div>'), "\n  ", HTML.Raw('<div class="timeline-item">\n      <div class="timeline-icon">\n \n\n      </div>\n      <div class="timeline-content right wow zoomIn">\n       <h3 class="mont green lighten-1">Commence Project!</h3>\n \n          <p style="margin-top:-.15em">\n        Once you have agreed to our service terms and went over our proposed roadmap, we will begin the development process right away.\n        </p>\n      \n      </div>\n    </div>'), "\n   \n\n    ", HTML.Raw('<div class="timeline-item">\n      <div class="timeline-icon">\n \n\n      </div>\n      <div class="timeline-content wow zoomIn">\n      <h3 class="mont red lighten-1">Maybe Next Time!</h3>\n        <p>\n        Aww. It is a shame to see you go. But don\'t worry. If we offered advice over the phone; that is free of charge. Also if you change your mind you know where to find us.\n        </p>\n      \n      </div>\n    </div>'), "\n                  ", HTML.Raw('<div class="timeline-item">\n      <div class="timeline-icon">\n \n\n      </div>\n      <div class="timeline-content wow zoomIn">\n       <h3 class="mont green lighten-1">Even more collaboration</h3>\n            \n          <p style="margin-top:-.15em">\n     Once our development phase reaches a formidable point, we will be coming back to you with results, updates, and opportunities to collaborate once more to prepare for the final stretch. \n        </p>\n         \n      </div>\n    </div>'), "\n                  ", HTML.Raw('<div class="timeline-item">\n      <div class="timeline-icon">\n \n\n      </div>\n      <div class="timeline-content right">\n       <h3 class="mont amber">Stall in Project</h3>\n        <p>\n          There are many reasons a project can be stalled. We do our bests to circumnavigate around these issues, but sometimes the problem can be out of our hands. We will be contacting you thoroughly to get any issues resolved.\n        </p>\n         \n      </div>\n    </div>'), "\n                         ", HTML.Raw('<div class="timeline-item">\n      <div class="timeline-icon">\n   \n      </div>\n      <div class="timeline-content wow zoomIn">\n       <h3 class="mont amber ">Change Course</h3>\n        <p>\n         If a project stalls, sometimes you the client might want to change course (maybe due to budget constraints, time variables, etc.) we will do our best to accommodate any changes to our project timeline. But many times a project stalls due to lack of contents being provided, and budgetary issues with our accounts.\n        </p>\n         \n      </div>\n    </div>'), "\n                         ", HTML.DIV({
-    "class": "timeline-item"                                                                                           // 12
-  }, "\n      ", HTML.Raw('<div class="timeline-icon">\n \n\n      </div>'), "\n      ", HTML.DIV({                    // 13
-    "class": "timeline-content wow zoomIn"                                                                             // 14
+    "class": "timeline-item"                                                                                           // 28
+  }, "\n      ", HTML.Raw('<div class="timeline-icon">\n \n\n      </div>'), "\n      ", HTML.DIV({                    // 29
+    "class": "timeline-content wow zoomIn"                                                                             // 30
   }, "\n       ", HTML.Raw('<h3 class="mont red lighten-1">Contract Ends</h3>'), "\n        ", HTML.P("\n          Sometimes businesses do not work out. We do our best to avoid these scenarios as much as possible since we would like to think we built our business relationship on trust. But the world sometimes does not work the way we want and we might have to part ways.", HTML.Raw("<br>"), "\n            If a project is cancelled, you can view our ", HTML.A({
-    href: function() {                                                                                                 // 16
-      return Spacebars.mustache(view.lookup("pathFor"), "policy");                                                     // 17
-    }                                                                                                                  // 18
-  }, "policies"), " to answer any questions you might have about cancellation.\n        "), "\n         \n      "), "\n    "), "\n                         ", HTML.Raw('<div class="timeline-item">\n      <div class="timeline-icon">\n \n\n      </div>\n      <div class="timeline-content right wow zoomIn">\n       <h3 class="mont green lighten-1">Success Imminent</h3>\n \n        <p>\n          Everything is smooth as butter. We are almost there. The finishing touch . We are almost finished with the development process and ready to deploy your product. This means that we have successfully collaborated together to create a true <b>MVP.</b>\n        </p>\n         \n      </div>\n    </div>'), "\n  "), "\n            "), "\n        "), "\n        ", HTML.SECTION({
-    "class": "center"                                                                                                  // 20
-  }, "\n            ", HTML.DIV({                                                                                      // 21
-    "class": "container"                                                                                               // 22
-  }, "\n                ", HTML.Raw('<div class="row">\n                    <div class="col s12 m12 l10 offset-l1">\n            <img src="/img/complete.png" class="responsive-img">\n            </div>\n                </div>'), "\n                ", HTML.DIV({
-    "class": "row"                                                                                                     // 24
-  }, "\n                ", HTML.DIV({                                                                                  // 25
-    "class": "center"                                                                                                  // 26
-  }, "\n                     ", HTML.DIV({                                                                             // 27
-    "class": "col s12 m12 l10 offset-l1"                                                                               // 28
-  }, "\n                    ", HTML.Raw('<h1 class="mont homeWhat">THERE YOU GO</h1>'), "\n                          ", HTML.Raw('<div class="divider green lighten-1"></div>'), "\n                         ", HTML.Raw('<h3 class="rale center">Sold? Let\'s begin a great success story together.</h3>'), "\n             ", HTML.DIV({
-    "class": "center"                                                                                                  // 30
-  }, "\n                  ", HTML.A({                                                                                  // 31
     href: function() {                                                                                                 // 32
-      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 33
-    },                                                                                                                 // 34
-    "class": "button outline"                                                                                          // 35
+      return Spacebars.mustache(view.lookup("pathFor"), "policy");                                                     // 33
+    }                                                                                                                  // 34
+  }, "policies"), " to answer any questions you might have about cancellation.\n        "), "\n         \n      "), "\n    "), "\n                         ", HTML.Raw('<div class="timeline-item">\n      <div class="timeline-icon">\n \n\n      </div>\n      <div class="timeline-content right wow zoomIn">\n       <h3 class="mont green lighten-1">Success Imminent</h3>\n \n        <p>\n          Everything is smooth as butter. We are almost there. The finishing touch . We are almost finished with the development process and ready to deploy your product. This means that we have successfully collaborated together to create a true <b>MVP.</b>\n        </p>\n         \n      </div>\n    </div>'), "\n  "), "\n            "), "\n        "), "\n        ", HTML.SECTION({
+    "class": "center"                                                                                                  // 36
+  }, "\n            ", HTML.DIV({                                                                                      // 37
+    "class": "container"                                                                                               // 38
+  }, "\n                ", HTML.Raw('<div class="row">\n                    <div class="col s12 m12 l10 offset-l1">\n            <img src="/img/complete.png" class="responsive-img">\n            </div>\n                </div>'), "\n                ", HTML.DIV({
+    "class": "row"                                                                                                     // 40
+  }, "\n                ", HTML.DIV({                                                                                  // 41
+    "class": "center"                                                                                                  // 42
+  }, "\n                     ", HTML.DIV({                                                                             // 43
+    "class": "col s12 m12 l10 offset-l1"                                                                               // 44
+  }, "\n                    ", HTML.Raw('<h1 class="mont homeWhat">THERE YOU GO</h1>'), "\n                          ", HTML.Raw('<div class="divider green lighten-1"></div>'), "\n                         ", HTML.Raw('<h3 class="rale center">Sold? Let\'s begin a great success story together.</h3>'), "\n             ", HTML.DIV({
+    "class": "center"                                                                                                  // 46
+  }, "\n                  ", HTML.A({                                                                                  // 47
+    href: function() {                                                                                                 // 48
+      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 49
+    },                                                                                                                 // 50
+    "class": "button outline"                                                                                          // 51
   }, "GET STARTED NOW"), "\n\n                "), "\n                    "), "\n                    "), "\n                "), "\n            "), "\n            \n        \n        ") ];
-}));                                                                                                                   // 37
-                                                                                                                       // 38
+}));                                                                                                                   // 53
+                                                                                                                       // 54
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 },"approach.js":function(){
@@ -1731,24 +1747,74 @@ Template["service"] = new Template("Template.service", (function() {            
     return Spacebars.mustache(view.lookup("_"), "iDevelopWith");                                                       // 45
   })), "\n                         \n                "), "\n            "), "\n            "), "\n        "), HTML.Raw('\n           \n           \n        <div class="divider" style="margin-top:6em;"></div>\n        '), HTML.SECTION({
     "class": "callToAction"                                                                                            // 47
-  }, "\n        ", HTML.Raw('<div class="container">\n      <div class="center">\n          <h4 class="nanum grey-text text-darken-3">My <span class="red-text text-lighten-1"> Services</span></h4>\n            </div>\n            </div>'), "\n            ", HTML.Raw('<div class="row callToAction">\n            <div class="container">\n                <div class="col s12 m12 l4">\n                <div class="pricing animated swing">\n  <div class="thumbnail animated pulse infinite">\n    <div class="fa fa-globe"></div>\n  </div>\n  <div class="title rale">\n   WEBSITE PACKAGE\n  </div>\n \n \n</div>\n                </div>\n                 <div class="col s12 m12 l4">\n                 <div class="pricing animated swing" style="background:#d33e3e;">\n  <div class="thumbnail animated pulse infinite">\n    <div class="fa fa-cart-plus"></div>\n  </div>\n  <div class="titl rale" style="background:#21313b">\n  ECOMMERCE SOLUTION\n  </div>\n  \n \n</div>\n                </div>\n                 <div class="col s12 m12 l4">\n                <div class="pricing animated swing" style="background:#d33e3e;">\n  <div class="thumbnail animated pulse infinite">\n    <div class="fa fa-edit"></div>\n  </div>\n  <div class="titles rale" style="background:#21313b;">\n    LOGO PACKAGE\n  </div>\n \n \n</div>\n                </div>\n                </div>\n            </div>'), "\n            ", HTML.DIV({
-    "class": "row callToAction"                                                                                        // 49
-  }, "\n            ", HTML.DIV({                                                                                      // 50
-    "class": "container"                                                                                               // 51
-  }, "\n                ", HTML.DIV({                                                                                  // 52
-    "class": "col s12 m10 l10 offset-l1 offset-m1"                                                                     // 53
-  }, "\n                ", HTML.Raw('<h4 class=" center nanum grey-text text-darken-3">\n                    Got questions about our services? Not a problem. <br>Give us a call or shoot us an email. We will get back to you in a jiffy.\n                    \n                    </h4>'), "\n                  ", HTML.DIV({
-    "class": "center"                                                                                                  // 55
-  }, "\n                  ", HTML.A({                                                                                  // 56
-    href: function() {                                                                                                 // 57
-      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 58
-    },                                                                                                                 // 59
-    "class": "button outline"                                                                                          // 60
-  }, Blaze.View("lookup:_", function() {                                                                               // 61
-    return Spacebars.mustache(view.lookup("_"), "getStarted");                                                         // 62
-  })), "\n\n                "), "\n                "), "\n                "), "\n            "), "\n        ") ];      // 63
-}));                                                                                                                   // 64
-                                                                                                                       // 65
+  }, "\n        ", HTML.DIV({                                                                                          // 48
+    "class": "container"                                                                                               // 49
+  }, "\n      ", HTML.DIV({                                                                                            // 50
+    "class": "center"                                                                                                  // 51
+  }, "\n          ", HTML.H4({                                                                                         // 52
+    "class": "nanum grey-text text-darken-3"                                                                           // 53
+  }, Blaze.View("lookup:_", function() {                                                                               // 54
+    return Spacebars.mustache(view.lookup("_"), "my");                                                                 // 55
+  }), " ", HTML.SPAN({                                                                                                 // 56
+    "class": "red-text text-lighten-1"                                                                                 // 57
+  }, " ", Blaze.View("lookup:_", function() {                                                                          // 58
+    return Spacebars.mustache(view.lookup("_"), "service");                                                            // 59
+  }))), "\n            "), "\n            "), "\n            ", HTML.DIV({                                             // 60
+    "class": "row callToAction"                                                                                        // 61
+  }, "\n            ", HTML.DIV({                                                                                      // 62
+    "class": "container"                                                                                               // 63
+  }, "\n                ", HTML.DIV({                                                                                  // 64
+    "class": "col s12 m12 l4"                                                                                          // 65
+  }, "\n                ", HTML.DIV({                                                                                  // 66
+    "class": "pricing animated swing"                                                                                  // 67
+  }, "\n  ", HTML.Raw('<div class="thumbnail animated pulse infinite">\n    <div class="fa fa-globe"></div>\n  </div>'), "\n  ", HTML.DIV({
+    "class": "title nanum"                                                                                             // 69
+  }, "\n   ", Blaze.View("lookup:_", function() {                                                                      // 70
+    return Spacebars.mustache(view.lookup("_"), "websitePackage");                                                     // 71
+  }), "\n  "), "\n \n \n"), "\n                "), "\n                 ", HTML.DIV({                                   // 72
+    "class": "col s12 m12 l4"                                                                                          // 73
+  }, "\n                 ", HTML.DIV({                                                                                 // 74
+    "class": "pricing animated swing",                                                                                 // 75
+    style: "background:#d33e3e;"                                                                                       // 76
+  }, "\n  ", HTML.Raw('<div class="thumbnail animated pulse infinite">\n    <div class="fa fa-cart-plus"></div>\n  </div>'), "\n  ", HTML.DIV({
+    "class": "titl nanum",                                                                                             // 78
+    style: "background:#21313b"                                                                                        // 79
+  }, "\n  ", Blaze.View("lookup:_", function() {                                                                       // 80
+    return Spacebars.mustache(view.lookup("_"), "ecommerce");                                                          // 81
+  }), "\n  "), "\n  \n \n"), "\n                "), "\n                 ", HTML.DIV({                                  // 82
+    "class": "col s12 m12 l4"                                                                                          // 83
+  }, "\n                ", HTML.DIV({                                                                                  // 84
+    "class": "pricing animated swing",                                                                                 // 85
+    style: "background:#d33e3e;"                                                                                       // 86
+  }, "\n  ", HTML.Raw('<div class="thumbnail animated pulse infinite">\n    <div class="fa fa-edit"></div>\n  </div>'), "\n  ", HTML.DIV({
+    "class": "titles nanum",                                                                                           // 88
+    style: "background:#21313b;"                                                                                       // 89
+  }, "\n    ", Blaze.View("lookup:_", function() {                                                                     // 90
+    return Spacebars.mustache(view.lookup("_"), "logo");                                                               // 91
+  }), "\n  "), "\n \n \n"), "\n                "), "\n                "), "\n            "), "\n            ", HTML.DIV({
+    "class": "row callToAction"                                                                                        // 93
+  }, "\n            ", HTML.DIV({                                                                                      // 94
+    "class": "container"                                                                                               // 95
+  }, "\n                ", HTML.DIV({                                                                                  // 96
+    "class": "col s12 m10 l10 offset-l1 offset-m1"                                                                     // 97
+  }, "\n                ", HTML.H4({                                                                                   // 98
+    "class": " center nanum grey-text text-darken-3"                                                                   // 99
+  }, "\n                    ", Blaze.View("lookup:_", function() {                                                     // 100
+    return Spacebars.mustache(view.lookup("_"), "gotQuestion");                                                        // 101
+  }), " ", HTML.Raw("<br>"), " ", Blaze.View("lookup:_", function() {                                                  // 102
+    return Spacebars.mustache(view.lookup("_"), "giveUsaCall");                                                        // 103
+  }), "\n                   \n                    \n                    "), "\n                  ", HTML.DIV({         // 104
+    "class": "center"                                                                                                  // 105
+  }, "\n                  ", HTML.A({                                                                                  // 106
+    href: function() {                                                                                                 // 107
+      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 108
+    },                                                                                                                 // 109
+    "class": "button outline"                                                                                          // 110
+  }, Blaze.View("lookup:_", function() {                                                                               // 111
+    return Spacebars.mustache(view.lookup("_"), "getStarted");                                                         // 112
+  })), "\n\n                "), "\n                "), "\n                "), "\n            "), "\n        ") ];      // 113
+}));                                                                                                                   // 114
+                                                                                                                       // 115
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 },"service.js":function(){
@@ -3022,7 +3088,29 @@ if (package_name != "project") {                                                
 }                                                                                                                      // 7
 // integrate the fallback language translations                                                                        // 8
 translations = {};                                                                                                     // 9
-translations[namespace] = {"reactivity":"reactivity","collaborate":"Let's collaborate to give you","unparalleled":"and unparalleled performance.","meteorFirst":"Meteor gives us developers a radically simpler way to build realtime web apps, entirely in JavaScript from one code base. We are able to leverage Javascript like never before and provide you with blazing reactivity in your web application's core. ","meteorSecond":"  Because the same code runs from the client to the cloud, from packages to database APIs, we are not restricted to our weakest link but can be judged based on our strongest one.","simpleSleek":"Simple, Sleek, yet Powerful","iDevelopWith":"I develop with Meteor to create robust, realtime websites and web applications that are as beautiful as they are powerful. As sleek as they are practical."};
+translations[namespace] = {"reactivity":"reactivity","collaborate":"Let's collaborate to give you","unparalleled":"and unparalleled performance.","meteorFirst":"Meteor gives us developers a radically simpler way to build realtime web apps, entirely in JavaScript from one code base. We are able to leverage Javascript like never before and provide you with blazing reactivity in your web application's core. ","meteorSecond":"  Because the same code runs from the client to the cloud, from packages to database APIs, we are not restricted to our weakest link but can be judged based on our strongest one.","simpleSleek":"Simple, Sleek, yet Powerful","iDevelopWith":"I develop with Meteor to create robust, realtime websites and web applications that are as beautiful as they are powerful. As sleek as they are practical.","my":"My","service":"Services","gotQuestion":"Got questions about our services? Not a problem.","giveUsaCall":"Give us a call or shoot us an email. We will get back to you in a jiffy.","websitePackage":"Website Package","ecommerce":"Ecommerce Package","logo":"Logo Package"};
+TAPi18n._loadLangFileObject("en", translations);                                                                       // 11
+                                                                                                                       // 12
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+},"success.en.i18n.json":function(){
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                                     //
+// both/i18n/en/success.en.i18n.json                                                                                   //
+//                                                                                                                     //
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                                                                                       //
+var _ = Package.underscore._,                                                                                          // 1
+    package_name = "project",                                                                                          // 2
+    namespace = "project";                                                                                             // 3
+                                                                                                                       // 4
+if (package_name != "project") {                                                                                       // 5
+    namespace = TAPi18n.packages[package_name].namespace;                                                              // 6
+}                                                                                                                      // 7
+// integrate the fallback language translations                                                                        // 8
+translations = {};                                                                                                     // 9
+translations[namespace] = {"successDoesnt":"Success Doesn't Come Easy.  ","combinationOf":"It is a Combination of A,B, and C."};
 TAPi18n._loadLangFileObject("en", translations);                                                                       // 11
                                                                                                                        // 12
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -3089,6 +3177,25 @@ TAPi18n.languages_names["ko"] = ["Korean","한국어"];                         
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //                                                                                                                     //
 // both/i18n/ko/service.ko.i18n.json                                                                                   //
+//                                                                                                                     //
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                                                                                       //
+var _ = Package.underscore._,                                                                                          // 1
+    package_name = "project",                                                                                          // 2
+    namespace = "project";                                                                                             // 3
+                                                                                                                       // 4
+if (package_name != "project") {                                                                                       // 5
+    namespace = TAPi18n.packages[package_name].namespace;                                                              // 6
+}                                                                                                                      // 7
+TAPi18n.languages_names["ko"] = ["Korean","한국어"];                                                                      // 8
+                                                                                                                       // 9
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+},"success.ko.i18n.json":function(){
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                                     //
+// both/i18n/ko/success.ko.i18n.json                                                                                   //
 //                                                                                                                     //
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                                                                                                                        //
@@ -3486,10 +3593,12 @@ require("./both/i18n/en/about.en.i18n.json");
 require("./both/i18n/en/header.en.i18n.json");
 require("./both/i18n/en/home.en.i18n.json");
 require("./both/i18n/en/service.en.i18n.json");
+require("./both/i18n/en/success.en.i18n.json");
 require("./both/i18n/ko/about.ko.i18n.json");
 require("./both/i18n/ko/header.ko.i18n.json");
 require("./both/i18n/ko/home.ko.i18n.json");
 require("./both/i18n/ko/service.ko.i18n.json");
+require("./both/i18n/ko/success.ko.i18n.json");
 require("./client/layout/appLayout/appLayout.js");
 require("./client/layout/header/header.js");
 require("./client/templates/about/about.js");
