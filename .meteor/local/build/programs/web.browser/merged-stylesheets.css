@@ -15323,8 +15323,8 @@ body {
 }
 
 .brand-logos {
-  background: rgba(255, 127, 127, 0);
-  height: 64px;
+  background: #e53935;
+  height: 56px;
 }
 
 .upper {
@@ -15346,7 +15346,7 @@ body {
   overflow: hidden;
   position: relative;
   height: 100vh;
-  min-height: 650px;
+  min-height: 750px;
 }
 
 .codes {

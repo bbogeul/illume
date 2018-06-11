@@ -72,9 +72,9 @@ body {
   padding-right:20px;
 }
 .brand-logos {
-  background: rgba(255, 127, 127, 0);
+  background: #e53935;
   
-  height: 64px;
+  height: 56px;
 }
 
 .upper {
@@ -94,7 +94,7 @@ body {
   overflow: hidden;
   position: relative;
   height: 100vh;
-    min-height: 650px;
+    min-height: 750px;
 }
 .codes {
   

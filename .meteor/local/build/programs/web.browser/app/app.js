@@ -152,7 +152,7 @@ Template["header"] = new Template("Template.header", (function() {              
     "class": "side-nav"                                                                                                // 53
   }, "\n        ", HTML.DIV({                                                                                          // 54
     "class": "center"                                                                                                  // 55
-  }, "\n            ", HTML.Raw("<br>"), "\n            ", HTML.Raw('<img src="/img/badge.png" width="150">'), HTML.Raw("<br>"), "\n            ", HTML.Raw('<span class="bold">#lightupyourbrand</span>'), "\n     ", HTML.LI({
+  }, "\n            ", HTML.Raw("<br>"), "\n            ", HTML.Raw('<img src="/img/drawnPic.jpg" width="150">'), HTML.Raw("<br>"), "\n  \n     ", HTML.LI({
     "class": "nanum",                                                                                                  // 57
     style: "margin-top:1em;"                                                                                           // 58
   }, HTML.A({                                                                                                          // 59
@@ -295,7 +295,7 @@ Template["about"] = new Template("Template.about", (function() {                
     "class": "nanum grey-text text-darken-2"                                                                           // 49
   }, "\n         Inkscape ", HTML.Raw("<br>"), "Adobe Photoshop ", HTML.Raw("<br>"), " Adobe Illustrator ", HTML.Raw("<br>"), " Adobe Lightroom ", HTML.Raw("<br>"), " GIMP ", HTML.Raw("<br>"), " (", Blaze.View("lookup:_", function() {
     return Spacebars.mustache(view.lookup("_"), "occasionally");                                                       // 51
-  }), ") Sketch\n     "), "\n "), "\n \n"), "\n                "), "\n                 ", HTML.DIV({                   // 52
+  }), ") Sketch\n     "), "\n "), "\n \n"), "\n  ", HTML.Raw("<br>"), "\n                "), "\n               \n                 ", HTML.DIV({
     "class": "col s12 m12 l4"                                                                                          // 53
   }, "\n                 ", HTML.DIV({                                                                                 // 54
     "class": "pricing animated swing"                                                                                  // 55
@@ -319,7 +319,7 @@ Template["about"] = new Template("Template.about", (function() {                
     style: "font-size:1.2em;margin-top:0.6em;"                                                                         // 73
   }, "\n         ", Blaze.View("lookup:_", function() {                                                                // 74
     return Spacebars.mustache(view.lookup("_"), "myTools");                                                            // 75
-  }), "\n     "), "\n     ", HTML.Raw('<p class="nanum grey-text text-darken-2">\n         Brackets <br>Sublime3 <br> Github <br> Bootstrap <br> Material Design <br> Meteor.js <br> Angular <br> Codepen <br> Terminal\n     </p>'), "\n "), "\n"), "\n                "), "\n                 ", HTML.DIV({
+  }), "\n     "), "\n     ", HTML.Raw('<p class="nanum grey-text text-darken-2">\n         Brackets <br>Sublime3 <br> Github <br> Bootstrap <br> Material Design <br> Meteor.js <br> Angular <br> Codepen <br> Terminal\n     </p>'), "\n "), "\n"), "\n  ", HTML.Raw("<br>"), "\n                "), "\n               \n                 ", HTML.DIV({
     "class": "col s12 m12 l4"                                                                                          // 77
   }, "\n                ", HTML.DIV({                                                                                  // 78
     "class": "pricing animated swing"                                                                                  // 79
@@ -340,7 +340,7 @@ Template["about"] = new Template("Template.about", (function() {                
     "class": "nanum grey-text text-darken-2"                                                                           // 94
   }, "\n          ", Blaze.View("lookup:_", function() {                                                               // 95
     return Spacebars.mustache(view.lookup("_"), "coffeeAnd");                                                          // 96
-  }), "\n      "), "\n  "), "\n"), "\n                "), "\n                "), "\n "), "\n "), HTML.Raw('\n       <div class="divider"></div>\n    '), HTML.SECTION({
+  }), "\n      "), "\n  "), "\n"), "\n", HTML.Raw("<br>"), "\n                "), "\n\n                "), "\n "), "\n "), HTML.Raw('\n       <div class="divider"></div>\n    '), HTML.SECTION({
     style: "margin-top:5em"                                                                                            // 98
   }, "\n                  ", HTML.DIV({                                                                                // 99
     "class": "container"                                                                                               // 100
@@ -1567,89 +1567,82 @@ Template["policy"] = new Template("Template.policy", (function() {              
 Template.__checkName("portfolio");                                                                                     // 2
 Template["portfolio"] = new Template("Template.portfolio", (function() {                                               // 3
   var view = this;                                                                                                     // 4
-  return [ Spacebars.include(view.lookupTemplate("fixedHeader")), "\n    ", HTML.DIV({                                 // 5
-    "class": "code hide-on-med-and-down",                                                                              // 6
-    style: "background:#fff;"                                                                                          // 7
-  }, "\n   \n        ", HTML.DIV({                                                                                     // 8
-    "class": "container",                                                                                              // 9
-    style: "margin-top:2em;"                                                                                           // 10
-  }, "\n  ", HTML.Raw('<p class="flow-text grey-text text-darken-2 center">MERGING THE BEST OF BOTH WORLDS OF WEB &amp; MOBILE.<br>CREATING APPLICATIONS AND WEBSITES<br> SPECIFICALLY FOR YOU AND YOUR BUSINESS  </p>'), "\n             ", HTML.Raw('<div class="divider red lighten-1" style="margin:0 auto;width:120px"></div>'), "\n  ", HTML.DIV({
-    "class": "row hide-on-med-and-down ",                                                                              // 12
-    style: "margin-top:5em;"                                                                                           // 13
-  }, "\n    ", HTML.DIV({                                                                                              // 14
-    "class": "col s12 m3"                                                                                              // 15
-  }, "\n        ", HTML.FIGURE({                                                                                       // 16
-    "class": "chart",                                                                                                  // 17
-    "data-percent": "75"                                                                                               // 18
-  }, "\n    ", HTML.Raw("<figcaption>HTML</figcaption>"), "\n    ", HTML.Raw('<img class="html" src="https://dl.dropboxusercontent.com/s/68gv23q4y5qyq52/html5.svg">'), "\n    ", HTML.SVG({
-    width: "200",                                                                                                      // 20
-    height: "200"                                                                                                      // 21
-  }, "\n      ", HTML.CIRCLE({                                                                                         // 22
-    "class": "outer",                                                                                                  // 23
-    cx: "95",                                                                                                          // 24
-    cy: "95",                                                                                                          // 25
-    r: "85",                                                                                                           // 26
-    transform: "rotate(-90, 95, 95)"                                                                                   // 27
-  }), "\n    "), "\n  "), "\n    \n      "), "\n          ", HTML.DIV({                                                // 28
-    "class": "col s12 m3"                                                                                              // 29
-  }, "\n        ", HTML.FIGURE({                                                                                       // 30
-    "class": "chart",                                                                                                  // 31
-    "data-percent": "75"                                                                                               // 32
-  }, "\n    ", HTML.Raw("<figcaption>CSS</figcaption>"), "\n    ", HTML.Raw('<img class="css" src="/img/css.svg">'), "\n    ", HTML.SVG({
-    width: "200",                                                                                                      // 34
-    height: "200"                                                                                                      // 35
-  }, "\n      ", HTML.CIRCLE({                                                                                         // 36
-    "class": "outer",                                                                                                  // 37
-    cx: "95",                                                                                                          // 38
-    cy: "95",                                                                                                          // 39
-    r: "85",                                                                                                           // 40
-    transform: "rotate(-90, 95, 95)"                                                                                   // 41
-  }), "\n    "), "\n  "), "\n      "), "\n          ", HTML.DIV({                                                      // 42
-    "class": "col s12 m3"                                                                                              // 43
-  }, "\n        ", HTML.FIGURE({                                                                                       // 44
-    "class": "chart",                                                                                                  // 45
-    "data-percent": "100"                                                                                              // 46
-  }, "\n    ", HTML.Raw("<figcaption>Javascript</figcaption>"), "\n    ", HTML.Raw('<img class="javascript" src="/img/js.png">'), "\n    ", HTML.SVG({
-    width: "200",                                                                                                      // 48
-    height: "200"                                                                                                      // 49
-  }, "\n      ", HTML.CIRCLE({                                                                                         // 50
-    "class": "outer",                                                                                                  // 51
-    cx: "95",                                                                                                          // 52
-    cy: "95",                                                                                                          // 53
-    r: "85",                                                                                                           // 54
-    transform: "rotate(-90, 95, 95)"                                                                                   // 55
-  }), "\n    "), "\n  "), "\n      "), "\n          ", HTML.DIV({                                                      // 56
-    "class": "col s12 m3"                                                                                              // 57
-  }, "\n        ", HTML.FIGURE({                                                                                       // 58
-    "class": "chart",                                                                                                  // 59
-    "data-percent": "75"                                                                                               // 60
-  }, "\n    ", HTML.Raw("<figcaption>Node</figcaption>"), "\n    ", HTML.Raw('<img class="node" src="https://dl.dropboxusercontent.com/s/v28zws1p38tjph2/node.png">'), "\n    ", HTML.SVG({
-    width: "200",                                                                                                      // 62
-    height: "200"                                                                                                      // 63
-  }, "\n      ", HTML.CIRCLE({                                                                                         // 64
-    "class": "outer",                                                                                                  // 65
-    cx: "95",                                                                                                          // 66
-    cy: "95",                                                                                                          // 67
-    r: "85",                                                                                                           // 68
-    transform: "rotate(-90, 95, 95)"                                                                                   // 69
-  }), "\n    "), "\n  "), "\n      "), "\n    "), "\n    "), "\n            ", HTML.Raw('<div class="center wow fadeInDown" data-wow-iteration="3" style="margin-top:21.5em;">\n                <a href="#portfolioWrapper" class="button outline"><b>CLICK TO VIEW MORE</b></a>\n            </div>'), "\n    "), HTML.Raw('\n \n\n  <!-- HTML Chart -->\n \n \n \n \n<div id="portfolioWrapper" class="">\n\n   <div class="row">\n        <div class="container">\n        <div class="col s12 m12 ">\n            <h3 class="  center  opensan">WEBSITES</h3>\n  \n            <div class="divider red lighten-1" style="margin:0 auto;width:120px"></div>\n             <p class="center flow-text">Our websites are built with <a href="http://www.meteor.com" target="_blank">Meteor.JS</a> - a state of the art native container - which increases reactivity and performance to a whole new level. Don\'t take our word for it. Take a look for yourself.</p>\n             \n            </div>\n        </div>\n                              </div>\n           <div class="row">\n                              <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/img/cdp.png">\n              \n            </div>\n           \n            \n          </div>\n           <div class="center" style="margin-top:-2.7em;">\n  <a href="http://www.vitalmetrics-cdp.com" target="_blank" class="btn-floating btn-large waves-effect waves-light red darken-2"><i class="material-icons">link</i></a>\n\n          </div>\n                                 \n                                  </div>\n                                                <div class="col s12 m4 l4">\n                                  <div class="card">\n            <div class="card-image">\n              <img src="/img/jesuslove.png">\n              \n            </div>\n            \n            \n          </div>\n     \n                                            \n                                  </div>\n                        \n                                       <div class="col s12 m4 l4">\n                                  <div class="card">\n            <div class="card-image">\n              <img src="/img/sfmvdm.png">\n              \n            </div>\n            \n            \n          </div>\n           <div class="center" style="margin-top:-2.7em;">\n  <a href="http://www.sfmvdm.com" target="_blank" class="btn-floating btn-large waves-effect waves-light red darken-2"><i class="material-icons">link</i></a>\n\n          </div>\n                                            \n                                  </div>\n                              </div>\n                        <div class="row">\n                              <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/img/bpr.png">\n              \n            </div>\n           \n            \n          </div>\n           <div class="center" style="margin-top:-2.7em;">\n  <a href="http://www.berguerpr.com" target="_blank" class="btn-floating btn-large waves-effect waves-light red darken-2"><i class="material-icons">link</i></a>\n\n          </div>\n                                 \n                                  </div>\n                                                <div class="col s12 m4 l4">\n                                  <div class="card">\n            <div class="card-image">\n              <img src="/img/ivhair.png">\n              \n            </div>\n            \n            \n          </div>\n           <div class="center" style="margin-top:-2.7em;">\n  <a href="http://www.ivhairco.com" target="_blank" class="btn-floating btn-large waves-effect waves-light red darken-2"><i class="material-icons">link</i></a>\n\n          </div>\n                                            \n                                  </div>\n                        \n                                       <div class="col s12 m4 l4">\n                                  <div class="card">\n            <div class="card-image">\n              <img src="/img/epic.png">\n              \n            </div>\n            \n            \n          </div>\n           <div class="center" style="margin-top:-2.7em;">\n  <a href="http://www.epicsupsb.com" target="_blank" class="btn-floating btn-large waves-effect waves-light red darken-2"><i class="material-icons">link</i></a>\n\n          </div>\n                                            \n                                  </div>\n                              </div>\n    <div class="row" style="margin-top:4em;">\n        <div class="container">\n        <div class="col s12 m12 l10 offset-l1">\n            <h3 class="  center  opensan">GRAPHICS</h3>\n  \n            <div class="divider red lighten-1" style="margin:0 auto;width:120px"></div>\n                \n             <p class="center flow-text">We make all of our graphics inhouse. Every single graphic work has been made with <i class="fa fa-heart red-text"></i> and a little bit of imagination.</p>\n            </div>\n        </div>\n                              </div>\n                                <div class="row">\n                              <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/img/cole.png" class="materialboxed">\n              \n            </div>\n           \n            \n          </div>\n           \n                                 \n                                  </div>\n                                                <div class="col s12 m4 l4">\n                                  <div class="card">\n            <div class="card-image">\n              <img src="/work/sfmvdm.png" class="materialboxed">\n              \n            </div>\n            \n            \n          </div>\n \n                                            \n                                  </div>\n                        \n                                       <div class="col s12 m4 l4">\n                                  <div class="card">\n            <div class="card-image">\n              <img src="/work/business.png" class="materialboxed">\n              \n            </div>\n            \n            \n          </div>\n         \n                                            \n                                  </div>\n                              </div>\n                     <div class="row">\n                              <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/work/speakwise.png" class="materialboxed">\n              \n            </div>\n           \n            \n          </div>\n           \n                                 \n                                  </div>\n                             <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/work/bpbanner.png" class="materialboxed">\n              \n            </div>\n           \n            \n          </div>\n           \n                                 \n                                  </div>\n                                          <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/work/jl.png" class="materialboxed">\n              \n            </div>\n           \n            \n          </div>\n           \n                                 \n                                  </div>\n    </div>\n\n</div>   \n \n      '), HTML.SECTION({
-    style: "margin-top:8em;padding:1.6em;margin-bottom:-1.4em;"                                                        // 71
-  }, "\n                ", HTML.DIV({                                                                                  // 72
-    "class": "row"                                                                                                     // 73
-  }, "\n        ", HTML.DIV({                                                                                          // 74
-    "class": "container"                                                                                               // 75
-  }, "\n        ", HTML.DIV({                                                                                          // 76
-    "class": "col s12 m12 l12"                                                                                         // 77
-  }, "\n            ", HTML.Raw('<h1 class="mont center homeWhat">ARE YOU GAME?</h1>'), "\n            ", HTML.Raw('<div class="divider red lighten-1"></div>'), "\n      \n             ", HTML.Raw('<h3 class="center muli grey-text text-darken-3">We would love to hear more.</h3>'), "\n                ", HTML.DIV({
-    "class": "center"                                                                                                  // 79
-  }, "\n                  ", HTML.A({                                                                                  // 80
-    href: function() {                                                                                                 // 81
-      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 82
-    },                                                                                                                 // 83
-    "class": "button outline"                                                                                          // 84
-  }, "GET STARTED WITH ILLUME INC."), "\n\n                "), "\n            "), "\n        "), "\n                              "), "\n            ") ];
-}));                                                                                                                   // 86
-                                                                                                                       // 87
+  return [ Spacebars.include(view.lookupTemplate("fixedHeader")), "\n ", HTML.SECTION("\n  ", HTML.Raw('<div class="center">\n    <h2 class="nanum "><b>My Work</b></h2>\n<div class="divider red lighten-1" style="margin:0 auto;width:120px"></div>\n  </div>'), "\n    ", HTML.Raw('<div class="container service-graphic sg2" style="margin-top:2em;">\n  <div class="screen monitor">\n    <div class="content">\n      <div class="browser">\n        <ul class="btns">\n          <li></li><li></li><li></li>\n        </ul>\n        <div class="browser-content">\n        <ul class="txt">\n          <li></li>        \n          <li class="big"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li></li>        \n          <li></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li></li>        \n          <li class="big"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n        </ul> \n        </div>\n      </div>\n    </div>\n    <div class="base">\n      <div class="grey-shadow"></div>\n      <div class="foot top"></div>\n      <div class="foot bottom"></div>\n    </div>\n  </div>\n  \n  <div class="laptop">\n    <div class="screen">\n      <ul class="txt">\n        <li></li>        \n        <li class="big"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li></li>        \n        <li></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li></li>        \n        <li class="big"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n      </ul>           \n    </div>\n    <div class="btm"></div>\n  </div>\n  \n  <div class="phone">\n    <div class="screen">\n      <ul class="txt">\n        <li></li>\n        <li></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li></li>\n        <li></li>\n      </ul>\n    </div>\n  <div class="shadow"></div>        \n  </div>\n  \n  <div class="ipad">\n    <div class="screen">\n      <ul class="txt">\n        <li></li>\n        <li class="big"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li></li>        \n        <li></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li></li>\n      </ul>\n    </div>\n  </div>  \n</div>'), "\n          ", HTML.DIV({
+    "class": "container",                                                                                              // 6
+    style: "margin-top:7em;"                                                                                           // 7
+  }, "\n              ", HTML.H2({                                                                                     // 8
+    "class": "flow-text nanum grey-text text-darken-3 center"                                                          // 9
+  }, Blaze.View("lookup:_", function() {                                                                               // 10
+    return Spacebars.mustache(view.lookup("_"), "myServices");                                                         // 11
+  })), "\n          "), "\n "), HTML.Raw('\n <br>\n\n<div class="divider"></div>\n\n  <!-- HTML Chart -->\n \n \n \n \n'), HTML.DIV({
+    id: "portfolioWrapper",                                                                                            // 13
+    "class": ""                                                                                                        // 14
+  }, "\n\n   ", HTML.DIV({                                                                                             // 15
+    "class": "row"                                                                                                     // 16
+  }, "\n        ", HTML.DIV({                                                                                          // 17
+    "class": "container"                                                                                               // 18
+  }, "\n        ", HTML.DIV({                                                                                          // 19
+    "class": "col s12 m12 "                                                                                            // 20
+  }, "\n            ", HTML.Raw('<h3 class="  center  opensan">WEBSITES</h3>'), "\n  \n            ", HTML.Raw('<div class="divider red lighten-1" style="margin:0 auto;width:120px"></div>'), "\n             ", HTML.P({
+    "class": "center flow-text"                                                                                        // 22
+  }, Blaze.View("lookup:_", function() {                                                                               // 23
+    return Spacebars.mustache(view.lookup("_"), "myWebsitesAre");                                                      // 24
+  }), HTML.A({                                                                                                         // 25
+    href: "http://www.meteor.com",                                                                                     // 26
+    target: "_blank"                                                                                                   // 27
+  }, Blaze.View("lookup:_", function() {                                                                               // 28
+    return Spacebars.mustache(view.lookup("_"), "meteorJs");                                                           // 29
+  })), " ", Blaze.View("lookup:_", function() {                                                                        // 30
+    return Spacebars.mustache(view.lookup("_"), "secondMyWeb");                                                        // 31
+  }), " - ", Blaze.View("lookup:_", function() {                                                                       // 32
+    return Spacebars.mustache(view.lookup("_"), "stateOfArt");                                                         // 33
+  })), "\n             \n            "), "\n        "), "\n                              "), "\n           ", HTML.Raw('<div class="row">\n                              <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/img/cdp.png">\n              \n            </div>\n           \n            \n          </div>\n           <div class="center" style="margin-top:-2.7em;">\n  <a href="http://www.vitalmetrics-cdp.com" target="_blank" class="btn-floating btn-large waves-effect waves-light red darken-2"><i class="material-icons">link</i></a>\n\n          </div>\n                                 \n                                  </div>\n                                                <div class="col s12 m4 l4">\n                                  <div class="card">\n            <div class="card-image">\n              <img src="/img/jesuslove.png">\n              \n            </div>\n            \n            \n          </div>\n     \n                                            \n                                  </div>\n                        \n                                       <div class="col s12 m4 l4">\n                                  <div class="card">\n            <div class="card-image">\n              <img src="/img/sfmvdm.png">\n              \n            </div>\n            \n            \n          </div>\n           <div class="center" style="margin-top:-2.7em;">\n  <a href="http://www.sfmvdm.com" target="_blank" class="btn-floating btn-large waves-effect waves-light red darken-2"><i class="material-icons">link</i></a>\n\n          </div>\n                                            \n                                  </div>\n                              </div>'), "\n                        ", HTML.Raw('<div class="row">\n                              <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/img/bpr.png">\n              \n            </div>\n           \n            \n          </div>\n           <div class="center" style="margin-top:-2.7em;">\n  <a href="http://www.berguerpr.com" target="_blank" class="btn-floating btn-large waves-effect waves-light red darken-2"><i class="material-icons">link</i></a>\n\n          </div>\n                                 \n                                  </div>\n                                                <div class="col s12 m4 l4">\n                                  <div class="card">\n            <div class="card-image">\n              <img src="/img/ivhair.png">\n              \n            </div>\n            \n            \n          </div>\n           <div class="center" style="margin-top:-2.7em;">\n  <a href="http://www.ivhairco.com" target="_blank" class="btn-floating btn-large waves-effect waves-light red darken-2"><i class="material-icons">link</i></a>\n\n          </div>\n                                            \n                                  </div>\n                        \n                                       <div class="col s12 m4 l4">\n                                  <div class="card">\n            <div class="card-image">\n              <img src="/img/epic.png">\n              \n            </div>\n            \n            \n          </div>\n           <div class="center" style="margin-top:-2.7em;">\n  <a href="http://www.epicsupsb.com" target="_blank" class="btn-floating btn-large waves-effect waves-light red darken-2"><i class="material-icons">link</i></a>\n\n          </div>\n                                            \n                                  </div>\n                              </div>'), "\n    ", HTML.DIV({
+    "class": "row",                                                                                                    // 35
+    style: "margin-top:4em;"                                                                                           // 36
+  }, "\n        ", HTML.DIV({                                                                                          // 37
+    "class": "container"                                                                                               // 38
+  }, "\n        ", HTML.DIV({                                                                                          // 39
+    "class": "col s12 m12 l10 offset-l1"                                                                               // 40
+  }, "\n            ", HTML.Raw('<h3 class="  center  opensan">GRAPHICS</h3>'), "\n  \n            ", HTML.Raw('<div class="divider red lighten-1" style="margin:0 auto;width:120px"></div>'), "\n                \n             ", HTML.P({
+    "class": "center flow-text"                                                                                        // 42
+  }, Blaze.View("lookup:_", function() {                                                                               // 43
+    return Spacebars.mustache(view.lookup("_"), "weMakeGraphics");                                                     // 44
+  }), " ", HTML.Raw('<i class="fa fa-heart red-text"></i>'), " ", Blaze.View("lookup:_", function() {                  // 45
+    return Spacebars.mustache(view.lookup("_"), "aBitOf");                                                             // 46
+  })), "\n            "), "\n        "), "\n                              "), "\n                                ", HTML.Raw('<div class="row">\n                              <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/img/cole.png" class="materialboxed">\n              \n            </div>\n           \n            \n          </div>\n           \n                                 \n                                  </div>\n                                                <div class="col s12 m4 l4">\n                                  <div class="card">\n            <div class="card-image">\n              <img src="/work/sfmvdm.png" class="materialboxed">\n              \n            </div>\n            \n            \n          </div>\n \n                                            \n                                  </div>\n                        \n                                       <div class="col s12 m4 l4">\n                                  <div class="card">\n            <div class="card-image">\n              <img src="/work/business.png" class="materialboxed">\n              \n            </div>\n            \n            \n          </div>\n         \n                                            \n                                  </div>\n                              </div>'), "\n                     ", HTML.Raw('<div class="row">\n                              <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/work/speakwise.png" class="materialboxed">\n              \n            </div>\n           \n            \n          </div>\n           \n                                 \n                                  </div>\n                             <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/work/bpbanner.png" class="materialboxed">\n              \n            </div>\n           \n            \n          </div>\n           \n                                 \n                                  </div>\n                                          <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/work/jl.png" class="materialboxed">\n              \n            </div>\n           \n            \n          </div>\n           \n                                 \n                                  </div>\n    </div>'), "\n\n"), "   \n  ", HTML.SECTION({
+    style: "margin-top:8em;padding:1.6em;margin-bottom:-1.4em;"                                                        // 48
+  }, "\n                ", HTML.DIV({                                                                                  // 49
+    "class": "row"                                                                                                     // 50
+  }, "\n        ", HTML.DIV({                                                                                          // 51
+    "class": "container"                                                                                               // 52
+  }, "\n        ", HTML.DIV({                                                                                          // 53
+    "class": "col s12 m12 l12"                                                                                         // 54
+  }, "\n            ", HTML.H1({                                                                                       // 55
+    "class": "nanum center homeWhat"                                                                                   // 56
+  }, Blaze.View("lookup:_", function() {                                                                               // 57
+    return Spacebars.mustache(view.lookup("_"), "areYouGame");                                                         // 58
+  })), "\n            ", HTML.Raw('<div class="divider red lighten-1"></div>'), "\n      \n             ", HTML.H3({   // 59
+    "class": "center nanum grey-text text-darken-3"                                                                    // 60
+  }, Blaze.View("lookup:_", function() {                                                                               // 61
+    return Spacebars.mustache(view.lookup("_"), "loveToHear");                                                         // 62
+  })), "\n                ", HTML.DIV({                                                                                // 63
+    "class": "center"                                                                                                  // 64
+  }, "\n                 ", HTML.P({                                                                                   // 65
+    "class": "flow-text nanum"                                                                                         // 66
+  }, Blaze.View("lookup:_", function() {                                                                               // 67
+    return Spacebars.mustache(view.lookup("_"), "alwaysOpen");                                                         // 68
+  }), "\n                 ", HTML.Raw("<br>"), "\n                 ", Blaze.View("lookup:_", function() {              // 69
+    return Spacebars.mustache(view.lookup("_"), "coffee");                                                             // 70
+  }), "\n                 "), "\n                  ", HTML.A({                                                         // 71
+    href: function() {                                                                                                 // 72
+      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 73
+    },                                                                                                                 // 74
+    "class": "button outline"                                                                                          // 75
+  }, Blaze.View("lookup:_", function() {                                                                               // 76
+    return Spacebars.mustache(view.lookup("_"), "getStarted");                                                         // 77
+  })), "\n\n                "), "\n            "), "\n        "), "\n                              "), "\n            ") ];
+}));                                                                                                                   // 79
+                                                                                                                       // 80
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 },"portfolio.js":function(){
@@ -1747,8 +1740,8 @@ Template.portfolio.rendered = function () {                                     
 Template.__checkName("service");                                                                                       // 2
 Template["service"] = new Template("Template.service", (function() {                                                   // 3
   var view = this;                                                                                                     // 4
-  return [ Spacebars.include(view.lookupTemplate("fixedHeader")), "\n    ", HTML.SECTION({                             // 5
-    style: "margin-top:3.2em"                                                                                          // 6
+  return [ Spacebars.include(view.lookupTemplate("fixedHeader")), HTML.Raw('\n        <div class="center">\n              <h2 class="nanum "><b>Collaborate</b></h2>\n<div class="divider red lighten-1" style="margin:0 auto;width:120px"></div>\n        </div>\n    '), HTML.SECTION({
+    style: "margin-top:2.2em"                                                                                          // 6
   }, "\n    ", HTML.DIV({                                                                                              // 7
     "class": "container"                                                                                               // 8
   }, "\n        ", HTML.DIV({                                                                                          // 9
@@ -1788,51 +1781,32 @@ Template["service"] = new Template("Template.service", (function() {            
     "class": "flow-text grey-text text-darken-3"                                                                       // 43
   }, Blaze.View("lookup:_", function() {                                                                               // 44
     return Spacebars.mustache(view.lookup("_"), "iDevelopWith");                                                       // 45
-  })), "\n                         \n                "), "\n            "), "\n            "), "\n        "), HTML.Raw('\n           \n           \n        <div class="divider" style="margin-top:6em;"></div>\n        '), HTML.SECTION({
+  })), "\n                         \n                "), "\n            "), "\n            "), "\n        "), HTML.Raw('\n           \n           \n        <div class="divider" style="margin-top:3em;"></div>\n        '), HTML.SECTION({
     "class": "callToAction"                                                                                            // 47
-  }, "\n        ", HTML.DIV({                                                                                          // 48
-    "class": "container"                                                                                               // 49
-  }, "\n      ", HTML.DIV({                                                                                            // 50
-    "class": "center"                                                                                                  // 51
-  }, "\n          ", HTML.H4({                                                                                         // 52
-    "class": "nanum grey-text text-darken-3"                                                                           // 53
-  }, Blaze.View("lookup:_", function() {                                                                               // 54
-    return Spacebars.mustache(view.lookup("_"), "my");                                                                 // 55
-  }), " ", HTML.SPAN({                                                                                                 // 56
-    "class": "red-text text-lighten-1"                                                                                 // 57
-  }, " ", Blaze.View("lookup:_", function() {                                                                          // 58
-    return Spacebars.mustache(view.lookup("_"), "service");                                                            // 59
-  }))), "\n            "), "\n            "), "\n        ", HTML.Raw('<div class="container service-graphic sg2">\n  <div class="screen monitor">\n    <div class="content">\n      <div class="browser">\n        <ul class="btns">\n          <li></li><li></li><li></li>\n        </ul>\n        <div class="browser-content">\n        <ul class="txt">\n          <li></li>        \n          <li class="big"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li></li>        \n          <li></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li></li>        \n          <li class="big"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n        </ul> \n        </div>\n      </div>\n    </div>\n    <div class="base">\n      <div class="grey-shadow"></div>\n      <div class="foot top"></div>\n      <div class="foot bottom"></div>\n    </div>\n  </div>\n  \n  <div class="laptop">\n    <div class="screen">\n      <ul class="txt">\n        <li></li>        \n        <li class="big"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li></li>        \n        <li></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li></li>        \n        <li class="big"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n      </ul>           \n    </div>\n    <div class="btm"></div>\n  </div>\n  \n  <div class="phone">\n    <div class="screen">\n      <ul class="txt">\n        <li></li>\n        <li></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li></li>\n        <li></li>\n      </ul>\n    </div>\n  <div class="shadow"></div>        \n  </div>\n  \n  <div class="ipad">\n    <div class="screen">\n      <ul class="txt">\n        <li></li>\n        <li class="big"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li></li>        \n        <li></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li></li>\n      </ul>\n    </div>\n  </div>  \n</div>'), "\n          ", HTML.DIV({
-    "class": "container",                                                                                              // 61
-    style: "margin-top:5em;"                                                                                           // 62
-  }, "\n              ", HTML.P({                                                                                      // 63
-    "class": "flow-text nanum grey-text text-darken-3 center"                                                          // 64
-  }, Blaze.View("lookup:_", function() {                                                                               // 65
-    return Spacebars.mustache(view.lookup("_"), "myServices");                                                         // 66
-  })), "\n          "), "\n           \n            ", HTML.DIV({                                                      // 67
-    "class": "row callToAction"                                                                                        // 68
-  }, "\n            ", HTML.DIV({                                                                                      // 69
-    "class": "container"                                                                                               // 70
-  }, "\n                ", HTML.DIV({                                                                                  // 71
-    "class": "col s12 m10 l10 offset-l1 offset-m1"                                                                     // 72
-  }, "\n                ", HTML.H4({                                                                                   // 73
-    "class": " center nanum grey-text text-darken-3"                                                                   // 74
-  }, "\n                    ", Blaze.View("lookup:_", function() {                                                     // 75
-    return Spacebars.mustache(view.lookup("_"), "gotQuestion");                                                        // 76
-  }), " ", HTML.Raw("<br>"), " ", Blaze.View("lookup:_", function() {                                                  // 77
-    return Spacebars.mustache(view.lookup("_"), "giveUsaCall");                                                        // 78
-  }), "\n                   \n                    \n                    "), "\n                  ", HTML.DIV({         // 79
-    "class": "center"                                                                                                  // 80
-  }, "\n                  ", HTML.A({                                                                                  // 81
-    href: function() {                                                                                                 // 82
-      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 83
-    },                                                                                                                 // 84
-    "class": "button outline"                                                                                          // 85
-  }, Blaze.View("lookup:_", function() {                                                                               // 86
-    return Spacebars.mustache(view.lookup("_"), "getStarted");                                                         // 87
-  })), "\n\n                "), "\n                "), "\n                "), "\n            "), "\n        ") ];      // 88
-}));                                                                                                                   // 89
-                                                                                                                       // 90
+  }, "\n        ", HTML.Raw('<div class="container">\n     \n            </div>'), "\n       \n           \n            ", HTML.DIV({
+    "class": "row callToAction"                                                                                        // 49
+  }, "\n            ", HTML.DIV({                                                                                      // 50
+    "class": "container"                                                                                               // 51
+  }, "\n                ", HTML.DIV({                                                                                  // 52
+    "class": "col s12 m10 l10 offset-l1 offset-m1"                                                                     // 53
+  }, "\n                ", HTML.H3({                                                                                   // 54
+    "class": " center nanum grey-text text-darken-3"                                                                   // 55
+  }, "\n                    ", Blaze.View("lookup:_", function() {                                                     // 56
+    return Spacebars.mustache(view.lookup("_"), "gotQuestion");                                                        // 57
+  }), " ", HTML.Raw("<br>"), " ", Blaze.View("lookup:_", function() {                                                  // 58
+    return Spacebars.mustache(view.lookup("_"), "giveUsaCall");                                                        // 59
+  }), "\n                   \n                    \n                    "), "\n                  ", HTML.DIV({         // 60
+    "class": "center"                                                                                                  // 61
+  }, "\n                  ", HTML.A({                                                                                  // 62
+    href: function() {                                                                                                 // 63
+      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 64
+    },                                                                                                                 // 65
+    "class": "button outline"                                                                                          // 66
+  }, Blaze.View("lookup:_", function() {                                                                               // 67
+    return Spacebars.mustache(view.lookup("_"), "getStarted");                                                         // 68
+  })), "\n\n                "), "\n                ", HTML.Raw("<br>"), "\n                "), "\n                "), "\n            "), "\n        ") ];
+}));                                                                                                                   // 70
+                                                                                                                       // 71
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 },"service.js":function(){
@@ -2720,7 +2694,7 @@ Router.configure({                                                              
     },                                                                                                                 //
     author: {                                                                                                          //
       name: 'author',                                                                                                  //
-      content: 'illume inc.'                                                                                           //
+      content: 'Joseph S. Lee'                                                                                         //
     },                                                                                                                 //
     url: {                                                                                                             //
       property: 'og:url',                                                                                              //
@@ -2783,8 +2757,8 @@ Router.route('about', {                                                         
                                                                                                                        //
 Router.route('service', {                                                                                              // 82
   template: 'service',                                                                                                 //
-  path: '/what-we-do',                                                                                                 //
-  title: 'Our Services',                                                                                               //
+  path: '/my-services',                                                                                                //
+  title: 'My Services',                                                                                                //
   meta: {                                                                                                              //
     description: {                                                                                                     //
       name: 'description',                                                                                             //
@@ -2851,14 +2825,14 @@ Router.route('hybrid', {                                                        
                                                                                                                        //
 Router.route('portfolio', {                                                                                            // 138
   template: 'portfolio',                                                                                               //
-  path: '/our-work',                                                                                                   //
-  title: 'Our Portfolio',                                                                                              //
+  path: '/my-work',                                                                                                    //
+  title: 'My Portfolio',                                                                                               //
   meta: {                                                                                                              //
     description: {                                                                                                     //
       name: 'description',                                                                                             //
       itemprop: 'description',                                                                                         //
       property: 'og:description',                                                                                      //
-      content: 'We ensure that the design benefits the function. We produce features that work in harmony with the design all intertwined into a fast, controllable, and powerful website. '
+      content: 'I ensure that the design benefits the function. We produce features that work in harmony with the design all intertwined into a fast, controllable, and powerful website. '
     },                                                                                                                 //
     keywords: {                                                                                                        //
       name: 'keywords',                                                                                                //
@@ -2873,13 +2847,13 @@ Router.route('portfolio', {                                                     
     url: {                                                                                                             //
       property: 'og:url',                                                                                              //
       itemprop: 'url',                                                                                                 //
-      content: 'http://www.illumeweb.com/our-work'                                                                     //
+      content: 'http://www.illumeweb.com/my-work'                                                                      //
     },                                                                                                                 //
     'og:type': 'website',                                                                                              //
     'og:title': function() {                                                                                           //
       return document.title;                                                                                           //
     },                                                                                                                 //
-    'og:site_name': 'Our Services'                                                                                     //
+    'og:site_name': 'My Work'                                                                                          //
   }                                                                                                                    //
 });                                                                                                                    //
                                                                                                                        //
@@ -3051,7 +3025,7 @@ TAPi18n._enable({"helper_name":"_","supported_languages":null,"i18n_files_route"
 TAPi18n.languages_names["en"] = ["English","English"];                                                                 // 9
 // integrate the fallback language translations                                                                        // 10
 translations = {};                                                                                                     // 11
-translations[namespace] = {"aboutIllume":"A Santa Barbara, CA based group, or purpose is to help create or refine your product vision and aim your business towards success. From research to solutions, we drive the lifecycle of your idea to be successful in the online arena with our powerful websites. One size does not fit all so we try our best to understand your current situation to build a comprehensive plan to bring additiional value to your idea.","webAndMobile":"Web & Mobile Apps, ","intoOne":"into One","secretWeapon":"Secret Weapon,","iValue":"I value simple content structure, clean design patterns, and thoughtful interactions.","iCode":"I love to code things from scratch, and enjoy bringing ideas to life in the browser.","moreMe":" I play videogames, read, but I mostly enjoy spending time with friends and family.","myTools":"My Tools:","thingsDesign":"Things I enjoy designing:","languageSpeak":"Languages I speak","thingsLike":"Things I enjoy:","coffeeAnd":"Coffee, videogames, coding, hanging out with loved ones, oh and also coffee.","occasionally":"Occasionally","meteor":"METEOR","learnMoreHybrid":"LEARN MORE ON HYBRID APPS","webDesc":"In December of 2010, Samsung SDS predicted that a native container platform that can merge the intricacies of the web and the dynamics of mobile apps will bring about a new future in software engineering. This so called 'hybrid apps' will bring ideas across all platforms of all devices; breaking down  walls for ideas to permeate into the marketspace. The good news is: We offer it right here at illume Inc. Experience the best of both worlds   and spark your ideas to life.","silos":"We cut out the silos and cookie-cutter solutions because we know they will ultimately fail. We are eager to find out what makes your business tick so we can build you a custom high-end website that works for you. Meteor is a Node.JS platform that offers robust flexibility in creating beautiful and powerful applications. We are proud to be part of a growing community of engineers willing to embrace the web-revolution that is about to come. Don't wait.","discoverMeteor":"DISCOVER METEOR","leeSang":"JOE LEE","leadDeveloper":"I believe a strong background in successful customer relation is essential in developing a powerful application fit for your business, all within the boundaries of our imagination. I strive to maintain constant communication between you and our team to ensure the optimal health of your product for your business. Thanks for choosing to work with me.","aLittleAboutMeteor":"A little about Meteor.JS","readySetGo":"READY, SET, GO."};
+translations[namespace] = {"aboutIllume":"A Santa Barbara, CA based group, or purpose is to help create or refine your product vision and aim your business towards success. From research to solutions, we drive the lifecycle of your idea to be successful in the online arena with our powerful websites. One size does not fit all so we try our best to understand your current situation to build a comprehensive plan to bring additiional value to your idea.","webAndMobile":"Web & Mobile Apps, ","intoOne":"into One","secretWeapon":"Secret Weapon,","iValue":"I value simple content structure, clean design patterns, and thoughtful interactions.","iCode":"I love to code things from scratch, and enjoy bringing ideas to life in the browser.","moreMe":" I play videogames, read, but I mostly enjoy spending time with friends and family.","myTools":"My Tools:","thingsDesign":"Things I enjoy designing:","languageSpeak":"Languages I speak","thingsLike":"Things I enjoy:","coffeeAnd":"Coffee, videogames, coding, hanging out with loved ones, oh and also coffee.","occasionally":"Occasionally","meteor":"METEOR","learnMoreHybrid":"LEARN MORE ON HYBRID APPS","webDesc":"In December of 2010, Samsung SDS predicted that a native container platform that can merge the intricacies of the web and the dynamics of mobile apps will bring about a new future in software engineering. This so called 'hybrid apps' will bring ideas across all platforms of all devices; breaking down  walls for ideas to permeate into the marketspace. The good news is: We offer it right here at illume Inc. Experience the best of both worlds   and spark your ideas to life.","silos":"We cut out the silos and cookie-cutter solutions because we know they will ultimately fail. We are eager to find out what makes your business tick so we can build you a custom high-end website that works for you. Meteor is a Node.JS platform that offers robust flexibility in creating beautiful and powerful applications. We are proud to be part of a growing community of engineers willing to embrace the web-revolution that is about to come. Don't wait.","discoverMeteor":"DISCOVER METEOR","leeSang":"JOE LEE","leadDeveloper":"I believe a strong background in successful customer relation is essential in developing a powerful application fit for your business, all within the boundaries of our imagination. I strive to maintain constant communication between you and our team to ensure the optimal health of your product for your business. Thanks for choosing to work with me.","aLittleAboutMeteor":"A little about Meteor.JS","readySetGo":"READY, SET, GO.","meteorJs":"Meteor.JS"};
 TAPi18n._loadLangFileObject("en", translations);                                                                       // 13
                                                                                                                        // 14
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -3122,6 +3096,28 @@ TAPi18n._loadLangFileObject("en", translations);                                
                                                                                                                        // 12
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+},"portfolio.en.i18n.json":function(){
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                                     //
+// both/i18n/en/portfolio.en.i18n.json                                                                                 //
+//                                                                                                                     //
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                                                                                       //
+var _ = Package.underscore._,                                                                                          // 1
+    package_name = "project",                                                                                          // 2
+    namespace = "project";                                                                                             // 3
+                                                                                                                       // 4
+if (package_name != "project") {                                                                                       // 5
+    namespace = TAPi18n.packages[package_name].namespace;                                                              // 6
+}                                                                                                                      // 7
+// integrate the fallback language translations                                                                        // 8
+translations = {};                                                                                                     // 9
+translations[namespace] = {"myWebsitesAre":"My websites are built with","secondMyWeb":"","stateOfArt":"a state of the art native container - which increases reactivity and performance to a whole new level.","weMakeGraphics":"We make all of our graphics inhouse. Every single graphic work has been made with","aBitOf":"and a little bit of imagination."};
+TAPi18n._loadLangFileObject("en", translations);                                                                       // 11
+                                                                                                                       // 12
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 },"service.en.i18n.json":function(){
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -3139,7 +3135,7 @@ if (package_name != "project") {                                                
 }                                                                                                                      // 7
 // integrate the fallback language translations                                                                        // 8
 translations = {};                                                                                                     // 9
-translations[namespace] = {"reactivity":"reactivity","collaborate":"Let's collaborate to give you","unparalleled":"and unparalleled performance.","meteorFirst":"Meteor gives us developers a radically simpler way to build realtime web apps, entirely in JavaScript from one code base. We are able to leverage Javascript like never before and provide you with blazing reactivity in your web application's core. ","meteorSecond":"  Because the same code runs from the client to the cloud, from packages to database APIs, we are not restricted to our weakest link but can be judged based on our strongest one.","simpleSleek":"Simple, Sleek, yet Powerful","iDevelopWith":"I develop with Meteor to create robust, realtime websites and web applications that are as beautiful as they are powerful. As sleek as they are practical.","my":"My","service":"Services","gotQuestion":"Got questions about my services? Not a problem.","giveUsaCall":"Give me a call or shoot an email. I will get back to you in a jiffy.","websitePackage":"Website Package","ecommerce":"Ecommerce Package","logo":"Logo Package","myServices":"I create, design, and develop websites and web applications for you and your business. Let me know what you need specifically and I am sure I can be of help to you and your team."};
+translations[namespace] = {"reactivity":"reactivity","collaborate":"Let's collaborate to give you a website with","unparalleled":"and unparalleled performance.","meteorFirst":"Meteor gives us developers a radically simpler way to build realtime web apps, entirely in JavaScript from one code base. We are able to leverage Javascript like never before and provide you with blazing reactivity in your web application's core. ","meteorSecond":"  Because the same code runs from the client to the cloud, from packages to database APIs, we are not restricted to our weakest link but can be judged based on our strongest one.","simpleSleek":"Simple, Sleek, yet Powerful","iDevelopWith":"I develop with Meteor to create robust, realtime websites and web applications that are as beautiful as they are powerful. As sleek as they are practical.","my":"My","service":"Services","gotQuestion":"Got questions about my services? Not a problem.","giveUsaCall":"Give me a call or shoot an email. I will get back to you in a jiffy.","websitePackage":"Website Package","ecommerce":"Ecommerce Package","logo":"Logo Package","myServices":"I create, design, and develop websites and web applications for you and your business. Let me know what you need specifically and I am sure I can be of help to you and your team."};
 TAPi18n._loadLangFileObject("en", translations);                                                                       // 11
                                                                                                                        // 12
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -3228,6 +3224,25 @@ TAPi18n.languages_names["ko"] = ["Korean","한국어"];                         
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //                                                                                                                     //
 // both/i18n/ko/home.ko.i18n.json                                                                                      //
+//                                                                                                                     //
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                                                                                       //
+var _ = Package.underscore._,                                                                                          // 1
+    package_name = "project",                                                                                          // 2
+    namespace = "project";                                                                                             // 3
+                                                                                                                       // 4
+if (package_name != "project") {                                                                                       // 5
+    namespace = TAPi18n.packages[package_name].namespace;                                                              // 6
+}                                                                                                                      // 7
+TAPi18n.languages_names["ko"] = ["Korean","한국어"];                                                                      // 8
+                                                                                                                       // 9
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+},"portfolio.ko.i18n.json":function(){
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                                     //
+// both/i18n/ko/portfolio.ko.i18n.json                                                                                 //
 //                                                                                                                     //
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                                                                                                                        //
@@ -3663,12 +3678,14 @@ require("./both/i18n/en/about.en.i18n.json");
 require("./both/i18n/en/contact.en.i18n.json");
 require("./both/i18n/en/header.en.i18n.json");
 require("./both/i18n/en/home.en.i18n.json");
+require("./both/i18n/en/portfolio.en.i18n.json");
 require("./both/i18n/en/service.en.i18n.json");
 require("./both/i18n/en/success.en.i18n.json");
 require("./both/i18n/ko/about.ko.i18n.json");
 require("./both/i18n/ko/contact.ko.i18n.json");
 require("./both/i18n/ko/header.ko.i18n.json");
 require("./both/i18n/ko/home.ko.i18n.json");
+require("./both/i18n/ko/portfolio.ko.i18n.json");
 require("./both/i18n/ko/service.ko.i18n.json");
 require("./both/i18n/ko/success.ko.i18n.json");
 require("./client/layout/appLayout/appLayout.js");

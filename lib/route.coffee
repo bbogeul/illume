@@ -25,7 +25,7 @@ Router.configure
 
     author:
         name: 'author'
-        content: 'illume inc.'
+        content: 'Joseph S. Lee'
 
     url:
       property: 'og:url'
@@ -81,8 +81,8 @@ Router.route 'about',
    
 Router.route 'service',
   template: 'service'
-  path: '/what-we-do'
-  title: 'Our Services' 
+  path: '/my-services'
+  title: 'My Services' 
   meta:
     description:
       name: 'description'
@@ -137,14 +137,14 @@ Router.route 'hybrid',
     
 Router.route 'portfolio',
   template: 'portfolio'
-  path: '/our-work'
-  title: 'Our Portfolio' 
+  path: '/my-work'
+  title: 'My Portfolio' 
   meta:
     description:
       name: 'description'
       itemprop: 'description'
       property: 'og:description'
-      content:  'We ensure that the design benefits the function. We produce features that work in harmony with the design all intertwined into a fast, controllable, and powerful website. '
+      content:  'I ensure that the design benefits the function. We produce features that work in harmony with the design all intertwined into a fast, controllable, and powerful website. '
     keywords: 
       name: 'keywords'
       itemprop: 'keywords'
@@ -156,12 +156,12 @@ Router.route 'portfolio',
      url:
       property: 'og:url'
       itemprop: 'url'
-      content: 'http://www.illumeweb.com/our-work'
+      content: 'http://www.illumeweb.com/my-work'
         
      'og:type': 'website'
      'og:title': ->
       document.title
-     'og:site_name': 'Our Services'        
+     'og:site_name': 'My Work'        
         
 Router.route 'approach',
   template: 'approach'
