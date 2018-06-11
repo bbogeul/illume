@@ -14791,6 +14791,10 @@ button.outline:active,
   font-family: "Montserrat", sans-serif;
 }
 
+.mainC {
+  color: #2f363b;
+}
+
 .open-nav {
   max-height: 400px !important;
 }
@@ -15430,10 +15434,11 @@ figcaption a {
 /* END Keyframes for the initial animation */
 
 .pricing {
-  background: #d33e3e;
+  background: #ffffff;
   width: 100%;
   top: 50%;
   left: 50%;
+  border-radius: 20px;
   padding: 40px 0 20px;
   color: #fff;
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
@@ -15442,9 +15447,9 @@ figcaption a {
 }
 
 .pricing .thumbnail {
-  background: #fff;
+  background: rgb(234, 14, 14);
   /* IE Fall */
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(229, 52, 52, 0.99);
   display: block;
   width: 90px;
   height: 90px;

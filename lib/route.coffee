@@ -15,7 +15,7 @@ Router.configure
       name: 'description'
      
  
-      content:  'illume Inc. is a full business idea & web/app product development workshop located in the heart of Santa Barbara, California. From research to solutions, we drive the lifecycle of your idea to be successful in the online arena with our powerful websites and apps.'
+      content:  'My name is Joe and I am a developer, a designer, and a coffee addict. Working with you to make a powerful web application for you and your business.'
 
     image:
      
@@ -54,17 +54,17 @@ Router.route 'home',
 
 Router.route 'about',
   template: 'about'
-  path: '/about-illumeinc'
-  title: 'About Us'
+  path: '/about-me'
+  title: 'About Me'
   meta:
     url:
       property: 'og:url'
       itemprop: 'url'
-      content: 'http://www.illumeweb.com/about-illumeinc'  
+      content: 'http://www.illumeweb.com/about-me'  
     description:
       name: 'description'
       property: 'og:description'
-      content:  'From research to solutions, we drive the lifecycle of your idea to be successful in the online arena with our powerful websites. '
+      content:  'I believe a strong background in successful customer relation is essential in developing a powerful application fit for your business, all within the boundaries of our imagination.'
     image:
       itemprop: 'image'
       property: 'og:image'
@@ -72,12 +72,12 @@ Router.route 'about',
     keywords: 
       name: 'keywords'
       itemprop: 'keywords'
-      content: 'Santa Barbara, product vision, meteorjs, success, Node.JS, robust flexibility, creating success, high-end website'  
+      content: 'web design, web development, freelance webdeveloper, coding, designer, developer'  
 
       'og:type': 'website'
      'og:title': ->
       document.title
-     'og:site_name': 'About Us'   
+     'og:site_name': 'About Me'   
    
 Router.route 'service',
   template: 'service'
