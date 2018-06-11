@@ -340,13 +340,13 @@ Template["about"] = new Template("Template.about", (function() {                
     "class": "nanum grey-text text-darken-2"                                                                           // 94
   }, "\n          ", Blaze.View("lookup:_", function() {                                                               // 95
     return Spacebars.mustache(view.lookup("_"), "coffeeAnd");                                                          // 96
-  }), "\n      "), "\n  "), "\n"), "\n                "), "\n                "), "\n "), "\n "), HTML.Raw('\n       <div class="parallax-container" style="height:400px;margin-top:4em">\n      <div class="parallax" style="background:#0f0f0f"><img src="/img/webd.jpg"></div>\n \n     \n    </div>\n    '), HTML.SECTION({
+  }), "\n      "), "\n  "), "\n"), "\n                "), "\n                "), "\n "), "\n "), HTML.Raw('\n       <div class="divider"></div>\n    '), HTML.SECTION({
     style: "margin-top:5em"                                                                                            // 98
   }, "\n                  ", HTML.DIV({                                                                                // 99
     "class": "container"                                                                                               // 100
-  }, "\n                   ", HTML.DIV({                                                                               // 101
+  }, "\n                  ", HTML.Raw('<div class="center">\n                      <img src="/img/meteor.svg" alt="">\n                  </div>'), "\n                   ", HTML.DIV({
     "class": "center"                                                                                                  // 102
-  }, "\n", HTML.H2({                                                                                                   // 103
+  }, "\n", HTML.H3({                                                                                                   // 103
     "class": "nanum"                                                                                                   // 104
   }, HTML.B(Blaze.View("lookup:_", function() {                                                                        // 105
     return Spacebars.mustache(view.lookup("_"), "aLittleAboutMeteor");                                                 // 106
@@ -1844,56 +1844,18 @@ Template["service"] = new Template("Template.service", (function() {            
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                                                                                                                        //
 Template.service.rendered = function () {                                                                              // 1
-	new WOW().init({ mobile: false });                                                                                    // 2
+    new WOW().init({ mobile: false });                                                                                 // 2
                                                                                                                        //
-	$(".titl").click(function () {                                                                                        // 4
-		$(".contents").slideToggle();                                                                                        // 5
-	});                                                                                                                   // 6
-	$(".title").click(function () {                                                                                       // 7
-		$(".content").slideToggle();                                                                                         // 8
-	});                                                                                                                   // 9
-	$(".titles").click(function () {                                                                                      // 10
-		$(".contentsss").slideToggle();                                                                                      // 11
-	});                                                                                                                   // 12
-                                                                                                                       //
-	jQuery(document).ready(function ($) {                                                                                 // 14
-		//store service items                                                                                                //
-		var fillingBlocks = $('.cd-service').not('.cd-service-divider');                                                     // 16
-                                                                                                                       //
-		//store service items top position into an array                                                                     //
-		var topValueFillingBlocks = [];                                                                                      // 19
-		fillingBlocks.each(function (index) {                                                                                // 20
-			var topValue = $(this).offset().top;                                                                                // 21
-			topValueFillingBlocks[topValueFillingBlocks.length] = topValue;                                                     // 22
-		});                                                                                                                  // 23
-                                                                                                                       //
-		//add the .focus class to the first service item                                                                     //
-		fillingBlocks.eq(0).addClass('focus');                                                                               // 26
-                                                                                                                       //
-		$(window).on('scroll', function () {                                                                                 // 28
-			//check which service item is in the viewport and add the .focus class to it                                        //
-			updateOnFocusItem(fillingBlocks.slice(1));                                                                          // 30
-			//evaluate the $(window).scrollTop value and change the body::after and body::before background accordingly (using the new-color-n classes)
-			bodyBackground(topValueFillingBlocks);                                                                              // 32
-		});                                                                                                                  // 33
-	});                                                                                                                   // 34
-                                                                                                                       //
-	function updateOnFocusItem(items) {                                                                                   // 36
-		items.each(function () {                                                                                             // 37
-			$(this).offset().top - $(window).scrollTop() <= $(window).height() / 2 ? $(this).addClass('focus') : $(this).removeClass('focus');
-		});                                                                                                                  // 39
-	}                                                                                                                     // 40
-                                                                                                                       //
-	function bodyBackground(itemsTopValues) {                                                                             // 42
-		var topPosition = $(window).scrollTop() + $(window).height() / 2,                                                    // 43
-		    servicesNumber = itemsTopValues.length;                                                                          // 43
-		$.each(itemsTopValues, function (key, value) {                                                                       // 45
-			if (itemsTopValues[key] <= topPosition && itemsTopValues[key + 1] > topPosition || itemsTopValues[key] <= topPosition && key + 1 == servicesNumber) {
-				$('body').removeClass('new-color-' + (key - 1) + ' new-color-' + (key + 1)).addClass('new-color-' + key);          // 47
-			}                                                                                                                   // 48
-		});                                                                                                                  // 49
-	}                                                                                                                     // 50
-};                                                                                                                     // 52
+    $(".titl").click(function () {                                                                                     // 4
+        $(".contents").slideToggle();                                                                                  // 5
+    });                                                                                                                // 6
+    $(".title").click(function () {                                                                                    // 7
+        $(".content").slideToggle();                                                                                   // 8
+    });                                                                                                                // 9
+    $(".titles").click(function () {                                                                                   // 10
+        $(".contentsss").slideToggle();                                                                                // 11
+    });                                                                                                                // 12
+};                                                                                                                     // 16
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 }},"work":{"template.application.js":function(){
@@ -1914,190 +1876,201 @@ Template["applications"] = new Template("Template.applications", (function() {  
 Template.__checkName("Rsvp");                                                                                          // 8
 Template["Rsvp"] = new Template("Template.Rsvp", (function() {                                                         // 9
   var view = this;                                                                                                     // 10
-  return [ Spacebars.include(view.lookupTemplate("fixedHeader")), HTML.Raw('\n  <section>\n <div class="section">\n    <div class="container">\n        <div class="center">\n        <h4 class="center muli grey-text text-darken-3">Create With Us Today</h4>\n        </div>\n        </div>\n    </div>\n   \n    <div class="section">\n    <div class="container">\n        <div class="row">\n     <div class="col s12 m12 l6 offset-l3">\n            <p class="center   flow-text grey-text text-darken-2">\n     Starting a project with illume is easy. Just email, call, or text us 24/7. We will get back to you within minutes.\n         </p>\n            </div>\n        </div>\n        </div>\n    </div>\n \n    <div class="section">\n    <div class="container">\n        <div class="row">\n        <div class="col s12 m6">\n            <h5 class="rale"> <i class="fa fa-phone  red-text"></i></h5>\n \n            <div class="center">\n            <ul class="collection">\n                <li class="collection-item  blue-grey darken-1">\n                \n                    <span class="  white-text">+1 805 530 5434 | ENG</span>\n                </li>\n                       <li class="collection-item  blue-grey darken-1">\n                \n                    <span class="  white-text">+82 10 5571 1781 | KOR</span>\n                </li>       \n                </ul>\n            </div>\n         <h5 class="rale"><i class="fa fa-envelope red-text"></i> </h5>\n          \n                  <div class="center">\n                       <ul class="collection">\n              \n                         <li class="collection-item  blue-grey darken-1">\n                \n                  <span class="  white-text">illumeweb@gmail.com</span>\n                </li>\n                </ul>\n                  </div>\n            </div>\n      \n           <div class="col s12 m6 l6">\n                  <h5 class="rale"><i class="fa fa-calendar-check-o red-text "></i> </h5>\n                        <ul class="collection">\n                <li class="collection-item  blue-grey darken-1">\n                \n                    <span class="  white-text">Mon - Fri: <span class="right">12:00PM - 7PM\n</span></span>\n                </li>\n                                <li class="collection-item  blue-grey darken-1">\n                \n                    <span class="  white-text">Sat: <span class="right">11:00AM  - 4PM</span></span>\n                </li> \n                                   <li class="collection-item  blue-grey darken-1">\n                \n                    <span class="  white-text">Sun: <span class="right bold">Closed  </span></span>\n                </li> \n                                         <li class="collection-item  blue-grey darken-1">\n                \n                    <span class="  white-text">Holidays: <span class="right bold">Closed</span></span>\n                </li>\n                </ul>\n            </div>\n        </div>\n        </div>\n    </div>\n</section>\n    <div class="divider" style="margin:0 auto;width:50%"></div>\n     <div class="section">\n    <div class="container">\n        <div class="row">\n     <div class="col s12 m12 l6 offset-l3">\n            <p class="center   flow-text grey-text text-darken-2">\n  You can also start a project by filling out our application form. You should be getting something from us within 24 hours.\n         </p>\n            </div>\n        </div>\n        </div>\n    </div>\n'), HTML.DIV({
-    "class": "container"                                                                                               // 12
-  }, " \n", HTML.DIV({                                                                                                 // 13
-    "class": "row center"                                                                                              // 14
-  }, "\n", HTML.DIV({                                                                                                  // 15
-    style: "padding:1em;",                                                                                             // 16
-    "class": "z-depth-1 col s12"                                                                                       // 17
-  }, " \n      \n        ", Blaze._TemplateWith(function() {                                                           // 18
-    return {                                                                                                           // 19
-      collection: Spacebars.call("Rsvps"),                                                                             // 20
-      id: Spacebars.call("insertRsvpForm"),                                                                            // 21
-      type: Spacebars.call("method"),                                                                                  // 22
-      meteormethod: Spacebars.call("submitRsvp"),                                                                      // 23
-      omitFields: Spacebars.call("createdAt")                                                                          // 24
-    };                                                                                                                 // 25
-  }, function() {                                                                                                      // 26
-    return Spacebars.include(view.lookupTemplate("autoForm"), function() {                                             // 27
-      return [ "\n   \n      ", HTML.DIV({                                                                             // 28
-        "class": "row"                                                                                                 // 29
-      }, " \n      ", HTML.DIV({                                                                                       // 30
-        "class": "col s12 m3"                                                                                          // 31
-      }, "\n      ", Blaze._TemplateWith(function() {                                                                  // 32
-        return {                                                                                                       // 33
-          name: Spacebars.call("name")                                                                                 // 34
-        };                                                                                                             // 35
-      }, function() {                                                                                                  // 36
-        return Spacebars.include(view.lookupTemplate("afQuickField"));                                                 // 37
-      }), "\n      "), " \n          ", HTML.DIV({                                                                     // 38
-        "class": "col s12 m3"                                                                                          // 39
-      }, "\n        ", Blaze._TemplateWith(function() {                                                                // 40
-        return {                                                                                                       // 41
-          name: Spacebars.call("last")                                                                                 // 42
-        };                                                                                                             // 43
-      }, function() {                                                                                                  // 44
-        return Spacebars.include(view.lookupTemplate("afQuickField"));                                                 // 45
-      }), "\n      "), " \n       ", HTML.DIV({                                                                        // 46
-        "class": "col s12 m3"                                                                                          // 47
-      }, "\n        ", Blaze._TemplateWith(function() {                                                                // 48
-        return {                                                                                                       // 49
-          name: Spacebars.call("email")                                                                                // 50
-        };                                                                                                             // 51
-      }, function() {                                                                                                  // 52
-        return Spacebars.include(view.lookupTemplate("afQuickField"));                                                 // 53
-      }), "\n      \n      "), " \n      ", HTML.DIV({                                                                 // 54
-        "class": "col s12 m3"                                                                                          // 55
-      }, "\n        ", Blaze._TemplateWith(function() {                                                                // 56
-        return {                                                                                                       // 57
-          name: Spacebars.call("phone")                                                                                // 58
-        };                                                                                                             // 59
-      }, function() {                                                                                                  // 60
-        return Spacebars.include(view.lookupTemplate("afQuickField"));                                                 // 61
-      }), "\n      \n      "), "\n      "), "\n       ", HTML.DIV({                                                    // 62
-        "class": "row"                                                                                                 // 63
-      }, "\n", HTML.DIV({                                                                                              // 64
-        "class": "col s12 m6"                                                                                          // 65
-      }, "\n ", Blaze._TemplateWith(function() {                                                                       // 66
-        return {                                                                                                       // 67
-          name: Spacebars.call("website")                                                                              // 68
-        };                                                                                                             // 69
-      }, function() {                                                                                                  // 70
-        return Spacebars.include(view.lookupTemplate("afQuickField"));                                                 // 71
-      }), "\n"), "\n", HTML.DIV({                                                                                      // 72
-        "class": "col s12 m6"                                                                                          // 73
-      }, "\n   ", Blaze._TemplateWith(function() {                                                                     // 74
-        return {                                                                                                       // 75
-          name: Spacebars.call("organization")                                                                         // 76
-        };                                                                                                             // 77
-      }, function() {                                                                                                  // 78
-        return Spacebars.include(view.lookupTemplate("afQuickField"));                                                 // 79
-      }), "\n"), "\n  \n       "), "\n       \n       ", HTML.DIV({                                                    // 80
-        "class": "row"                                                                                                 // 81
-      }, "\n       \n       ", HTML.DIV({                                                                              // 82
-        "class": "col s12 m12 l5"                                                                                      // 83
-      }, "\n ", Blaze._TemplateWith(function() {                                                                       // 84
-        return {                                                                                                       // 85
-          name: Spacebars.call("industry")                                                                             // 86
-        };                                                                                                             // 87
-      }, function() {                                                                                                  // 88
-        return Spacebars.include(view.lookupTemplate("afQuickField"));                                                 // 89
-      }), "\n       "), "\n        ", HTML.DIV({                                                                       // 90
-        "class": "col s12 m12 l7"                                                                                      // 91
-      }, "\n ", Blaze._TemplateWith(function() {                                                                       // 92
-        return {                                                                                                       // 93
-          name: Spacebars.call("Competitors")                                                                          // 94
-        };                                                                                                             // 95
-      }, function() {                                                                                                  // 96
-        return Spacebars.include(view.lookupTemplate("afQuickField"));                                                 // 97
-      }), "\n       "), "\n       "), "\n       ", HTML.DIV({                                                          // 98
-        "class": "row"                                                                                                 // 99
-      }, "\n     ", HTML.DIV({                                                                                         // 100
-        "class": "col s12 m6"                                                                                          // 101
-      }, "\n", Blaze._TemplateWith(function() {                                                                        // 102
-        return {                                                                                                       // 103
-          name: Spacebars.call("iadSense")                                                                             // 104
-        };                                                                                                             // 105
-      }, function() {                                                                                                  // 106
-        return Spacebars.include(view.lookupTemplate("afQuickField"));                                                 // 107
-      }), "\n "), "\n   ", HTML.DIV({                                                                                  // 108
-        "class": "col s12 m6"                                                                                          // 109
-      }, "\n    ", Blaze._TemplateWith(function() {                                                                    // 110
-        return {                                                                                                       // 111
-          name: Spacebars.call("budget")                                                                               // 112
-        };                                                                                                             // 113
-      }, function() {                                                                                                  // 114
-        return Spacebars.include(view.lookupTemplate("afQuickField"));                                                 // 115
-      }), "\n   "), "\n "), "\n \n \n ", HTML.DIV({                                                                    // 116
-        "class": "row"                                                                                                 // 117
-      }, "\n ", HTML.DIV({                                                                                             // 118
-        "class": "col s12 m8 offset-m2 offset-l3 l6"                                                                   // 119
-      }, "\n  \n      ", HTML.DIV({                                                                                    // 120
-        "class": " "                                                                                                   // 121
-      }, "\n", HTML.LABEL({                                                                                            // 122
-        style: "font-size:17px"                                                                                        // 123
-      }, "Are you engaged with another agency at the moment? *"), "\n ", Blaze._TemplateWith(function() {              // 124
-        return {                                                                                                       // 125
-          name: Spacebars.call("another"),                                                                             // 126
-          type: Spacebars.call("switch"),                                                                              // 127
-          trueLabel: Spacebars.call("YES"),                                                                            // 128
-          falseLabel: Spacebars.call("NOPE")                                                                           // 129
-        };                                                                                                             // 130
-      }, function() {                                                                                                  // 131
-        return Spacebars.include(view.lookupTemplate("afQuickField"));                                                 // 132
-      }), "\n"), "\n "), "\n "), "\n \n ", HTML.DIV({                                                                  // 133
-        "class": "row"                                                                                                 // 134
-      }, "\n \n", HTML.DIV({                                                                                           // 135
-        "class": "col s12 m6 offset-m3"                                                                                // 136
-      }, "\n ", Blaze._TemplateWith(function() {                                                                       // 137
-        return {                                                                                                       // 138
-          name: Spacebars.call("whatElse")                                                                             // 139
-        };                                                                                                             // 140
-      }, function() {                                                                                                  // 141
-        return Spacebars.include(view.lookupTemplate("afQuickField"));                                                 // 142
-      }), "\n"), "\n\n\n "), "\n    ", HTML.BUTTON({                                                                   // 143
-        type: "submit",                                                                                                // 144
-        "class": "button outline"                                                                                      // 145
-      }, "SUBMIT APPLICATION"), "\n    ", HTML.BR(), "\n    ", HTML.BR(), "\n    ", HTML.DIV({                         // 146
-        "class": "center wow bounce",                                                                                  // 147
-        "data-wow-iteration": "4"                                                                                      // 148
-      }, "\n    ", HTML.SPAN({                                                                                         // 149
-        "class": "grey-text text-darken-2"                                                                             // 150
-      }, "* REQUIRED FIELDS"), "\n    "), "\n  " ];                                                                    // 151
-    });                                                                                                                // 152
-  }), "\n       \n\n      "), "\n      "), "\n      "), "\n     ", Blaze.If(function() {                               // 153
-    return Spacebars.call(view.lookup("isSuccessfulRsvp"));                                                            // 154
-  }, function() {                                                                                                      // 155
-    return [ "\n    ", HTML.DIV({                                                                                      // 156
-      "class": "container"                                                                                             // 157
-    }, "\n    ", HTML.DIV({                                                                                            // 158
-      "class": "row wow zoomIn"                                                                                        // 159
-    }, "\n    ", HTML.DIV({                                                                                            // 160
-      "class": "col s12 m10 offset-m1 l8 offset-l2"                                                                    // 161
-    }, "\n    ", HTML.H5({                                                                                             // 162
-      "class": "center robotoIt grey-text text-darken-3 wow zoomInUp"                                                  // 163
-    }, "  ", Blaze.View("lookup:name", function() {                                                                    // 164
-      return Spacebars.mustache(view.lookup("name"));                                                                  // 165
-    }), " ", Blaze.View("lookup:last", function() {                                                                    // 166
-      return Spacebars.mustache(view.lookup("last"));                                                                  // 167
-    }), " Thanks for choosing illume Inc. We will get back to you shortly ", Blaze.View("lookup:name", function() {    // 168
-      return Spacebars.mustache(view.lookup("name"));                                                                  // 169
-    }), ".  "), "\n    ", HTML.BR(), "\n    ", HTML.DIV({                                                              // 170
-      "class": "center"                                                                                                // 171
-    }, "\n                  ", HTML.A({                                                                                // 172
-      href: "/",                                                                                                       // 173
-      "class": "button outline"                                                                                        // 174
-    }, "BACK HOME"), "\n\n                "), "\n    "), "\n    "), "\n"), "\n    \n    " ];                           // 175
-  }, function() {                                                                                                      // 176
-    return "   \n  ";                                                                                                  // 177
-  }) ];                                                                                                                // 178
-}));                                                                                                                   // 179
-                                                                                                                       // 180
-Template.__checkName("lastRsvp");                                                                                      // 181
-Template["lastRsvp"] = new Template("Template.lastRsvp", (function() {                                                 // 182
-  var view = this;                                                                                                     // 183
-  return Blaze.Each(function() {                                                                                       // 184
-    return Spacebars.call(view.lookup("rsvps"));                                                                       // 185
-  }, function() {                                                                                                      // 186
-    return [ "\n    ", Blaze.View("lookup:name", function() {                                                          // 187
-      return Spacebars.mustache(view.lookup("name"));                                                                  // 188
-    }), " ", Blaze.View("lookup:last", function() {                                                                    // 189
-      return Spacebars.mustache(view.lookup("last"));                                                                  // 190
-    }), "\n  " ];                                                                                                      // 191
-  });                                                                                                                  // 192
-}));                                                                                                                   // 193
-                                                                                                                       // 194
+  return [ Spacebars.include(view.lookupTemplate("fixedHeader")), "\n  ", HTML.SECTION("\n ", HTML.DIV({               // 11
+    "class": "section"                                                                                                 // 12
+  }, "\n    ", HTML.DIV({                                                                                              // 13
+    "class": "container"                                                                                               // 14
+  }, "\n        ", HTML.DIV({                                                                                          // 15
+    "class": "center"                                                                                                  // 16
+  }, "\n        ", HTML.H4({                                                                                           // 17
+    "class": "center nanum"                                                                                            // 18
+  }, Blaze.View("lookup:_", function() {                                                                               // 19
+    return Spacebars.mustache(view.lookup("_"), "contactMe");                                                          // 20
+  })), "\n        "), "\n        "), "\n    "), "\n   \n    ", HTML.Raw('<div class="section">\n    <div class="container">\n        <div class="row">\n     <div class="col s12 m12 l6 offset-l3">\n            <p class="center   flow-text grey-text text-darken-2">\n     Starting a project with me is easy. Just email, call, or text us 24/7. We will get back to you within minutes.\n         </p>\n            </div>\n        </div>\n        </div>\n    </div>'), "\n \n    ", HTML.Raw('<div class="section">\n    <div class="container">\n        <div class="row">\n        <div class="col s12 m6">\n            <h5 class="rale"> <i class="fa fa-phone  red-text"></i></h5>\n \n            <div class="center">\n            <ul class="collection">\n                <li class="collection-item  blue-grey darken-1">\n                \n                    <span class="  white-text">+1 805 530 5434 | ENG</span>\n                </li>\n                       <li class="collection-item  blue-grey darken-1">\n                \n                    <span class="  white-text">+82 10 5571 1781 | KOR</span>\n                </li>       \n                </ul>\n            </div>\n         <h5 class="rale"><i class="fa fa-envelope red-text"></i> </h5>\n          \n                  <div class="center">\n                       <ul class="collection">\n              \n                         <li class="collection-item  blue-grey darken-1">\n                \n                  <span class="  white-text">illumeweb@gmail.com</span>\n                </li>\n                </ul>\n                  </div>\n            </div>\n      \n           <div class="col s12 m6 l6">\n                  <h5 class="rale"><i class="fa fa-calendar-check-o red-text "></i> </h5>\n                        <ul class="collection">\n                <li class="collection-item  blue-grey darken-1">\n                \n                    <span class="  white-text">Mon - Fri: <span class="right">12:00PM - 7PM\n</span></span>\n                </li>\n                                <li class="collection-item  blue-grey darken-1">\n                \n                    <span class="  white-text">Sat: <span class="right">11:00AM  - 4PM</span></span>\n                </li> \n                                   <li class="collection-item  blue-grey darken-1">\n                \n                    <span class="  white-text">Sun: <span class="right bold">Closed  </span></span>\n                </li> \n                                         <li class="collection-item  blue-grey darken-1">\n                \n                    <span class="  white-text">Holidays: <span class="right bold">Closed</span></span>\n                </li>\n                </ul>\n            </div>\n        </div>\n        </div>\n    </div>'), "\n"), HTML.Raw('\n    <div class="divider" style="margin:0 auto;width:50%"></div>\n     <div class="section" style="display: none;">\n    <div class="container">\n        <div class="row">\n     <div class="col s12 m12 l6 offset-l3">\n            <p class="center   flow-text grey-text text-darken-2">\n  You can also start a project by filling out our application form. You should be getting something from us within 24 hours.\n         </p>\n            </div>\n        </div>\n        </div>\n    </div>\n'), HTML.DIV({
+    "class": "container",                                                                                              // 22
+    style: "display: none;"                                                                                            // 23
+  }, " \n", HTML.DIV({                                                                                                 // 24
+    "class": "row center"                                                                                              // 25
+  }, "\n", HTML.DIV({                                                                                                  // 26
+    style: "padding:1em;",                                                                                             // 27
+    "class": "z-depth-1 col s12"                                                                                       // 28
+  }, " \n      \n        ", Blaze._TemplateWith(function() {                                                           // 29
+    return {                                                                                                           // 30
+      collection: Spacebars.call("Rsvps"),                                                                             // 31
+      id: Spacebars.call("insertRsvpForm"),                                                                            // 32
+      type: Spacebars.call("method"),                                                                                  // 33
+      meteormethod: Spacebars.call("submitRsvp"),                                                                      // 34
+      omitFields: Spacebars.call("createdAt")                                                                          // 35
+    };                                                                                                                 // 36
+  }, function() {                                                                                                      // 37
+    return Spacebars.include(view.lookupTemplate("autoForm"), function() {                                             // 38
+      return [ "\n   \n      ", HTML.DIV({                                                                             // 39
+        "class": "row"                                                                                                 // 40
+      }, " \n      ", HTML.DIV({                                                                                       // 41
+        "class": "col s12 m3"                                                                                          // 42
+      }, "\n      ", Blaze._TemplateWith(function() {                                                                  // 43
+        return {                                                                                                       // 44
+          name: Spacebars.call("name")                                                                                 // 45
+        };                                                                                                             // 46
+      }, function() {                                                                                                  // 47
+        return Spacebars.include(view.lookupTemplate("afQuickField"));                                                 // 48
+      }), "\n      "), " \n          ", HTML.DIV({                                                                     // 49
+        "class": "col s12 m3"                                                                                          // 50
+      }, "\n        ", Blaze._TemplateWith(function() {                                                                // 51
+        return {                                                                                                       // 52
+          name: Spacebars.call("last")                                                                                 // 53
+        };                                                                                                             // 54
+      }, function() {                                                                                                  // 55
+        return Spacebars.include(view.lookupTemplate("afQuickField"));                                                 // 56
+      }), "\n      "), " \n       ", HTML.DIV({                                                                        // 57
+        "class": "col s12 m3"                                                                                          // 58
+      }, "\n        ", Blaze._TemplateWith(function() {                                                                // 59
+        return {                                                                                                       // 60
+          name: Spacebars.call("email")                                                                                // 61
+        };                                                                                                             // 62
+      }, function() {                                                                                                  // 63
+        return Spacebars.include(view.lookupTemplate("afQuickField"));                                                 // 64
+      }), "\n      \n      "), " \n      ", HTML.DIV({                                                                 // 65
+        "class": "col s12 m3"                                                                                          // 66
+      }, "\n        ", Blaze._TemplateWith(function() {                                                                // 67
+        return {                                                                                                       // 68
+          name: Spacebars.call("phone")                                                                                // 69
+        };                                                                                                             // 70
+      }, function() {                                                                                                  // 71
+        return Spacebars.include(view.lookupTemplate("afQuickField"));                                                 // 72
+      }), "\n      \n      "), "\n      "), "\n       ", HTML.DIV({                                                    // 73
+        "class": "row"                                                                                                 // 74
+      }, "\n", HTML.DIV({                                                                                              // 75
+        "class": "col s12 m6"                                                                                          // 76
+      }, "\n ", Blaze._TemplateWith(function() {                                                                       // 77
+        return {                                                                                                       // 78
+          name: Spacebars.call("website")                                                                              // 79
+        };                                                                                                             // 80
+      }, function() {                                                                                                  // 81
+        return Spacebars.include(view.lookupTemplate("afQuickField"));                                                 // 82
+      }), "\n"), "\n", HTML.DIV({                                                                                      // 83
+        "class": "col s12 m6"                                                                                          // 84
+      }, "\n   ", Blaze._TemplateWith(function() {                                                                     // 85
+        return {                                                                                                       // 86
+          name: Spacebars.call("organization")                                                                         // 87
+        };                                                                                                             // 88
+      }, function() {                                                                                                  // 89
+        return Spacebars.include(view.lookupTemplate("afQuickField"));                                                 // 90
+      }), "\n"), "\n  \n       "), "\n       \n       ", HTML.DIV({                                                    // 91
+        "class": "row"                                                                                                 // 92
+      }, "\n       \n       ", HTML.DIV({                                                                              // 93
+        "class": "col s12 m12 l5"                                                                                      // 94
+      }, "\n ", Blaze._TemplateWith(function() {                                                                       // 95
+        return {                                                                                                       // 96
+          name: Spacebars.call("industry")                                                                             // 97
+        };                                                                                                             // 98
+      }, function() {                                                                                                  // 99
+        return Spacebars.include(view.lookupTemplate("afQuickField"));                                                 // 100
+      }), "\n       "), "\n        ", HTML.DIV({                                                                       // 101
+        "class": "col s12 m12 l7"                                                                                      // 102
+      }, "\n ", Blaze._TemplateWith(function() {                                                                       // 103
+        return {                                                                                                       // 104
+          name: Spacebars.call("Competitors")                                                                          // 105
+        };                                                                                                             // 106
+      }, function() {                                                                                                  // 107
+        return Spacebars.include(view.lookupTemplate("afQuickField"));                                                 // 108
+      }), "\n       "), "\n       "), "\n       ", HTML.DIV({                                                          // 109
+        "class": "row"                                                                                                 // 110
+      }, "\n     ", HTML.DIV({                                                                                         // 111
+        "class": "col s12 m6"                                                                                          // 112
+      }, "\n", Blaze._TemplateWith(function() {                                                                        // 113
+        return {                                                                                                       // 114
+          name: Spacebars.call("iadSense")                                                                             // 115
+        };                                                                                                             // 116
+      }, function() {                                                                                                  // 117
+        return Spacebars.include(view.lookupTemplate("afQuickField"));                                                 // 118
+      }), "\n "), "\n   ", HTML.DIV({                                                                                  // 119
+        "class": "col s12 m6"                                                                                          // 120
+      }, "\n    ", Blaze._TemplateWith(function() {                                                                    // 121
+        return {                                                                                                       // 122
+          name: Spacebars.call("budget")                                                                               // 123
+        };                                                                                                             // 124
+      }, function() {                                                                                                  // 125
+        return Spacebars.include(view.lookupTemplate("afQuickField"));                                                 // 126
+      }), "\n   "), "\n "), "\n \n \n ", HTML.DIV({                                                                    // 127
+        "class": "row"                                                                                                 // 128
+      }, "\n ", HTML.DIV({                                                                                             // 129
+        "class": "col s12 m8 offset-m2 offset-l3 l6"                                                                   // 130
+      }, "\n  \n      ", HTML.DIV({                                                                                    // 131
+        "class": " "                                                                                                   // 132
+      }, "\n", HTML.LABEL({                                                                                            // 133
+        style: "font-size:17px"                                                                                        // 134
+      }, "Are you engaged with another agency at the moment? *"), "\n ", Blaze._TemplateWith(function() {              // 135
+        return {                                                                                                       // 136
+          name: Spacebars.call("another"),                                                                             // 137
+          type: Spacebars.call("switch"),                                                                              // 138
+          trueLabel: Spacebars.call("YES"),                                                                            // 139
+          falseLabel: Spacebars.call("NOPE")                                                                           // 140
+        };                                                                                                             // 141
+      }, function() {                                                                                                  // 142
+        return Spacebars.include(view.lookupTemplate("afQuickField"));                                                 // 143
+      }), "\n"), "\n "), "\n "), "\n \n ", HTML.DIV({                                                                  // 144
+        "class": "row"                                                                                                 // 145
+      }, "\n \n", HTML.DIV({                                                                                           // 146
+        "class": "col s12 m6 offset-m3"                                                                                // 147
+      }, "\n ", Blaze._TemplateWith(function() {                                                                       // 148
+        return {                                                                                                       // 149
+          name: Spacebars.call("whatElse")                                                                             // 150
+        };                                                                                                             // 151
+      }, function() {                                                                                                  // 152
+        return Spacebars.include(view.lookupTemplate("afQuickField"));                                                 // 153
+      }), "\n"), "\n\n\n "), "\n    ", HTML.BUTTON({                                                                   // 154
+        type: "submit",                                                                                                // 155
+        "class": "button outline"                                                                                      // 156
+      }, "SUBMIT APPLICATION"), "\n    ", HTML.BR(), "\n    ", HTML.BR(), "\n    ", HTML.DIV({                         // 157
+        "class": "center wow bounce",                                                                                  // 158
+        "data-wow-iteration": "4"                                                                                      // 159
+      }, "\n    ", HTML.SPAN({                                                                                         // 160
+        "class": "grey-text text-darken-2"                                                                             // 161
+      }, "* REQUIRED FIELDS"), "\n    "), "\n  " ];                                                                    // 162
+    });                                                                                                                // 163
+  }), "\n       \n\n      "), "\n      "), "\n      "), "\n     ", Blaze.If(function() {                               // 164
+    return Spacebars.call(view.lookup("isSuccessfulRsvp"));                                                            // 165
+  }, function() {                                                                                                      // 166
+    return [ "\n    ", HTML.DIV({                                                                                      // 167
+      "class": "container"                                                                                             // 168
+    }, "\n    ", HTML.DIV({                                                                                            // 169
+      "class": "row wow zoomIn"                                                                                        // 170
+    }, "\n    ", HTML.DIV({                                                                                            // 171
+      "class": "col s12 m10 offset-m1 l8 offset-l2"                                                                    // 172
+    }, "\n    ", HTML.H5({                                                                                             // 173
+      "class": "center robotoIt grey-text text-darken-3 wow zoomInUp"                                                  // 174
+    }, "  ", Blaze.View("lookup:name", function() {                                                                    // 175
+      return Spacebars.mustache(view.lookup("name"));                                                                  // 176
+    }), " ", Blaze.View("lookup:last", function() {                                                                    // 177
+      return Spacebars.mustache(view.lookup("last"));                                                                  // 178
+    }), " Thanks for choosing illume Inc. We will get back to you shortly ", Blaze.View("lookup:name", function() {    // 179
+      return Spacebars.mustache(view.lookup("name"));                                                                  // 180
+    }), ".  "), "\n    ", HTML.BR(), "\n    ", HTML.DIV({                                                              // 181
+      "class": "center"                                                                                                // 182
+    }, "\n                  ", HTML.A({                                                                                // 183
+      href: "/",                                                                                                       // 184
+      "class": "button outline"                                                                                        // 185
+    }, "BACK HOME"), "\n\n                "), "\n    "), "\n    "), "\n"), "\n    \n    " ];                           // 186
+  }, function() {                                                                                                      // 187
+    return "   \n  ";                                                                                                  // 188
+  }) ];                                                                                                                // 189
+}));                                                                                                                   // 190
+                                                                                                                       // 191
+Template.__checkName("lastRsvp");                                                                                      // 192
+Template["lastRsvp"] = new Template("Template.lastRsvp", (function() {                                                 // 193
+  var view = this;                                                                                                     // 194
+  return Blaze.Each(function() {                                                                                       // 195
+    return Spacebars.call(view.lookup("rsvps"));                                                                       // 196
+  }, function() {                                                                                                      // 197
+    return [ "\n    ", Blaze.View("lookup:name", function() {                                                          // 198
+      return Spacebars.mustache(view.lookup("name"));                                                                  // 199
+    }), " ", Blaze.View("lookup:last", function() {                                                                    // 200
+      return Spacebars.mustache(view.lookup("last"));                                                                  // 201
+    }), "\n  " ];                                                                                                      // 202
+  });                                                                                                                  // 203
+}));                                                                                                                   // 204
+                                                                                                                       // 205
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 },"application.js":function(){
@@ -3083,6 +3056,28 @@ TAPi18n._loadLangFileObject("en", translations);                                
                                                                                                                        // 14
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+},"contact.en.i18n.json":function(){
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                                     //
+// both/i18n/en/contact.en.i18n.json                                                                                   //
+//                                                                                                                     //
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                                                                                       //
+var _ = Package.underscore._,                                                                                          // 1
+    package_name = "project",                                                                                          // 2
+    namespace = "project";                                                                                             // 3
+                                                                                                                       // 4
+if (package_name != "project") {                                                                                       // 5
+    namespace = TAPi18n.packages[package_name].namespace;                                                              // 6
+}                                                                                                                      // 7
+// integrate the fallback language translations                                                                        // 8
+translations = {};                                                                                                     // 9
+translations[namespace] = {"contactMe":"Contact me today!","startProject":"     Starting a project with me is easy. Just email, call, or text us 24/7. I will get back to you within minutes."};
+TAPi18n._loadLangFileObject("en", translations);                                                                       // 11
+                                                                                                                       // 12
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 },"header.en.i18n.json":function(){
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -3176,6 +3171,25 @@ TAPi18n._loadLangFileObject("en", translations);                                
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //                                                                                                                     //
 // both/i18n/ko/about.ko.i18n.json                                                                                     //
+//                                                                                                                     //
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                                                                                       //
+var _ = Package.underscore._,                                                                                          // 1
+    package_name = "project",                                                                                          // 2
+    namespace = "project";                                                                                             // 3
+                                                                                                                       // 4
+if (package_name != "project") {                                                                                       // 5
+    namespace = TAPi18n.packages[package_name].namespace;                                                              // 6
+}                                                                                                                      // 7
+TAPi18n.languages_names["ko"] = ["Korean","한국어"];                                                                      // 8
+                                                                                                                       // 9
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+},"contact.ko.i18n.json":function(){
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                                     //
+// both/i18n/ko/contact.ko.i18n.json                                                                                   //
 //                                                                                                                     //
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                                                                                                                        //
@@ -3646,11 +3660,13 @@ require("./backend/template.login.js");
 require("./lib/config.js");
 require("./lib/route.coffee.js");
 require("./both/i18n/en/about.en.i18n.json");
+require("./both/i18n/en/contact.en.i18n.json");
 require("./both/i18n/en/header.en.i18n.json");
 require("./both/i18n/en/home.en.i18n.json");
 require("./both/i18n/en/service.en.i18n.json");
 require("./both/i18n/en/success.en.i18n.json");
 require("./both/i18n/ko/about.ko.i18n.json");
+require("./both/i18n/ko/contact.ko.i18n.json");
 require("./both/i18n/ko/header.ko.i18n.json");
 require("./both/i18n/ko/home.ko.i18n.json");
 require("./both/i18n/ko/service.ko.i18n.json");

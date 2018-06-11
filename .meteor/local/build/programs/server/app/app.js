@@ -378,6 +378,29 @@ TAPi18n._registerServerTranslator("en", namespace);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
+},"contact.en.i18n.json":function(){
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                   //
+// both/i18n/en/contact.en.i18n.json                                                                 //
+//                                                                                                   //
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                                                                     //
+var _ = Package.underscore._,
+    package_name = "project",
+    namespace = "project";
+
+if (package_name != "project") {
+    namespace = TAPi18n.packages[package_name].namespace;
+}
+// integrate the fallback language translations 
+translations = {};
+translations[namespace] = {"contactMe":"Contact me today!","startProject":"     Starting a project with me is easy. Just email, call, or text us 24/7. I will get back to you within minutes."};
+TAPi18n._loadLangFileObject("en", translations);
+TAPi18n._registerServerTranslator("en", namespace);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
 },"header.en.i18n.json":function(){
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -495,6 +518,35 @@ if(_.isUndefined(TAPi18n.translations["ko"][namespace])) {
 }
 
 _.extend(TAPi18n.translations["ko"][namespace], {"aboutIllume":"저희 목표는 간단합니다. 당신의 비즈니스 아이디어를 성공의 길을 걷게끔 도와드리는겁니다. 연구에서 해결방안까지, 성공하기 힘든 경쟁에서 저희 웹사이트로 성공할 수 있도록 끝까지 노력하는 것이 일룸의 미션입니다. 당신의 상황에 맞는 해결방안을 제시하면서 경쟁자들과 승부할 수 있는 비밀병기를 만들 수 있도록 저희 일룸이 도와드리겠습니다.","webAndMobile":"웹과 모바일을, ","intoOne":"하나로","secretWeapon":"비밀병기,","iValue":"단순한 콘텐츠 구조, 깨끗한 디자인 패턴 및 사려 깊은 상호 작용을 중시합니다.","iCode":"처음부터 끝까지 코딩하고 브라우저에다 다양한 아이디어를 현실로 만드는 것을 즐깁니다.","moreMe":"게임도 하고, 책도 읽지만, 사랑하는 사람들이랑 시간 보내는 것이 제일 좋습니다.","thingsDesign":"디자인하는 것들은:","languageSpeak":"사용할 줄 아는 프로그램잉 언어:","thingsLike":"제가 좋아하는 것들:","myTools":"제가 쓰는 도구들:","meteor":"미티어","coffeeAnd":"커피, 컴퓨터 게임, 코딩, 친구들이랑 놀기, 아 그리고 커피 ","occasionally":"가끔 사용","learnMoreHybrid":"하이브리드 어플의 대해서 더 알아보기","webDesc":"삼성 SDS는 2010년 12월, 웹의 다양성과 모바일 앱의 역학을 융합 할 수있는 네이티브 컨테이너 플랫폼이 소프트웨어 엔지니어링의 새로운 미래를 가져올 것이라고 예측했습니다. 이른바 '하이브리드 앱'은 모든 기기의 모든 플랫폼에서 아이디어를 가져옵니다. 시장을 침투하기위한 벽을 무너 뜨리며 새로운 혁신을 가져올 수 있는 기회라고 기대했습니다. 희소식은 illume Inc.에서 바로 그 하이브리드 앱을 제공하는 것입니다.이 두 가지 장점을 모두 경험하고 아이디어를 통해 활력이 있는 어플을 만들어 봅시다.","silos":"우리는 궁극적으로 실패 할 것이라는 것을 알고 있기 때문에 필요하지 않은 모든 부분들을 잘라 냈습니다. 우리는 귀하의 비즈니스를 진실하게 만드는 요소를 찾으려고 노력하므로 귀하에게 적합한 맞춤형 하이엔드 웹 사이트를 구축 할 수 있도록 최선을 다할 것입니다. Meteor는 아름답고 강력한 응용 프로그램을 만드는 데있어 강력한 유연성을 제공하는 Node.JS 플랫폼입니다. 우리는 앞으로 웹-혁명을 기꺼이 받아들이는 엔지니어 공동체의 일원임을 자랑스럽게 기여하고 있습니다. 기다리지 말고 미티어를 만나보세요.","discoverMeteor":"미티어 만나보세요","leeSang":"이상준","leadDeveloper":"성공적인 상거래에 대한 강한 배경은 귀하의 비즈니스에 적합한 강력한 애플리케이션을 개발하는 데 필수적이며 모든 것이 상상의 한계에 있다고 생각합니다. 귀하의 비즈니스에 최적의 제품 상태를 보장하기 위해 귀하와 당사 팀 간의 지속적인 커뮤니케이션을 유지하기 위해 노력합니다. 최선을 다하겠습니다.","aLittleAboutMeteor":"미티어의 대해서 잠깐!","readySetGo":"준비~, 시작!"});
+TAPi18n._registerServerTranslator("ko", namespace);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+},"contact.ko.i18n.json":function(){
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                   //
+// both/i18n/ko/contact.ko.i18n.json                                                                 //
+//                                                                                                   //
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                                                                     //
+var _ = Package.underscore._,
+    package_name = "project",
+    namespace = "project";
+
+if (package_name != "project") {
+    namespace = TAPi18n.packages[package_name].namespace;
+}
+TAPi18n.languages_names["ko"] = ["Korean","한국어"];
+if(_.isUndefined(TAPi18n.translations["ko"])) {
+  TAPi18n.translations["ko"] = {};
+}
+
+if(_.isUndefined(TAPi18n.translations["ko"][namespace])) {
+  TAPi18n.translations["ko"][namespace] = {};
+}
+
+_.extend(TAPi18n.translations["ko"][namespace], {"contactMe":"오늘 연락주세요!","startProject":""});
 TAPi18n._registerServerTranslator("ko", namespace);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1023,11 +1075,13 @@ sitemaps.add('/sitemap.xml', function () {                                      
 require("./lib/config.js");
 require("./lib/route.coffee.js");
 require("./both/i18n/en/about.en.i18n.json");
+require("./both/i18n/en/contact.en.i18n.json");
 require("./both/i18n/en/header.en.i18n.json");
 require("./both/i18n/en/home.en.i18n.json");
 require("./both/i18n/en/service.en.i18n.json");
 require("./both/i18n/en/success.en.i18n.json");
 require("./both/i18n/ko/about.ko.i18n.json");
+require("./both/i18n/ko/contact.ko.i18n.json");
 require("./both/i18n/ko/header.ko.i18n.json");
 require("./both/i18n/ko/home.ko.i18n.json");
 require("./both/i18n/ko/service.ko.i18n.json");

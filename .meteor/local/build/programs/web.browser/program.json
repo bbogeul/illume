@@ -987,11 +987,11 @@
       "where": "client",
       "type": "js",
       "cacheable": true,
-      "url": "/app/app.js?hash=baa5e6a1ac986cd29eac447ef89eeb7ee589c8f1",
+      "url": "/app/app.js?hash=4d5ca4f38b74b77ac96afdfce8a5e13387e81aa2",
       "sourceMap": "app/app.js.map",
-      "sourceMapUrl": "/app/baa5e6a1ac986cd29eac447ef89eeb7ee589c8f1.map",
-      "size": 482384,
-      "hash": "baa5e6a1ac986cd29eac447ef89eeb7ee589c8f1"
+      "sourceMapUrl": "/app/4d5ca4f38b74b77ac96afdfce8a5e13387e81aa2.map",
+      "size": 483273,
+      "hash": "4d5ca4f38b74b77ac96afdfce8a5e13387e81aa2"
     },
     {
       "path": "packages/mdg_validation-error.js",
@@ -1781,6 +1781,15 @@
       "url": "/img/logo2.png",
       "size": 36959,
       "hash": "f8bc990084e23c15cc90ab815d04315000df9d38"
+    },
+    {
+      "path": "app/img/meteor.svg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/meteor.svg",
+      "size": 2537,
+      "hash": "02da372cf1b42500bc293667718c43087b02c0af"
     },
     {
       "path": "app/img/meteors.png",
