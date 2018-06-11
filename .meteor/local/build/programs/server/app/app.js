@@ -656,7 +656,7 @@ if(_.isUndefined(TAPi18n.translations["ko"][namespace])) {
   TAPi18n.translations["ko"][namespace] = {};
 }
 
-_.extend(TAPi18n.translations["ko"][namespace], {"myWebsitesAre":"제가 개발하는 웹사이트들은 모두 ","secondMyWeb":"만들어져 있습니다","stateOfArt":"새로운 수준으로 반응성과 성능을 향상시키는 최신 네이티브 컨테이너 환경.","weMakeGraphics":"모든 그래픽들은 직접 처음부터 끝까지 만들며","aBitOf":"과 상상으로 만듭니다."});
+_.extend(TAPi18n.translations["ko"][namespace], {"myWebsitesAre":"제가 개발하는 웹사이트들은 모두 ","secondMyWeb":"만들어져 있습니다","stateOfArt":"새로운 수준으로 반응성과 성능을 향상시키는 최신 네이티브 컨테이너 환경.","weMakeGraphics":"모든 그래픽들은 직접 처음부터 끝까지 만들며","aBitOf":"과 상상력으로 제작합니다."});
 TAPi18n._registerServerTranslator("ko", namespace);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
