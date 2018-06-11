@@ -402,6 +402,9 @@
       "path": "packages/tap_i18n.js"
     },
     {
+      "path": "packages/less.js"
+    },
+    {
       "path": "packages/livedata.js"
     },
     {

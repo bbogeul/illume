@@ -121,89 +121,73 @@ Template["header"] = new Template("Template.header", (function() {              
     }                                                                                                                  // 22
   }, Blaze.View("lookup:_", function() {                                                                               // 23
     return Spacebars.mustache(view.lookup("_"), "about");                                                              // 24
-  }))), "\n        ", HTML.LI({                                                                                        // 25
+  }))), "\n      \n        ", HTML.LI({                                                                                // 25
     "class": "nanum"                                                                                                   // 26
   }, HTML.A({                                                                                                          // 27
     href: function() {                                                                                                 // 28
-      return Spacebars.mustache(view.lookup("pathFor"), "approach");                                                   // 29
+      return Spacebars.mustache(view.lookup("pathFor"), "service");                                                    // 29
     }                                                                                                                  // 30
   }, Blaze.View("lookup:_", function() {                                                                               // 31
-    return Spacebars.mustache(view.lookup("_"), "howWeWork");                                                          // 32
-  }))), "\n        ", HTML.LI({                                                                                        // 33
+    return Spacebars.mustache(view.lookup("_"), "ourServices");                                                        // 32
+  }))), "\n             ", HTML.LI({                                                                                   // 33
     "class": "nanum"                                                                                                   // 34
   }, HTML.A({                                                                                                          // 35
     href: function() {                                                                                                 // 36
-      return Spacebars.mustache(view.lookup("pathFor"), "service");                                                    // 37
+      return Spacebars.mustache(view.lookup("pathFor"), "portfolio");                                                  // 37
     }                                                                                                                  // 38
   }, Blaze.View("lookup:_", function() {                                                                               // 39
-    return Spacebars.mustache(view.lookup("_"), "ourServices");                                                        // 40
-  }))), "\n             ", HTML.LI({                                                                                   // 41
+    return Spacebars.mustache(view.lookup("_"), "portfolio");                                                          // 40
+  }))), "\n           ", HTML.LI({                                                                                     // 41
     "class": "nanum"                                                                                                   // 42
   }, HTML.A({                                                                                                          // 43
     href: function() {                                                                                                 // 44
-      return Spacebars.mustache(view.lookup("pathFor"), "portfolio");                                                  // 45
+      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 45
     }                                                                                                                  // 46
   }, Blaze.View("lookup:_", function() {                                                                               // 47
-    return Spacebars.mustache(view.lookup("_"), "portfolio");                                                          // 48
-  }))), "\n           ", HTML.LI({                                                                                     // 49
-    "class": "nanum"                                                                                                   // 50
-  }, HTML.A({                                                                                                          // 51
-    href: function() {                                                                                                 // 52
-      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 53
-    }                                                                                                                  // 54
-  }, Blaze.View("lookup:_", function() {                                                                               // 55
-    return Spacebars.mustache(view.lookup("_"), "reachUs");                                                            // 56
-  }))), "\n \n\n      "), "\n        ", HTML.UL({                                                                      // 57
-    "class": "right hide-on-med-and-down"                                                                              // 58
+    return Spacebars.mustache(view.lookup("_"), "reachUs");                                                            // 48
+  }))), "\n \n\n      "), "\n        ", HTML.UL({                                                                      // 49
+    "class": "right hide-on-med-and-down"                                                                              // 50
   }, "\n           ", Spacebars.include(view.lookupTemplate("languageSwitcher")), "\n            ", HTML.Raw('<li><a class="white-text center" href="https://urlgeni.us/facebook/4U1B"><i class="fab fa-facebook-f  fa-2x"></i></a></li>'), "\n                         ", HTML.Raw('<li class="divider"></li>'), "\n    ", HTML.Raw('<li><a class="center white-text" href="https://instagram.com/illumeinc/"><i class="fab fa-instagram  fa-2x"></i></a></li>'), "\n            "), "\n       \n    "), "\n      "), "\n       \n          "), "\n\n      "), "\n"), "\n    ", HTML.UL({
-    id: "slide-outs",                                                                                                  // 60
-    "class": "side-nav"                                                                                                // 61
-  }, "\n        ", HTML.DIV({                                                                                          // 62
-    "class": "center"                                                                                                  // 63
+    id: "slide-outs",                                                                                                  // 52
+    "class": "side-nav"                                                                                                // 53
+  }, "\n        ", HTML.DIV({                                                                                          // 54
+    "class": "center"                                                                                                  // 55
   }, "\n            ", HTML.Raw("<br>"), "\n            ", HTML.Raw('<img src="/img/badge.png" width="150">'), HTML.Raw("<br>"), "\n            ", HTML.Raw('<span class="bold">#lightupyourbrand</span>'), "\n     ", HTML.LI({
-    "class": "nanum",                                                                                                  // 65
-    style: "margin-top:1em;"                                                                                           // 66
+    "class": "nanum",                                                                                                  // 57
+    style: "margin-top:1em;"                                                                                           // 58
+  }, HTML.A({                                                                                                          // 59
+    href: function() {                                                                                                 // 60
+      return Spacebars.mustache(view.lookup("pathFor"), "about");                                                      // 61
+    }                                                                                                                  // 62
+  }, Blaze.View("lookup:_", function() {                                                                               // 63
+    return Spacebars.mustache(view.lookup("_"), "about");                                                              // 64
+  }))), "\n    \n        ", HTML.LI({                                                                                  // 65
+    "class": "nanum"                                                                                                   // 66
   }, HTML.A({                                                                                                          // 67
     href: function() {                                                                                                 // 68
-      return Spacebars.mustache(view.lookup("pathFor"), "about");                                                      // 69
+      return Spacebars.mustache(view.lookup("pathFor"), "service");                                                    // 69
     }                                                                                                                  // 70
   }, Blaze.View("lookup:_", function() {                                                                               // 71
-    return Spacebars.mustache(view.lookup("_"), "about");                                                              // 72
-  }))), "\n     ", HTML.LI({                                                                                           // 73
+    return Spacebars.mustache(view.lookup("_"), "ourServices");                                                        // 72
+  }))), "\n             ", HTML.LI({                                                                                   // 73
     "class": "nanum"                                                                                                   // 74
   }, HTML.A({                                                                                                          // 75
     href: function() {                                                                                                 // 76
-      return Spacebars.mustache(view.lookup("pathFor"), "approach");                                                   // 77
+      return Spacebars.mustache(view.lookup("pathFor"), "portfolio");                                                  // 77
     }                                                                                                                  // 78
   }, Blaze.View("lookup:_", function() {                                                                               // 79
-    return Spacebars.mustache(view.lookup("_"), "howWeWork");                                                          // 80
-  }))), "\n        ", HTML.LI({                                                                                        // 81
+    return Spacebars.mustache(view.lookup("_"), "portfolio");                                                          // 80
+  }))), "\n           ", HTML.LI({                                                                                     // 81
     "class": "nanum"                                                                                                   // 82
   }, HTML.A({                                                                                                          // 83
     href: function() {                                                                                                 // 84
-      return Spacebars.mustache(view.lookup("pathFor"), "service");                                                    // 85
+      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 85
     }                                                                                                                  // 86
   }, Blaze.View("lookup:_", function() {                                                                               // 87
-    return Spacebars.mustache(view.lookup("_"), "ourServices");                                                        // 88
-  }))), "\n             ", HTML.LI({                                                                                   // 89
-    "class": "nanum"                                                                                                   // 90
-  }, HTML.A({                                                                                                          // 91
-    href: function() {                                                                                                 // 92
-      return Spacebars.mustache(view.lookup("pathFor"), "portfolio");                                                  // 93
-    }                                                                                                                  // 94
-  }, Blaze.View("lookup:_", function() {                                                                               // 95
-    return Spacebars.mustache(view.lookup("_"), "portfolio");                                                          // 96
-  }))), "\n           ", HTML.LI({                                                                                     // 97
-    "class": "nanum"                                                                                                   // 98
-  }, HTML.A({                                                                                                          // 99
-    href: function() {                                                                                                 // 100
-      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 101
-    }                                                                                                                  // 102
-  }, Blaze.View("lookup:_", function() {                                                                               // 103
-    return Spacebars.mustache(view.lookup("_"), "reachUs");                                                            // 104
-  }))), "\n           ", Spacebars.include(view.lookupTemplate("languageSwitcher2")), "\n        "), "\n  ") ];        // 105
-}));                                                                                                                   // 106
-                                                                                                                       // 107
+    return Spacebars.mustache(view.lookup("_"), "reachUs");                                                            // 88
+  }))), "\n           ", Spacebars.include(view.lookupTemplate("languageSwitcher2")), "\n        "), "\n  ") ];        // 89
+}));                                                                                                                   // 90
+                                                                                                                       // 91
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 },"header.js":function(){
@@ -345,91 +329,102 @@ Template["about"] = new Template("Template.about", (function() {                
     "class": "nanum grey-text text-darken-2"                                                                           // 83
   }, Blaze.View("lookup:_", function() {                                                                               // 84
     return Spacebars.mustache(view.lookup("_"), "moreMe");                                                             // 85
-  })), "\n  "), "\n \n"), "\n                "), "\n                "), "\n "), "\n "), HTML.Raw('\n       <div class="parallax-container" style="height:400px;margin-top:4em">\n      <div class="parallax" style="background:#0f0f0f"><img src="/img/webd.jpg"></div>\n \n     \n    </div>\n    '), HTML.SECTION({
-    style: "margin-top:5em"                                                                                            // 87
-  }, "\n                  ", HTML.DIV({                                                                                // 88
-    "class": "container"                                                                                               // 89
-  }, "\n                   ", HTML.DIV({                                                                               // 90
-    "class": "center"                                                                                                  // 91
-  }, "\n", HTML.H2({                                                                                                   // 92
-    "class": "nanum"                                                                                                   // 93
-  }, HTML.B(Blaze.View("lookup:_", function() {                                                                        // 94
-    return Spacebars.mustache(view.lookup("_"), "aLittleAboutMeteor");                                                 // 95
-  }))), "\n "), "\n ", HTML.Raw('<div class="divider red lighten-1" style="margin:0 auto;width:120px"></div>'), "\n        ", HTML.DIV({
-    "class": "row",                                                                                                    // 97
+  })), "\n  "), "\n   ", HTML.DIV({                                                                                    // 86
+    "class": "center container"                                                                                        // 87
+  }, "\n      ", HTML.P({                                                                                              // 88
+    "class": " nanum bold mainC",                                                                                      // 89
+    style: "font-size: 1.2em;"                                                                                         // 90
+  }, "\n          ", Blaze.View("lookup:_", function() {                                                               // 91
+    return Spacebars.mustache(view.lookup("_"), "thingsLike");                                                         // 92
+  }), "\n      "), "\n      ", HTML.P({                                                                                // 93
+    "class": "nanum grey-text text-darken-2"                                                                           // 94
+  }, "\n          ", Blaze.View("lookup:_", function() {                                                               // 95
+    return Spacebars.mustache(view.lookup("_"), "coffeeAnd");                                                          // 96
+  }), "\n      "), "\n  "), "\n"), "\n                "), "\n                "), "\n "), "\n "), HTML.Raw('\n       <div class="parallax-container" style="height:400px;margin-top:4em">\n      <div class="parallax" style="background:#0f0f0f"><img src="/img/webd.jpg"></div>\n \n     \n    </div>\n    '), HTML.SECTION({
     style: "margin-top:5em"                                                                                            // 98
-  }, "\n              \n \n     ", HTML.DIV({                                                                          // 99
-    "class": "col s12 m12 l6 center"                                                                                   // 100
-  }, "\n          ", HTML.H5({                                                                                         // 101
-    "class": "rale grey-text text-darken-3"                                                                            // 102
-  }, Blaze.View("lookup:_", function() {                                                                               // 103
-    return Spacebars.mustache(view.lookup("_"), "webAndMobile");                                                       // 104
-  }), "   ", HTML.B({                                                                                                  // 105
-    "class": "red-text text-lighten-1"                                                                                 // 106
-  }, Blaze.View("lookup:_", function() {                                                                               // 107
-    return Spacebars.mustache(view.lookup("_"), "intoOne");                                                            // 108
+  }, "\n                  ", HTML.DIV({                                                                                // 99
+    "class": "container"                                                                                               // 100
+  }, "\n                   ", HTML.DIV({                                                                               // 101
+    "class": "center"                                                                                                  // 102
+  }, "\n", HTML.H2({                                                                                                   // 103
+    "class": "nanum"                                                                                                   // 104
+  }, HTML.B(Blaze.View("lookup:_", function() {                                                                        // 105
+    return Spacebars.mustache(view.lookup("_"), "aLittleAboutMeteor");                                                 // 106
+  }))), "\n "), "\n ", HTML.Raw('<div class="divider red lighten-1" style="margin:0 auto;width:120px"></div>'), "\n        ", HTML.DIV({
+    "class": "row",                                                                                                    // 108
+    style: "margin-top:5em"                                                                                            // 109
+  }, "\n              \n \n     ", HTML.DIV({                                                                          // 110
+    "class": "col s12 m12 l6 center"                                                                                   // 111
+  }, "\n          ", HTML.H5({                                                                                         // 112
+    "class": "rale grey-text text-darken-3"                                                                            // 113
+  }, Blaze.View("lookup:_", function() {                                                                               // 114
+    return Spacebars.mustache(view.lookup("_"), "webAndMobile");                                                       // 115
+  }), "   ", HTML.B({                                                                                                  // 116
+    "class": "red-text text-lighten-1"                                                                                 // 117
+  }, Blaze.View("lookup:_", function() {                                                                               // 118
+    return Spacebars.mustache(view.lookup("_"), "intoOne");                                                            // 119
   }))), "\n         ", HTML.Raw('<div class="divider red lighten-1" style="margin:0 auto;width:40px"></div>'), "\n         ", HTML.P({
-    "class": "flow-text "                                                                                              // 110
-  }, Blaze.View("lookup:_", function() {                                                                               // 111
-    return Spacebars.mustache(view.lookup("_"), "webDesc");                                                            // 112
-  })), "\n         ", HTML.Raw("<br>"), "\n             ", HTML.DIV({                                                  // 113
-    "class": "center"                                                                                                  // 114
-  }, "\n                  ", HTML.A({                                                                                  // 115
-    href: function() {                                                                                                 // 116
-      return Spacebars.mustache(view.lookup("pathFor"), "hybrid");                                                     // 117
-    },                                                                                                                 // 118
-    "class": "button outline"                                                                                          // 119
-  }, Blaze.View("lookup:_", function() {                                                                               // 120
-    return Spacebars.mustache(view.lookup("_"), "learnMoreHybrid");                                                    // 121
-  })), "\n\n                "), "\n            "), "\n                ", HTML.DIV({                                    // 122
-    "class": "col s12 m12 l6  center"                                                                                  // 123
-  }, "\n        \n     \n        ", HTML.H5({                                                                          // 124
-    "class": "rale grey-text text-darken-3"                                                                            // 125
-  }, Blaze.View("lookup:_", function() {                                                                               // 126
-    return Spacebars.mustache(view.lookup("_"), "secretWeapon");                                                       // 127
-  }), " ", HTML.B({                                                                                                    // 128
-    "class": "red-text text-lighten-1"                                                                                 // 129
-  }, Blaze.View("lookup:_", function() {                                                                               // 130
-    return Spacebars.mustache(view.lookup("_"), "meteor");                                                             // 131
-  }), " JS")), "\n        ", HTML.Raw('<div class="divider red lighten-1" style="margin:0 auto;width:40px"></div>'), "\n        ", HTML.P({
-    "class": "flow-text "                                                                                              // 133
-  }, Blaze.View("lookup:_", function() {                                                                               // 134
-    return Spacebars.mustache(view.lookup("_"), "silos");                                                              // 135
-  })), "\n        ", HTML.Raw("<br>"), "\n       ", HTML.DIV({                                                         // 136
-    "class": "center"                                                                                                  // 137
-  }, "\n                  ", HTML.A({                                                                                  // 138
-    href: "https://www.meteor.com",                                                                                    // 139
-    "class": "button outline"                                                                                          // 140
+    "class": "flow-text "                                                                                              // 121
+  }, Blaze.View("lookup:_", function() {                                                                               // 122
+    return Spacebars.mustache(view.lookup("_"), "webDesc");                                                            // 123
+  })), "\n         ", HTML.Raw("<br>"), "\n             ", HTML.DIV({                                                  // 124
+    "class": "center"                                                                                                  // 125
+  }, "\n                  ", HTML.A({                                                                                  // 126
+    href: function() {                                                                                                 // 127
+      return Spacebars.mustache(view.lookup("pathFor"), "hybrid");                                                     // 128
+    },                                                                                                                 // 129
+    "class": "button outline"                                                                                          // 130
+  }, Blaze.View("lookup:_", function() {                                                                               // 131
+    return Spacebars.mustache(view.lookup("_"), "learnMoreHybrid");                                                    // 132
+  })), "\n\n                "), "\n            "), "\n                ", HTML.DIV({                                    // 133
+    "class": "col s12 m12 l6  center"                                                                                  // 134
+  }, "\n        \n     \n        ", HTML.H5({                                                                          // 135
+    "class": "rale grey-text text-darken-3"                                                                            // 136
+  }, Blaze.View("lookup:_", function() {                                                                               // 137
+    return Spacebars.mustache(view.lookup("_"), "secretWeapon");                                                       // 138
+  }), " ", HTML.B({                                                                                                    // 139
+    "class": "red-text text-lighten-1"                                                                                 // 140
   }, Blaze.View("lookup:_", function() {                                                                               // 141
-    return Spacebars.mustache(view.lookup("_"), "discoverMeteor");                                                     // 142
+    return Spacebars.mustache(view.lookup("_"), "meteor");                                                             // 142
+  }), " JS")), "\n        ", HTML.Raw('<div class="divider red lighten-1" style="margin:0 auto;width:40px"></div>'), "\n        ", HTML.P({
+    "class": "flow-text "                                                                                              // 144
+  }, Blaze.View("lookup:_", function() {                                                                               // 145
+    return Spacebars.mustache(view.lookup("_"), "silos");                                                              // 146
+  })), "\n        ", HTML.Raw("<br>"), "\n       ", HTML.DIV({                                                         // 147
+    "class": "center"                                                                                                  // 148
+  }, "\n                  ", HTML.A({                                                                                  // 149
+    href: "https://www.meteor.com",                                                                                    // 150
+    "class": "button outline"                                                                                          // 151
+  }, Blaze.View("lookup:_", function() {                                                                               // 152
+    return Spacebars.mustache(view.lookup("_"), "discoverMeteor");                                                     // 153
   })), "\n\n                "), "\n        "), "\n        "), "\n    "), "\n              "), "\n                       \n                          ", HTML.SECTION({
-    style: "margin-top:8em;padding:1.6em;margin-bottom:-1.4em;"                                                        // 144
-  }, "\n                ", HTML.DIV({                                                                                  // 145
-    "class": "row"                                                                                                     // 146
-  }, "\n        ", HTML.DIV({                                                                                          // 147
-    "class": "container"                                                                                               // 148
-  }, "\n        ", HTML.DIV({                                                                                          // 149
-    "class": "col s12 m12 l12"                                                                                         // 150
-  }, "\n            ", HTML.H1({                                                                                       // 151
-    "class": "nanum center homeWhat"                                                                                   // 152
-  }, Blaze.View("lookup:_", function() {                                                                               // 153
-    return Spacebars.mustache(view.lookup("_"), "readySetGo");                                                         // 154
-  })), "\n            ", HTML.Raw('<div class="divider red lighten-1"></div>'), "\n      \n             ", HTML.P({    // 155
-    "class": "center flow-text nanum grey-text text-darken-3"                                                          // 156
-  }, Blaze.View("lookup:_", function() {                                                                               // 157
-    return Spacebars.mustache(view.lookup("_"), "alwaysOpen");                                                         // 158
-  })), "\n             ", HTML.DIV({                                                                                   // 159
-    "class": "center"                                                                                                  // 160
-  }, "\n                  ", HTML.A({                                                                                  // 161
-    href: function() {                                                                                                 // 162
-      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 163
-    },                                                                                                                 // 164
-    "class": "button outline"                                                                                          // 165
-  }, Blaze.View("lookup:_", function() {                                                                               // 166
-    return Spacebars.mustache(view.lookup("_"), "getStarted");                                                         // 167
+    style: "margin-top:8em;padding:1.6em;margin-bottom:-1.4em;"                                                        // 155
+  }, "\n                ", HTML.DIV({                                                                                  // 156
+    "class": "row"                                                                                                     // 157
+  }, "\n        ", HTML.DIV({                                                                                          // 158
+    "class": "container"                                                                                               // 159
+  }, "\n        ", HTML.DIV({                                                                                          // 160
+    "class": "col s12 m12 l12"                                                                                         // 161
+  }, "\n            ", HTML.H1({                                                                                       // 162
+    "class": "nanum center homeWhat"                                                                                   // 163
+  }, Blaze.View("lookup:_", function() {                                                                               // 164
+    return Spacebars.mustache(view.lookup("_"), "readySetGo");                                                         // 165
+  })), "\n            ", HTML.Raw('<div class="divider red lighten-1"></div>'), "\n      \n             ", HTML.P({    // 166
+    "class": "center flow-text nanum grey-text text-darken-3"                                                          // 167
+  }, Blaze.View("lookup:_", function() {                                                                               // 168
+    return Spacebars.mustache(view.lookup("_"), "alwaysOpen");                                                         // 169
+  })), "\n             ", HTML.DIV({                                                                                   // 170
+    "class": "center"                                                                                                  // 171
+  }, "\n                  ", HTML.A({                                                                                  // 172
+    href: function() {                                                                                                 // 173
+      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 174
+    },                                                                                                                 // 175
+    "class": "button outline"                                                                                          // 176
+  }, Blaze.View("lookup:_", function() {                                                                               // 177
+    return Spacebars.mustache(view.lookup("_"), "getStarted");                                                         // 178
   })), "\n\n                "), "\n            "), "\n        "), "\n                              "), "\n            ") ];
-}));                                                                                                                   // 169
-                                                                                                                       // 170
+}));                                                                                                                   // 180
+                                                                                                                       // 181
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 },"about.js":function(){
@@ -1411,97 +1406,79 @@ Template["fixedHeader"] = new Template("Template.fixedHeader", (function() {    
     "class": "grey-text  text-darken-2 "                                                                               // 876
   }, Blaze.View("lookup:_", function() {                                                                               // 877
     return Spacebars.mustache(view.lookup("_"), "about");                                                              // 878
-  }))), "\n        ", HTML.LI({                                                                                        // 879
+  }))), "\n  \n  \n        ", HTML.LI({                                                                                // 879
     "class": "nanum"                                                                                                   // 880
   }, HTML.A({                                                                                                          // 881
     href: function() {                                                                                                 // 882
-      return Spacebars.mustache(view.lookup("pathFor"), "approach");                                                   // 883
+      return Spacebars.mustache(view.lookup("pathFor"), "service");                                                    // 883
     },                                                                                                                 // 884
-    "class": "grey-text  text-darken-2"                                                                                // 885
-  }, Blaze.View("lookup:_", function() {                                                                               // 886
-    return Spacebars.mustache(view.lookup("_"), "howWeWork");                                                          // 887
-  }))), "\n        ", HTML.LI({                                                                                        // 888
+    "class": "grey-text text-darken-2"                                                                                 // 885
+  }, " ", Blaze.View("lookup:_", function() {                                                                          // 886
+    return Spacebars.mustache(view.lookup("_"), "ourServices");                                                        // 887
+  }))), "\n             ", HTML.LI({                                                                                   // 888
     "class": "nanum"                                                                                                   // 889
   }, HTML.A({                                                                                                          // 890
     href: function() {                                                                                                 // 891
-      return Spacebars.mustache(view.lookup("pathFor"), "service");                                                    // 892
+      return Spacebars.mustache(view.lookup("pathFor"), "portfolio");                                                  // 892
     },                                                                                                                 // 893
     "class": "grey-text text-darken-2"                                                                                 // 894
-  }, " ", Blaze.View("lookup:_", function() {                                                                          // 895
-    return Spacebars.mustache(view.lookup("_"), "ourServices");                                                        // 896
-  }))), "\n             ", HTML.LI({                                                                                   // 897
+  }, Blaze.View("lookup:_", function() {                                                                               // 895
+    return Spacebars.mustache(view.lookup("_"), "portfolio");                                                          // 896
+  }))), "\n           ", HTML.LI({                                                                                     // 897
     "class": "nanum"                                                                                                   // 898
   }, HTML.A({                                                                                                          // 899
     href: function() {                                                                                                 // 900
-      return Spacebars.mustache(view.lookup("pathFor"), "portfolio");                                                  // 901
+      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 901
     },                                                                                                                 // 902
     "class": "grey-text text-darken-2"                                                                                 // 903
   }, Blaze.View("lookup:_", function() {                                                                               // 904
-    return Spacebars.mustache(view.lookup("_"), "portfolio");                                                          // 905
-  }))), "\n           ", HTML.LI({                                                                                     // 906
-    "class": "nanum"                                                                                                   // 907
-  }, HTML.A({                                                                                                          // 908
-    href: function() {                                                                                                 // 909
-      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 910
-    },                                                                                                                 // 911
-    "class": "grey-text text-darken-2"                                                                                 // 912
-  }, Blaze.View("lookup:_", function() {                                                                               // 913
-    return Spacebars.mustache(view.lookup("_"), "reachUs");                                                            // 914
-  }))), "\n \n\n      "), "\n        ", HTML.UL({                                                                      // 915
-    "class": "right hide-on-med-and-down"                                                                              // 916
+    return Spacebars.mustache(view.lookup("_"), "reachUs");                                                            // 905
+  }))), "\n \n\n      "), "\n        ", HTML.UL({                                                                      // 906
+    "class": "right hide-on-med-and-down"                                                                              // 907
   }, "\n           ", Spacebars.include(view.lookupTemplate("languageSwitcher2")), "\n            ", HTML.Raw('<li><a class=" grey-text center" href="https://urlgeni.us/facebook/4U1B"><i class="fab fa-facebook-f  fa-2x"></i></a></li>'), "\n                         ", HTML.Raw('<li class="divider"></li>'), "\n    ", HTML.Raw('<li><a class="center grey-text" href="https://instagram.com/illumeinc/"><i class="fab fa-instagram  fa-2x"></i></a></li>'), "\n            "), "\n       \n    "), "\n      "), "\n \n \n  ", HTML.UL({
-    id: "slide-out2",                                                                                                  // 918
-    "class": "side-nav center"                                                                                         // 919
-  }, "\n         ", HTML.DIV({                                                                                         // 920
-    "class": "center"                                                                                                  // 921
-  }, "\n            \n             \n      ", HTML.LI({                                                                // 922
+    id: "slide-out2",                                                                                                  // 909
+    "class": "side-nav center"                                                                                         // 910
+  }, "\n         ", HTML.DIV({                                                                                         // 911
+    "class": "center"                                                                                                  // 912
+  }, "\n            \n             \n      ", HTML.LI({                                                                // 913
+    "class": "nanum"                                                                                                   // 914
+  }, HTML.A({                                                                                                          // 915
+    href: function() {                                                                                                 // 916
+      return Spacebars.mustache(view.lookup("pathFor"), "about");                                                      // 917
+    },                                                                                                                 // 918
+    "class": "grey-text text-darken-3 "                                                                                // 919
+  }, Blaze.View("lookup:_", function() {                                                                               // 920
+    return Spacebars.mustache(view.lookup("_"), "about");                                                              // 921
+  }))), "\n     \n        ", HTML.LI({                                                                                 // 922
     "class": "nanum"                                                                                                   // 923
   }, HTML.A({                                                                                                          // 924
     href: function() {                                                                                                 // 925
-      return Spacebars.mustache(view.lookup("pathFor"), "about");                                                      // 926
+      return Spacebars.mustache(view.lookup("pathFor"), "service");                                                    // 926
     },                                                                                                                 // 927
-    "class": "grey-text text-darken-3 "                                                                                // 928
+    "class": "grey-text text-darken-3"                                                                                 // 928
   }, Blaze.View("lookup:_", function() {                                                                               // 929
-    return Spacebars.mustache(view.lookup("_"), "about");                                                              // 930
-  }))), "\n        ", HTML.LI({                                                                                        // 931
+    return Spacebars.mustache(view.lookup("_"), "ourServices");                                                        // 930
+  }))), "\n                ", HTML.LI({                                                                                // 931
     "class": "nanum"                                                                                                   // 932
   }, HTML.A({                                                                                                          // 933
     href: function() {                                                                                                 // 934
-      return Spacebars.mustache(view.lookup("pathFor"), "approach");                                                   // 935
+      return Spacebars.mustache(view.lookup("pathFor"), "portfolio");                                                  // 935
     },                                                                                                                 // 936
-    "class": "grey-text text-darken-3 "                                                                                // 937
+    "class": "grey-text text-darken-3"                                                                                 // 937
   }, Blaze.View("lookup:_", function() {                                                                               // 938
-    return Spacebars.mustache(view.lookup("_"), "howWeWork");                                                          // 939
-  }))), "\n        ", HTML.LI({                                                                                        // 940
+    return Spacebars.mustache(view.lookup("_"), "portfolio");                                                          // 939
+  }))), "\n           ", HTML.LI({                                                                                     // 940
     "class": "nanum"                                                                                                   // 941
   }, HTML.A({                                                                                                          // 942
     href: function() {                                                                                                 // 943
-      return Spacebars.mustache(view.lookup("pathFor"), "service");                                                    // 944
+      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 944
     },                                                                                                                 // 945
     "class": "grey-text text-darken-3"                                                                                 // 946
   }, Blaze.View("lookup:_", function() {                                                                               // 947
-    return Spacebars.mustache(view.lookup("_"), "ourServices");                                                        // 948
-  }))), "\n                ", HTML.LI({                                                                                // 949
-    "class": "nanum"                                                                                                   // 950
-  }, HTML.A({                                                                                                          // 951
-    href: function() {                                                                                                 // 952
-      return Spacebars.mustache(view.lookup("pathFor"), "portfolio");                                                  // 953
-    },                                                                                                                 // 954
-    "class": "grey-text text-darken-3"                                                                                 // 955
-  }, Blaze.View("lookup:_", function() {                                                                               // 956
-    return Spacebars.mustache(view.lookup("_"), "portfolio");                                                          // 957
-  }))), "\n           ", HTML.LI({                                                                                     // 958
-    "class": "nanum"                                                                                                   // 959
-  }, HTML.A({                                                                                                          // 960
-    href: function() {                                                                                                 // 961
-      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 962
-    },                                                                                                                 // 963
-    "class": "grey-text text-darken-3"                                                                                 // 964
-  }, Blaze.View("lookup:_", function() {                                                                               // 965
-    return Spacebars.mustache(view.lookup("_"), "reachUs");                                                            // 966
+    return Spacebars.mustache(view.lookup("_"), "reachUs");                                                            // 948
   }))), "\n           ", Spacebars.include(view.lookupTemplate("languageSwitcher2")), "\n        "), "\n "), "\n \n          ");
-}));                                                                                                                   // 968
-                                                                                                                       // 969
+}));                                                                                                                   // 950
+                                                                                                                       // 951
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 },"home.js":function(){
@@ -1801,8 +1778,8 @@ Template["service"] = new Template("Template.service", (function() {            
     "class": "row"                                                                                                     // 33
   }, "\n            ", HTML.DIV({                                                                                      // 34
     "class": "container"                                                                                               // 35
-  }, "\n            ", HTML.Raw('<div class="col s12 m6 l6">\n                <div class="center">\n                <img src="/img/meteors.png" class="responsive-img wow fadeInLeft">\n                </div>\n                </div>'), "\n                     ", HTML.DIV({
-    "class": "col s12 m6 l6"                                                                                           // 37
+  }, "\n         \n                     ", HTML.DIV({                                                                  // 36
+    "class": "col s12 m6 l6 offset-l3 center"                                                                          // 37
   }, "\n                         ", HTML.H4({                                                                          // 38
     "class": "nanum  red-text text-lighten-1"                                                                          // 39
   }, Blaze.View("lookup:_", function() {                                                                               // 40
@@ -1825,62 +1802,37 @@ Template["service"] = new Template("Template.service", (function() {            
     "class": "red-text text-lighten-1"                                                                                 // 57
   }, " ", Blaze.View("lookup:_", function() {                                                                          // 58
     return Spacebars.mustache(view.lookup("_"), "service");                                                            // 59
-  }))), "\n            "), "\n            "), "\n            ", HTML.DIV({                                             // 60
-    "class": "row callToAction"                                                                                        // 61
-  }, "\n            ", HTML.DIV({                                                                                      // 62
-    "class": "container"                                                                                               // 63
-  }, "\n                ", HTML.DIV({                                                                                  // 64
-    "class": "col s12 m12 l4"                                                                                          // 65
-  }, "\n                ", HTML.DIV({                                                                                  // 66
-    "class": "pricing animated swing"                                                                                  // 67
-  }, "\n  ", HTML.Raw('<div class="thumbnail animated pulse infinite">\n    <div class="fa fa-globe"></div>\n  </div>'), "\n  ", HTML.DIV({
-    "class": "title nanum"                                                                                             // 69
-  }, "\n   ", Blaze.View("lookup:_", function() {                                                                      // 70
-    return Spacebars.mustache(view.lookup("_"), "websitePackage");                                                     // 71
-  }), "\n  "), "\n \n \n"), "\n                "), "\n                 ", HTML.DIV({                                   // 72
-    "class": "col s12 m12 l4"                                                                                          // 73
-  }, "\n                 ", HTML.DIV({                                                                                 // 74
-    "class": "pricing animated swing",                                                                                 // 75
-    style: "background:#d33e3e;"                                                                                       // 76
-  }, "\n  ", HTML.Raw('<div class="thumbnail animated pulse infinite">\n    <div class="fa fa-cart-plus"></div>\n  </div>'), "\n  ", HTML.DIV({
-    "class": "titl nanum",                                                                                             // 78
-    style: "background:#21313b"                                                                                        // 79
-  }, "\n  ", Blaze.View("lookup:_", function() {                                                                       // 80
-    return Spacebars.mustache(view.lookup("_"), "ecommerce");                                                          // 81
-  }), "\n  "), "\n  \n \n"), "\n                "), "\n                 ", HTML.DIV({                                  // 82
-    "class": "col s12 m12 l4"                                                                                          // 83
-  }, "\n                ", HTML.DIV({                                                                                  // 84
-    "class": "pricing animated swing",                                                                                 // 85
-    style: "background:#d33e3e;"                                                                                       // 86
-  }, "\n  ", HTML.Raw('<div class="thumbnail animated pulse infinite">\n    <div class="fa fa-edit"></div>\n  </div>'), "\n  ", HTML.DIV({
-    "class": "titles nanum",                                                                                           // 88
-    style: "background:#21313b;"                                                                                       // 89
-  }, "\n    ", Blaze.View("lookup:_", function() {                                                                     // 90
-    return Spacebars.mustache(view.lookup("_"), "logo");                                                               // 91
-  }), "\n  "), "\n \n \n"), "\n                "), "\n                "), "\n            "), "\n            ", HTML.DIV({
-    "class": "row callToAction"                                                                                        // 93
-  }, "\n            ", HTML.DIV({                                                                                      // 94
-    "class": "container"                                                                                               // 95
-  }, "\n                ", HTML.DIV({                                                                                  // 96
-    "class": "col s12 m10 l10 offset-l1 offset-m1"                                                                     // 97
-  }, "\n                ", HTML.H4({                                                                                   // 98
-    "class": " center nanum grey-text text-darken-3"                                                                   // 99
-  }, "\n                    ", Blaze.View("lookup:_", function() {                                                     // 100
-    return Spacebars.mustache(view.lookup("_"), "gotQuestion");                                                        // 101
-  }), " ", HTML.Raw("<br>"), " ", Blaze.View("lookup:_", function() {                                                  // 102
-    return Spacebars.mustache(view.lookup("_"), "giveUsaCall");                                                        // 103
-  }), "\n                   \n                    \n                    "), "\n                  ", HTML.DIV({         // 104
-    "class": "center"                                                                                                  // 105
-  }, "\n                  ", HTML.A({                                                                                  // 106
-    href: function() {                                                                                                 // 107
-      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 108
-    },                                                                                                                 // 109
-    "class": "button outline"                                                                                          // 110
-  }, Blaze.View("lookup:_", function() {                                                                               // 111
-    return Spacebars.mustache(view.lookup("_"), "getStarted");                                                         // 112
-  })), "\n\n                "), "\n                "), "\n                "), "\n            "), "\n        ") ];      // 113
-}));                                                                                                                   // 114
-                                                                                                                       // 115
+  }))), "\n            "), "\n            "), "\n        ", HTML.Raw('<div class="container service-graphic sg2">\n  <div class="screen monitor">\n    <div class="content">\n      <div class="browser">\n        <ul class="btns">\n          <li></li><li></li><li></li>\n        </ul>\n        <div class="browser-content">\n        <ul class="txt">\n          <li></li>        \n          <li class="big"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li></li>        \n          <li></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li></li>        \n          <li class="big"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n        </ul> \n        </div>\n      </div>\n    </div>\n    <div class="base">\n      <div class="grey-shadow"></div>\n      <div class="foot top"></div>\n      <div class="foot bottom"></div>\n    </div>\n  </div>\n  \n  <div class="laptop">\n    <div class="screen">\n      <ul class="txt">\n        <li></li>        \n        <li class="big"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li></li>        \n        <li></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li></li>        \n        <li class="big"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n      </ul>           \n    </div>\n    <div class="btm"></div>\n  </div>\n  \n  <div class="phone">\n    <div class="screen">\n      <ul class="txt">\n        <li></li>\n        <li></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li></li>\n        <li></li>\n      </ul>\n    </div>\n  <div class="shadow"></div>        \n  </div>\n  \n  <div class="ipad">\n    <div class="screen">\n      <ul class="txt">\n        <li></li>\n        <li class="big"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li></li>        \n        <li></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li></li>\n      </ul>\n    </div>\n  </div>  \n</div>'), "\n          ", HTML.DIV({
+    "class": "container",                                                                                              // 61
+    style: "margin-top:5em;"                                                                                           // 62
+  }, "\n              ", HTML.P({                                                                                      // 63
+    "class": "flow-text nanum grey-text text-darken-3 center"                                                          // 64
+  }, Blaze.View("lookup:_", function() {                                                                               // 65
+    return Spacebars.mustache(view.lookup("_"), "myServices");                                                         // 66
+  })), "\n          "), "\n           \n            ", HTML.DIV({                                                      // 67
+    "class": "row callToAction"                                                                                        // 68
+  }, "\n            ", HTML.DIV({                                                                                      // 69
+    "class": "container"                                                                                               // 70
+  }, "\n                ", HTML.DIV({                                                                                  // 71
+    "class": "col s12 m10 l10 offset-l1 offset-m1"                                                                     // 72
+  }, "\n                ", HTML.H4({                                                                                   // 73
+    "class": " center nanum grey-text text-darken-3"                                                                   // 74
+  }, "\n                    ", Blaze.View("lookup:_", function() {                                                     // 75
+    return Spacebars.mustache(view.lookup("_"), "gotQuestion");                                                        // 76
+  }), " ", HTML.Raw("<br>"), " ", Blaze.View("lookup:_", function() {                                                  // 77
+    return Spacebars.mustache(view.lookup("_"), "giveUsaCall");                                                        // 78
+  }), "\n                   \n                    \n                    "), "\n                  ", HTML.DIV({         // 79
+    "class": "center"                                                                                                  // 80
+  }, "\n                  ", HTML.A({                                                                                  // 81
+    href: function() {                                                                                                 // 82
+      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 83
+    },                                                                                                                 // 84
+    "class": "button outline"                                                                                          // 85
+  }, Blaze.View("lookup:_", function() {                                                                               // 86
+    return Spacebars.mustache(view.lookup("_"), "getStarted");                                                         // 87
+  })), "\n\n                "), "\n                "), "\n                "), "\n            "), "\n        ") ];      // 88
+}));                                                                                                                   // 89
+                                                                                                                       // 90
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 },"service.js":function(){
@@ -1892,18 +1844,56 @@ Template["service"] = new Template("Template.service", (function() {            
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                                                                                                                        //
 Template.service.rendered = function () {                                                                              // 1
-     new WOW().init({ mobile: false });                                                                                // 2
+	new WOW().init({ mobile: false });                                                                                    // 2
                                                                                                                        //
-     $(".titl").click(function () {                                                                                    // 4
-          $(".contents").slideToggle();                                                                                // 5
-     });                                                                                                               // 6
-     $(".title").click(function () {                                                                                   // 7
-          $(".content").slideToggle();                                                                                 // 8
-     });                                                                                                               // 9
-     $(".titles").click(function () {                                                                                  // 10
-          $(".contentsss").slideToggle();                                                                              // 11
-     });                                                                                                               // 12
-};                                                                                                                     // 13
+	$(".titl").click(function () {                                                                                        // 4
+		$(".contents").slideToggle();                                                                                        // 5
+	});                                                                                                                   // 6
+	$(".title").click(function () {                                                                                       // 7
+		$(".content").slideToggle();                                                                                         // 8
+	});                                                                                                                   // 9
+	$(".titles").click(function () {                                                                                      // 10
+		$(".contentsss").slideToggle();                                                                                      // 11
+	});                                                                                                                   // 12
+                                                                                                                       //
+	jQuery(document).ready(function ($) {                                                                                 // 14
+		//store service items                                                                                                //
+		var fillingBlocks = $('.cd-service').not('.cd-service-divider');                                                     // 16
+                                                                                                                       //
+		//store service items top position into an array                                                                     //
+		var topValueFillingBlocks = [];                                                                                      // 19
+		fillingBlocks.each(function (index) {                                                                                // 20
+			var topValue = $(this).offset().top;                                                                                // 21
+			topValueFillingBlocks[topValueFillingBlocks.length] = topValue;                                                     // 22
+		});                                                                                                                  // 23
+                                                                                                                       //
+		//add the .focus class to the first service item                                                                     //
+		fillingBlocks.eq(0).addClass('focus');                                                                               // 26
+                                                                                                                       //
+		$(window).on('scroll', function () {                                                                                 // 28
+			//check which service item is in the viewport and add the .focus class to it                                        //
+			updateOnFocusItem(fillingBlocks.slice(1));                                                                          // 30
+			//evaluate the $(window).scrollTop value and change the body::after and body::before background accordingly (using the new-color-n classes)
+			bodyBackground(topValueFillingBlocks);                                                                              // 32
+		});                                                                                                                  // 33
+	});                                                                                                                   // 34
+                                                                                                                       //
+	function updateOnFocusItem(items) {                                                                                   // 36
+		items.each(function () {                                                                                             // 37
+			$(this).offset().top - $(window).scrollTop() <= $(window).height() / 2 ? $(this).addClass('focus') : $(this).removeClass('focus');
+		});                                                                                                                  // 39
+	}                                                                                                                     // 40
+                                                                                                                       //
+	function bodyBackground(itemsTopValues) {                                                                             // 42
+		var topPosition = $(window).scrollTop() + $(window).height() / 2,                                                    // 43
+		    servicesNumber = itemsTopValues.length;                                                                          // 43
+		$.each(itemsTopValues, function (key, value) {                                                                       // 45
+			if (itemsTopValues[key] <= topPosition && itemsTopValues[key + 1] > topPosition || itemsTopValues[key] <= topPosition && key + 1 == servicesNumber) {
+				$('body').removeClass('new-color-' + (key - 1) + ' new-color-' + (key + 1)).addClass('new-color-' + key);          // 47
+			}                                                                                                                   // 48
+		});                                                                                                                  // 49
+	}                                                                                                                     // 50
+};                                                                                                                     // 52
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 }},"work":{"template.application.js":function(){
@@ -3088,7 +3078,7 @@ TAPi18n._enable({"helper_name":"_","supported_languages":null,"i18n_files_route"
 TAPi18n.languages_names["en"] = ["English","English"];                                                                 // 9
 // integrate the fallback language translations                                                                        // 10
 translations = {};                                                                                                     // 11
-translations[namespace] = {"aboutIllume":"A Santa Barbara, CA based group, or purpose is to help create or refine your product vision and aim your business towards success. From research to solutions, we drive the lifecycle of your idea to be successful in the online arena with our powerful websites. One size does not fit all so we try our best to understand your current situation to build a comprehensive plan to bring additiional value to your idea.","webAndMobile":"Web & Mobile Apps, ","intoOne":"into One","secretWeapon":"Secret Weapon,","iValue":"I value simple content structure, clean design patterns, and thoughtful interactions.","iCode":"I love to code things from scratch, and enjoy bringing ideas to life in the browser.","moreMe":" I play videogames, read, but I mostly enjoy spending time with friends and family.","myTools":"My Tools:","thingsDesign":"Things I enjoy designing:","languageSpeak":"Languages I speak","thingsLike":"Things I enjoy:","occasionally":"Occasionally","meteor":"METEOR","learnMoreHybrid":"LEARN MORE ON HYBRID APPS","webDesc":"In December of 2010, Samsung SDS predicted that a native container platform that can merge the intricacies of the web and the dynamics of mobile apps will bring about a new future in software engineering. This so called 'hybrid apps' will bring ideas across all platforms of all devices; breaking down  walls for ideas to permeate into the marketspace. The good news is: We offer it right here at illume Inc. Experience the best of both worlds   and spark your ideas to life.","silos":"We cut out the silos and cookie-cutter solutions because we know they will ultimately fail. We are eager to find out what makes your business tick so we can build you a custom high-end website that works for you. Meteor is a Node.JS platform that offers robust flexibility in creating beautiful and powerful applications. We are proud to be part of a growing community of engineers willing to embrace the web-revolution that is about to come. Don't wait.","discoverMeteor":"DISCOVER METEOR","leeSang":"JOE LEE","leadDeveloper":"I believe a strong background in successful customer relation is essential in developing a powerful application fit for your business, all within the boundaries of our imagination. I strive to maintain constant communication between you and our team to ensure the optimal health of your product for your business. Thanks for choosing to work with me.","aLittleAboutMeteor":"A little about Meteor.JS","readySetGo":"READY, SET, GO."};
+translations[namespace] = {"aboutIllume":"A Santa Barbara, CA based group, or purpose is to help create or refine your product vision and aim your business towards success. From research to solutions, we drive the lifecycle of your idea to be successful in the online arena with our powerful websites. One size does not fit all so we try our best to understand your current situation to build a comprehensive plan to bring additiional value to your idea.","webAndMobile":"Web & Mobile Apps, ","intoOne":"into One","secretWeapon":"Secret Weapon,","iValue":"I value simple content structure, clean design patterns, and thoughtful interactions.","iCode":"I love to code things from scratch, and enjoy bringing ideas to life in the browser.","moreMe":" I play videogames, read, but I mostly enjoy spending time with friends and family.","myTools":"My Tools:","thingsDesign":"Things I enjoy designing:","languageSpeak":"Languages I speak","thingsLike":"Things I enjoy:","coffeeAnd":"Coffee, videogames, coding, hanging out with loved ones, oh and also coffee.","occasionally":"Occasionally","meteor":"METEOR","learnMoreHybrid":"LEARN MORE ON HYBRID APPS","webDesc":"In December of 2010, Samsung SDS predicted that a native container platform that can merge the intricacies of the web and the dynamics of mobile apps will bring about a new future in software engineering. This so called 'hybrid apps' will bring ideas across all platforms of all devices; breaking down  walls for ideas to permeate into the marketspace. The good news is: We offer it right here at illume Inc. Experience the best of both worlds   and spark your ideas to life.","silos":"We cut out the silos and cookie-cutter solutions because we know they will ultimately fail. We are eager to find out what makes your business tick so we can build you a custom high-end website that works for you. Meteor is a Node.JS platform that offers robust flexibility in creating beautiful and powerful applications. We are proud to be part of a growing community of engineers willing to embrace the web-revolution that is about to come. Don't wait.","discoverMeteor":"DISCOVER METEOR","leeSang":"JOE LEE","leadDeveloper":"I believe a strong background in successful customer relation is essential in developing a powerful application fit for your business, all within the boundaries of our imagination. I strive to maintain constant communication between you and our team to ensure the optimal health of your product for your business. Thanks for choosing to work with me.","aLittleAboutMeteor":"A little about Meteor.JS","readySetGo":"READY, SET, GO."};
 TAPi18n._loadLangFileObject("en", translations);                                                                       // 13
                                                                                                                        // 14
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -3154,7 +3144,7 @@ if (package_name != "project") {                                                
 }                                                                                                                      // 7
 // integrate the fallback language translations                                                                        // 8
 translations = {};                                                                                                     // 9
-translations[namespace] = {"reactivity":"reactivity","collaborate":"Let's collaborate to give you","unparalleled":"and unparalleled performance.","meteorFirst":"Meteor gives us developers a radically simpler way to build realtime web apps, entirely in JavaScript from one code base. We are able to leverage Javascript like never before and provide you with blazing reactivity in your web application's core. ","meteorSecond":"  Because the same code runs from the client to the cloud, from packages to database APIs, we are not restricted to our weakest link but can be judged based on our strongest one.","simpleSleek":"Simple, Sleek, yet Powerful","iDevelopWith":"I develop with Meteor to create robust, realtime websites and web applications that are as beautiful as they are powerful. As sleek as they are practical.","my":"My","service":"Services","gotQuestion":"Got questions about our services? Not a problem.","giveUsaCall":"Give us a call or shoot us an email. We will get back to you in a jiffy.","websitePackage":"Website Package","ecommerce":"Ecommerce Package","logo":"Logo Package"};
+translations[namespace] = {"reactivity":"reactivity","collaborate":"Let's collaborate to give you","unparalleled":"and unparalleled performance.","meteorFirst":"Meteor gives us developers a radically simpler way to build realtime web apps, entirely in JavaScript from one code base. We are able to leverage Javascript like never before and provide you with blazing reactivity in your web application's core. ","meteorSecond":"  Because the same code runs from the client to the cloud, from packages to database APIs, we are not restricted to our weakest link but can be judged based on our strongest one.","simpleSleek":"Simple, Sleek, yet Powerful","iDevelopWith":"I develop with Meteor to create robust, realtime websites and web applications that are as beautiful as they are powerful. As sleek as they are practical.","my":"My","service":"Services","gotQuestion":"Got questions about my services? Not a problem.","giveUsaCall":"Give me a call or shoot an email. I will get back to you in a jiffy.","websitePackage":"Website Package","ecommerce":"Ecommerce Package","logo":"Logo Package","myServices":"I create, design, and develop websites and web applications for you and your business. Let me know what you need specifically and I am sure I can be of help to you and your team."};
 TAPi18n._loadLangFileObject("en", translations);                                                                       // 11
                                                                                                                        // 12
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -3636,7 +3626,7 @@ mainController = RouteController.extend({                                       
 });                                                                                                                    // 1
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-}}},{"extensions":[".js",".json",".html",".coffee",".css"]});
+}}},{"extensions":[".js",".json",".html",".coffee",".css",".less"]});
 require("./client/layout/appLayout/template.appLayout.js");
 require("./client/layout/appLayout/template.dashboard.js");
 require("./client/layout/appLayout/template.loginLayout.js");

@@ -177,6 +177,7 @@ install("alanning:roles");
 install("meteorspark:util");
 install("cfs:http-methods");
 install("tap:i18n");
+install("less");
 install("livedata");
 install("hot-code-push");
 install("launch-screen");

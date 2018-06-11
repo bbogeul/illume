@@ -210,13 +210,14 @@ install("shell-server");                                                     // 
 install("alanning:roles");                                                   // 116
 install("meteorspark:util");                                                 // 117
 install("tap:i18n");                                                         // 118
-install("webapp");                                                           // 119
-install("hot-code-push");                                                    // 120
-install("launch-screen");                                                    // 121
-install("autoupdate");                                                       // 122
-install("mdg:validation-error");                                             // 123
-install("service-configuration");                                            // 124
-                                                                             // 125
+install("less");                                                             // 119
+install("webapp");                                                           // 120
+install("hot-code-push");                                                    // 121
+install("launch-screen");                                                    // 122
+install("autoupdate");                                                       // 123
+install("mdg:validation-error");                                             // 124
+install("service-configuration");                                            // 125
+                                                                             // 126
 ///////////////////////////////////////////////////////////////////////////////
 
 },"process.js":["process",function(require,exports,module){
