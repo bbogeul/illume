@@ -131,6 +131,7 @@ install("binary-heap");
 install("mongo");
 install("blaze-html-templates");
 install("session");
+install("fourseven:scss");
 install("materialize:materialize");
 install("aldeed:simple-schema");
 install("aldeed:autoform");

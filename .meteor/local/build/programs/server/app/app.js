@@ -395,7 +395,7 @@ if (package_name != "project") {
 }
 // integrate the fallback language translations 
 translations = {};
-translations[namespace] = {"contactMe":"Contact me today!","startProject":"     Starting a project with me is easy. Just email, call, or text us 24/7. I will get back to you within minutes."};
+translations[namespace] = {"contactMe":"Contact me today!","startProject":"     Starting a project with me is easy. Just email, call, or text me 24/7. I will get back to you within minutes."};
 TAPi18n._loadLangFileObject("en", translations);
 TAPi18n._registerServerTranslator("en", namespace);
 
@@ -464,7 +464,7 @@ if (package_name != "project") {
 }
 // integrate the fallback language translations 
 translations = {};
-translations[namespace] = {"myWebsitesAre":"My websites are built with","secondMyWeb":"","stateOfArt":"a state of the art native container - which increases reactivity and performance to a whole new level.","weMakeGraphics":"We make all of our graphics inhouse. Every single graphic work has been made with","aBitOf":"and a little bit of imagination."};
+translations[namespace] = {"myWebsitesAre":"My websites are built with ","secondMyWeb":"","stateOfArt":"a state of the art native container - which increases reactivity and performance to a whole new level.","weMakeGraphics":"We make all of our graphics inhouse. Every single graphic work has been made with","aBitOf":"and a little bit of imagination."};
 TAPi18n._loadLangFileObject("en", translations);
 TAPi18n._registerServerTranslator("en", namespace);
 
@@ -569,7 +569,7 @@ if(_.isUndefined(TAPi18n.translations["ko"][namespace])) {
   TAPi18n.translations["ko"][namespace] = {};
 }
 
-_.extend(TAPi18n.translations["ko"][namespace], {"contactMe":"오늘 연락주세요!","startProject":""});
+_.extend(TAPi18n.translations["ko"][namespace], {"contactMe":"오늘 연락주세요!","startProject":"저랑 멋진 프로젝트를 시작하는 것은 매우 간단합니다. 언제든지, 전화, 문자, 혹은 이메일로 연략주세요!"});
 TAPi18n._registerServerTranslator("ko", namespace);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////

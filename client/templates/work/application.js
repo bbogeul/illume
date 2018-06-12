@@ -1,9 +1,19 @@
 Template.Rsvp.rendered = function() {
        
  new WOW().init();
-   $('.collapsible').collapsible();    
+   $('.collapsible').collapsible({
+   
+  });
+         
 };
- 
+ Template.applications.rendered = function() {
+       
+ new WOW().init();
+   $('.collapsible').collapsible({
+    
+  });
+         
+};
 AutoForm.setDefaultTemplate('materialize');
 AutoForm.addHooks('insertRsvpForm', {
 	onSuccess: function () {
@@ -36,14 +46,9 @@ Template.Rsvp.created = function () {
 	return Session.set('successfulRsvp', false);
 };
 
-Template.Rsvp.rendered = function () {
-};
+ 
 
 Template.Rsvp.destroyed = function () {
 	return Session.set('successfulRsvp', false);
 };
-Template.applications.rendered = function() {
-    	new WOW().init();
-   
-   
-};
+ 

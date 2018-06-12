@@ -16,6 +16,10 @@
 
 .mainC {
     color: #2f363b;}
+
+.mainB {
+  background: #2f363b;
+}
  
 .open-nav {
   max-height: 400px !important;
