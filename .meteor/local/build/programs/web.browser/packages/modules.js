@@ -211,13 +211,15 @@ install("alanning:roles");                                                   // 
 install("meteorspark:util");                                                 // 117
 install("tap:i18n");                                                         // 118
 install("less");                                                             // 119
-install("webapp");                                                           // 120
-install("hot-code-push");                                                    // 121
-install("launch-screen");                                                    // 122
-install("autoupdate");                                                       // 123
-install("mdg:validation-error");                                             // 124
-install("service-configuration");                                            // 125
-                                                                             // 126
+install("mdg:seo");                                                          // 120
+install("webapp");                                                           // 121
+install("hot-code-push");                                                    // 122
+install("launch-screen");                                                    // 123
+install("dferber:prerender");                                                // 124
+install("autoupdate");                                                       // 125
+install("mdg:validation-error");                                             // 126
+install("service-configuration");                                            // 127
+                                                                             // 128
 ///////////////////////////////////////////////////////////////////////////////
 
 },"process.js":["process",function(require,exports,module){

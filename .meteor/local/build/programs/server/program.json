@@ -405,6 +405,9 @@
       "path": "packages/less.js"
     },
     {
+      "path": "packages/mdg_seo.js"
+    },
+    {
       "path": "packages/livedata.js"
     },
     {
@@ -412,6 +415,11 @@
     },
     {
       "path": "packages/launch-screen.js"
+    },
+    {
+      "node_modules": "npm/node_modules/meteor/dferber_prerender/node_modules",
+      "sourceMap": "packages/dferber_prerender.js.map",
+      "path": "packages/dferber_prerender.js"
     },
     {
       "sourceMap": "packages/autoupdate.js.map",
