@@ -270,8 +270,8 @@ Router.route('lessons', {                                                       
 Router.route('applications', {                                                                       // 218
   template: 'applications',                                                                          //
   layoutTemplate: 'appLayout',                                                                       //
-  path: '/work-with-us',                                                                             //
-  title: 'Work with Illume Inc.',                                                                    //
+  path: '/contact-me',                                                                               //
+  title: 'Contact',                                                                                  //
   meta: {                                                                                            //
     url: {                                                                                           //
       property: 'og:url',                                                                            //

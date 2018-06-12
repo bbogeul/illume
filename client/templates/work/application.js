@@ -1,7 +1,7 @@
-Template.lastRsvp.rendered = function() {
+Template.Rsvp.rendered = function() {
        
  new WOW().init();
-      
+   $('.collapsible').collapsible();    
 };
  
 AutoForm.setDefaultTemplate('materialize');
