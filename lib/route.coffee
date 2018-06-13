@@ -21,7 +21,7 @@ Router.configure
      
       
       property: 'og:image'
-      content: '/img/badge.png'
+      content: '/img/drawnPic.jpg'
 
     author:
         name: 'author'
@@ -68,7 +68,7 @@ Router.route 'about',
     image:
       itemprop: 'image'
       property: 'og:image'
-      content: '/img/badge.png'    
+      content: '/img/drawnPic.jpg'
     keywords: 
       name: 'keywords'
       itemprop: 'keywords'
@@ -96,7 +96,7 @@ Router.route 'service',
      image:
       itemprop: 'image'
       property: 'og:image'
-      content: '/img/badge.png'
+      content: '/img/drawnPic.jpg'
      url:
       property: 'og:url'
       itemprop: 'url'
@@ -124,7 +124,7 @@ Router.route 'hybrid',
      image:
       itemprop: 'image'
       property: 'og:image'
-      content: '/img/badge.png'
+      content: '/img/drawnPic.jpg'
      url:
       property: 'og:url'
       itemprop: 'url'
@@ -152,7 +152,7 @@ Router.route 'portfolio',
      image:
       itemprop: 'image'
       property: 'og:image'
-      content: '/img/badge.png'
+      content: '/img/drawnPic.jpg'
      url:
       property: 'og:url'
       itemprop: 'url'

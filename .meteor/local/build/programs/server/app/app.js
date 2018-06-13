@@ -37,7 +37,7 @@ Router.configure({                                                              
     },                                                                                               //
     image: {                                                                                         //
       property: 'og:image',                                                                          //
-      content: '/img/badge.png'                                                                      //
+      content: '/img/drawnPic.jpg'                                                                   //
     },                                                                                               //
     author: {                                                                                        //
       name: 'author',                                                                                //
@@ -87,7 +87,7 @@ Router.route('about', {                                                         
     image: {                                                                                         //
       itemprop: 'image',                                                                             //
       property: 'og:image',                                                                          //
-      content: '/img/badge.png'                                                                      //
+      content: '/img/drawnPic.jpg'                                                                   //
     },                                                                                               //
     keywords: {                                                                                      //
       name: 'keywords',                                                                              //
@@ -121,7 +121,7 @@ Router.route('service', {                                                       
     image: {                                                                                         //
       itemprop: 'image',                                                                             //
       property: 'og:image',                                                                          //
-      content: '/img/badge.png'                                                                      //
+      content: '/img/drawnPic.jpg'                                                                   //
     },                                                                                               //
     url: {                                                                                           //
       property: 'og:url',                                                                            //
@@ -155,7 +155,7 @@ Router.route('hybrid', {                                                        
     image: {                                                                                         //
       itemprop: 'image',                                                                             //
       property: 'og:image',                                                                          //
-      content: '/img/badge.png'                                                                      //
+      content: '/img/drawnPic.jpg'                                                                   //
     },                                                                                               //
     url: {                                                                                           //
       property: 'og:url',                                                                            //
@@ -189,7 +189,7 @@ Router.route('portfolio', {                                                     
     image: {                                                                                         //
       itemprop: 'image',                                                                             //
       property: 'og:image',                                                                          //
-      content: '/img/badge.png'                                                                      //
+      content: '/img/drawnPic.jpg'                                                                   //
     },                                                                                               //
     url: {                                                                                           //
       property: 'og:url',                                                                            //
@@ -569,7 +569,7 @@ if(_.isUndefined(TAPi18n.translations["ko"][namespace])) {
   TAPi18n.translations["ko"][namespace] = {};
 }
 
-_.extend(TAPi18n.translations["ko"][namespace], {"contactMe":"오늘 연락주세요!","startProject":"저랑 멋진 프로젝트를 시작하는 것은 매우 간단합니다. 언제든지, 전화, 문자, 혹은 이메일로 연략주세요!"});
+_.extend(TAPi18n.translations["ko"][namespace], {"contactMe":"오늘 연락주세요!","startProject":"저랑 멋진 프로젝트를 시작하는 것은 매우 간단합니다. 언제든지, 전화, 문자, 혹은 이메일로 연락주세요!"});
 TAPi18n._registerServerTranslator("ko", namespace);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -728,7 +728,7 @@ TAPi18n._registerServerTranslator("ko", namespace);
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
                                                                                                      //
 getUserLanguage = function getUserLanguage() {                                                       // 1
-  return "en";                                                                                       // 2
+  return "ko";                                                                                       // 2
 };                                                                                                   // 3
                                                                                                      //
 if (Meteor.isClient) {                                                                               // 5

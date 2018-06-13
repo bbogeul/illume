@@ -1,5 +1,5 @@
 getUserLanguage = function () {
-  return "en";
+  return "ko";
 };
 
 if (Meteor.isClient) {

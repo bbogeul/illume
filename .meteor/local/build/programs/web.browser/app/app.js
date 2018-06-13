@@ -1298,7 +1298,7 @@ Template["home"] = new Template("Template.home", (function() {                  
     return Spacebars.mustache(view.lookup("_"), "allOfOurWebsites");                                                   // 779
   }), HTML.Raw("<br>"), Blaze.View("lookup:_", function() {                                                            // 780
     return Spacebars.mustache(view.lookup("_"), "fastSleek");                                                          // 781
-  })), "\n            \n                \n             \n            "), "\n        "), "\n                              "), "\n                              ", HTML.Raw('<div class="row">\n                              <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/img/cdp.png">\n              \n            </div>\n           \n            \n          </div>\n           <div class="center" style="margin-top:-2.7em;">\n  <a href="http://www.vitalmetrics-cdp.com" target="_blank" class="btn-floating btn-large waves-effect waves-light red darken-2"><i class="material-icons">link</i></a>\n\n          </div>\n                                 \n                                  </div>\n                                                <div class="col s12 m4 l4">\n                                  <div class="card">\n            <div class="card-image">\n              <img src="/img/jesuslove.png">\n              \n            </div>\n            \n            \n          </div>\n     \n                                            \n                                  </div>\n                        \n                                       <div class="col s12 m4 l4">\n                                  <div class="card">\n            <div class="card-image">\n              <img src="/img/sfmvdm.png">\n              \n            </div>\n            \n            \n          </div>\n           <div class="center" style="margin-top:-2.7em;">\n  <a href="http://www.sfmvdm.com" target="_blank" class="btn-floating btn-large waves-effect waves-light red darken-2"><i class="material-icons">link</i></a>\n\n          </div>\n                                            \n                                  </div>\n                              </div>'), "\n                   ", HTML.DIV({
+  })), "\n            \n                \n             \n            "), "\n        "), "\n                              "), "\n                              ", HTML.Raw('<div class="row">\n                              <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/img/cdp.png">\n              \n            </div>\n           \n            \n          </div>\n          \n                                 \n                                  </div>\n                                                <div class="col s12 m4 l4">\n                                  <div class="card">\n            <div class="card-image">\n              <img src="/img/jesuslove.png">\n              \n            </div>\n            \n            \n          </div>\n     \n                                            \n                                  </div>\n                        \n                                       <div class="col s12 m4 l4">\n                                  <div class="card">\n            <div class="card-image">\n              <img src="/img/sfmvdm.png">\n              \n            </div>\n            \n            \n          </div>\n      \n                                            \n                                  </div>\n                              </div>'), "\n                   ", HTML.DIV({
     "class": "center"                                                                                                  // 783
   }, "\n                  ", HTML.A({                                                                                  // 784
     href: function() {                                                                                                 // 785
@@ -2690,7 +2690,7 @@ Router.configure({                                                              
     },                                                                                                                 //
     image: {                                                                                                           //
       property: 'og:image',                                                                                            //
-      content: '/img/badge.png'                                                                                        //
+      content: '/img/drawnPic.jpg'                                                                                     //
     },                                                                                                                 //
     author: {                                                                                                          //
       name: 'author',                                                                                                  //
@@ -2740,7 +2740,7 @@ Router.route('about', {                                                         
     image: {                                                                                                           //
       itemprop: 'image',                                                                                               //
       property: 'og:image',                                                                                            //
-      content: '/img/badge.png'                                                                                        //
+      content: '/img/drawnPic.jpg'                                                                                     //
     },                                                                                                                 //
     keywords: {                                                                                                        //
       name: 'keywords',                                                                                                //
@@ -2774,7 +2774,7 @@ Router.route('service', {                                                       
     image: {                                                                                                           //
       itemprop: 'image',                                                                                               //
       property: 'og:image',                                                                                            //
-      content: '/img/badge.png'                                                                                        //
+      content: '/img/drawnPic.jpg'                                                                                     //
     },                                                                                                                 //
     url: {                                                                                                             //
       property: 'og:url',                                                                                              //
@@ -2808,7 +2808,7 @@ Router.route('hybrid', {                                                        
     image: {                                                                                                           //
       itemprop: 'image',                                                                                               //
       property: 'og:image',                                                                                            //
-      content: '/img/badge.png'                                                                                        //
+      content: '/img/drawnPic.jpg'                                                                                     //
     },                                                                                                                 //
     url: {                                                                                                             //
       property: 'og:url',                                                                                              //
@@ -2842,7 +2842,7 @@ Router.route('portfolio', {                                                     
     image: {                                                                                                           //
       itemprop: 'image',                                                                                               //
       property: 'og:image',                                                                                            //
-      content: '/img/badge.png'                                                                                        //
+      content: '/img/drawnPic.jpg'                                                                                     //
     },                                                                                                                 //
     url: {                                                                                                             //
       property: 'og:url',                                                                                              //
@@ -3304,7 +3304,7 @@ TAPi18n.languages_names["ko"] = ["Korean","한국어"];                         
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                                                                                                                        //
 getUserLanguage = function getUserLanguage() {                                                                         // 1
-  return "en";                                                                                                         // 2
+  return "ko";                                                                                                         // 2
 };                                                                                                                     // 3
                                                                                                                        //
 if (Meteor.isClient) {                                                                                                 // 5
