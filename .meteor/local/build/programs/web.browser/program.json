@@ -1014,11 +1014,11 @@
       "where": "client",
       "type": "js",
       "cacheable": true,
-      "url": "/app/app.js?hash=64f30da33c581fe45461ff47b66d35f168d9c360",
+      "url": "/app/app.js?hash=b152d7cebaef4cbd5cd4642cd75abd92b0d3f58c",
       "sourceMap": "app/app.js.map",
-      "sourceMapUrl": "/app/64f30da33c581fe45461ff47b66d35f168d9c360.map",
-      "size": 480683,
-      "hash": "64f30da33c581fe45461ff47b66d35f168d9c360"
+      "sourceMapUrl": "/app/b152d7cebaef4cbd5cd4642cd75abd92b0d3f58c.map",
+      "size": 481629,
+      "hash": "b152d7cebaef4cbd5cd4642cd75abd92b0d3f58c"
     },
     {
       "path": "packages/mdg_validation-error.js",
