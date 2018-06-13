@@ -50,7 +50,7 @@ Router.route 'home',
     url:
       property: 'og:url'
       itemprop: 'url'
-      content: 'http://www.j-lee.com/'
+      content: 'http://www.jaulzlee.com/'
 
 Router.route 'about',
   template: 'about'
@@ -60,7 +60,7 @@ Router.route 'about',
     url:
       property: 'og:url'
       itemprop: 'url'
-      content: 'http://www.illumeweb.com/about-me'  
+      content: 'http://www.jaulzlee.com/about-me'  
     description:
       name: 'description'
       property: 'og:description'
@@ -88,7 +88,7 @@ Router.route 'service',
       name: 'description'
       itemprop: 'description'
       property: 'og:description'
-      content:  'We ensure that the design benefits the function. We produce features that work in harmony with the design all intertwined into a fast, controllable, and powerful website. '
+      content:  'I ensure that the design benefits the function. Producing features that work in harmony with the design all intertwined into a fast, controllable, and powerful website. '
     keywords: 
       name: 'keywords'
       itemprop: 'keywords'
@@ -100,12 +100,12 @@ Router.route 'service',
      url:
       property: 'og:url'
       itemprop: 'url'
-      content: 'http://www.illumeweb.com/what-we-do'
+      content: 'http://www.jaulzlee.com/my-services'
         
      'og:type': 'website'
      'og:title': ->
       document.title
-     'og:site_name': 'Our Services'
+     'og:site_name': 'My Services'
 
 Router.route 'hybrid',
   template: 'hybrid'
@@ -128,7 +128,7 @@ Router.route 'hybrid',
      url:
       property: 'og:url'
       itemprop: 'url'
-      content: 'http://www.illumeweb.com/about-hybrid-app'
+      content: 'http://www.jaulzlee.com/about-hybrid-app'
         
      'og:type': 'website'
      'og:title': ->
@@ -156,7 +156,7 @@ Router.route 'portfolio',
      url:
       property: 'og:url'
       itemprop: 'url'
-      content: 'http://www.illumeweb.com/my-work'
+      content: 'http://www.jaulzlee.com/my-work'
         
      'og:type': 'website'
      'og:title': ->
@@ -180,7 +180,7 @@ Router.route 'approach',
     url:
       property: 'og:url'
       itemprop: 'url'
-      content: 'http://www.illumeweb.com/how-we-work'    
+      content: 'http://www.jaulzlee.com/how-we-work'    
     
     'og:type': 'website'
     'og:title': ->
@@ -208,7 +208,7 @@ Router.route 'lessons',
     url:
       property: 'og:url'
       itemprop: 'url'
-      content: 'http://www.illumeweb.com/services/web-lessons'    
+      content: 'http://www.jaulzlee.com/services/web-lessons'    
     
     'og:type': 'website'
     'og:title': ->

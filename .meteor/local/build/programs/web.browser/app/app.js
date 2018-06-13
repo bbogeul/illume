@@ -199,41 +199,30 @@ Template["header"] = new Template("Template.header", (function() {              
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                                                                                                                        //
 Template.header.rendered = function () {                                                                               // 1
-    $('.button-collapse').sideNav({                                                                                    // 2
-        menuWidth: 200, // Default is 240                                                                              // 3
-        edge: 'right', // Choose the horizontal origin                                                                 // 4
-        closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor                                 // 5
-    });                                                                                                                // 2
-    $(window).scroll(function () {                                                                                     // 8
+  $('.button-collapse').sideNav({                                                                                      // 2
+    menuWidth: 200, // Default is 240                                                                                  // 3
+    edge: 'right', // Choose the horizontal origin                                                                     // 4
+    closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor                                     // 5
+  });                                                                                                                  // 2
+  $(window).scroll(function () {                                                                                       // 8
                                                                                                                        //
-        if ($(window).scrollTop() > 100) {                                                                             // 10
-            $('.main_h').addClass('sticky');                                                                           // 11
-        } else {                                                                                                       // 12
-            $('.main_h').removeClass('sticky');                                                                        // 13
-        }                                                                                                              // 14
-    });                                                                                                                // 15
+    if ($(window).scrollTop() > 100) {                                                                                 // 10
+      $('.main_h').addClass('sticky');                                                                                 // 11
+    } else {                                                                                                           // 12
+      $('.main_h').removeClass('sticky');                                                                              // 13
+    }                                                                                                                  // 14
+  });                                                                                                                  // 15
                                                                                                                        //
-    // Mobile Navigation                                                                                               //
+  // Mobile Navigation                                                                                                 //
+};                                                                                                                     // 21
+Template.fixedHeader.rendered = function () {                                                                          // 22
                                                                                                                        //
-    // Navigation Scroll - ljepo radi materem                                                                          //
-    $('nav a').click(function (event) {                                                                                // 20
-        var id = $(this).attr("href");                                                                                 // 21
-        var offset = 70;                                                                                               // 22
-        var target = $(id).offset().top - offset;                                                                      // 23
-        $('html, body').animate({                                                                                      // 24
-            scrollTop: target                                                                                          // 25
-        }, 500);                                                                                                       // 24
-        event.preventDefault();                                                                                        // 27
-    });                                                                                                                // 28
+  $('.button-collapse').sideNav({                                                                                      // 24
+    menuWidth: 200, // Default is 240                                                                                  // 25
+    edge: 'right', // Choose the horizontal origin                                                                     // 26
+    closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor                                     // 27
+  });                                                                                                                  // 24
 };                                                                                                                     // 30
-Template.fixedHeader.rendered = function () {                                                                          // 31
-                                                                                                                       //
-    $('.button-collapse').sideNav({                                                                                    // 33
-        menuWidth: 200, // Default is 240                                                                              // 34
-        edge: 'right', // Choose the horizontal origin                                                                 // 35
-        closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor                                 // 36
-    });                                                                                                                // 33
-};                                                                                                                     // 39
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 }}},"templates":{"about":{"template.about.js":function(){
@@ -532,7 +521,7 @@ Template.approach.rendered = function () {                                      
 Template.__checkName("home");                                                                                          // 2
 Template["home"] = new Template("Template.home", (function() {                                                         // 3
   var view = this;                                                                                                     // 4
-  return [ HTML.DIV({                                                                                                  // 5
+  return [ Spacebars.include(view.lookupTemplate("fixedHeader")), "\n\n", HTML.DIV({                                   // 5
     "class": "code "                                                                                                   // 6
   }, "\n    ", HTML.Raw('<div class="container ">\n <div class="center" style="margin-top:4.4em;">\n 	<img class="wow bounceIn" src="img/drawnPic.jpg" alt="" width="120px">\n    <h3 class="opensan bold wow fadeInDown">Developer, Designer, and Coffee Addict</h3>\n    <p class="nanum flow-text wow fadeInUp">I <b class="bold">create powerful applications</b> and I <i class="fa fa-heart red-text"></i> what I do.</p>\n    \n</div>\n    </div>'), "\n  ", HTML.DIV({
     "class": "svg"                                                                                                     // 8
@@ -1389,82 +1378,82 @@ Template["home"] = new Template("Template.home", (function() {                  
 Template.__checkName("fixedHeader");                                                                                   // 859
 Template["fixedHeader"] = new Template("Template.fixedHeader", (function() {                                           // 860
   var view = this;                                                                                                     // 861
-  return HTML.NAV({                                                                                                    // 862
-    "class": "white"                                                                                                   // 863
-  }, "\n     \n  ", HTML.DIV({                                                                                         // 864
-    "class": "nav-wrapper"                                                                                             // 865
-  }, "\n        ", HTML.DIV({                                                                                          // 866
-    "class": ""                                                                                                        // 867
-  }, "\n        ", HTML.Raw('<div class="brand-logo center hide-on-small-only">\n            <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35" alt=""></a>\n            </div>'), "\n              ", HTML.Raw('<div class="brand-logos brand-logo show-on-small-only hide-on-med-and-up">\n            <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35" alt=""></a>\n            </div>'), "\n            ", HTML.Raw('<a href="#" data-activates="slide-outs" class="red-text button-collapse left" style="margin-left:5px;"><i class="material-icons">reorder</i></a>'), "\n           \n         \n            \n      \n      ", HTML.UL({
-    "class": "hide-on-med-and-down left"                                                                               // 869
-  }, "\n        ", HTML.LI({                                                                                           // 870
-    "class": "nanum"                                                                                                   // 871
-  }, HTML.A({                                                                                                          // 872
-    href: function() {                                                                                                 // 873
-      return Spacebars.mustache(view.lookup("pathFor"), "about");                                                      // 874
-    },                                                                                                                 // 875
-    "class": "grey-text  text-darken-2 "                                                                               // 876
-  }, Blaze.View("lookup:_", function() {                                                                               // 877
-    return Spacebars.mustache(view.lookup("_"), "about");                                                              // 878
-  }))), "\n  \n  \n        ", HTML.LI({                                                                                // 879
-    "class": "nanum"                                                                                                   // 880
-  }, HTML.A({                                                                                                          // 881
-    href: function() {                                                                                                 // 882
-      return Spacebars.mustache(view.lookup("pathFor"), "service");                                                    // 883
-    },                                                                                                                 // 884
-    "class": "grey-text text-darken-2"                                                                                 // 885
-  }, " ", Blaze.View("lookup:_", function() {                                                                          // 886
-    return Spacebars.mustache(view.lookup("_"), "ourServices");                                                        // 887
-  }))), "\n             ", HTML.LI({                                                                                   // 888
-    "class": "nanum"                                                                                                   // 889
-  }, HTML.A({                                                                                                          // 890
-    href: function() {                                                                                                 // 891
-      return Spacebars.mustache(view.lookup("pathFor"), "portfolio");                                                  // 892
-    },                                                                                                                 // 893
-    "class": "grey-text text-darken-2"                                                                                 // 894
-  }, Blaze.View("lookup:_", function() {                                                                               // 895
-    return Spacebars.mustache(view.lookup("_"), "portfolio");                                                          // 896
-  }))), "\n           ", HTML.LI({                                                                                     // 897
-    "class": "nanum"                                                                                                   // 898
-  }, HTML.A({                                                                                                          // 899
-    href: function() {                                                                                                 // 900
-      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 901
-    },                                                                                                                 // 902
-    "class": "grey-text text-darken-2"                                                                                 // 903
-  }, Blaze.View("lookup:_", function() {                                                                               // 904
-    return Spacebars.mustache(view.lookup("_"), "reachUs");                                                            // 905
-  }))), "\n \n\n      "), "\n        ", HTML.UL({                                                                      // 906
-    "class": "right hide-on-med-and-down"                                                                              // 907
+  return HTML.DIV({                                                                                                    // 862
+    "class": " "                                                                                                       // 863
+  }, "\n  ", HTML.NAV({                                                                                                // 864
+    "class": "white"                                                                                                   // 865
+  }, "\n     \n  ", HTML.DIV({                                                                                         // 866
+    "class": "nav-wrapper"                                                                                             // 867
+  }, "\n        ", HTML.DIV({                                                                                          // 868
+    "class": ""                                                                                                        // 869
+  }, "\n        ", HTML.Raw('<div class="brand-logo center hide-on-small-only">\n            <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35" alt=""></a>\n            </div>'), "\n              ", HTML.Raw('<div class="brand-logos brand-logo show-on-small-only hide-on-med-and-up">\n            <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35" alt=""></a>\n            </div>'), "\n            ", HTML.Raw('<a href="#" data-activates="slide-out2" class="red-text button-collapse left" style="margin-left:5px;"><i class="material-icons">reorder</i></a>'), "\n           \n         \n            \n      \n      ", HTML.UL({
+    "class": "hide-on-med-and-down left"                                                                               // 871
+  }, "\n        ", HTML.LI({                                                                                           // 872
+    "class": "nanum"                                                                                                   // 873
+  }, HTML.A({                                                                                                          // 874
+    href: function() {                                                                                                 // 875
+      return Spacebars.mustache(view.lookup("pathFor"), "about");                                                      // 876
+    },                                                                                                                 // 877
+    "class": "grey-text  text-darken-2 "                                                                               // 878
+  }, Blaze.View("lookup:_", function() {                                                                               // 879
+    return Spacebars.mustache(view.lookup("_"), "about");                                                              // 880
+  }))), "\n  \n  \n        ", HTML.LI({                                                                                // 881
+    "class": "nanum"                                                                                                   // 882
+  }, HTML.A({                                                                                                          // 883
+    href: function() {                                                                                                 // 884
+      return Spacebars.mustache(view.lookup("pathFor"), "service");                                                    // 885
+    },                                                                                                                 // 886
+    "class": "grey-text text-darken-2"                                                                                 // 887
+  }, " ", Blaze.View("lookup:_", function() {                                                                          // 888
+    return Spacebars.mustache(view.lookup("_"), "ourServices");                                                        // 889
+  }))), "\n             ", HTML.LI({                                                                                   // 890
+    "class": "nanum"                                                                                                   // 891
+  }, HTML.A({                                                                                                          // 892
+    href: function() {                                                                                                 // 893
+      return Spacebars.mustache(view.lookup("pathFor"), "portfolio");                                                  // 894
+    },                                                                                                                 // 895
+    "class": "grey-text text-darken-2"                                                                                 // 896
+  }, Blaze.View("lookup:_", function() {                                                                               // 897
+    return Spacebars.mustache(view.lookup("_"), "portfolio");                                                          // 898
+  }))), "\n           ", HTML.LI({                                                                                     // 899
+    "class": "nanum"                                                                                                   // 900
+  }, HTML.A({                                                                                                          // 901
+    href: function() {                                                                                                 // 902
+      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 903
+    },                                                                                                                 // 904
+    "class": "grey-text text-darken-2"                                                                                 // 905
+  }, Blaze.View("lookup:_", function() {                                                                               // 906
+    return Spacebars.mustache(view.lookup("_"), "reachUs");                                                            // 907
+  }))), "\n \n\n      "), "\n        ", HTML.UL({                                                                      // 908
+    "class": "right hide-on-med-and-down"                                                                              // 909
   }, "\n           ", Spacebars.include(view.lookupTemplate("languageSwitcher2")), "\n            ", HTML.Raw('<li><a class=" grey-text center" href="https://urlgeni.us/facebook/4U1B"><i class="fab fa-facebook-f  fa-2x"></i></a></li>'), "\n                         ", HTML.Raw('<li class="divider"></li>'), "\n    ", HTML.Raw('<li><a class="center grey-text" href="https://instagram.com/illumeinc/"><i class="fab fa-instagram  fa-2x"></i></a></li>'), "\n            "), "\n       \n    "), "\n      "), "\n \n \n  ", HTML.UL({
-    id: "slide-out2",                                                                                                  // 909
-    "class": "side-nav center"                                                                                         // 910
-  }, "\n         ", HTML.DIV({                                                                                         // 911
-    "class": "center"                                                                                                  // 912
-  }, "\n            \n             \n      ", HTML.LI({                                                                // 913
-    "class": "nanum"                                                                                                   // 914
-  }, HTML.A({                                                                                                          // 915
-    href: function() {                                                                                                 // 916
-      return Spacebars.mustache(view.lookup("pathFor"), "about");                                                      // 917
-    },                                                                                                                 // 918
-    "class": "grey-text text-darken-3 "                                                                                // 919
-  }, Blaze.View("lookup:_", function() {                                                                               // 920
-    return Spacebars.mustache(view.lookup("_"), "about");                                                              // 921
-  }))), "\n     \n        ", HTML.LI({                                                                                 // 922
-    "class": "nanum"                                                                                                   // 923
-  }, HTML.A({                                                                                                          // 924
-    href: function() {                                                                                                 // 925
-      return Spacebars.mustache(view.lookup("pathFor"), "service");                                                    // 926
-    },                                                                                                                 // 927
-    "class": "grey-text text-darken-3"                                                                                 // 928
-  }, Blaze.View("lookup:_", function() {                                                                               // 929
-    return Spacebars.mustache(view.lookup("_"), "ourServices");                                                        // 930
-  }))), "\n                ", HTML.LI({                                                                                // 931
-    "class": "nanum"                                                                                                   // 932
-  }, HTML.A({                                                                                                          // 933
-    href: function() {                                                                                                 // 934
-      return Spacebars.mustache(view.lookup("pathFor"), "portfolio");                                                  // 935
-    },                                                                                                                 // 936
-    "class": "grey-text text-darken-3"                                                                                 // 937
+    id: "slide-out2",                                                                                                  // 911
+    "class": "side-nav"                                                                                                // 912
+  }, "\n        ", HTML.DIV({                                                                                          // 913
+    "class": "center"                                                                                                  // 914
+  }, "\n            ", HTML.Raw("<br>"), "\n            ", HTML.Raw('<img src="/img/drawnPic.jpg" width="150">'), HTML.Raw("<br>"), "\n  \n     ", HTML.LI({
+    "class": "nanum",                                                                                                  // 916
+    style: "margin-top:1em;"                                                                                           // 917
+  }, HTML.A({                                                                                                          // 918
+    href: function() {                                                                                                 // 919
+      return Spacebars.mustache(view.lookup("pathFor"), "about");                                                      // 920
+    }                                                                                                                  // 921
+  }, Blaze.View("lookup:_", function() {                                                                               // 922
+    return Spacebars.mustache(view.lookup("_"), "about");                                                              // 923
+  }))), "\n    \n        ", HTML.LI({                                                                                  // 924
+    "class": "nanum"                                                                                                   // 925
+  }, HTML.A({                                                                                                          // 926
+    href: function() {                                                                                                 // 927
+      return Spacebars.mustache(view.lookup("pathFor"), "service");                                                    // 928
+    }                                                                                                                  // 929
+  }, Blaze.View("lookup:_", function() {                                                                               // 930
+    return Spacebars.mustache(view.lookup("_"), "ourServices");                                                        // 931
+  }))), "\n             ", HTML.LI({                                                                                   // 932
+    "class": "nanum"                                                                                                   // 933
+  }, HTML.A({                                                                                                          // 934
+    href: function() {                                                                                                 // 935
+      return Spacebars.mustache(view.lookup("pathFor"), "portfolio");                                                  // 936
+    }                                                                                                                  // 937
   }, Blaze.View("lookup:_", function() {                                                                               // 938
     return Spacebars.mustache(view.lookup("_"), "portfolio");                                                          // 939
   }))), "\n           ", HTML.LI({                                                                                     // 940
@@ -1472,13 +1461,12 @@ Template["fixedHeader"] = new Template("Template.fixedHeader", (function() {    
   }, HTML.A({                                                                                                          // 942
     href: function() {                                                                                                 // 943
       return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 944
-    },                                                                                                                 // 945
-    "class": "grey-text text-darken-3"                                                                                 // 946
-  }, Blaze.View("lookup:_", function() {                                                                               // 947
-    return Spacebars.mustache(view.lookup("_"), "reachUs");                                                            // 948
-  }))), "\n           ", Spacebars.include(view.lookupTemplate("languageSwitcher2")), "\n        "), "\n "), "\n \n          ");
-}));                                                                                                                   // 950
-                                                                                                                       // 951
+    }                                                                                                                  // 945
+  }, Blaze.View("lookup:_", function() {                                                                               // 946
+    return Spacebars.mustache(view.lookup("_"), "reachUs");                                                            // 947
+  }))), "\n           ", Spacebars.include(view.lookupTemplate("languageSwitcher2")), "\n        "), "\n  "), "\n \n          "), "\n            ");
+}));                                                                                                                   // 949
+                                                                                                                       // 950
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 },"home.js":function(){
@@ -2729,7 +2717,7 @@ Router.route('home', {                                                          
     url: {                                                                                                             //
       property: 'og:url',                                                                                              //
       itemprop: 'url',                                                                                                 //
-      content: 'http://www.j-lee.com/'                                                                                 //
+      content: 'http://www.jaulzlee.com/'                                                                              //
     }                                                                                                                  //
   }                                                                                                                    //
 });                                                                                                                    //
@@ -2742,7 +2730,7 @@ Router.route('about', {                                                         
     url: {                                                                                                             //
       property: 'og:url',                                                                                              //
       itemprop: 'url',                                                                                                 //
-      content: 'http://www.illumeweb.com/about-me'                                                                     //
+      content: 'http://www.jaulzlee.com/about-me'                                                                      //
     },                                                                                                                 //
     description: {                                                                                                     //
       name: 'description',                                                                                             //
@@ -2776,7 +2764,7 @@ Router.route('service', {                                                       
       name: 'description',                                                                                             //
       itemprop: 'description',                                                                                         //
       property: 'og:description',                                                                                      //
-      content: 'We ensure that the design benefits the function. We produce features that work in harmony with the design all intertwined into a fast, controllable, and powerful website. '
+      content: 'I ensure that the design benefits the function. Producing features that work in harmony with the design all intertwined into a fast, controllable, and powerful website. '
     },                                                                                                                 //
     keywords: {                                                                                                        //
       name: 'keywords',                                                                                                //
@@ -2791,13 +2779,13 @@ Router.route('service', {                                                       
     url: {                                                                                                             //
       property: 'og:url',                                                                                              //
       itemprop: 'url',                                                                                                 //
-      content: 'http://www.illumeweb.com/what-we-do'                                                                   //
+      content: 'http://www.jaulzlee.com/my-services'                                                                   //
     },                                                                                                                 //
     'og:type': 'website',                                                                                              //
     'og:title': function() {                                                                                           //
       return document.title;                                                                                           //
     },                                                                                                                 //
-    'og:site_name': 'Our Services'                                                                                     //
+    'og:site_name': 'My Services'                                                                                      //
   }                                                                                                                    //
 });                                                                                                                    //
                                                                                                                        //
@@ -2825,7 +2813,7 @@ Router.route('hybrid', {                                                        
     url: {                                                                                                             //
       property: 'og:url',                                                                                              //
       itemprop: 'url',                                                                                                 //
-      content: 'http://www.illumeweb.com/about-hybrid-app'                                                             //
+      content: 'http://www.jaulzlee.com/about-hybrid-app'                                                              //
     },                                                                                                                 //
     'og:type': 'website',                                                                                              //
     'og:title': function() {                                                                                           //
@@ -2859,7 +2847,7 @@ Router.route('portfolio', {                                                     
     url: {                                                                                                             //
       property: 'og:url',                                                                                              //
       itemprop: 'url',                                                                                                 //
-      content: 'http://www.illumeweb.com/my-work'                                                                      //
+      content: 'http://www.jaulzlee.com/my-work'                                                                       //
     },                                                                                                                 //
     'og:type': 'website',                                                                                              //
     'og:title': function() {                                                                                           //
@@ -2888,7 +2876,7 @@ Router.route('approach', {                                                      
     url: {                                                                                                             //
       property: 'og:url',                                                                                              //
       itemprop: 'url',                                                                                                 //
-      content: 'http://www.illumeweb.com/how-we-work'                                                                  //
+      content: 'http://www.jaulzlee.com/how-we-work'                                                                   //
     },                                                                                                                 //
     'og:type': 'website',                                                                                              //
     'og:title': function() {                                                                                           //
@@ -2922,7 +2910,7 @@ Router.route('lessons', {                                                       
     url: {                                                                                                             //
       property: 'og:url',                                                                                              //
       itemprop: 'url',                                                                                                 //
-      content: 'http://www.illumeweb.com/services/web-lessons'                                                         //
+      content: 'http://www.jaulzlee.com/services/web-lessons'                                                          //
     },                                                                                                                 //
     'og:type': 'website',                                                                                              //
     'og:title': function() {                                                                                           //

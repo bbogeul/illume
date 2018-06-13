@@ -1,5 +1,5 @@
 <template name="home">
- 
+ {{> fixedHeader}}
 
 <div class="code ">
     <div class="container ">
@@ -628,7 +628,7 @@
  
 </template>
         <template name="fixedHeader">
-    
+    <div class=" ">
   <nav class="white">
      
   <div class="nav-wrapper">
@@ -639,7 +639,7 @@
               <div class="brand-logos brand-logo show-on-small-only hide-on-med-and-up">
             <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35"  alt=""></a>
             </div>
-            <a href="#" data-activates="slide-outs" class="red-text button-collapse left" style="margin-left:5px;"><i class="material-icons">reorder</i></a>
+            <a href="#" data-activates="slide-out2" class="red-text button-collapse left" style="margin-left:5px;"><i class="material-icons">reorder</i></a>
            
          
             
@@ -665,19 +665,20 @@
       </div>
  
  
-  <ul id="slide-out2" class="side-nav center">
-         <div class="center">
-            
-             
-      <li class="nanum"><a href="{{pathFor 'about'}}" class="grey-text text-darken-3 ">{{_"about"}}</a></li>
-     
-        <li class="nanum"><a href="{{pathFor 'service'}}"  class="grey-text text-darken-3">{{_"ourServices"}}</a></li>
-                <li class="nanum"><a href="{{pathFor 'portfolio'}}"  class="grey-text text-darken-3">{{_"portfolio"}}</a></li>
-           <li class="nanum"><a href="{{pathFor 'applications'}}"  class="grey-text text-darken-3">{{_"reachUs"}}</a></li>
-           {{>languageSwitcher2}}
+  <ul id="slide-out2" class="side-nav">
+        <div class="center">
+            <br>
+            <img src="/img/drawnPic.jpg"  width="150"><br>
+  
+     <li class="nanum" style="margin-top:1em;"><a href="{{pathFor 'about'}}">{{_"about"}}</a></li>
+    
+        <li class="nanum"><a href="{{pathFor 'service'}}">{{_"ourServices"}}</a></li>
+             <li class="nanum"><a href="{{pathFor 'portfolio'}}">{{_"portfolio"}}</a></li>
+           <li class="nanum"><a href="{{pathFor 'applications'}}">{{_"reachUs"}}</a></li>
+           {{> languageSwitcher2}}
         </div>
- </ul>
+  </ul>
  
           </nav>
- 
+            </div>
         </template>
