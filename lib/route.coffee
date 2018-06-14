@@ -30,7 +30,7 @@ Router.configure
     url:
       property: 'og:url'
        
-      content: 'http://www.illumeweb.com'
+      content: 'http://www.jaulzlee.com'
 
     
 
@@ -144,7 +144,7 @@ Router.route 'portfolio',
       name: 'description'
       itemprop: 'description'
       property: 'og:description'
-      content:  'I ensure that the design benefits the function. We produce features that work in harmony with the design all intertwined into a fast, controllable, and powerful website. '
+      content:  'Some of my past and recent works. Made with Meteor. '
     keywords: 
       name: 'keywords'
       itemprop: 'keywords'

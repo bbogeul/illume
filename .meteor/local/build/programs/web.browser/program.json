@@ -1014,11 +1014,11 @@
       "where": "client",
       "type": "js",
       "cacheable": true,
-      "url": "/app/app.js?hash=b152d7cebaef4cbd5cd4642cd75abd92b0d3f58c",
+      "url": "/app/app.js?hash=8344d63fe7fe7bc62d1e2d2ad9e1c319e2bd5c69",
       "sourceMap": "app/app.js.map",
-      "sourceMapUrl": "/app/b152d7cebaef4cbd5cd4642cd75abd92b0d3f58c.map",
-      "size": 481629,
-      "hash": "b152d7cebaef4cbd5cd4642cd75abd92b0d3f58c"
+      "sourceMapUrl": "/app/8344d63fe7fe7bc62d1e2d2ad9e1c319e2bd5c69.map",
+      "size": 481563,
+      "hash": "8344d63fe7fe7bc62d1e2d2ad9e1c319e2bd5c69"
     },
     {
       "path": "packages/mdg_validation-error.js",
@@ -1502,15 +1502,6 @@
       "url": "/img/approach.png",
       "size": 281752,
       "hash": "b7e49539272da81cab27fe9b08aad9053a70b1d2"
-    },
-    {
-      "path": "app/img/badge.png",
-      "where": "client",
-      "type": "asset",
-      "cacheable": false,
-      "url": "/img/badge.png",
-      "size": 9186,
-      "hash": "7dda74bbb7c2574fd1df5b4c163ce12f7c9dcf34"
     },
     {
       "path": "app/img/bottom.svg",
