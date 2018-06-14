@@ -598,7 +598,7 @@ if(_.isUndefined(TAPi18n.translations["ko"][namespace])) {
   TAPi18n.translations["ko"][namespace] = {};
 }
 
-_.extend(TAPi18n.translations["ko"][namespace], {"about":"저의 대해서","howWeWork":"성공비결","ourServices":"서비스","portfolio":"Portfolio","reachUs":"연락처"});
+_.extend(TAPi18n.translations["ko"][namespace], {"about":"저에 대해서","howWeWork":"성공비결","ourServices":"서비스","portfolio":"Portfolio","reachUs":"연락처"});
 TAPi18n._registerServerTranslator("ko", namespace);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
