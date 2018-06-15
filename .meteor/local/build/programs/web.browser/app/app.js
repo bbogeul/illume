@@ -308,7 +308,7 @@ Template["about"] = new Template("Template.about", (function() {                
     style: "font-size:1.2em;margin-top:0.6em;"                                                                         // 73
   }, "\n         ", Blaze.View("lookup:_", function() {                                                                // 74
     return Spacebars.mustache(view.lookup("_"), "myTools");                                                            // 75
-  }), "\n     "), "\n     ", HTML.Raw('<p class="nanum grey-text text-darken-2">\n         Brackets <br>Sublime3 <br> Github <br> Bootstrap <br> Material Design <br> Meteor.js <br> Angular <br> Codepen <br> Terminal\n     </p>'), "\n "), "\n"), "\n  ", HTML.Raw("<br>"), "\n                "), "\n               \n                 ", HTML.DIV({
+  }), "\n     "), "\n     ", HTML.Raw('<p class="nanum grey-text text-darken-2">\n        Linux(Mac &amp; Ubuntu) Brackets <br>Sublime3 <br> Github <br> Bootstrap <br> Material Design <br> Meteor.js <br> Angular <br> Codepen <br> Terminal\n     </p>'), "\n "), "\n"), "\n  ", HTML.Raw("<br>"), "\n                "), "\n               \n                 ", HTML.DIV({
     "class": "col s12 m12 l4"                                                                                          // 77
   }, "\n                ", HTML.DIV({                                                                                  // 78
     "class": "pricing animated swing"                                                                                  // 79
