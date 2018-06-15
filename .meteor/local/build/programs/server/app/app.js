@@ -29,7 +29,7 @@ Router.configure({                                                              
     },                                                                                               //
     keywords: {                                                                                      //
       name: 'keywords',                                                                              //
-      content: 'applications, mobile, web, javascript, illume inc., santa barbara, meteor, meteor.js, hybrid applications, web design, web development, mobile app development, web design santa barbara, web development santa barbara'
+      content: 'applications, mobile, web, javascript, santa barbara, meteor, meteor.js, hybrid applications, web design, web development, mobile app development, web design, web development'
     },                                                                                               //
     description: {                                                                                   //
       name: 'description',                                                                           //

@@ -111,7 +111,7 @@ Template["header"] = new Template("Template.header", (function() {              
     "class": "nav-wrapper"                                                                                             // 12
   }, "\n        ", HTML.DIV({                                                                                          // 13
     "class": ""                                                                                                        // 14
-  }, "\n        ", HTML.Raw('<div class="brand-logo center hide-on-small-only">\n            <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35" alt=""></a>\n            </div>'), "\n              ", HTML.Raw('<div class="brand-logos brand-logo show-on-small-only hide-on-med-and-up">\n            <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35" alt=""></a>\n            </div>'), "\n            ", HTML.Raw('<a href="#" data-activates="slide-outs" class="white-text button-collapse left" style="margin-left:5px;"><i class="material-icons">reorder</i></a>'), "\n           \n         \n            \n      \n      ", HTML.UL({
+  }, "\n        ", HTML.Raw('<div class="brand-logo center hide-on-small-only">\n            <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35" alt=""></a>\n            </div>'), "\n              ", HTML.Raw('<div class="brand-logos brand-logo show-on-small-only hide-on-med-and-up">\n            <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35" alt=""></a>\n            </div>'), "\n            ", HTML.Raw('<a href="#" data-activates="slide-outs" class="white-text button-collapse left" style="margin-left:15px;"><i class="fas fa-bars"></i></a>'), "\n           \n         \n            \n      \n      ", HTML.UL({
     "class": "hide-on-med-and-down left"                                                                               // 16
   }, "\n        ", HTML.LI({                                                                                           // 17
     "class": "nanum"                                                                                                   // 18
@@ -1395,7 +1395,7 @@ Template["fixedHeader"] = new Template("Template.fixedHeader", (function() {    
     "class": "nav-wrapper"                                                                                             // 876
   }, "\n        ", HTML.DIV({                                                                                          // 877
     "class": ""                                                                                                        // 878
-  }, "\n        ", HTML.Raw('<div class="brand-logo center hide-on-small-only">\n            <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35" alt=""></a>\n            </div>'), "\n              ", HTML.Raw('<div class="brand-logos brand-logo show-on-small-only hide-on-med-and-up">\n            <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35" alt=""></a>\n            </div>'), "\n            ", HTML.Raw('<a href="#" data-activates="slide-out2" class="red-text button-collapse left" style="margin-left:5px;"><i class="material-icons">reorder</i></a>'), "\n           \n         \n            \n      \n      ", HTML.UL({
+  }, "\n        ", HTML.Raw('<div class="brand-logo center hide-on-small-only">\n            <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35" alt=""></a>\n            </div>'), "\n              ", HTML.Raw('<div class="brand-logos brand-logo show-on-small-only hide-on-med-and-up">\n            <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35" alt=""></a>\n            </div>'), "\n            ", HTML.Raw('<a href="#" data-activates="slide-out2" class="red-text button-collapse left" style="margin-left:15px;"><i class="fas fa-bars"></i></a>'), "\n           \n         \n            \n      \n      ", HTML.UL({
     "class": "hide-on-med-and-down left"                                                                               // 880
   }, "\n        ", HTML.LI({                                                                                           // 881
     "class": "nanum"                                                                                                   // 882
@@ -1586,60 +1586,61 @@ Template["portfolio"] = new Template("Template.portfolio", (function() {        
     return Spacebars.mustache(view.lookup("_"), "myWebsitesAre");                                                      // 24
   }), HTML.A({                                                                                                         // 25
     href: "http://www.meteor.com",                                                                                     // 26
-    target: "_blank"                                                                                                   // 27
-  }, Blaze.View("lookup:_", function() {                                                                               // 28
-    return Spacebars.mustache(view.lookup("_"), "meteorJs");                                                           // 29
-  })), " ", Blaze.View("lookup:_", function() {                                                                        // 30
-    return Spacebars.mustache(view.lookup("_"), "secondMyWeb");                                                        // 31
-  }), " - ", Blaze.View("lookup:_", function() {                                                                       // 32
-    return Spacebars.mustache(view.lookup("_"), "stateOfArt");                                                         // 33
+    "class": "red-text",                                                                                               // 27
+    target: "_blank"                                                                                                   // 28
+  }, Blaze.View("lookup:_", function() {                                                                               // 29
+    return Spacebars.mustache(view.lookup("_"), "meteorJs");                                                           // 30
+  })), " ", Blaze.View("lookup:_", function() {                                                                        // 31
+    return Spacebars.mustache(view.lookup("_"), "secondMyWeb");                                                        // 32
+  }), " - ", Blaze.View("lookup:_", function() {                                                                       // 33
+    return Spacebars.mustache(view.lookup("_"), "stateOfArt");                                                         // 34
   })), "\n             \n            "), "\n        "), "\n                              "), "\n           ", HTML.Raw('<div class="row">\n                              <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/img/cdp.png">\n              \n            </div>\n           \n            \n          </div>\n          \n                                 \n                                  </div>\n                                                <div class="col s12 m4 l4">\n                                  <div class="card">\n            <div class="card-image">\n              <img src="/img/jesuslove.png">\n              \n            </div>\n            \n            \n          </div>\n     \n                                            \n                                  </div>\n                        \n                                       <div class="col s12 m4 l4">\n                                  <div class="card">\n            <div class="card-image">\n              <img src="/img/sfmvdm.png">\n              \n            </div>\n            \n            \n          </div>\n         \n                                            \n                                  </div>\n                              </div>'), "\n                        ", HTML.Raw('<div class="row">\n                              <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/img/bpr.png">\n              \n            </div>\n           \n            \n          </div>\n          \n                                 \n                                  </div>\n                                                <div class="col s12 m4 l4">\n                                  <div class="card">\n            <div class="card-image">\n              <img src="/img/ivhair.png">\n              \n            </div>\n            \n            \n          </div>\n          \n                                            \n                                  </div>\n                        \n                                       <div class="col s12 m4 l4">\n                                  <div class="card">\n            <div class="card-image">\n              <img src="/img/epic.png">\n              \n            </div>\n            \n            \n          </div>\n           \n                                            \n                                  </div>\n                              </div>'), "\n    ", HTML.DIV({
-    "class": "row",                                                                                                    // 35
-    style: "margin-top:4em;"                                                                                           // 36
-  }, "\n        ", HTML.DIV({                                                                                          // 37
-    "class": "container"                                                                                               // 38
-  }, "\n        ", HTML.DIV({                                                                                          // 39
-    "class": "col s12 m12 l10 offset-l1"                                                                               // 40
+    "class": "row",                                                                                                    // 36
+    style: "margin-top:4em;"                                                                                           // 37
+  }, "\n        ", HTML.DIV({                                                                                          // 38
+    "class": "container"                                                                                               // 39
+  }, "\n        ", HTML.DIV({                                                                                          // 40
+    "class": "col s12 m12 l10 offset-l1"                                                                               // 41
   }, "\n            ", HTML.Raw('<h3 class="  center  opensan">GRAPHICS</h3>'), "\n  \n            ", HTML.Raw('<div class="divider red lighten-1" style="margin:0 auto;width:120px"></div>'), "\n                \n             ", HTML.P({
-    "class": "center flow-text"                                                                                        // 42
-  }, Blaze.View("lookup:_", function() {                                                                               // 43
-    return Spacebars.mustache(view.lookup("_"), "weMakeGraphics");                                                     // 44
-  }), " ", HTML.Raw('<i class="fa fa-heart red-text"></i>'), " ", Blaze.View("lookup:_", function() {                  // 45
-    return Spacebars.mustache(view.lookup("_"), "aBitOf");                                                             // 46
+    "class": "center flow-text"                                                                                        // 43
+  }, Blaze.View("lookup:_", function() {                                                                               // 44
+    return Spacebars.mustache(view.lookup("_"), "weMakeGraphics");                                                     // 45
+  }), " ", HTML.Raw('<i class="fa fa-heart red-text"></i>'), " ", Blaze.View("lookup:_", function() {                  // 46
+    return Spacebars.mustache(view.lookup("_"), "aBitOf");                                                             // 47
   })), "\n            "), "\n        "), "\n                              "), "\n                                ", HTML.Raw('<div class="row">\n                              <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/img/cole.png" class="materialboxed">\n              \n            </div>\n           \n            \n          </div>\n           \n                                 \n                                  </div>\n                                                <div class="col s12 m4 l4">\n                                  <div class="card">\n            <div class="card-image">\n              <img src="/work/sfmvdm.png" class="materialboxed">\n              \n            </div>\n            \n            \n          </div>\n \n                                            \n                                  </div>\n                        \n                                       <div class="col s12 m4 l4">\n                                  <div class="card">\n            <div class="card-image">\n              <img src="/work/business.png" class="materialboxed">\n              \n            </div>\n            \n            \n          </div>\n         \n                                            \n                                  </div>\n                              </div>'), "\n                     ", HTML.Raw('<div class="row">\n                              <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/work/speakwise.png" class="materialboxed">\n              \n            </div>\n           \n            \n          </div>\n           \n                                 \n                                  </div>\n                             <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/work/bpbanner.png" class="materialboxed">\n              \n            </div>\n           \n            \n          </div>\n           \n                                 \n                                  </div>\n                                          <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/work/jl.png" class="materialboxed">\n              \n            </div>\n           \n            \n          </div>\n           \n                                 \n                                  </div>\n    </div>'), "\n\n"), "   \n  ", HTML.SECTION({
-    style: "margin-top:8em;padding:1.6em;margin-bottom:-1.4em;"                                                        // 48
-  }, "\n                ", HTML.DIV({                                                                                  // 49
-    "class": "row"                                                                                                     // 50
-  }, "\n        ", HTML.DIV({                                                                                          // 51
-    "class": "container"                                                                                               // 52
-  }, "\n        ", HTML.DIV({                                                                                          // 53
-    "class": "col s12 m12 l12"                                                                                         // 54
-  }, "\n            ", HTML.H1({                                                                                       // 55
-    "class": "nanum center homeWhat"                                                                                   // 56
-  }, Blaze.View("lookup:_", function() {                                                                               // 57
-    return Spacebars.mustache(view.lookup("_"), "areYouGame");                                                         // 58
-  })), "\n            ", HTML.Raw('<div class="divider red lighten-1"></div>'), "\n      \n             ", HTML.H3({   // 59
-    "class": "center nanum grey-text text-darken-3"                                                                    // 60
-  }, Blaze.View("lookup:_", function() {                                                                               // 61
-    return Spacebars.mustache(view.lookup("_"), "loveToHear");                                                         // 62
-  })), "\n                ", HTML.DIV({                                                                                // 63
-    "class": "center"                                                                                                  // 64
-  }, "\n                 ", HTML.P({                                                                                   // 65
-    "class": "flow-text nanum"                                                                                         // 66
-  }, Blaze.View("lookup:_", function() {                                                                               // 67
-    return Spacebars.mustache(view.lookup("_"), "alwaysOpen");                                                         // 68
-  }), "\n                 ", HTML.Raw("<br>"), "\n                 ", Blaze.View("lookup:_", function() {              // 69
-    return Spacebars.mustache(view.lookup("_"), "coffee");                                                             // 70
-  }), "\n                 "), "\n                  ", HTML.A({                                                         // 71
-    href: function() {                                                                                                 // 72
-      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 73
-    },                                                                                                                 // 74
-    "class": "button outline"                                                                                          // 75
-  }, Blaze.View("lookup:_", function() {                                                                               // 76
-    return Spacebars.mustache(view.lookup("_"), "getStarted");                                                         // 77
+    style: "margin-top:8em;padding:1.6em;margin-bottom:-1.4em;"                                                        // 49
+  }, "\n                ", HTML.DIV({                                                                                  // 50
+    "class": "row"                                                                                                     // 51
+  }, "\n        ", HTML.DIV({                                                                                          // 52
+    "class": "container"                                                                                               // 53
+  }, "\n        ", HTML.DIV({                                                                                          // 54
+    "class": "col s12 m12 l12"                                                                                         // 55
+  }, "\n            ", HTML.H1({                                                                                       // 56
+    "class": "nanum center homeWhat"                                                                                   // 57
+  }, Blaze.View("lookup:_", function() {                                                                               // 58
+    return Spacebars.mustache(view.lookup("_"), "areYouGame");                                                         // 59
+  })), "\n            ", HTML.Raw('<div class="divider red lighten-1"></div>'), "\n      \n             ", HTML.H3({   // 60
+    "class": "center nanum grey-text text-darken-3"                                                                    // 61
+  }, Blaze.View("lookup:_", function() {                                                                               // 62
+    return Spacebars.mustache(view.lookup("_"), "loveToHear");                                                         // 63
+  })), "\n                ", HTML.DIV({                                                                                // 64
+    "class": "center"                                                                                                  // 65
+  }, "\n                 ", HTML.P({                                                                                   // 66
+    "class": "flow-text nanum"                                                                                         // 67
+  }, Blaze.View("lookup:_", function() {                                                                               // 68
+    return Spacebars.mustache(view.lookup("_"), "alwaysOpen");                                                         // 69
+  }), "\n                 ", HTML.Raw("<br>"), "\n                 ", Blaze.View("lookup:_", function() {              // 70
+    return Spacebars.mustache(view.lookup("_"), "coffee");                                                             // 71
+  }), "\n                 "), "\n                  ", HTML.A({                                                         // 72
+    href: function() {                                                                                                 // 73
+      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 74
+    },                                                                                                                 // 75
+    "class": "button outline"                                                                                          // 76
+  }, Blaze.View("lookup:_", function() {                                                                               // 77
+    return Spacebars.mustache(view.lookup("_"), "getStarted");                                                         // 78
   })), "\n\n                "), "\n            "), "\n        "), "\n                              "), "\n            ") ];
-}));                                                                                                                   // 79
-                                                                                                                       // 80
+}));                                                                                                                   // 80
+                                                                                                                       // 81
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 },"portfolio.js":function(){
@@ -2691,7 +2692,7 @@ Router.configure({                                                              
     },                                                                                                                 //
     keywords: {                                                                                                        //
       name: 'keywords',                                                                                                //
-      content: 'applications, mobile, web, javascript, illume inc., santa barbara, meteor, meteor.js, hybrid applications, web design, web development, mobile app development, web design santa barbara, web development santa barbara'
+      content: 'applications, mobile, web, javascript, santa barbara, meteor, meteor.js, hybrid applications, web design, web development, mobile app development, web design, web development'
     },                                                                                                                 //
     description: {                                                                                                     //
       name: 'description',                                                                                             //
