@@ -528,7 +528,7 @@ Template["home"] = new Template("Template.home", (function() {                  
   }, "\n ", HTML.DIV({                                                                                                 // 9
     "class": "center",                                                                                                 // 10
     style: "margin-top:4.4em;"                                                                                         // 11
-  }, "\n 	", HTML.Raw('<img class="wow bounceIn" src="img/drawnPic.jpg" alt="" width="120px">'), "\n    ", HTML.H3({   // 12
+  }, "\n 	", HTML.Raw('<img class="wow bounceIn" src="img/drawnPic.jpg" alt="" width="140px">'), "\n    ", HTML.H3({   // 12
     "class": "opensan bold wow fadeInDown"                                                                             // 13
   }, Blaze.View("lookup:_", function() {                                                                               // 14
     return Spacebars.mustache(view.lookup("_"), "developDesigner");                                                    // 15
