@@ -110,7 +110,7 @@ Template["header"] = new Template("Template.header", (function() {              
   }, "\n     \n    ", HTML.DIV({                                                                                       // 11
     "class": "nav-wrapper"                                                                                             // 12
   }, "\n        ", HTML.DIV({                                                                                          // 13
-    "class": "container"                                                                                               // 14
+    "class": " "                                                                                                       // 14
   }, "\n        ", HTML.Raw('<div class="brand-logo center hide-on-small-only">\n            <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35" alt=""></a>\n            </div>'), "\n              ", HTML.Raw('<div class="brand-logos brand-logo show-on-small-only hide-on-med-and-up">\n            <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35" alt=""></a>\n            </div>'), "\n            ", HTML.Raw('<a href="#" data-activates="slide-outs" class="white-text button-collapse left" style="margin-left:15px;"><i class="fas fa-bars"></i></a>'), "\n           \n         \n            \n      \n      ", HTML.UL({
     "class": "hide-on-med-and-down left"                                                                               // 16
   }, "\n        ", HTML.LI({                                                                                           // 17
@@ -1394,7 +1394,7 @@ Template["fixedHeader"] = new Template("Template.fixedHeader", (function() {    
   }, "\n     \n  ", HTML.DIV({                                                                                         // 875
     "class": "nav-wrapper"                                                                                             // 876
   }, "\n        ", HTML.DIV({                                                                                          // 877
-    "class": "container"                                                                                               // 878
+    "class": " "                                                                                                       // 878
   }, "\n        ", HTML.Raw('<div class="brand-logo center hide-on-small-only">\n            <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35" alt=""></a>\n            </div>'), "\n              ", HTML.Raw('<div class="brand-logos brand-logo show-on-small-only hide-on-med-and-up">\n            <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35" alt=""></a>\n            </div>'), "\n            ", HTML.Raw('<a href="#" data-activates="slide-out2" class="red-text button-collapse left" style="margin-left:15px;"><i class="fas fa-bars"></i></a>'), "\n           \n         \n            \n      \n      ", HTML.UL({
     "class": "hide-on-med-and-down left"                                                                               // 880
   }, "\n        ", HTML.LI({                                                                                           // 881
