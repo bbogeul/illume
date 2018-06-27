@@ -464,7 +464,7 @@ if (package_name != "project") {
 }
 // integrate the fallback language translations 
 translations = {};
-translations[namespace] = {"myWebsitesAre":"My websites are built with ","secondMyWeb":"","stateOfArt":"a state of the art native container - which increases reactivity and performance to a whole new level.","weMakeGraphics":"We make all of our graphics inhouse. Every single graphic work has been made with","aBitOf":"and a little bit of imagination."};
+translations[namespace] = {"myWebsitesAre":"My websites are built with ","secondMyWeb":"","stateOfArt":"a state of the art native container - which increases reactivity and performance to a whole new level.","weMakeGraphics":"We make all of our graphics inhouse. Every single graphic work has been made with","aBitOf":"and a little bit of imagination.","currentProjects":"CURRENT PROJECTS"};
 TAPi18n._loadLangFileObject("en", translations);
 TAPi18n._registerServerTranslator("en", namespace);
 
@@ -656,7 +656,7 @@ if(_.isUndefined(TAPi18n.translations["ko"][namespace])) {
   TAPi18n.translations["ko"][namespace] = {};
 }
 
-_.extend(TAPi18n.translations["ko"][namespace], {"myWebsitesAre":"제가 개발하는 웹사이트들은 모두 ","secondMyWeb":"만들어져 있습니다","stateOfArt":"새로운 수준으로 반응성과 성능을 향상시키는 최신 네이티브 컨테이너 환경.","weMakeGraphics":"모든 그래픽들은 직접 처음부터 끝까지 만들며","aBitOf":"과 상상력으로 제작합니다."});
+_.extend(TAPi18n.translations["ko"][namespace], {"myWebsitesAre":"제가 개발하는 웹사이트들은 모두 ","secondMyWeb":"만들어져 있습니다","stateOfArt":"새로운 수준으로 반응성과 성능을 향상시키는 최신 네이티브 컨테이너 환경.","weMakeGraphics":"모든 그래픽들은 직접 처음부터 끝까지 만들며","aBitOf":"과 상상력으로 제작합니다.","currentProjects":"현재 개발하고 있는 작품들"});
 TAPi18n._registerServerTranslator("ko", namespace);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -728,7 +728,7 @@ TAPi18n._registerServerTranslator("ko", namespace);
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
                                                                                                      //
 getUserLanguage = function getUserLanguage() {                                                       // 1
-  return "ko";                                                                                       // 2
+  return "en";                                                                                       // 2
 };                                                                                                   // 3
                                                                                                      //
 if (Meteor.isClient) {                                                                               // 5

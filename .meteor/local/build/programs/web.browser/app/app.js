@@ -110,7 +110,7 @@ Template["header"] = new Template("Template.header", (function() {              
   }, "\n     \n    ", HTML.DIV({                                                                                       // 11
     "class": "nav-wrapper"                                                                                             // 12
   }, "\n        ", HTML.DIV({                                                                                          // 13
-    "class": ""                                                                                                        // 14
+    "class": "container"                                                                                               // 14
   }, "\n        ", HTML.Raw('<div class="brand-logo center hide-on-small-only">\n            <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35" alt=""></a>\n            </div>'), "\n              ", HTML.Raw('<div class="brand-logos brand-logo show-on-small-only hide-on-med-and-up">\n            <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35" alt=""></a>\n            </div>'), "\n            ", HTML.Raw('<a href="#" data-activates="slide-outs" class="white-text button-collapse left" style="margin-left:15px;"><i class="fas fa-bars"></i></a>'), "\n           \n         \n            \n      \n      ", HTML.UL({
     "class": "hide-on-med-and-down left"                                                                               // 16
   }, "\n        ", HTML.LI({                                                                                           // 17
@@ -1394,7 +1394,7 @@ Template["fixedHeader"] = new Template("Template.fixedHeader", (function() {    
   }, "\n     \n  ", HTML.DIV({                                                                                         // 875
     "class": "nav-wrapper"                                                                                             // 876
   }, "\n        ", HTML.DIV({                                                                                          // 877
-    "class": ""                                                                                                        // 878
+    "class": "container"                                                                                               // 878
   }, "\n        ", HTML.Raw('<div class="brand-logo center hide-on-small-only">\n            <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35" alt=""></a>\n            </div>'), "\n              ", HTML.Raw('<div class="brand-logos brand-logo show-on-small-only hide-on-med-and-up">\n            <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35" alt=""></a>\n            </div>'), "\n            ", HTML.Raw('<a href="#" data-activates="slide-out2" class="red-text button-collapse left" style="margin-left:15px;"><i class="fas fa-bars"></i></a>'), "\n           \n         \n            \n      \n      ", HTML.UL({
     "class": "hide-on-med-and-down left"                                                                               // 880
   }, "\n        ", HTML.LI({                                                                                           // 881
@@ -1574,7 +1574,7 @@ Template["portfolio"] = new Template("Template.portfolio", (function() {        
   })), "\n          "), "\n "), HTML.Raw('\n <br>\n\n<div class="divider"></div>\n\n  <!-- HTML Chart -->\n \n \n \n \n'), HTML.DIV({
     id: "portfolioWrapper",                                                                                            // 13
     "class": ""                                                                                                        // 14
-  }, "\n\n   ", HTML.DIV({                                                                                             // 15
+  }, "\n", HTML.Raw('<div class="row">\n \n</div>'), "\n   ", HTML.DIV({                                               // 15
     "class": "row"                                                                                                     // 16
   }, "\n        ", HTML.DIV({                                                                                          // 17
     "class": "container"                                                                                               // 18
@@ -1607,40 +1607,62 @@ Template["portfolio"] = new Template("Template.portfolio", (function() {        
     return Spacebars.mustache(view.lookup("_"), "weMakeGraphics");                                                     // 45
   }), " ", HTML.Raw('<i class="fa fa-heart red-text"></i>'), " ", Blaze.View("lookup:_", function() {                  // 46
     return Spacebars.mustache(view.lookup("_"), "aBitOf");                                                             // 47
-  })), "\n            "), "\n        "), "\n                              "), "\n                                ", HTML.Raw('<div class="row">\n                              <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/img/cole.png" class="materialboxed">\n              \n            </div>\n           \n            \n          </div>\n           \n                                 \n                                  </div>\n                                                <div class="col s12 m4 l4">\n                                  <div class="card">\n            <div class="card-image">\n              <img src="/work/sfmvdm.png" class="materialboxed">\n              \n            </div>\n            \n            \n          </div>\n \n                                            \n                                  </div>\n                        \n                                       <div class="col s12 m4 l4">\n                                  <div class="card">\n            <div class="card-image">\n              <img src="/work/business.png" class="materialboxed">\n              \n            </div>\n            \n            \n          </div>\n         \n                                            \n                                  </div>\n                              </div>'), "\n                     ", HTML.Raw('<div class="row">\n                              <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/work/speakwise.png" class="materialboxed">\n              \n            </div>\n           \n            \n          </div>\n           \n                                 \n                                  </div>\n                             <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/work/bpbanner.png" class="materialboxed">\n              \n            </div>\n           \n            \n          </div>\n           \n                                 \n                                  </div>\n                                          <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/work/jl.png" class="materialboxed">\n              \n            </div>\n           \n            \n          </div>\n           \n                                 \n                                  </div>\n    </div>'), "\n\n"), "   \n  ", HTML.SECTION({
-    style: "margin-top:8em;padding:1.6em;margin-bottom:-1.4em;"                                                        // 49
-  }, "\n                ", HTML.DIV({                                                                                  // 50
-    "class": "row"                                                                                                     // 51
-  }, "\n        ", HTML.DIV({                                                                                          // 52
-    "class": "container"                                                                                               // 53
-  }, "\n        ", HTML.DIV({                                                                                          // 54
-    "class": "col s12 m12 l12"                                                                                         // 55
-  }, "\n            ", HTML.H1({                                                                                       // 56
-    "class": "nanum center homeWhat"                                                                                   // 57
-  }, Blaze.View("lookup:_", function() {                                                                               // 58
-    return Spacebars.mustache(view.lookup("_"), "areYouGame");                                                         // 59
-  })), "\n            ", HTML.Raw('<div class="divider red lighten-1"></div>'), "\n      \n             ", HTML.H3({   // 60
-    "class": "center nanum grey-text text-darken-3"                                                                    // 61
-  }, Blaze.View("lookup:_", function() {                                                                               // 62
-    return Spacebars.mustache(view.lookup("_"), "loveToHear");                                                         // 63
-  })), "\n                ", HTML.DIV({                                                                                // 64
-    "class": "center"                                                                                                  // 65
-  }, "\n                 ", HTML.P({                                                                                   // 66
-    "class": "flow-text nanum"                                                                                         // 67
+  })), "\n            "), "\n        "), "\n                              "), "\n                                ", HTML.Raw('<div class="row">\n                              <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/img/cole.png" class="materialboxed">\n              \n            </div>\n           \n            \n          </div>\n           \n                                 \n                                  </div>\n                                                <div class="col s12 m4 l4">\n                                  <div class="card">\n            <div class="card-image">\n              <img src="/work/sfmvdm.png" class="materialboxed">\n              \n            </div>\n            \n            \n          </div>\n \n                                            \n                                  </div>\n                        \n                                       <div class="col s12 m4 l4">\n                                  <div class="card">\n            <div class="card-image">\n              <img src="/work/business.png" class="materialboxed">\n              \n            </div>\n            \n            \n          </div>\n         \n                                            \n                                  </div>\n                              </div>'), "\n                     ", HTML.Raw('<div class="row">\n                              <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/work/speakwise.png" class="materialboxed">\n              \n            </div>\n           \n            \n          </div>\n           \n                                 \n                                  </div>\n                             <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/work/bpbanner.png" class="materialboxed">\n              \n            </div>\n           \n            \n          </div>\n           \n                                 \n                                  </div>\n                                          <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/work/jl.png" class="materialboxed">\n              \n            </div>\n           \n            \n          </div>\n           \n                                 \n                                  </div>\n    </div>'), "\n", HTML.DIV({
+    "class": "row",                                                                                                    // 49
+    style: ""                                                                                                          // 50
+  }, "\n  ", HTML.DIV({                                                                                                // 51
+    "class": "container"                                                                                               // 52
+  }, "\n    ", HTML.DIV({                                                                                              // 53
+    "class": "col s12 m12"                                                                                             // 54
+  }, "\n      ", HTML.H3({                                                                                             // 55
+    "class": "center opensan"                                                                                          // 56
+  }, Blaze.View("lookup:_", function() {                                                                               // 57
+    return Spacebars.mustache(view.lookup("_"), "currentProjects");                                                    // 58
+  })), "\n      ", HTML.Raw('<div class="divider red lighten-1" style="margin:0 auto;width:120px"></div>'), "\n      ", HTML.P({
+    "class": "flow-text center"                                                                                        // 60
+  }, Blaze.View("lookup:_", function() {                                                                               // 61
+    return Spacebars.mustache(view.lookup("_"), "currentProjectsParagraph");                                           // 62
+  })), "\n      ", HTML.Raw("<br>"), "\n      ", HTML.DIV({                                                            // 63
+    "class": "center"                                                                                                  // 64
+  }, " \n      ", HTML.A({                                                                                             // 65
+    href: "",                                                                                                          // 66
+    "class": "  button outline"                                                                                        // 67
   }, Blaze.View("lookup:_", function() {                                                                               // 68
-    return Spacebars.mustache(view.lookup("_"), "alwaysOpen");                                                         // 69
-  }), "\n                 ", HTML.Raw("<br>"), "\n                 ", Blaze.View("lookup:_", function() {              // 70
-    return Spacebars.mustache(view.lookup("_"), "coffee");                                                             // 71
-  }), "\n                 "), "\n                  ", HTML.A({                                                         // 72
-    href: function() {                                                                                                 // 73
-      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 74
-    },                                                                                                                 // 75
-    "class": "button outline"                                                                                          // 76
-  }, Blaze.View("lookup:_", function() {                                                                               // 77
-    return Spacebars.mustache(view.lookup("_"), "getStarted");                                                         // 78
+    return Spacebars.mustache(view.lookup("_"), "checkThemOut");                                                       // 69
+  })), "\n    "), "\n    "), "\n  "), "\n"), "\n"), "   \n  ", HTML.SECTION({                                          // 70
+    style: "margin-top:8em;padding:1.6em;margin-bottom:-1.4em;"                                                        // 71
+  }, "\n                ", HTML.DIV({                                                                                  // 72
+    "class": "row"                                                                                                     // 73
+  }, "\n        ", HTML.DIV({                                                                                          // 74
+    "class": "container"                                                                                               // 75
+  }, "\n        ", HTML.DIV({                                                                                          // 76
+    "class": "col s12 m12 l12"                                                                                         // 77
+  }, "\n            ", HTML.H1({                                                                                       // 78
+    "class": "nanum center homeWhat"                                                                                   // 79
+  }, Blaze.View("lookup:_", function() {                                                                               // 80
+    return Spacebars.mustache(view.lookup("_"), "areYouGame");                                                         // 81
+  })), "\n            ", HTML.Raw('<div class="divider red lighten-1"></div>'), "\n      \n             ", HTML.H3({   // 82
+    "class": "center nanum grey-text text-darken-3"                                                                    // 83
+  }, Blaze.View("lookup:_", function() {                                                                               // 84
+    return Spacebars.mustache(view.lookup("_"), "loveToHear");                                                         // 85
+  })), "\n                ", HTML.DIV({                                                                                // 86
+    "class": "center"                                                                                                  // 87
+  }, "\n                 ", HTML.P({                                                                                   // 88
+    "class": "flow-text nanum"                                                                                         // 89
+  }, Blaze.View("lookup:_", function() {                                                                               // 90
+    return Spacebars.mustache(view.lookup("_"), "alwaysOpen");                                                         // 91
+  }), "\n                 ", HTML.Raw("<br>"), "\n                 ", Blaze.View("lookup:_", function() {              // 92
+    return Spacebars.mustache(view.lookup("_"), "coffee");                                                             // 93
+  }), "\n                 "), "\n                  ", HTML.A({                                                         // 94
+    href: function() {                                                                                                 // 95
+      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 96
+    },                                                                                                                 // 97
+    "class": "button outline"                                                                                          // 98
+  }, Blaze.View("lookup:_", function() {                                                                               // 99
+    return Spacebars.mustache(view.lookup("_"), "getStarted");                                                         // 100
   })), "\n\n                "), "\n            "), "\n        "), "\n                              "), "\n            ") ];
-}));                                                                                                                   // 80
-                                                                                                                       // 81
+}));                                                                                                                   // 102
+                                                                                                                       // 103
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 },"portfolio.js":function(){
@@ -3123,7 +3145,7 @@ if (package_name != "project") {                                                
 }                                                                                                                      // 7
 // integrate the fallback language translations                                                                        // 8
 translations = {};                                                                                                     // 9
-translations[namespace] = {"myWebsitesAre":"My websites are built with ","secondMyWeb":"","stateOfArt":"a state of the art native container - which increases reactivity and performance to a whole new level.","weMakeGraphics":"We make all of our graphics inhouse. Every single graphic work has been made with","aBitOf":"and a little bit of imagination."};
+translations[namespace] = {"myWebsitesAre":"My websites are built with ","secondMyWeb":"","stateOfArt":"a state of the art native container - which increases reactivity and performance to a whole new level.","weMakeGraphics":"We make all of our graphics inhouse. Every single graphic work has been made with","aBitOf":"and a little bit of imagination.","currentProjects":"CURRENT PROJECTS"};
 TAPi18n._loadLangFileObject("en", translations);                                                                       // 11
                                                                                                                        // 12
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -3314,7 +3336,7 @@ TAPi18n.languages_names["ko"] = ["Korean","한국어"];                         
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                                                                                                                        //
 getUserLanguage = function getUserLanguage() {                                                                         // 1
-  return "ko";                                                                                                         // 2
+  return "en";                                                                                                         // 2
 };                                                                                                                     // 3
                                                                                                                        //
 if (Meteor.isClient) {                                                                                                 // 5
