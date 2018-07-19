@@ -1,6 +1,15 @@
 <template name="portfolio">
   
  {{>fixedHeader}}
+ <div id="currentWorkModal" class="modal">
+  <div class="modal-content">
+    <h4>Modal Header</h4>
+    <p>A bunch of text</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+  </div>
+</div>
  <section>
   <div class="center">
     <h2 class="nanum "><b>My Work</b></h2>
@@ -318,7 +327,7 @@
                                  
                                   </div>
     </div>
-<div class="row" style="">
+<div class="row" style="display: none;">
   <div class="container">
     <div class="col s12 m12">
       <h3 class="center opensan">{{_"currentProjects"}}</h3>

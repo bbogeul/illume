@@ -1,19 +1,22 @@
  /*****************************************************************************/
 /* Server Only Methods */
 /*****************************************************************************/
-Meteor.methods({
-	'submitRsvp': function (rsvp) {
-		console.log('new RSVP:', rsvp);
-		Rsvps.insert(rsvp);
-	}
-});
+ 
 /**
  * Meteor.publish('items', function (param1, param2) {
  *  this.ready();
  * });
  */
-Meteor.publish('rsvps', function () {
-  return Rsvps.find();
+Meteor.publish('Recording', function () {
+  return Recording.find();
 });
-
- 
+Meteor.publish('Montha', function () {
+	return Months.find();
+  });
+Meteor.methods({
+	'submitRecords': function (rsvp) {
+        Recording.insert(rsvp);
+		console.log('new record:', rsvp);
+		 
+	} 
+});

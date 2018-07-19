@@ -1,5 +1,1 @@
- Template.appLayout.rendered = function() {    
-  
- 
-};
  

@@ -1,231 +1,226 @@
-var require = meteorInstall({"client":{"layout":{"appLayout":{"template.appLayout.js":function(){
+var require = meteorInstall({"client":{"templates":{"portfolio":{"works":{"template.work.js":function(){
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //                                                                                                                     //
-// client/layout/appLayout/template.appLayout.js                                                                       //
+// client/templates/portfolio/works/template.work.js                                                                   //
 //                                                                                                                     //
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                                                                                                                        //
                                                                                                                        // 1
-Template.__checkName("appLayout");                                                                                     // 2
-Template["appLayout"] = new Template("Template.appLayout", (function() {                                               // 3
+Template.__checkName("someOfWork");                                                                                    // 2
+Template["someOfWork"] = new Template("Template.someOfWork", (function() {                                             // 3
   var view = this;                                                                                                     // 4
-  return [ Spacebars.include(view.lookupTemplate("header")), "\n\n", Spacebars.include(view.lookupTemplate("yield")), "\n\n", Spacebars.include(view.lookupTemplate("footer")) ];
-}));                                                                                                                   // 6
-                                                                                                                       // 7
+  return HTML.SECTION("\n       ", HTML.DIV({                                                                          // 5
+    "class": "container"                                                                                               // 6
+  }, "\n           ", HTML.DIV({                                                                                       // 7
+    "class": "center"                                                                                                  // 8
+  }, "\n               ", HTML.H2({                                                                                    // 9
+    "class": "nanum"                                                                                                   // 10
+  }, Blaze.View("lookup:currentProjects", function() {                                                                 // 11
+    return Spacebars.mustache(view.lookup("currentProjects"));                                                         // 12
+  })), "\n           "), "\n       "), "\n   ");                                                                       // 13
+}));                                                                                                                   // 14
+                                                                                                                       // 15
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-},"template.dashboard.js":function(){
+}},"template.portfolio.js":function(){
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //                                                                                                                     //
-// client/layout/appLayout/template.dashboard.js                                                                       //
+// client/templates/portfolio/template.portfolio.js                                                                    //
 //                                                                                                                     //
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                                                                                                                        //
                                                                                                                        // 1
-Template.__checkName("dashboard");                                                                                     // 2
-Template["dashboard"] = new Template("Template.dashboard", (function() {                                               // 3
+Template.__checkName("portfolio");                                                                                     // 2
+Template["portfolio"] = new Template("Template.portfolio", (function() {                                               // 3
   var view = this;                                                                                                     // 4
-  return [ HTML.Raw('<div class="center">\n<a href="/">\n<img src="/img/sideNav.png" width="150" style="margin-top:1em;">\n</a>\n</div>\n \n<p class="center flow-text grey-text text-darken-2"></p>\n'), Spacebars.include(view.lookupTemplate("yield")) ];
-}));                                                                                                                   // 6
-                                                                                                                       // 7
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-},"template.loginLayout.js":function(){
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//                                                                                                                     //
-// client/layout/appLayout/template.loginLayout.js                                                                     //
-//                                                                                                                     //
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                                                                                                                       //
-                                                                                                                       // 1
-Template.__checkName("loginLayout");                                                                                   // 2
-Template["loginLayout"] = new Template("Template.loginLayout", (function() {                                           // 3
-  var view = this;                                                                                                     // 4
-  return [ Spacebars.include(view.lookupTemplate("fixedHeader")), "\n\n  ", Blaze.If(function() {                      // 5
-    return Spacebars.call(view.lookup("currentUser"));                                                                 // 6
-  }, function() {                                                                                                      // 7
-    return [ "\n        ", Spacebars.include(view.lookupTemplate("application")), "\n\n    " ];                        // 8
-  }, function() {                                                                                                      // 9
-    return [ "\n        ", Spacebars.include(view.lookupTemplate("login")), "\n         \n    " ];                     // 10
-  }) ];                                                                                                                // 11
-}));                                                                                                                   // 12
-                                                                                                                       // 13
-Template.__checkName("registerTemplate");                                                                              // 14
-Template["registerTemplate"] = new Template("Template.registerTemplate", (function() {                                 // 15
-  var view = this;                                                                                                     // 16
-  return Spacebars.include(view.lookupTemplate("yield"));                                                              // 17
-}));                                                                                                                   // 18
-                                                                                                                       // 19
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-},"appLayout.js":function(){
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//                                                                                                                     //
-// client/layout/appLayout/appLayout.js                                                                                //
-//                                                                                                                     //
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                                                                                                                       //
-Template.appLayout.rendered = function () {};                                                                          // 1
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-}},"footer":{"template.footer.js":function(){
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//                                                                                                                     //
-// client/layout/footer/template.footer.js                                                                             //
-//                                                                                                                     //
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                                                                                                                       //
-                                                                                                                       // 1
-Template.__checkName("footer");                                                                                        // 2
-Template["footer"] = new Template("Template.footer", (function() {                                                     // 3
-  var view = this;                                                                                                     // 4
-  return HTML.Raw('<div class="container">\n \n    </div>\n<footer class="page-footer" style="background: #2f363b;height:500px;">\n    <section class="text-center" style="padding:1em;margin-top:70px;">     \n        <div class="container center">\n    <div>\n        <a href="/"><img src="/img/wlogo.png" width="85"></a>\n        </div>\n        <br>\n        <div class="divider" style="margin:0 auto;width: 100px"></div>\n    <p class="footer-company-motto nanum white-text flow-text"><b>Living, Breathing, and Improving</b></p>\n\n	 \n\n			<p class="footer-company-name rale" style="color:#a0a0a0;margin-top: 120px;">Typecrafted by joseph s. lee &copy; twentyeighteen<br><span class="nanum">경기도 고양시 </span>| Santa Barbara, CA <br><br><span class="nanum">made with <a class="grey-text" href="www.meteor.com">Meteor.JS</a></span></p>\n    \n\n        </div>\n    </section> \n    </footer>');
-}));                                                                                                                   // 6
-                                                                                                                       // 7
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-}},"header":{"template.header.js":function(){
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//                                                                                                                     //
-// client/layout/header/template.header.js                                                                             //
-//                                                                                                                     //
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                                                                                                                       //
-                                                                                                                       // 1
-Template.__checkName("header");                                                                                        // 2
-Template["header"] = new Template("Template.header", (function() {                                                     // 3
-  var view = this;                                                                                                     // 4
-  return [ HTML.HEADER({                                                                                               // 5
-    "class": "main_h"                                                                                                  // 6
-  }, "\n\n \n      ", HTML.DIV({                                                                                       // 7
-    "class": "navbar-fixed"                                                                                            // 8
-  }, "\n  ", HTML.NAV({                                                                                                // 9
-    style: "background:#2f363b;"                                                                                       // 10
-  }, "\n     \n    ", HTML.DIV({                                                                                       // 11
-    "class": "nav-wrapper"                                                                                             // 12
-  }, "\n        ", HTML.DIV({                                                                                          // 13
-    "class": " "                                                                                                       // 14
-  }, "\n        ", HTML.Raw('<div class="brand-logo center hide-on-small-only">\n            <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35" alt=""></a>\n            </div>'), "\n              ", HTML.Raw('<div class="brand-logos brand-logo show-on-small-only hide-on-med-and-up">\n            <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35" alt=""></a>\n            </div>'), "\n            ", HTML.Raw('<a href="#" data-activates="slide-outs" class="white-text button-collapse left" style="margin-left:15px;"><i class="fas fa-bars"></i></a>'), "\n           \n         \n            \n      \n      ", HTML.UL({
-    "class": "hide-on-med-and-down left"                                                                               // 16
-  }, "\n        ", HTML.LI({                                                                                           // 17
-    "class": "nanum"                                                                                                   // 18
-  }, HTML.A({                                                                                                          // 19
-    href: function() {                                                                                                 // 20
-      return Spacebars.mustache(view.lookup("pathFor"), "about");                                                      // 21
-    }                                                                                                                  // 22
+  return [ Spacebars.include(view.lookupTemplate("fixedHeader")), HTML.Raw('\n <div id="currentWorkModal" class="modal">\n  <div class="modal-content">\n    <h4>Modal Header</h4>\n    <p>A bunch of text</p>\n  </div>\n  <div class="modal-footer">\n    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>\n  </div>\n</div>\n '), HTML.SECTION("\n  ", HTML.Raw('<div class="center">\n    <h2 class="nanum "><b>My Work</b></h2>\n<div class="divider red lighten-1" style="margin:0 auto;width:120px"></div>\n  </div>'), "\n    ", HTML.Raw('<div class="container service-graphic sg2" style="margin-top:2em;">\n  <div class="screen monitor">\n    <div class="content">\n      <div class="browser">\n        <ul class="btns">\n          <li></li><li></li><li></li>\n        </ul>\n        <div class="browser-content">\n        <ul class="txt">\n          <li></li>        \n          <li class="big"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li></li>        \n          <li></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li></li>        \n          <li class="big"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n        </ul> \n        </div>\n      </div>\n    </div>\n    <div class="base">\n      <div class="grey-shadow"></div>\n      <div class="foot top"></div>\n      <div class="foot bottom"></div>\n    </div>\n  </div>\n  \n  <div class="laptop">\n    <div class="screen">\n      <ul class="txt">\n        <li></li>        \n        <li class="big"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li></li>        \n        <li></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li></li>        \n        <li class="big"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n      </ul>           \n    </div>\n    <div class="btm"></div>\n  </div>\n  \n  <div class="phone">\n    <div class="screen">\n      <ul class="txt">\n        <li></li>\n        <li></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li></li>\n        <li></li>\n      </ul>\n    </div>\n  <div class="shadow"></div>        \n  </div>\n  \n  <div class="ipad">\n    <div class="screen">\n      <ul class="txt">\n        <li></li>\n        <li class="big"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li></li>        \n        <li></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li></li>\n      </ul>\n    </div>\n  </div>  \n</div>'), "\n          ", HTML.DIV({
+    "class": "container",                                                                                              // 6
+    style: "margin-top:7em;"                                                                                           // 7
+  }, "\n              ", HTML.H2({                                                                                     // 8
+    "class": "flow-text nanum grey-text text-darken-3 center"                                                          // 9
+  }, Blaze.View("lookup:_", function() {                                                                               // 10
+    return Spacebars.mustache(view.lookup("_"), "myServices");                                                         // 11
+  })), "\n          "), "\n "), HTML.Raw('\n <br>\n\n<div class="divider"></div>\n\n  <!-- HTML Chart -->\n \n \n \n \n'), HTML.DIV({
+    id: "portfolioWrapper",                                                                                            // 13
+    "class": ""                                                                                                        // 14
+  }, "\n", HTML.Raw('<div class="row">\n \n</div>'), "\n   ", HTML.DIV({                                               // 15
+    "class": "row"                                                                                                     // 16
+  }, "\n        ", HTML.DIV({                                                                                          // 17
+    "class": "container"                                                                                               // 18
+  }, "\n        ", HTML.DIV({                                                                                          // 19
+    "class": "col s12 m12 "                                                                                            // 20
+  }, "\n            ", HTML.Raw('<h3 class="  center  opensan">WEBSITES</h3>'), "\n  \n            ", HTML.Raw('<div class="divider red lighten-1" style="margin:0 auto;width:120px"></div>'), "\n             ", HTML.P({
+    "class": "center flow-text"                                                                                        // 22
   }, Blaze.View("lookup:_", function() {                                                                               // 23
-    return Spacebars.mustache(view.lookup("_"), "about");                                                              // 24
-  }))), "\n      \n        ", HTML.LI({                                                                                // 25
-    "class": "nanum"                                                                                                   // 26
-  }, HTML.A({                                                                                                          // 27
-    href: function() {                                                                                                 // 28
-      return Spacebars.mustache(view.lookup("pathFor"), "service");                                                    // 29
-    }                                                                                                                  // 30
-  }, Blaze.View("lookup:_", function() {                                                                               // 31
-    return Spacebars.mustache(view.lookup("_"), "ourServices");                                                        // 32
-  }))), "\n             ", HTML.LI({                                                                                   // 33
-    "class": "nanum"                                                                                                   // 34
-  }, HTML.A({                                                                                                          // 35
-    href: function() {                                                                                                 // 36
-      return Spacebars.mustache(view.lookup("pathFor"), "portfolio");                                                  // 37
-    }                                                                                                                  // 38
-  }, Blaze.View("lookup:_", function() {                                                                               // 39
-    return Spacebars.mustache(view.lookup("_"), "portfolio");                                                          // 40
-  }))), "\n           ", HTML.LI({                                                                                     // 41
-    "class": "nanum"                                                                                                   // 42
-  }, HTML.A({                                                                                                          // 43
-    href: function() {                                                                                                 // 44
-      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 45
-    }                                                                                                                  // 46
-  }, Blaze.View("lookup:_", function() {                                                                               // 47
-    return Spacebars.mustache(view.lookup("_"), "reachUs");                                                            // 48
-  }))), "\n \n\n      "), "\n        ", HTML.UL({                                                                      // 49
-    "class": "right hide-on-med-and-down"                                                                              // 50
-  }, "\n           ", Spacebars.include(view.lookupTemplate("languageSwitcher")), "\n            ", HTML.Raw('<li><a class="white-text center" href="https://urlgeni.us/facebook/n12_"><i class="fab fa-facebook-f  fa-2x"></i></a></li>'), "\n                         ", HTML.Raw('<li class="divider"></li>'), "\n    ", HTML.Raw('<li><a class="center white-text" href="https://urlgeni.us/instagram/3fIn"><i class="fab fa-instagram  fa-2x"></i></a></li>'), "\n           ", HTML.Raw('<li>  <a class="center white-text" href="https://urlgeni.us/Uxlo"><i class="fab fa-github fa-2x"></i></a></li>'), "\n            "), "\n       \n    "), "\n      "), "\n       \n          "), "\n\n      "), "\n"), "\n    ", HTML.UL({
-    id: "slide-outs",                                                                                                  // 52
-    "class": "side-nav"                                                                                                // 53
-  }, "\n        ", HTML.DIV({                                                                                          // 54
-    "class": "center"                                                                                                  // 55
-  }, "\n            ", HTML.Raw("<br>"), "\n            ", HTML.Raw('<img src="/img/drawnPic.jpg" width="150">'), HTML.Raw("<br>"), "\n  \n     ", HTML.LI({
-    "class": "nanum",                                                                                                  // 57
-    style: "margin-top:1em;"                                                                                           // 58
-  }, HTML.A({                                                                                                          // 59
-    href: function() {                                                                                                 // 60
-      return Spacebars.mustache(view.lookup("pathFor"), "about");                                                      // 61
-    }                                                                                                                  // 62
-  }, Blaze.View("lookup:_", function() {                                                                               // 63
-    return Spacebars.mustache(view.lookup("_"), "about");                                                              // 64
-  }))), "\n    \n        ", HTML.LI({                                                                                  // 65
-    "class": "nanum"                                                                                                   // 66
-  }, HTML.A({                                                                                                          // 67
-    href: function() {                                                                                                 // 68
-      return Spacebars.mustache(view.lookup("pathFor"), "service");                                                    // 69
-    }                                                                                                                  // 70
-  }, Blaze.View("lookup:_", function() {                                                                               // 71
-    return Spacebars.mustache(view.lookup("_"), "ourServices");                                                        // 72
-  }))), "\n             ", HTML.LI({                                                                                   // 73
-    "class": "nanum"                                                                                                   // 74
-  }, HTML.A({                                                                                                          // 75
-    href: function() {                                                                                                 // 76
-      return Spacebars.mustache(view.lookup("pathFor"), "portfolio");                                                  // 77
-    }                                                                                                                  // 78
-  }, Blaze.View("lookup:_", function() {                                                                               // 79
-    return Spacebars.mustache(view.lookup("_"), "portfolio");                                                          // 80
-  }))), "\n           ", HTML.LI({                                                                                     // 81
-    "class": "nanum"                                                                                                   // 82
-  }, HTML.A({                                                                                                          // 83
-    href: function() {                                                                                                 // 84
-      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 85
-    }                                                                                                                  // 86
-  }, Blaze.View("lookup:_", function() {                                                                               // 87
-    return Spacebars.mustache(view.lookup("_"), "reachUs");                                                            // 88
-  }))), "\n           ", Spacebars.include(view.lookupTemplate("languageSwitcher2")), "\n        "), "\n  ") ];        // 89
-}));                                                                                                                   // 90
-                                                                                                                       // 91
+    return Spacebars.mustache(view.lookup("_"), "myWebsitesAre");                                                      // 24
+  }), HTML.A({                                                                                                         // 25
+    href: "http://www.meteor.com",                                                                                     // 26
+    "class": "red-text",                                                                                               // 27
+    target: "_blank"                                                                                                   // 28
+  }, Blaze.View("lookup:_", function() {                                                                               // 29
+    return Spacebars.mustache(view.lookup("_"), "meteorJs");                                                           // 30
+  })), " ", Blaze.View("lookup:_", function() {                                                                        // 31
+    return Spacebars.mustache(view.lookup("_"), "secondMyWeb");                                                        // 32
+  }), " - ", Blaze.View("lookup:_", function() {                                                                       // 33
+    return Spacebars.mustache(view.lookup("_"), "stateOfArt");                                                         // 34
+  })), "\n             \n            "), "\n        "), "\n                              "), "\n           ", HTML.Raw('<div class="row">\n                              <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/img/cdp.png">\n              \n            </div>\n           \n            \n          </div>\n          \n                                 \n                                  </div>\n                                                <div class="col s12 m4 l4">\n                                  <div class="card">\n            <div class="card-image">\n              <img src="/work/jl.png">\n              \n            </div>\n            \n            \n          </div>\n     \n                                            \n                                  </div>\n                        \n                                       <div class="col s12 m4 l4">\n                                  <div class="card">\n            <div class="card-image">\n              <img src="/img/sfmvdm.png">\n              \n            </div>\n            \n            \n          </div>\n         \n                                            \n                                  </div>\n                              </div>'), "\n                        ", HTML.Raw('<div class="row">\n                              <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/img/bpr.png">\n              \n            </div>\n           \n            \n          </div>\n          \n                                 \n                                  </div>\n                                                <div class="col s12 m4 l4">\n                                  <div class="card">\n            <div class="card-image">\n              <img src="/img/ivhair.png">\n              \n            </div>\n            \n            \n          </div>\n          \n                                            \n                                  </div>\n                        \n                                       <div class="col s12 m4 l4">\n                                  <div class="card">\n            <div class="card-image">\n              <img src="/img/epic.png">\n              \n            </div>\n            \n            \n          </div>\n           \n                                            \n                                  </div>\n                              </div>'), "\n    ", HTML.DIV({
+    "class": "row",                                                                                                    // 36
+    style: "margin-top:4em;"                                                                                           // 37
+  }, "\n        ", HTML.DIV({                                                                                          // 38
+    "class": "container"                                                                                               // 39
+  }, "\n        ", HTML.DIV({                                                                                          // 40
+    "class": "col s12 m12 l10 offset-l1"                                                                               // 41
+  }, "\n            ", HTML.Raw('<h3 class="  center  opensan">GRAPHICS</h3>'), "\n  \n            ", HTML.Raw('<div class="divider red lighten-1" style="margin:0 auto;width:120px"></div>'), "\n                \n             ", HTML.P({
+    "class": "center flow-text"                                                                                        // 43
+  }, Blaze.View("lookup:_", function() {                                                                               // 44
+    return Spacebars.mustache(view.lookup("_"), "weMakeGraphics");                                                     // 45
+  }), " ", HTML.Raw('<i class="fa fa-heart red-text"></i>'), " ", Blaze.View("lookup:_", function() {                  // 46
+    return Spacebars.mustache(view.lookup("_"), "aBitOf");                                                             // 47
+  })), "\n            "), "\n        "), "\n                              "), "\n                                ", HTML.Raw('<div class="row">\n                              <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/img/cole.png" class="materialboxed">\n              \n            </div>\n           \n            \n          </div>\n           \n                                 \n                                  </div>\n                                                <div class="col s12 m4 l4">\n                                  <div class="card">\n            <div class="card-image">\n              <img src="/work/sfmvdm.png" class="materialboxed">\n              \n            </div>\n            \n            \n          </div>\n \n                                            \n                                  </div>\n                        \n                                       <div class="col s12 m4 l4">\n                                  <div class="card">\n            <div class="card-image">\n              <img src="/work/business.png" class="materialboxed">\n              \n            </div>\n            \n            \n          </div>\n         \n                                            \n                                  </div>\n                              </div>'), "\n                     ", HTML.Raw('<div class="row">\n                              <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/work/speakwise.png" class="materialboxed">\n              \n            </div>\n           \n            \n          </div>\n           \n                                 \n                                  </div>\n                             <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/work/bpbanner.png" class="materialboxed">\n              \n            </div>\n           \n            \n          </div>\n           \n                                 \n                                  </div>\n                                          <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/work/jl.png" class="materialboxed">\n              \n            </div>\n           \n            \n          </div>\n           \n                                 \n                                  </div>\n    </div>'), "\n", HTML.DIV({
+    "class": "row",                                                                                                    // 49
+    style: "display: none;"                                                                                            // 50
+  }, "\n  ", HTML.DIV({                                                                                                // 51
+    "class": "container"                                                                                               // 52
+  }, "\n    ", HTML.DIV({                                                                                              // 53
+    "class": "col s12 m12"                                                                                             // 54
+  }, "\n      ", HTML.H3({                                                                                             // 55
+    "class": "center opensan"                                                                                          // 56
+  }, Blaze.View("lookup:_", function() {                                                                               // 57
+    return Spacebars.mustache(view.lookup("_"), "currentProjects");                                                    // 58
+  })), "\n      ", HTML.Raw('<div class="divider red lighten-1" style="margin:0 auto;width:120px"></div>'), "\n      ", HTML.P({
+    "class": "flow-text center"                                                                                        // 60
+  }, Blaze.View("lookup:_", function() {                                                                               // 61
+    return Spacebars.mustache(view.lookup("_"), "currentProjectsParagraph");                                           // 62
+  })), "\n      ", HTML.Raw("<br>"), "\n      ", HTML.DIV({                                                            // 63
+    "class": "center"                                                                                                  // 64
+  }, " \n      ", HTML.A({                                                                                             // 65
+    href: "",                                                                                                          // 66
+    "class": "  button outline"                                                                                        // 67
+  }, Blaze.View("lookup:_", function() {                                                                               // 68
+    return Spacebars.mustache(view.lookup("_"), "checkThemOut");                                                       // 69
+  })), "\n    "), "\n    "), "\n  "), "\n"), "\n"), "   \n  ", HTML.SECTION({                                          // 70
+    style: "margin-top:8em;padding:1.6em;margin-bottom:-1.4em;"                                                        // 71
+  }, "\n                ", HTML.DIV({                                                                                  // 72
+    "class": "row"                                                                                                     // 73
+  }, "\n        ", HTML.DIV({                                                                                          // 74
+    "class": "container"                                                                                               // 75
+  }, "\n        ", HTML.DIV({                                                                                          // 76
+    "class": "col s12 m12 l12"                                                                                         // 77
+  }, "\n            ", HTML.H1({                                                                                       // 78
+    "class": "nanum center homeWhat"                                                                                   // 79
+  }, Blaze.View("lookup:_", function() {                                                                               // 80
+    return Spacebars.mustache(view.lookup("_"), "areYouGame");                                                         // 81
+  })), "\n            ", HTML.Raw('<div class="divider red lighten-1"></div>'), "\n      \n             ", HTML.H3({   // 82
+    "class": "center nanum grey-text text-darken-3"                                                                    // 83
+  }, Blaze.View("lookup:_", function() {                                                                               // 84
+    return Spacebars.mustache(view.lookup("_"), "loveToHear");                                                         // 85
+  })), "\n                ", HTML.DIV({                                                                                // 86
+    "class": "center"                                                                                                  // 87
+  }, "\n                 ", HTML.P({                                                                                   // 88
+    "class": "flow-text nanum"                                                                                         // 89
+  }, Blaze.View("lookup:_", function() {                                                                               // 90
+    return Spacebars.mustache(view.lookup("_"), "alwaysOpen");                                                         // 91
+  }), "\n                 ", HTML.Raw("<br>"), "\n                 ", Blaze.View("lookup:_", function() {              // 92
+    return Spacebars.mustache(view.lookup("_"), "coffee");                                                             // 93
+  }), "\n                 "), "\n                  ", HTML.A({                                                         // 94
+    href: function() {                                                                                                 // 95
+      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 96
+    },                                                                                                                 // 97
+    "class": "button outline"                                                                                          // 98
+  }, Blaze.View("lookup:_", function() {                                                                               // 99
+    return Spacebars.mustache(view.lookup("_"), "getStarted");                                                         // 100
+  })), "\n\n                "), "\n            "), "\n        "), "\n                              "), "\n            ") ];
+}));                                                                                                                   // 102
+                                                                                                                       // 103
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-},"header.js":function(){
+},"portfolio.js":function(){
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //                                                                                                                     //
-// client/layout/header/header.js                                                                                      //
+// client/templates/portfolio/portfolio.js                                                                             //
 //                                                                                                                     //
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                                                                                                                        //
-Template.header.rendered = function () {                                                                               // 1
-  $('.button-collapse').sideNav({                                                                                      // 2
-    menuWidth: 200, // Default is 240                                                                                  // 3
-    edge: 'right', // Choose the horizontal origin                                                                     // 4
-    closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor                                     // 5
-  });                                                                                                                  // 2
-  $(window).scroll(function () {                                                                                       // 8
+Template.portfolio.rendered = function () {                                                                            // 1
+  $('.materialboxed').materialbox();                                                                                   // 2
+  $('.scrollspy').scrollSpy();                                                                                         // 3
                                                                                                                        //
-    if ($(window).scrollTop() > 100) {                                                                                 // 10
-      $('.main_h').addClass('sticky');                                                                                 // 11
-    } else {                                                                                                           // 12
-      $('.main_h').removeClass('sticky');                                                                              // 13
-    }                                                                                                                  // 14
-  });                                                                                                                  // 15
+  new WOW().init({ mobile: false });                                                                                   // 5
+  //checks if element it is called on is visible (only checks horizontally                                             //
+  (function ($) {                                                                                                      // 7
+    var $window = $(window);                                                                                           // 8
                                                                                                                        //
-  // Mobile Navigation                                                                                                 //
-};                                                                                                                     // 21
-Template.fixedHeader.rendered = function () {                                                                          // 22
+    $.fn.isVisible = function () {                                                                                     // 10
+      var $this = $(this),                                                                                             // 11
+          Left = $this.offset().left,                                                                                  // 11
+          visibleWidth = $window.width();                                                                              // 11
                                                                                                                        //
-  $('.button-collapse').sideNav({                                                                                      // 24
-    menuWidth: 200, // Default is 240                                                                                  // 25
-    edge: 'right', // Choose the horizontal origin                                                                     // 26
-    closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor                                     // 27
-  });                                                                                                                  // 24
-};                                                                                                                     // 30
+      return Left < visibleWidth;                                                                                      // 15
+    };                                                                                                                 // 16
+  })(jQuery);                                                                                                          // 17
+                                                                                                                       //
+  (function ($) {                                                                                                      // 19
+    var list = $('.portfolio-items'),                                                                                  // 20
+        showVisibleItems = function showVisibleItems() {                                                               // 20
+      list.children('.item:not(.falldown)').each(function (el, i) {                                                    // 22
+        var $this = $(this);                                                                                           // 23
+        if ($this.isVisible()) {                                                                                       // 24
+          $this.addClass('falldown');                                                                                  // 25
+        }                                                                                                              // 26
+      });                                                                                                              // 27
+    };                                                                                                                 // 28
+                                                                                                                       //
+    //initially show all visible items before any scroll starts                                                        //
+    showVisibleItems();                                                                                                // 31
+                                                                                                                       //
+    //then on scroll check for visible items and show them                                                             //
+    list.scroll(function () {                                                                                          // 34
+      showVisibleItems();                                                                                              // 35
+    });                                                                                                                // 36
+                                                                                                                       //
+    //image hover pan effect                                                                                           //
+    list.on('mousemove', 'img', function (ev) {                                                                        // 39
+      var $this = $(this),                                                                                             // 40
+          posX = ev.pageX,                                                                                             // 40
+          posY = ev.pageY,                                                                                             // 40
+          data = $this.data('cache');                                                                                  // 40
+      //cache necessary variables                                                                                      //
+      if (!data) {                                                                                                     // 45
+        data = {};                                                                                                     // 46
+        data.marginTop = -parseInt($this.css('top')), data.marginLeft = -parseInt($this.css('left')), data.parent = $this.parent('.view'), $this.data('cache', data);
+      }                                                                                                                // 51
+                                                                                                                       //
+      var originX = data.parent.offset().left,                                                                         // 53
+          originY = data.parent.offset().top;                                                                          // 53
+                                                                                                                       //
+      //move image                                                                                                     //
+      $this.css({                                                                                                      // 57
+        'left': -(posX - originX) / data.marginLeft,                                                                   // 58
+        'top': -(posY - originY) / data.marginTop                                                                      // 59
+      });                                                                                                              // 57
+    });                                                                                                                // 61
+                                                                                                                       //
+    list.on('mouseleave', '.item', function (e) {                                                                      // 63
+      $(this).find('img').css({                                                                                        // 64
+        'left': '0',                                                                                                   // 65
+        'top': '0'                                                                                                     // 66
+      });                                                                                                              // 64
+    });                                                                                                                // 68
+                                                                                                                       //
+    list.mousewheel(function (event, delta) {                                                                          // 70
+                                                                                                                       //
+      this.scrollLeft -= delta * 60;                                                                                   // 72
+                                                                                                                       //
+      event.preventDefault();                                                                                          // 74
+    });                                                                                                                // 76
+  })(jQuery);                                                                                                          // 77
+};                                                                                                                     // 81
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-}}},"templates":{"about":{"template.about.js":function(){
+}},"about":{"template.about.js":function(){
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //                                                                                                                     //
@@ -1384,98 +1379,6 @@ Template["home"] = new Template("Template.home", (function() {                  
   })), "\n\n                "), "\n            "), "\n        "), "\n                              "), "\n            ") ];
 }));                                                                                                                   // 866
                                                                                                                        // 867
-Template.__checkName("fixedHeader");                                                                                   // 868
-Template["fixedHeader"] = new Template("Template.fixedHeader", (function() {                                           // 869
-  var view = this;                                                                                                     // 870
-  return HTML.DIV({                                                                                                    // 871
-    "class": " "                                                                                                       // 872
-  }, "\n  ", HTML.NAV({                                                                                                // 873
-    "class": "white"                                                                                                   // 874
-  }, "\n     \n  ", HTML.DIV({                                                                                         // 875
-    "class": "nav-wrapper"                                                                                             // 876
-  }, "\n        ", HTML.DIV({                                                                                          // 877
-    "class": " "                                                                                                       // 878
-  }, "\n        ", HTML.Raw('<div class="brand-logo center hide-on-small-only">\n            <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35" alt=""></a>\n            </div>'), "\n              ", HTML.Raw('<div class="brand-logos brand-logo show-on-small-only hide-on-med-and-up">\n            <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35" alt=""></a>\n            </div>'), "\n            ", HTML.Raw('<a href="#" data-activates="slide-out2" class="red-text button-collapse left" style="margin-left:15px;"><i class="fas fa-bars"></i></a>'), "\n           \n         \n            \n      \n      ", HTML.UL({
-    "class": "hide-on-med-and-down left"                                                                               // 880
-  }, "\n        ", HTML.LI({                                                                                           // 881
-    "class": "nanum"                                                                                                   // 882
-  }, HTML.A({                                                                                                          // 883
-    href: function() {                                                                                                 // 884
-      return Spacebars.mustache(view.lookup("pathFor"), "about");                                                      // 885
-    },                                                                                                                 // 886
-    "class": "grey-text  text-darken-2 "                                                                               // 887
-  }, Blaze.View("lookup:_", function() {                                                                               // 888
-    return Spacebars.mustache(view.lookup("_"), "about");                                                              // 889
-  }))), "\n  \n  \n        ", HTML.LI({                                                                                // 890
-    "class": "nanum"                                                                                                   // 891
-  }, HTML.A({                                                                                                          // 892
-    href: function() {                                                                                                 // 893
-      return Spacebars.mustache(view.lookup("pathFor"), "service");                                                    // 894
-    },                                                                                                                 // 895
-    "class": "grey-text text-darken-2"                                                                                 // 896
-  }, " ", Blaze.View("lookup:_", function() {                                                                          // 897
-    return Spacebars.mustache(view.lookup("_"), "ourServices");                                                        // 898
-  }))), "\n             ", HTML.LI({                                                                                   // 899
-    "class": "nanum"                                                                                                   // 900
-  }, HTML.A({                                                                                                          // 901
-    href: function() {                                                                                                 // 902
-      return Spacebars.mustache(view.lookup("pathFor"), "portfolio");                                                  // 903
-    },                                                                                                                 // 904
-    "class": "grey-text text-darken-2"                                                                                 // 905
-  }, Blaze.View("lookup:_", function() {                                                                               // 906
-    return Spacebars.mustache(view.lookup("_"), "portfolio");                                                          // 907
-  }))), "\n           ", HTML.LI({                                                                                     // 908
-    "class": "nanum"                                                                                                   // 909
-  }, HTML.A({                                                                                                          // 910
-    href: function() {                                                                                                 // 911
-      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 912
-    },                                                                                                                 // 913
-    "class": "grey-text text-darken-2"                                                                                 // 914
-  }, Blaze.View("lookup:_", function() {                                                                               // 915
-    return Spacebars.mustache(view.lookup("_"), "reachUs");                                                            // 916
-  }))), "\n \n\n      "), "\n        ", HTML.UL({                                                                      // 917
-    "class": "right hide-on-med-and-down"                                                                              // 918
-  }, "\n           ", Spacebars.include(view.lookupTemplate("languageSwitcher2")), "\n            ", HTML.Raw('<li><a class=" grey-text center" href="https://urlgeni.us/facebook/4U1B"><i class="fab fa-facebook-f  fa-2x"></i></a></li>'), "\n                         ", HTML.Raw('<li class="divider"></li>'), "\n    ", HTML.Raw('<li><a class="center grey-text" href="https://urlgeni.us/instagram/3fIn"><i class="fab fa-instagram  fa-2x"></i></a></li>'), "\n               ", HTML.Raw('<li>  <a class="center grey-text" href="https://urlgeni.us/Uxlo"><i class="fab fa-github fa-2x"></i></a></li>'), "\n            "), "\n       \n    "), "\n      "), "\n \n \n  ", HTML.UL({
-    id: "slide-out2",                                                                                                  // 920
-    "class": "side-nav"                                                                                                // 921
-  }, "\n        ", HTML.DIV({                                                                                          // 922
-    "class": "center"                                                                                                  // 923
-  }, "\n            ", HTML.Raw("<br>"), "\n            ", HTML.Raw('<img src="/img/drawnPic.jpg" width="150">'), HTML.Raw("<br>"), "\n  \n     ", HTML.LI({
-    "class": "nanum",                                                                                                  // 925
-    style: "margin-top:1em;"                                                                                           // 926
-  }, HTML.A({                                                                                                          // 927
-    href: function() {                                                                                                 // 928
-      return Spacebars.mustache(view.lookup("pathFor"), "about");                                                      // 929
-    }                                                                                                                  // 930
-  }, Blaze.View("lookup:_", function() {                                                                               // 931
-    return Spacebars.mustache(view.lookup("_"), "about");                                                              // 932
-  }))), "\n    \n        ", HTML.LI({                                                                                  // 933
-    "class": "nanum"                                                                                                   // 934
-  }, HTML.A({                                                                                                          // 935
-    href: function() {                                                                                                 // 936
-      return Spacebars.mustache(view.lookup("pathFor"), "service");                                                    // 937
-    }                                                                                                                  // 938
-  }, Blaze.View("lookup:_", function() {                                                                               // 939
-    return Spacebars.mustache(view.lookup("_"), "ourServices");                                                        // 940
-  }))), "\n             ", HTML.LI({                                                                                   // 941
-    "class": "nanum"                                                                                                   // 942
-  }, HTML.A({                                                                                                          // 943
-    href: function() {                                                                                                 // 944
-      return Spacebars.mustache(view.lookup("pathFor"), "portfolio");                                                  // 945
-    }                                                                                                                  // 946
-  }, Blaze.View("lookup:_", function() {                                                                               // 947
-    return Spacebars.mustache(view.lookup("_"), "portfolio");                                                          // 948
-  }))), "\n           ", HTML.LI({                                                                                     // 949
-    "class": "nanum"                                                                                                   // 950
-  }, HTML.A({                                                                                                          // 951
-    href: function() {                                                                                                 // 952
-      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 953
-    }                                                                                                                  // 954
-  }, Blaze.View("lookup:_", function() {                                                                               // 955
-    return Spacebars.mustache(view.lookup("_"), "reachUs");                                                            // 956
-  }))), "\n           ", Spacebars.include(view.lookupTemplate("languageSwitcher2")), "\n        "), "\n  "), "\n \n          "), "\n            ");
-}));                                                                                                                   // 958
-                                                                                                                       // 959
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 },"home.js":function(){
@@ -1550,202 +1453,6 @@ Template["policy"] = new Template("Template.policy", (function() {              
   return HTML.Raw('<div class="section">\n    <div class="container">\n        <h3 class="mont center" style="margin-top:1.8em;"><b>POLICIES</b></h3>\n        <div class="row">\n        \n \n\n<h3>Non-personal identification information</h3>\n<p>We may collect non-personal identification information about Users whenever they interact with our Site. Non-personal identification information may include the browser name, the type of computer and technical information about Users means of connection to our Site, such as the operating system and the Internet service providers utilized and other similar information.</p>\n\n \n\n \n\n<h3>Maintenance policies</h3>\n<p>We require every client to have a maintenance package with the organization. The organization may from time to time provide services without the need for a package but all discretion and final decision rights are with the developer and the developer\'s organization</p>\n\n<h3>Sharing your personal information</h3>\n<p>We do not sell, trade, or rent Users personal identification information to others. We may share generic aggregated demographic information not linked to any personal identification information regarding visitors and users with our business partners, trusted affiliates and advertisers for the purposes outlined above. </p>\n\n \n \n\n \n\n<h3>Changes to this privacy policy</h3>\n<p>ILLUME INC has the discretion to update this privacy policy at any time. When we do, we will post a notification on the main page of our Site. We encourage Users to frequently check this page for any changes to stay informed about how we are helping to protect the personal information we collect. You acknowledge and agree that it is your responsibility to review this privacy policy periodically and become aware of modifications.</p>\n<h3>Cancellation of service contract</h3>\n<p>Cancelling the service contract may be done with a potential for refund if the request is made within 1 week. After the provided time, the client cannot request for a refund for any amount paid to the organization.</p>\n<h3>Your acceptance of these terms</h3>\n<p>By using this Site, you signify your acceptance of this policy. If you do not agree to this policy, please do not use our Site. Your continued use of the Site following the posting of changes to this policy will be deemed your acceptance of those changes.</p>\n\n<h3>Contacting us</h3>\n<p>If you have any questions about this Privacy Policy, the practices of this site, or your dealings with this site, please contact us.</p>\n\n        </div>\n        </div>\n    </div>');
 }));                                                                                                                   // 6
                                                                                                                        // 7
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-}},"portfolio":{"template.portfolio.js":function(){
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//                                                                                                                     //
-// client/templates/portfolio/template.portfolio.js                                                                    //
-//                                                                                                                     //
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                                                                                                                       //
-                                                                                                                       // 1
-Template.__checkName("portfolio");                                                                                     // 2
-Template["portfolio"] = new Template("Template.portfolio", (function() {                                               // 3
-  var view = this;                                                                                                     // 4
-  return [ Spacebars.include(view.lookupTemplate("fixedHeader")), "\n ", HTML.SECTION("\n  ", HTML.Raw('<div class="center">\n    <h2 class="nanum "><b>My Work</b></h2>\n<div class="divider red lighten-1" style="margin:0 auto;width:120px"></div>\n  </div>'), "\n    ", HTML.Raw('<div class="container service-graphic sg2" style="margin-top:2em;">\n  <div class="screen monitor">\n    <div class="content">\n      <div class="browser">\n        <ul class="btns">\n          <li></li><li></li><li></li>\n        </ul>\n        <div class="browser-content">\n        <ul class="txt">\n          <li></li>        \n          <li class="big"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li></li>        \n          <li></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li></li>        \n          <li class="big"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n          <li class="third"></li>\n        </ul> \n        </div>\n      </div>\n    </div>\n    <div class="base">\n      <div class="grey-shadow"></div>\n      <div class="foot top"></div>\n      <div class="foot bottom"></div>\n    </div>\n  </div>\n  \n  <div class="laptop">\n    <div class="screen">\n      <ul class="txt">\n        <li></li>        \n        <li class="big"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li></li>        \n        <li></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li></li>        \n        <li class="big"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n        <li class="third"></li>\n      </ul>           \n    </div>\n    <div class="btm"></div>\n  </div>\n  \n  <div class="phone">\n    <div class="screen">\n      <ul class="txt">\n        <li></li>\n        <li></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li></li>\n        <li></li>\n      </ul>\n    </div>\n  <div class="shadow"></div>        \n  </div>\n  \n  <div class="ipad">\n    <div class="screen">\n      <ul class="txt">\n        <li></li>\n        <li class="big"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li></li>        \n        <li></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li class="txt-half"></li>\n        <li></li>\n      </ul>\n    </div>\n  </div>  \n</div>'), "\n          ", HTML.DIV({
-    "class": "container",                                                                                              // 6
-    style: "margin-top:7em;"                                                                                           // 7
-  }, "\n              ", HTML.H2({                                                                                     // 8
-    "class": "flow-text nanum grey-text text-darken-3 center"                                                          // 9
-  }, Blaze.View("lookup:_", function() {                                                                               // 10
-    return Spacebars.mustache(view.lookup("_"), "myServices");                                                         // 11
-  })), "\n          "), "\n "), HTML.Raw('\n <br>\n\n<div class="divider"></div>\n\n  <!-- HTML Chart -->\n \n \n \n \n'), HTML.DIV({
-    id: "portfolioWrapper",                                                                                            // 13
-    "class": ""                                                                                                        // 14
-  }, "\n", HTML.Raw('<div class="row">\n \n</div>'), "\n   ", HTML.DIV({                                               // 15
-    "class": "row"                                                                                                     // 16
-  }, "\n        ", HTML.DIV({                                                                                          // 17
-    "class": "container"                                                                                               // 18
-  }, "\n        ", HTML.DIV({                                                                                          // 19
-    "class": "col s12 m12 "                                                                                            // 20
-  }, "\n            ", HTML.Raw('<h3 class="  center  opensan">WEBSITES</h3>'), "\n  \n            ", HTML.Raw('<div class="divider red lighten-1" style="margin:0 auto;width:120px"></div>'), "\n             ", HTML.P({
-    "class": "center flow-text"                                                                                        // 22
-  }, Blaze.View("lookup:_", function() {                                                                               // 23
-    return Spacebars.mustache(view.lookup("_"), "myWebsitesAre");                                                      // 24
-  }), HTML.A({                                                                                                         // 25
-    href: "http://www.meteor.com",                                                                                     // 26
-    "class": "red-text",                                                                                               // 27
-    target: "_blank"                                                                                                   // 28
-  }, Blaze.View("lookup:_", function() {                                                                               // 29
-    return Spacebars.mustache(view.lookup("_"), "meteorJs");                                                           // 30
-  })), " ", Blaze.View("lookup:_", function() {                                                                        // 31
-    return Spacebars.mustache(view.lookup("_"), "secondMyWeb");                                                        // 32
-  }), " - ", Blaze.View("lookup:_", function() {                                                                       // 33
-    return Spacebars.mustache(view.lookup("_"), "stateOfArt");                                                         // 34
-  })), "\n             \n            "), "\n        "), "\n                              "), "\n           ", HTML.Raw('<div class="row">\n                              <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/img/cdp.png">\n              \n            </div>\n           \n            \n          </div>\n          \n                                 \n                                  </div>\n                                                <div class="col s12 m4 l4">\n                                  <div class="card">\n            <div class="card-image">\n              <img src="/work/jl.png">\n              \n            </div>\n            \n            \n          </div>\n     \n                                            \n                                  </div>\n                        \n                                       <div class="col s12 m4 l4">\n                                  <div class="card">\n            <div class="card-image">\n              <img src="/img/sfmvdm.png">\n              \n            </div>\n            \n            \n          </div>\n         \n                                            \n                                  </div>\n                              </div>'), "\n                        ", HTML.Raw('<div class="row">\n                              <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/img/bpr.png">\n              \n            </div>\n           \n            \n          </div>\n          \n                                 \n                                  </div>\n                                                <div class="col s12 m4 l4">\n                                  <div class="card">\n            <div class="card-image">\n              <img src="/img/ivhair.png">\n              \n            </div>\n            \n            \n          </div>\n          \n                                            \n                                  </div>\n                        \n                                       <div class="col s12 m4 l4">\n                                  <div class="card">\n            <div class="card-image">\n              <img src="/img/epic.png">\n              \n            </div>\n            \n            \n          </div>\n           \n                                            \n                                  </div>\n                              </div>'), "\n    ", HTML.DIV({
-    "class": "row",                                                                                                    // 36
-    style: "margin-top:4em;"                                                                                           // 37
-  }, "\n        ", HTML.DIV({                                                                                          // 38
-    "class": "container"                                                                                               // 39
-  }, "\n        ", HTML.DIV({                                                                                          // 40
-    "class": "col s12 m12 l10 offset-l1"                                                                               // 41
-  }, "\n            ", HTML.Raw('<h3 class="  center  opensan">GRAPHICS</h3>'), "\n  \n            ", HTML.Raw('<div class="divider red lighten-1" style="margin:0 auto;width:120px"></div>'), "\n                \n             ", HTML.P({
-    "class": "center flow-text"                                                                                        // 43
-  }, Blaze.View("lookup:_", function() {                                                                               // 44
-    return Spacebars.mustache(view.lookup("_"), "weMakeGraphics");                                                     // 45
-  }), " ", HTML.Raw('<i class="fa fa-heart red-text"></i>'), " ", Blaze.View("lookup:_", function() {                  // 46
-    return Spacebars.mustache(view.lookup("_"), "aBitOf");                                                             // 47
-  })), "\n            "), "\n        "), "\n                              "), "\n                                ", HTML.Raw('<div class="row">\n                              <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/img/cole.png" class="materialboxed">\n              \n            </div>\n           \n            \n          </div>\n           \n                                 \n                                  </div>\n                                                <div class="col s12 m4 l4">\n                                  <div class="card">\n            <div class="card-image">\n              <img src="/work/sfmvdm.png" class="materialboxed">\n              \n            </div>\n            \n            \n          </div>\n \n                                            \n                                  </div>\n                        \n                                       <div class="col s12 m4 l4">\n                                  <div class="card">\n            <div class="card-image">\n              <img src="/work/business.png" class="materialboxed">\n              \n            </div>\n            \n            \n          </div>\n         \n                                            \n                                  </div>\n                              </div>'), "\n                     ", HTML.Raw('<div class="row">\n                              <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/work/speakwise.png" class="materialboxed">\n              \n            </div>\n           \n            \n          </div>\n           \n                                 \n                                  </div>\n                             <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/work/bpbanner.png" class="materialboxed">\n              \n            </div>\n           \n            \n          </div>\n           \n                                 \n                                  </div>\n                                          <div class="col s12 m4 l4">\n                                                    <div class="card">\n            <div class="card-image">\n              <img src="/work/jl.png" class="materialboxed">\n              \n            </div>\n           \n            \n          </div>\n           \n                                 \n                                  </div>\n    </div>'), "\n", HTML.DIV({
-    "class": "row",                                                                                                    // 49
-    style: ""                                                                                                          // 50
-  }, "\n  ", HTML.DIV({                                                                                                // 51
-    "class": "container"                                                                                               // 52
-  }, "\n    ", HTML.DIV({                                                                                              // 53
-    "class": "col s12 m12"                                                                                             // 54
-  }, "\n      ", HTML.H3({                                                                                             // 55
-    "class": "center opensan"                                                                                          // 56
-  }, Blaze.View("lookup:_", function() {                                                                               // 57
-    return Spacebars.mustache(view.lookup("_"), "currentProjects");                                                    // 58
-  })), "\n      ", HTML.Raw('<div class="divider red lighten-1" style="margin:0 auto;width:120px"></div>'), "\n      ", HTML.P({
-    "class": "flow-text center"                                                                                        // 60
-  }, Blaze.View("lookup:_", function() {                                                                               // 61
-    return Spacebars.mustache(view.lookup("_"), "currentProjectsParagraph");                                           // 62
-  })), "\n      ", HTML.Raw("<br>"), "\n      ", HTML.DIV({                                                            // 63
-    "class": "center"                                                                                                  // 64
-  }, " \n      ", HTML.A({                                                                                             // 65
-    href: "",                                                                                                          // 66
-    "class": "  button outline"                                                                                        // 67
-  }, Blaze.View("lookup:_", function() {                                                                               // 68
-    return Spacebars.mustache(view.lookup("_"), "checkThemOut");                                                       // 69
-  })), "\n    "), "\n    "), "\n  "), "\n"), "\n"), "   \n  ", HTML.SECTION({                                          // 70
-    style: "margin-top:8em;padding:1.6em;margin-bottom:-1.4em;"                                                        // 71
-  }, "\n                ", HTML.DIV({                                                                                  // 72
-    "class": "row"                                                                                                     // 73
-  }, "\n        ", HTML.DIV({                                                                                          // 74
-    "class": "container"                                                                                               // 75
-  }, "\n        ", HTML.DIV({                                                                                          // 76
-    "class": "col s12 m12 l12"                                                                                         // 77
-  }, "\n            ", HTML.H1({                                                                                       // 78
-    "class": "nanum center homeWhat"                                                                                   // 79
-  }, Blaze.View("lookup:_", function() {                                                                               // 80
-    return Spacebars.mustache(view.lookup("_"), "areYouGame");                                                         // 81
-  })), "\n            ", HTML.Raw('<div class="divider red lighten-1"></div>'), "\n      \n             ", HTML.H3({   // 82
-    "class": "center nanum grey-text text-darken-3"                                                                    // 83
-  }, Blaze.View("lookup:_", function() {                                                                               // 84
-    return Spacebars.mustache(view.lookup("_"), "loveToHear");                                                         // 85
-  })), "\n                ", HTML.DIV({                                                                                // 86
-    "class": "center"                                                                                                  // 87
-  }, "\n                 ", HTML.P({                                                                                   // 88
-    "class": "flow-text nanum"                                                                                         // 89
-  }, Blaze.View("lookup:_", function() {                                                                               // 90
-    return Spacebars.mustache(view.lookup("_"), "alwaysOpen");                                                         // 91
-  }), "\n                 ", HTML.Raw("<br>"), "\n                 ", Blaze.View("lookup:_", function() {              // 92
-    return Spacebars.mustache(view.lookup("_"), "coffee");                                                             // 93
-  }), "\n                 "), "\n                  ", HTML.A({                                                         // 94
-    href: function() {                                                                                                 // 95
-      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 96
-    },                                                                                                                 // 97
-    "class": "button outline"                                                                                          // 98
-  }, Blaze.View("lookup:_", function() {                                                                               // 99
-    return Spacebars.mustache(view.lookup("_"), "getStarted");                                                         // 100
-  })), "\n\n                "), "\n            "), "\n        "), "\n                              "), "\n            ") ];
-}));                                                                                                                   // 102
-                                                                                                                       // 103
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-},"portfolio.js":function(){
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//                                                                                                                     //
-// client/templates/portfolio/portfolio.js                                                                             //
-//                                                                                                                     //
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                                                                                                                       //
-Template.portfolio.rendered = function () {                                                                            // 1
-  $('.materialboxed').materialbox();                                                                                   // 2
-  $('.scrollspy').scrollSpy();                                                                                         // 3
-  new WOW().init({ mobile: false });                                                                                   // 4
-  //checks if element it is called on is visible (only checks horizontally                                             //
-  (function ($) {                                                                                                      // 6
-    var $window = $(window);                                                                                           // 7
-                                                                                                                       //
-    $.fn.isVisible = function () {                                                                                     // 9
-      var $this = $(this),                                                                                             // 10
-          Left = $this.offset().left,                                                                                  // 10
-          visibleWidth = $window.width();                                                                              // 10
-                                                                                                                       //
-      return Left < visibleWidth;                                                                                      // 14
-    };                                                                                                                 // 15
-  })(jQuery);                                                                                                          // 16
-                                                                                                                       //
-  (function ($) {                                                                                                      // 18
-    var list = $('.portfolio-items'),                                                                                  // 19
-        showVisibleItems = function showVisibleItems() {                                                               // 19
-      list.children('.item:not(.falldown)').each(function (el, i) {                                                    // 21
-        var $this = $(this);                                                                                           // 22
-        if ($this.isVisible()) {                                                                                       // 23
-          $this.addClass('falldown');                                                                                  // 24
-        }                                                                                                              // 25
-      });                                                                                                              // 26
-    };                                                                                                                 // 27
-                                                                                                                       //
-    //initially show all visible items before any scroll starts                                                        //
-    showVisibleItems();                                                                                                // 30
-                                                                                                                       //
-    //then on scroll check for visible items and show them                                                             //
-    list.scroll(function () {                                                                                          // 33
-      showVisibleItems();                                                                                              // 34
-    });                                                                                                                // 35
-                                                                                                                       //
-    //image hover pan effect                                                                                           //
-    list.on('mousemove', 'img', function (ev) {                                                                        // 38
-      var $this = $(this),                                                                                             // 39
-          posX = ev.pageX,                                                                                             // 39
-          posY = ev.pageY,                                                                                             // 39
-          data = $this.data('cache');                                                                                  // 39
-      //cache necessary variables                                                                                      //
-      if (!data) {                                                                                                     // 44
-        data = {};                                                                                                     // 45
-        data.marginTop = -parseInt($this.css('top')), data.marginLeft = -parseInt($this.css('left')), data.parent = $this.parent('.view'), $this.data('cache', data);
-      }                                                                                                                // 50
-                                                                                                                       //
-      var originX = data.parent.offset().left,                                                                         // 52
-          originY = data.parent.offset().top;                                                                          // 52
-                                                                                                                       //
-      //move image                                                                                                     //
-      $this.css({                                                                                                      // 56
-        'left': -(posX - originX) / data.marginLeft,                                                                   // 57
-        'top': -(posY - originY) / data.marginTop                                                                      // 58
-      });                                                                                                              // 56
-    });                                                                                                                // 60
-                                                                                                                       //
-    list.on('mouseleave', '.item', function (e) {                                                                      // 62
-      $(this).find('img').css({                                                                                        // 63
-        'left': '0',                                                                                                   // 64
-        'top': '0'                                                                                                     // 65
-      });                                                                                                              // 63
-    });                                                                                                                // 67
-                                                                                                                       //
-    list.mousewheel(function (event, delta) {                                                                          // 69
-                                                                                                                       //
-      this.scrollLeft -= delta * 60;                                                                                   // 71
-                                                                                                                       //
-      event.preventDefault();                                                                                          // 73
-    });                                                                                                                // 75
-  })(jQuery);                                                                                                          // 76
-};                                                                                                                     // 79
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 }},"services":{"template.service.js":function(){
@@ -1892,191 +1599,23 @@ Template["Rsvp"] = new Template("Template.Rsvp", (function() {                  
     "class": "center flow-text grey-text text-darken-2"                                                                // 30
   }, "\n ", Blaze.View("lookup:_", function() {                                                                        // 31
     return Spacebars.mustache(view.lookup("_"), "startProject");                                                       // 32
-  }), "\n         "), "\n            "), "\n        "), "\n        "), "\n    "), "\n \n    ", HTML.Raw('<div class="section">\n    <div class="container">\n        <div class="row">\n          <div class="center">\n            <img src="/img/joe.png" width="120px" alt="Joseph S. Lee">\n          </div>\n          <br>\n          <div class="row">\n            <div class="col s12 m6 l6 offset-m3 offset-l3">\n              \n                <div class="col s4">\n                  <div class="center">\n                    <a class="mainC" href="https://urlgeni.us/instagram/3fIn"><i class="fab fa-instagram fa-3x"></i></a>\n                  </div>\n                </div>\n                 <div class="col s4">\n                  <div class="center">\n                     <a class="mainC" href="https://urlgeni.us/facebook/n12_"><i class="fab fa-facebook-f fa-3x"></i></a>\n                  </div>\n                </div>\n                 <div class="col s4">\n                  <div class="center">\n                     <a class="mainC" href="https://urlgeni.us/Uxlo"><i class="fab fa-github fa-3x"></i></a>\n                  </div>\n                </div>\n         \n            </div>\n          </div>\n        <div class="col s12 m8 l6 offset-m2 offset-l3">\n        <ul class="collapsible popout" data-collapsible="accordion">\n    <li class=" ">\n      <div class="collapsible-header active white-text mainB"><i class="material-icons">phone</i>Phone Number</div>\n      <div class="collapsible-body center nanum"><span>+82 10-2390-1782</span></div>\n    </li>\n    <li>\n      <div class="collapsible-header white-text mainB"><i class="material-icons">email</i>Email Address</div>\n      <div class="collapsible-body center nanum"><span>illumeweb@gmail.com</span></div>\n    </li>\n  \n  </ul>\n        </div>\n        </div>\n        </div>\n    </div>'), "\n"), HTML.Raw('\n    <div class="divider" style="margin:0 auto;width:50%"></div>\n     <div class="section" style="display: none;">\n    <div class="container">\n        <div class="row">\n     <div class="col s12 m12 l6 offset-l3">\n            <p class="center   flow-text grey-text text-darken-2">\n  You can also start a project by filling out our application form. You should be getting something from us within 24 hours.\n         </p>\n            </div>\n        </div>\n        </div>\n    </div>\n'), HTML.DIV({
-    "class": "container",                                                                                              // 34
-    style: "display: none;"                                                                                            // 35
-  }, " \n", HTML.DIV({                                                                                                 // 36
-    "class": "row center"                                                                                              // 37
-  }, "\n", HTML.DIV({                                                                                                  // 38
-    style: "padding:1em;",                                                                                             // 39
-    "class": "z-depth-1 col s12"                                                                                       // 40
-  }, " \n      \n        ", Blaze._TemplateWith(function() {                                                           // 41
-    return {                                                                                                           // 42
-      collection: Spacebars.call("Rsvps"),                                                                             // 43
-      id: Spacebars.call("insertRsvpForm"),                                                                            // 44
-      type: Spacebars.call("method"),                                                                                  // 45
-      meteormethod: Spacebars.call("submitRsvp"),                                                                      // 46
-      omitFields: Spacebars.call("createdAt")                                                                          // 47
-    };                                                                                                                 // 48
-  }, function() {                                                                                                      // 49
-    return Spacebars.include(view.lookupTemplate("autoForm"), function() {                                             // 50
-      return [ "\n   \n      ", HTML.DIV({                                                                             // 51
-        "class": "row"                                                                                                 // 52
-      }, " \n      ", HTML.DIV({                                                                                       // 53
-        "class": "col s12 m3"                                                                                          // 54
-      }, "\n      ", Blaze._TemplateWith(function() {                                                                  // 55
-        return {                                                                                                       // 56
-          name: Spacebars.call("name")                                                                                 // 57
-        };                                                                                                             // 58
-      }, function() {                                                                                                  // 59
-        return Spacebars.include(view.lookupTemplate("afQuickField"));                                                 // 60
-      }), "\n      "), " \n          ", HTML.DIV({                                                                     // 61
-        "class": "col s12 m3"                                                                                          // 62
-      }, "\n        ", Blaze._TemplateWith(function() {                                                                // 63
-        return {                                                                                                       // 64
-          name: Spacebars.call("last")                                                                                 // 65
-        };                                                                                                             // 66
-      }, function() {                                                                                                  // 67
-        return Spacebars.include(view.lookupTemplate("afQuickField"));                                                 // 68
-      }), "\n      "), " \n       ", HTML.DIV({                                                                        // 69
-        "class": "col s12 m3"                                                                                          // 70
-      }, "\n        ", Blaze._TemplateWith(function() {                                                                // 71
-        return {                                                                                                       // 72
-          name: Spacebars.call("email")                                                                                // 73
-        };                                                                                                             // 74
-      }, function() {                                                                                                  // 75
-        return Spacebars.include(view.lookupTemplate("afQuickField"));                                                 // 76
-      }), "\n      \n      "), " \n      ", HTML.DIV({                                                                 // 77
-        "class": "col s12 m3"                                                                                          // 78
-      }, "\n        ", Blaze._TemplateWith(function() {                                                                // 79
-        return {                                                                                                       // 80
-          name: Spacebars.call("phone")                                                                                // 81
-        };                                                                                                             // 82
-      }, function() {                                                                                                  // 83
-        return Spacebars.include(view.lookupTemplate("afQuickField"));                                                 // 84
-      }), "\n      \n      "), "\n      "), "\n       ", HTML.DIV({                                                    // 85
-        "class": "row"                                                                                                 // 86
-      }, "\n", HTML.DIV({                                                                                              // 87
-        "class": "col s12 m6"                                                                                          // 88
-      }, "\n ", Blaze._TemplateWith(function() {                                                                       // 89
-        return {                                                                                                       // 90
-          name: Spacebars.call("website")                                                                              // 91
-        };                                                                                                             // 92
-      }, function() {                                                                                                  // 93
-        return Spacebars.include(view.lookupTemplate("afQuickField"));                                                 // 94
-      }), "\n"), "\n", HTML.DIV({                                                                                      // 95
-        "class": "col s12 m6"                                                                                          // 96
-      }, "\n   ", Blaze._TemplateWith(function() {                                                                     // 97
-        return {                                                                                                       // 98
-          name: Spacebars.call("organization")                                                                         // 99
-        };                                                                                                             // 100
-      }, function() {                                                                                                  // 101
-        return Spacebars.include(view.lookupTemplate("afQuickField"));                                                 // 102
-      }), "\n"), "\n  \n       "), "\n       \n       ", HTML.DIV({                                                    // 103
-        "class": "row"                                                                                                 // 104
-      }, "\n       \n       ", HTML.DIV({                                                                              // 105
-        "class": "col s12 m12 l5"                                                                                      // 106
-      }, "\n ", Blaze._TemplateWith(function() {                                                                       // 107
-        return {                                                                                                       // 108
-          name: Spacebars.call("industry")                                                                             // 109
-        };                                                                                                             // 110
-      }, function() {                                                                                                  // 111
-        return Spacebars.include(view.lookupTemplate("afQuickField"));                                                 // 112
-      }), "\n       "), "\n        ", HTML.DIV({                                                                       // 113
-        "class": "col s12 m12 l7"                                                                                      // 114
-      }, "\n ", Blaze._TemplateWith(function() {                                                                       // 115
-        return {                                                                                                       // 116
-          name: Spacebars.call("Competitors")                                                                          // 117
-        };                                                                                                             // 118
-      }, function() {                                                                                                  // 119
-        return Spacebars.include(view.lookupTemplate("afQuickField"));                                                 // 120
-      }), "\n       "), "\n       "), "\n       ", HTML.DIV({                                                          // 121
-        "class": "row"                                                                                                 // 122
-      }, "\n     ", HTML.DIV({                                                                                         // 123
-        "class": "col s12 m6"                                                                                          // 124
-      }, "\n", Blaze._TemplateWith(function() {                                                                        // 125
-        return {                                                                                                       // 126
-          name: Spacebars.call("iadSense")                                                                             // 127
-        };                                                                                                             // 128
-      }, function() {                                                                                                  // 129
-        return Spacebars.include(view.lookupTemplate("afQuickField"));                                                 // 130
-      }), "\n "), "\n   ", HTML.DIV({                                                                                  // 131
-        "class": "col s12 m6"                                                                                          // 132
-      }, "\n    ", Blaze._TemplateWith(function() {                                                                    // 133
-        return {                                                                                                       // 134
-          name: Spacebars.call("budget")                                                                               // 135
-        };                                                                                                             // 136
-      }, function() {                                                                                                  // 137
-        return Spacebars.include(view.lookupTemplate("afQuickField"));                                                 // 138
-      }), "\n   "), "\n "), "\n \n \n ", HTML.DIV({                                                                    // 139
-        "class": "row"                                                                                                 // 140
-      }, "\n ", HTML.DIV({                                                                                             // 141
-        "class": "col s12 m8 offset-m2 offset-l3 l6"                                                                   // 142
-      }, "\n  \n      ", HTML.DIV({                                                                                    // 143
-        "class": " "                                                                                                   // 144
-      }, "\n", HTML.LABEL({                                                                                            // 145
-        style: "font-size:17px"                                                                                        // 146
-      }, "Are you engaged with another agency at the moment? *"), "\n ", Blaze._TemplateWith(function() {              // 147
-        return {                                                                                                       // 148
-          name: Spacebars.call("another"),                                                                             // 149
-          type: Spacebars.call("switch"),                                                                              // 150
-          trueLabel: Spacebars.call("YES"),                                                                            // 151
-          falseLabel: Spacebars.call("NOPE")                                                                           // 152
-        };                                                                                                             // 153
-      }, function() {                                                                                                  // 154
-        return Spacebars.include(view.lookupTemplate("afQuickField"));                                                 // 155
-      }), "\n"), "\n "), "\n "), "\n \n ", HTML.DIV({                                                                  // 156
-        "class": "row"                                                                                                 // 157
-      }, "\n \n", HTML.DIV({                                                                                           // 158
-        "class": "col s12 m6 offset-m3"                                                                                // 159
-      }, "\n ", Blaze._TemplateWith(function() {                                                                       // 160
-        return {                                                                                                       // 161
-          name: Spacebars.call("whatElse")                                                                             // 162
-        };                                                                                                             // 163
-      }, function() {                                                                                                  // 164
-        return Spacebars.include(view.lookupTemplate("afQuickField"));                                                 // 165
-      }), "\n"), "\n\n\n "), "\n    ", HTML.BUTTON({                                                                   // 166
-        type: "submit",                                                                                                // 167
-        "class": "button outline"                                                                                      // 168
-      }, "SUBMIT APPLICATION"), "\n    ", HTML.BR(), "\n    ", HTML.BR(), "\n    ", HTML.DIV({                         // 169
-        "class": "center wow bounce",                                                                                  // 170
-        "data-wow-iteration": "4"                                                                                      // 171
-      }, "\n    ", HTML.SPAN({                                                                                         // 172
-        "class": "grey-text text-darken-2"                                                                             // 173
-      }, "* REQUIRED FIELDS"), "\n    "), "\n  " ];                                                                    // 174
-    });                                                                                                                // 175
-  }), "\n       \n\n      "), "\n      "), "\n      "), "\n     ", Blaze.If(function() {                               // 176
-    return Spacebars.call(view.lookup("isSuccessfulRsvp"));                                                            // 177
-  }, function() {                                                                                                      // 178
-    return [ "\n    ", HTML.DIV({                                                                                      // 179
-      "class": "container"                                                                                             // 180
-    }, "\n    ", HTML.DIV({                                                                                            // 181
-      "class": "row wow zoomIn"                                                                                        // 182
-    }, "\n    ", HTML.DIV({                                                                                            // 183
-      "class": "col s12 m10 offset-m1 l8 offset-l2"                                                                    // 184
-    }, "\n    ", HTML.H5({                                                                                             // 185
-      "class": "center robotoIt grey-text text-darken-3 wow zoomInUp"                                                  // 186
-    }, "  ", Blaze.View("lookup:name", function() {                                                                    // 187
-      return Spacebars.mustache(view.lookup("name"));                                                                  // 188
-    }), " ", Blaze.View("lookup:last", function() {                                                                    // 189
-      return Spacebars.mustache(view.lookup("last"));                                                                  // 190
-    }), " Thanks for choosing illume Inc. We will get back to you shortly ", Blaze.View("lookup:name", function() {    // 191
-      return Spacebars.mustache(view.lookup("name"));                                                                  // 192
-    }), ".  "), "\n    ", HTML.BR(), "\n    ", HTML.DIV({                                                              // 193
-      "class": "center"                                                                                                // 194
-    }, "\n                  ", HTML.A({                                                                                // 195
-      href: "/",                                                                                                       // 196
-      "class": "button outline"                                                                                        // 197
-    }, "BACK HOME"), "\n\n                "), "\n    "), "\n    "), "\n"), "\n    \n    " ];                           // 198
-  }, function() {                                                                                                      // 199
-    return "   \n  ";                                                                                                  // 200
-  }) ];                                                                                                                // 201
-}));                                                                                                                   // 202
-                                                                                                                       // 203
-Template.__checkName("lastRsvp");                                                                                      // 204
-Template["lastRsvp"] = new Template("Template.lastRsvp", (function() {                                                 // 205
-  var view = this;                                                                                                     // 206
-  return Blaze.Each(function() {                                                                                       // 207
-    return Spacebars.call(view.lookup("rsvps"));                                                                       // 208
-  }, function() {                                                                                                      // 209
-    return [ "\n    ", Blaze.View("lookup:name", function() {                                                          // 210
-      return Spacebars.mustache(view.lookup("name"));                                                                  // 211
-    }), " ", Blaze.View("lookup:last", function() {                                                                    // 212
-      return Spacebars.mustache(view.lookup("last"));                                                                  // 213
-    }), "\n  " ];                                                                                                      // 214
-  });                                                                                                                  // 215
-}));                                                                                                                   // 216
-                                                                                                                       // 217
+  }), "\n         "), "\n            "), "\n        "), "\n        "), "\n    "), "\n \n    ", HTML.Raw('<div class="section">\n    <div class="container">\n        <div class="row">\n          <div class="center">\n            <img src="/img/joe.png" width="120px" alt="Joseph S. Lee">\n          </div>\n          <br>\n          <div class="row">\n            <div class="col s12 m6 l6 offset-m3 offset-l3">\n              \n                <div class="col s4">\n                  <div class="center">\n                    <a class="mainC" href="https://urlgeni.us/instagram/3fIn"><i class="fab fa-instagram fa-3x"></i></a>\n                  </div>\n                </div>\n                 <div class="col s4">\n                  <div class="center">\n                     <a class="mainC" href="https://urlgeni.us/facebook/n12_"><i class="fab fa-facebook-f fa-3x"></i></a>\n                  </div>\n                </div>\n                 <div class="col s4">\n                  <div class="center">\n                     <a class="mainC" href="https://urlgeni.us/Uxlo"><i class="fab fa-github fa-3x"></i></a>\n                  </div>\n                </div>\n         \n            </div>\n          </div>\n        <div class="col s12 m8 l6 offset-m2 offset-l3">\n        <ul class="collapsible popout" data-collapsible="accordion">\n    <li class=" ">\n      <div class="collapsible-header active white-text mainB"><i class="material-icons">phone</i>Phone Number</div>\n      <div class="collapsible-body center nanum"><span>+82 10-2390-1782</span></div>\n    </li>\n    <li>\n      <div class="collapsible-header white-text mainB"><i class="material-icons">email</i>Email Address</div>\n      <div class="collapsible-body center nanum"><span>illumeweb@gmail.com</span></div>\n    </li>\n  \n  </ul>\n        </div>\n        </div>\n        </div>\n    </div>'), "\n") ];
+}));                                                                                                                   // 34
+                                                                                                                       // 35
+Template.__checkName("lastRsvp");                                                                                      // 36
+Template["lastRsvp"] = new Template("Template.lastRsvp", (function() {                                                 // 37
+  var view = this;                                                                                                     // 38
+  return Blaze.Each(function() {                                                                                       // 39
+    return Spacebars.call(view.lookup("rsvps"));                                                                       // 40
+  }, function() {                                                                                                      // 41
+    return [ "\n    ", Blaze.View("lookup:name", function() {                                                          // 42
+      return Spacebars.mustache(view.lookup("name"));                                                                  // 43
+    }), " ", Blaze.View("lookup:last", function() {                                                                    // 44
+      return Spacebars.mustache(view.lookup("last"));                                                                  // 45
+    }), "\n  " ];                                                                                                      // 46
+  });                                                                                                                  // 47
+}));                                                                                                                   // 48
+                                                                                                                       // 49
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 },"application.js":function(){
@@ -2137,6 +1676,371 @@ Template.Rsvp.created = function () {                                           
 Template.Rsvp.destroyed = function () {                                                                                // 51
   return Session.set('successfulRsvp', false);                                                                         // 52
 };                                                                                                                     // 53
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+}}},"layout":{"appLayout":{"template.appLayout.js":function(){
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                                     //
+// client/layout/appLayout/template.appLayout.js                                                                       //
+//                                                                                                                     //
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                                                                                       //
+                                                                                                                       // 1
+Template.__checkName("appLayout");                                                                                     // 2
+Template["appLayout"] = new Template("Template.appLayout", (function() {                                               // 3
+  var view = this;                                                                                                     // 4
+  return [ Spacebars.include(view.lookupTemplate("header")), "\n\n", Spacebars.include(view.lookupTemplate("yield")), "\n\n", Spacebars.include(view.lookupTemplate("footer")) ];
+}));                                                                                                                   // 6
+                                                                                                                       // 7
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+},"template.dashboard.js":function(){
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                                     //
+// client/layout/appLayout/template.dashboard.js                                                                       //
+//                                                                                                                     //
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                                                                                       //
+                                                                                                                       // 1
+Template.__checkName("dashboard");                                                                                     // 2
+Template["dashboard"] = new Template("Template.dashboard", (function() {                                               // 3
+  var view = this;                                                                                                     // 4
+  return [ HTML.Raw('<div class="center">\n<a href="/">\n<img src="/img/sideNav.png" width="150" style="margin-top:1em;">\n</a>\n</div>\n \n<p class="center flow-text grey-text text-darken-2"></p>\n'), Spacebars.include(view.lookupTemplate("yield")) ];
+}));                                                                                                                   // 6
+                                                                                                                       // 7
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+},"template.loginLayout.js":function(){
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                                     //
+// client/layout/appLayout/template.loginLayout.js                                                                     //
+//                                                                                                                     //
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                                                                                       //
+                                                                                                                       // 1
+Template.__checkName("loginLayout");                                                                                   // 2
+Template["loginLayout"] = new Template("Template.loginLayout", (function() {                                           // 3
+  var view = this;                                                                                                     // 4
+  return [ Spacebars.include(view.lookupTemplate("fixedHeader")), "\n\n  ", Blaze.If(function() {                      // 5
+    return Spacebars.call(view.lookup("currentUser"));                                                                 // 6
+  }, function() {                                                                                                      // 7
+    return [ "\n        ", Spacebars.include(view.lookupTemplate("application")), "\n\n    " ];                        // 8
+  }, function() {                                                                                                      // 9
+    return [ "\n        ", Spacebars.include(view.lookupTemplate("login")), "\n         \n    " ];                     // 10
+  }) ];                                                                                                                // 11
+}));                                                                                                                   // 12
+                                                                                                                       // 13
+Template.__checkName("registerTemplate");                                                                              // 14
+Template["registerTemplate"] = new Template("Template.registerTemplate", (function() {                                 // 15
+  var view = this;                                                                                                     // 16
+  return Spacebars.include(view.lookupTemplate("yield"));                                                              // 17
+}));                                                                                                                   // 18
+                                                                                                                       // 19
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+},"appLayout.js":function(){
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                                     //
+// client/layout/appLayout/appLayout.js                                                                                //
+//                                                                                                                     //
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                                                                                       //
+                                                                                                                       //
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+}},"footer":{"template.footer.js":function(){
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                                     //
+// client/layout/footer/template.footer.js                                                                             //
+//                                                                                                                     //
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                                                                                       //
+                                                                                                                       // 1
+Template.__checkName("footer");                                                                                        // 2
+Template["footer"] = new Template("Template.footer", (function() {                                                     // 3
+  var view = this;                                                                                                     // 4
+  return HTML.Raw('<div class="container">\n \n    </div>\n<footer class="page-footer" style="background: #2f363b;height:500px;">\n    <section class="text-center" style="padding:1em;margin-top:70px;">     \n        <div class="container center">\n    <div>\n        <a href="/"><img src="/img/wlogo.png" width="85"></a>\n        </div>\n        <br>\n        <div class="divider" style="margin:0 auto;width: 100px"></div>\n    <p class="footer-company-motto nanum white-text flow-text"><b>Living, Breathing, and Improving</b></p>\n\n	 \n\n			<p class="footer-company-name rale" style="color:#a0a0a0;margin-top: 120px;">Typecrafted by joseph s. lee &copy; twentyeighteen<br><span class="nanum">경기도 고양시 </span>| Santa Barbara, CA <br><br><span class="nanum">made with <a class="grey-text" href="www.meteor.com">Meteor.JS</a></span></p>\n    \n\n        </div>\n    </section> \n    </footer>');
+}));                                                                                                                   // 6
+                                                                                                                       // 7
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+}},"header":{"template.header.js":function(){
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                                     //
+// client/layout/header/template.header.js                                                                             //
+//                                                                                                                     //
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                                                                                       //
+                                                                                                                       // 1
+Template.__checkName("header");                                                                                        // 2
+Template["header"] = new Template("Template.header", (function() {                                                     // 3
+  var view = this;                                                                                                     // 4
+  return [ HTML.Raw('<head>\n\n   \n     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">\n        <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet" type="text/css">\n        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet" type="text/css">\n        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300" rel="stylesheet" type="text/css">\n        <link href="https://fonts.googleapis.com/css?family=Oxygen:400,700" rel="stylesheet" type="text/css">\n        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet" type="text/css">\n        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">\n        <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet" type="text/css">\n        <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">\n        \n            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">\n            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">\n        \n        <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">\n        <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">\n        <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">\n        <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">\n        <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">\n        <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">\n        <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">\n        <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">\n        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">\n        <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">\n        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">\n        <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">\n        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">\n        <link rel="manifest" href="/manifest.json">\n        <meta name="msapplication-TileColor" content="#ffffff">\n        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">\n        <meta name="theme-color" content="#ffffff">\n    \n    </head>\n'), HTML.HEADER({
+    "class": "main_h"                                                                                                  // 6
+  }, "\n\n \n      ", HTML.DIV({                                                                                       // 7
+    "class": "navbar-fixed"                                                                                            // 8
+  }, "\n  ", HTML.NAV({                                                                                                // 9
+    style: "background:#2f363b;"                                                                                       // 10
+  }, "\n     \n    ", HTML.DIV({                                                                                       // 11
+    "class": "nav-wrapper"                                                                                             // 12
+  }, "\n        ", HTML.DIV({                                                                                          // 13
+    "class": " "                                                                                                       // 14
+  }, "\n        ", HTML.Raw('<div class="brand-logo center hide-on-small-only">\n            <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35" alt=""></a>\n            </div>'), "\n              ", HTML.Raw('<div class="brand-logos brand-logo show-on-small-only hide-on-med-and-up">\n            <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35" alt=""></a>\n            </div>'), "\n            ", HTML.Raw('<a href="#" data-activates="slide-outs" class="white-text button-collapse left" style="margin-left:15px;"><i class="fas fa-bars"></i></a>'), "\n            ", HTML.Raw('<a href="#" style="margin:5px 10px" data-activates="language-switcher" class="hide-on-large-only dropdown-button right white-text"><i class="fas fa-language"></i>\n\n            </a>'), "\n           ", HTML.Raw("<!--dropdown for language-->"), "\n           ", HTML.UL({
+    id: "language-switcher",                                                                                           // 16
+    "class": "dropdown-content"                                                                                        // 17
+  }, "\n               ", Spacebars.include(view.lookupTemplate("languageSwitcher")), "\n           "), "\n         \n            \n      \n      ", HTML.UL({
+    "class": "hide-on-med-and-down left"                                                                               // 19
+  }, "\n        ", HTML.LI({                                                                                           // 20
+    "class": "nanum"                                                                                                   // 21
+  }, HTML.A({                                                                                                          // 22
+    "class": "dropdown-button",                                                                                        // 23
+    "data-activates": "dropdown2",                                                                                     // 24
+    href: ""                                                                                                           // 25
+  }, Blaze.View("lookup:_", function() {                                                                               // 26
+    return Spacebars.mustache(view.lookup("_"), "about");                                                              // 27
+  }))), "\n   \n      \n        ", HTML.LI({                                                                           // 28
+    "class": "nanum"                                                                                                   // 29
+  }, HTML.A({                                                                                                          // 30
+    href: function() {                                                                                                 // 31
+      return Spacebars.mustache(view.lookup("pathFor"), "service");                                                    // 32
+    }                                                                                                                  // 33
+  }, Blaze.View("lookup:_", function() {                                                                               // 34
+    return Spacebars.mustache(view.lookup("_"), "ourServices");                                                        // 35
+  }))), "\n             ", HTML.LI({                                                                                   // 36
+    "class": "nanum"                                                                                                   // 37
+  }, HTML.A({                                                                                                          // 38
+    href: function() {                                                                                                 // 39
+      return Spacebars.mustache(view.lookup("pathFor"), "portfolio");                                                  // 40
+    }                                                                                                                  // 41
+  }, Blaze.View("lookup:_", function() {                                                                               // 42
+    return Spacebars.mustache(view.lookup("_"), "portfolio");                                                          // 43
+  }))), "\n           ", HTML.LI({                                                                                     // 44
+    "class": "nanum"                                                                                                   // 45
+  }, HTML.A({                                                                                                          // 46
+    href: function() {                                                                                                 // 47
+      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 48
+    }                                                                                                                  // 49
+  }, Blaze.View("lookup:_", function() {                                                                               // 50
+    return Spacebars.mustache(view.lookup("_"), "reachUs");                                                            // 51
+  }))), "\n \n ", HTML.Raw("<!-- dropdown for resume-->"), "\n ", HTML.UL({                                            // 52
+    id: "dropdown2",                                                                                                   // 53
+    "class": "dropdown-content"                                                                                        // 54
+  }, "\n        ", HTML.LI(HTML.A({                                                                                    // 55
+    href: function() {                                                                                                 // 56
+      return Spacebars.mustache(view.lookup("pathFor"), "about");                                                      // 57
+    }                                                                                                                  // 58
+  }, Blaze.View("lookup:_", function() {                                                                               // 59
+    return Spacebars.mustache(view.lookup("_"), "about");                                                              // 60
+  }))), "\n    ", HTML.LI(HTML.A({                                                                                     // 61
+    href: "/resume.pdf",                                                                                               // 62
+    target: "blank"                                                                                                    // 63
+  }, Blaze.View("lookup:_", function() {                                                                               // 64
+    return Spacebars.mustache(view.lookup("_"), "myResume");                                                           // 65
+  }))), "\n   \n  "), "\n      "), "\n        ", HTML.UL({                                                             // 66
+    "class": "right hide-on-med-and-down"                                                                              // 67
+  }, "\n           ", Spacebars.include(view.lookupTemplate("languageSwitcher")), "\n            ", HTML.Raw('<li><a class="white-text center" href="https://urlgeni.us/facebook/n12_"><i class="fab fa-facebook-f  fa-2x"></i></a></li>'), "\n                         ", HTML.Raw('<li class="divider"></li>'), "\n    ", HTML.Raw('<li><a class="center white-text" href="https://urlgeni.us/instagram/3fIn"><i class="fab fa-instagram  fa-2x"></i></a></li>'), "\n           ", HTML.Raw('<li>  <a class="center white-text" href="https://urlgeni.us/Uxlo"><i class="fab fa-github fa-2x"></i></a></li>'), "\n            "), "\n       \n    "), "\n      "), "\n       \n          "), "\n\n      "), "\n"), "\n    ", HTML.UL({
+    id: "slide-outs",                                                                                                  // 69
+    "class": "side-nav"                                                                                                // 70
+  }, "\n        ", HTML.DIV({                                                                                          // 71
+    "class": "center"                                                                                                  // 72
+  }, "\n            ", HTML.Raw("<br>"), "\n            ", HTML.Raw('<img src="/img/drawnPic.jpg" width="150">'), HTML.Raw("<br>"), "\n  \n     ", HTML.LI({
+    "class": "nanum",                                                                                                  // 74
+    style: "margin-top:1em;"                                                                                           // 75
+  }, HTML.A({                                                                                                          // 76
+    href: function() {                                                                                                 // 77
+      return Spacebars.mustache(view.lookup("pathFor"), "about");                                                      // 78
+    }                                                                                                                  // 79
+  }, Blaze.View("lookup:_", function() {                                                                               // 80
+    return Spacebars.mustache(view.lookup("_"), "about");                                                              // 81
+  }))), "\n    ", HTML.Raw("<!-- dropdown for resume-->"), "\n    \n        ", HTML.LI({                               // 82
+    "class": "nanum"                                                                                                   // 83
+  }, HTML.A({                                                                                                          // 84
+    href: function() {                                                                                                 // 85
+      return Spacebars.mustache(view.lookup("pathFor"), "service");                                                    // 86
+    }                                                                                                                  // 87
+  }, Blaze.View("lookup:_", function() {                                                                               // 88
+    return Spacebars.mustache(view.lookup("_"), "ourServices");                                                        // 89
+  }))), "\n             ", HTML.LI({                                                                                   // 90
+    "class": "nanum"                                                                                                   // 91
+  }, HTML.A({                                                                                                          // 92
+    href: function() {                                                                                                 // 93
+      return Spacebars.mustache(view.lookup("pathFor"), "portfolio");                                                  // 94
+    }                                                                                                                  // 95
+  }, Blaze.View("lookup:_", function() {                                                                               // 96
+    return Spacebars.mustache(view.lookup("_"), "portfolio");                                                          // 97
+  }))), "\n           ", HTML.LI({                                                                                     // 98
+    "class": "nanum"                                                                                                   // 99
+  }, HTML.A({                                                                                                          // 100
+    href: function() {                                                                                                 // 101
+      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 102
+    }                                                                                                                  // 103
+  }, Blaze.View("lookup:_", function() {                                                                               // 104
+    return Spacebars.mustache(view.lookup("_"), "reachUs");                                                            // 105
+  }))), "\n           ", Spacebars.include(view.lookupTemplate("languageSwitcher2")), "\n        ", HTML.LI({          // 106
+    "class": "nanum"                                                                                                   // 107
+  }, HTML.A({                                                                                                          // 108
+    href: "/resume.pdf",                                                                                               // 109
+    target: "blank"                                                                                                    // 110
+  }, Blaze.View("lookup:_", function() {                                                                               // 111
+    return Spacebars.mustache(view.lookup("_"), "myResume");                                                           // 112
+  }))), "\n        "), "\n  ") ];                                                                                      // 113
+}));                                                                                                                   // 114
+                                                                                                                       // 115
+Template.__checkName("fixedHeader");                                                                                   // 116
+Template["fixedHeader"] = new Template("Template.fixedHeader", (function() {                                           // 117
+  var view = this;                                                                                                     // 118
+  return HTML.DIV({                                                                                                    // 119
+    "class": " "                                                                                                       // 120
+  }, "\n      ", HTML.NAV({                                                                                            // 121
+    "class": "white"                                                                                                   // 122
+  }, "\n         \n      ", HTML.DIV({                                                                                 // 123
+    "class": "nav-wrapper"                                                                                             // 124
+  }, "\n            ", HTML.DIV({                                                                                      // 125
+    "class": " "                                                                                                       // 126
+  }, "\n            ", HTML.Raw('<div class="brand-logo center hide-on-small-only">\n                <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35" alt=""></a>\n                </div>'), "\n                  ", HTML.Raw('<div class="brand-logos brand-logo show-on-small-only hide-on-med-and-up">\n                <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35" alt=""></a>\n                </div>'), "\n                ", HTML.Raw('<a href="#" data-activates="slide-out2" class="red-text button-collapse left" style="margin-left:15px;"><i class="fas fa-bars"></i></a>'), "\n                ", HTML.Raw('<a href="#" style="margin:5px 10px" data-activates="language-switcher1" class="hide-on-large-only dropdown-button right red-text"><i class="fas fa-language"></i>\n\n                </a>'), "\n             \n                ", HTML.UL({
+    id: "language-switcher1",                                                                                          // 128
+    "class": "dropdown-content"                                                                                        // 129
+  }, "\n                        ", Spacebars.include(view.lookupTemplate("languageSwitcher")), "\n                    "), "\n          \n          ", HTML.UL({
+    "class": "hide-on-med-and-down left"                                                                               // 131
+  }, "\n            ", HTML.LI({                                                                                       // 132
+    "class": "nanum"                                                                                                   // 133
+  }, HTML.A({                                                                                                          // 134
+    href: function() {                                                                                                 // 135
+      return Spacebars.mustache(view.lookup("pathFor"), "about");                                                      // 136
+    },                                                                                                                 // 137
+    "class": "grey-text  text-darken-2 "                                                                               // 138
+  }, Blaze.View("lookup:_", function() {                                                                               // 139
+    return Spacebars.mustache(view.lookup("_"), "about");                                                              // 140
+  }))), "\n      \n      \n            ", HTML.LI({                                                                    // 141
+    "class": "nanum"                                                                                                   // 142
+  }, HTML.A({                                                                                                          // 143
+    href: function() {                                                                                                 // 144
+      return Spacebars.mustache(view.lookup("pathFor"), "service");                                                    // 145
+    },                                                                                                                 // 146
+    "class": "grey-text text-darken-2"                                                                                 // 147
+  }, " ", Blaze.View("lookup:_", function() {                                                                          // 148
+    return Spacebars.mustache(view.lookup("_"), "ourServices");                                                        // 149
+  }))), "\n                 ", HTML.LI({                                                                               // 150
+    "class": "nanum"                                                                                                   // 151
+  }, HTML.A({                                                                                                          // 152
+    href: function() {                                                                                                 // 153
+      return Spacebars.mustache(view.lookup("pathFor"), "portfolio");                                                  // 154
+    },                                                                                                                 // 155
+    "class": "grey-text text-darken-2"                                                                                 // 156
+  }, Blaze.View("lookup:_", function() {                                                                               // 157
+    return Spacebars.mustache(view.lookup("_"), "portfolio");                                                          // 158
+  }))), "\n               ", HTML.LI({                                                                                 // 159
+    "class": "nanum"                                                                                                   // 160
+  }, HTML.A({                                                                                                          // 161
+    href: function() {                                                                                                 // 162
+      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 163
+    },                                                                                                                 // 164
+    "class": "grey-text text-darken-2"                                                                                 // 165
+  }, Blaze.View("lookup:_", function() {                                                                               // 166
+    return Spacebars.mustache(view.lookup("_"), "reachUs");                                                            // 167
+  }))), "\n     \n    \n          "), "\n            ", HTML.UL({                                                      // 168
+    "class": "right hide-on-med-and-down"                                                                              // 169
+  }, "\n               ", Spacebars.include(view.lookupTemplate("languageSwitcher2")), "\n                ", HTML.Raw('<li><a class=" grey-text center" href="https://urlgeni.us/facebook/4U1B"><i class="fab fa-facebook-f  fa-2x"></i></a></li>'), "\n                             ", HTML.Raw('<li class="divider"></li>'), "\n        ", HTML.Raw('<li><a class="center grey-text" href="https://urlgeni.us/instagram/3fIn"><i class="fab fa-instagram  fa-2x"></i></a></li>'), "\n                   ", HTML.Raw('<li>  <a class="center grey-text" href="https://urlgeni.us/Uxlo"><i class="fab fa-github fa-2x"></i></a></li>'), "\n                "), "\n           \n        "), "\n          "), "\n     \n     \n      ", HTML.UL({
+    id: "slide-out2",                                                                                                  // 171
+    "class": "side-nav"                                                                                                // 172
+  }, "\n            ", HTML.DIV({                                                                                      // 173
+    "class": "center"                                                                                                  // 174
+  }, "\n                ", HTML.Raw("<br>"), "\n                ", HTML.Raw('<img src="/img/drawnPic.jpg" width="150">'), HTML.Raw("<br>"), "\n      \n         ", HTML.LI({
+    "class": "nanum",                                                                                                  // 176
+    style: "margin-top:1em;"                                                                                           // 177
+  }, HTML.A({                                                                                                          // 178
+    href: function() {                                                                                                 // 179
+      return Spacebars.mustache(view.lookup("pathFor"), "about");                                                      // 180
+    }                                                                                                                  // 181
+  }, Blaze.View("lookup:_", function() {                                                                               // 182
+    return Spacebars.mustache(view.lookup("_"), "about");                                                              // 183
+  }))), "\n        \n            ", HTML.LI({                                                                          // 184
+    "class": "nanum"                                                                                                   // 185
+  }, HTML.A({                                                                                                          // 186
+    href: function() {                                                                                                 // 187
+      return Spacebars.mustache(view.lookup("pathFor"), "service");                                                    // 188
+    }                                                                                                                  // 189
+  }, Blaze.View("lookup:_", function() {                                                                               // 190
+    return Spacebars.mustache(view.lookup("_"), "ourServices");                                                        // 191
+  }))), "\n                 ", HTML.LI({                                                                               // 192
+    "class": "nanum"                                                                                                   // 193
+  }, HTML.A({                                                                                                          // 194
+    href: function() {                                                                                                 // 195
+      return Spacebars.mustache(view.lookup("pathFor"), "portfolio");                                                  // 196
+    }                                                                                                                  // 197
+  }, Blaze.View("lookup:_", function() {                                                                               // 198
+    return Spacebars.mustache(view.lookup("_"), "portfolio");                                                          // 199
+  }))), "\n               ", HTML.LI({                                                                                 // 200
+    "class": "nanum"                                                                                                   // 201
+  }, HTML.A({                                                                                                          // 202
+    href: function() {                                                                                                 // 203
+      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 204
+    }                                                                                                                  // 205
+  }, Blaze.View("lookup:_", function() {                                                                               // 206
+    return Spacebars.mustache(view.lookup("_"), "reachUs");                                                            // 207
+  }))), "\n               ", Spacebars.include(view.lookupTemplate("languageSwitcher2")), "\n            "), "\n      "), "\n     \n              "), "\n                ");
+}));                                                                                                                   // 209
+                                                                                                                       // 210
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+},"header.js":function(){
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                                     //
+// client/layout/header/header.js                                                                                      //
+//                                                                                                                     //
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                                                                                       //
+Template.header.rendered = function () {                                                                               // 1
+  $('.dropdown-button').dropdown({                                                                                     // 2
+    inDuration: 300,                                                                                                   // 3
+    outDuration: 225,                                                                                                  // 4
+    constrainWidth: false, // Does not change width of dropdown to that of the activator                               // 5
+    hover: false, // Activate on hover                                                                                 // 6
+    gutter: 0, // Spacing from edge                                                                                    // 7
+    belowOrigin: true, // Displays dropdown below the button                                                           // 8
+    alignment: 'right', // Displays dropdown with edge aligned to the left of button                                   // 9
+    stopPropagation: false // Stops event propagation                                                                  // 10
+  });                                                                                                                  // 2
+  $('.button-collapse').sideNav({                                                                                      // 13
+    menuWidth: 200, // Default is 240                                                                                  // 14
+    edge: 'right', // Choose the horizontal origin                                                                     // 15
+    closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor                                     // 16
+  });                                                                                                                  // 13
+  $(window).scroll(function () {                                                                                       // 19
+                                                                                                                       //
+    if ($(window).scrollTop() > 100) {                                                                                 // 21
+      $('.main_h').addClass('sticky');                                                                                 // 22
+    } else {                                                                                                           // 23
+      $('.main_h').removeClass('sticky');                                                                              // 24
+    }                                                                                                                  // 25
+  });                                                                                                                  // 26
+                                                                                                                       //
+  // Mobile Navigation                                                                                                 //
+};                                                                                                                     // 32
+Template.fixedHeader.rendered = function () {                                                                          // 33
+  $('.dropdown-button').dropdown({                                                                                     // 34
+    inDuration: 300,                                                                                                   // 35
+    outDuration: 225,                                                                                                  // 36
+    constrainWidth: false, // Does not change width of dropdown to that of the activator                               // 37
+    hover: false, // Activate on hover                                                                                 // 38
+    gutter: 0, // Spacing from edge                                                                                    // 39
+    belowOrigin: true, // Displays dropdown below the button                                                           // 40
+    alignment: 'right', // Displays dropdown with edge aligned to the left of button                                   // 41
+    stopPropagation: false // Stops event propagation                                                                  // 42
+  });                                                                                                                  // 34
+  $('.button-collapse').sideNav({                                                                                      // 45
+    menuWidth: 200, // Default is 240                                                                                  // 46
+    edge: 'right', // Choose the horizontal origin                                                                     // 47
+    closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor                                     // 48
+  });                                                                                                                  // 45
+};                                                                                                                     // 51
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 }}},"components":{"template.language_switcher.js":function(){
@@ -2604,7 +2508,7 @@ Template["register"] = new Template("Template.register", (function() {          
 Template.__checkName("login");                                                                                         // 14
 Template["login"] = new Template("Template.login", (function() {                                                       // 15
   var view = this;                                                                                                     // 16
-  return HTML.Raw('<section> \n<div class="container" style="padding:2em;">\n<div class="center">\n    <a href="/"><img src="/img/badge.png" width="220"></a>\n    <br>\n    <h4 class="grey-text text-darken-1 mont">Welcome, you are about to login into privileged sectors of our website. Please provide your credentials.</h4>\n    <h4 class="grey-text text-darken-1">환영합니다. 로그인하기 위해 아이디와 비밀번호를 제공해주십시오.</h4>\n</div>\n</div>\n<div class="container">\n<form>\n<div class="row">\n     <div class="col s12 l8 offset-l2">\n     <div class="input-field">\n         <i class="material-icons prefix">account_circle</i>\n          <input id="icon_prefix" type="email" name="loginEmail" class="validate">\n          <label for="icon_prefix">Email Address</label>\n          </div>\n          <br>\n           <div class="input-field">\n         <i class="material-icons prefix">https</i>\n          <input id="icon_prefix" type="password" name="loginPassword" class="validate">\n          <label for="icon_prefix">Password</label>\n          </div>\n          <br>\n             <div class="center">\n<input class="btn-large white-text red lighten-1" type="submit" value="LOGIN | 로그인하기">\n        </div>\n        </div>\n      \n    \n    </div>\n     </form>\n    </div>\n    </section>');
+  return HTML.Raw('<section> \n<div class="container" style="padding:2em;">\n<div class="center">\n    \n    <br>\n    <h4 class="grey-text text-darken-1  ">Welcome, you are about to login into privileged sectors of our website. Please provide your credentials.</h4>\n    <h4 class="grey-text text-darken-1">환영합니다. 로그인하기 위해 아이디와 비밀번호를 제공해주십시오.</h4>\n</div>\n</div>\n<div class="container">\n<form>\n<div class="row">\n     <div class="col s12 l8 offset-l2">\n     <div class="input-field">\n         <i class="material-icons prefix">account_circle</i>\n          <input id="icon_prefix" type="email" name="loginEmail" class="validate">\n          <label for="icon_prefix">Email Address</label>\n          </div>\n          <br>\n           <div class="input-field">\n         <i class="material-icons prefix">https</i>\n          <input id="icon_prefix" type="password" name="loginPassword" class="validate">\n          <label for="icon_prefix">Password</label>\n          </div>\n          <br>\n             <div class="center">\n<input class="btn-large white-text red lighten-1" type="submit" value="LOGIN | 로그인하기">\n        </div>\n        </div>\n      \n    \n    </div>\n     </form>\n    </div>\n    </section>');
 }));                                                                                                                   // 18
                                                                                                                        // 19
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -2889,7 +2793,41 @@ Router.route('portfolio', {                                                     
   }                                                                                                                    //
 });                                                                                                                    //
                                                                                                                        //
-Router.route('approach', {                                                                                             // 166
+Router.route('someOfWork', {                                                                                           // 165
+  template: 'someOfWork',                                                                                              //
+  path: '/current-projects',                                                                                           //
+  title: 'Current Projects',                                                                                           //
+  meta: {                                                                                                              //
+    description: {                                                                                                     //
+      name: 'description',                                                                                             //
+      itemprop: 'description',                                                                                         //
+      property: 'og:description',                                                                                      //
+      content: 'Check out some of the things I am working on at the moment! '                                          //
+    },                                                                                                                 //
+    keywords: {                                                                                                        //
+      name: 'keywords',                                                                                                //
+      itemprop: 'keywords',                                                                                            //
+      content: ' web, mobile, website, mobile app, meteor, meteor.js, node.js, web development'                        //
+    },                                                                                                                 //
+    image: {                                                                                                           //
+      itemprop: 'image',                                                                                               //
+      property: 'og:image',                                                                                            //
+      content: '/img/drawnPic.jpg'                                                                                     //
+    },                                                                                                                 //
+    url: {                                                                                                             //
+      property: 'og:url',                                                                                              //
+      itemprop: 'url',                                                                                                 //
+      content: 'http://www.jaulzlee.com/current-projects'                                                              //
+    },                                                                                                                 //
+    'og:type': 'website',                                                                                              //
+    'og:title': function() {                                                                                           //
+      return document.title;                                                                                           //
+    },                                                                                                                 //
+    'og:site_name': 'Current Projects'                                                                                 //
+  }                                                                                                                    //
+});                                                                                                                    //
+                                                                                                                       //
+Router.route('approach', {                                                                                             // 192
   template: 'approach',                                                                                                //
   path: '/how-we-work',                                                                                                //
   title: 'How We Work',                                                                                                //
@@ -2918,7 +2856,7 @@ Router.route('approach', {                                                      
   }                                                                                                                    //
 });                                                                                                                    //
                                                                                                                        //
-Router.route('lessons', {                                                                                              // 190
+Router.route('lessons', {                                                                                              // 216
   template: 'lessons',                                                                                                 //
   path: '/services/web-lessons',                                                                                       //
   title: 'Web Lessons',                                                                                                //
@@ -2952,7 +2890,7 @@ Router.route('lessons', {                                                       
   }                                                                                                                    //
 });                                                                                                                    //
                                                                                                                        //
-Router.route('applications', {                                                                                         // 218
+Router.route('applications', {                                                                                         // 244
   template: 'applications',                                                                                            //
   layoutTemplate: 'appLayout',                                                                                         //
   path: '/contact-me',                                                                                                 //
@@ -2966,7 +2904,7 @@ Router.route('applications', {                                                  
   }                                                                                                                    //
 });                                                                                                                    //
                                                                                                                        //
-Router.route('application', {                                                                                          // 229
+Router.route('application', {                                                                                          // 255
   template: 'application',                                                                                             //
   path: '/backend',                                                                                                    //
   layoutTemplate: 'loginLayout',                                                                                       //
@@ -2981,14 +2919,14 @@ Router.route('application', {                                                   
   }                                                                                                                    //
 });                                                                                                                    //
                                                                                                                        //
-Router.route('rsvp', {                                                                                                 // 241
+Router.route('rsvp', {                                                                                                 // 267
   template: 'rsvp',                                                                                                    //
   controller: 'RsvpController',                                                                                        //
   action: 'action',                                                                                                    //
   where: 'client'                                                                                                      //
 });                                                                                                                    //
                                                                                                                        //
-Router.route('login', {                                                                                                // 246
+Router.route('login', {                                                                                                // 272
   template: 'login',                                                                                                   //
   layoutTemplate: 'loginLayout',                                                                                       //
   path: '/login',                                                                                                      //
@@ -3002,7 +2940,7 @@ Router.route('login', {                                                         
   }                                                                                                                    //
 });                                                                                                                    //
                                                                                                                        //
-Router.route('dashboards', {                                                                                           // 256
+Router.route('dashboards', {                                                                                           // 282
   template: 'dashboards',                                                                                              //
   layoutTemplate: 'loginLayout',                                                                                       //
   controller: 'main2Controller',                                                                                       //
@@ -3017,7 +2955,7 @@ Router.route('dashboards', {                                                    
   }                                                                                                                    //
 });                                                                                                                    //
                                                                                                                        //
-Router.route('register', {                                                                                             // 267
+Router.route('register', {                                                                                             // 293
   template: 'register',                                                                                                //
   layoutTemplate: 'registerTemplate',                                                                                  //
   path: '/register',                                                                                                   //
@@ -3031,7 +2969,7 @@ Router.route('register', {                                                      
   }                                                                                                                    //
 });                                                                                                                    //
                                                                                                                        //
-Router.route('policy', {                                                                                               // 277
+Router.route('policy', {                                                                                               // 303
   template: 'policy',                                                                                                  //
   path: '/policies'                                                                                                    //
 });                                                                                                                    //
@@ -3101,7 +3039,7 @@ if (package_name != "project") {                                                
 }                                                                                                                      // 7
 // integrate the fallback language translations                                                                        // 8
 translations = {};                                                                                                     // 9
-translations[namespace] = {"about":"About me","howWeWork":"How I work","ourServices":"Services","portfolio":"My work","reachUs":"Reach me"};
+translations[namespace] = {"about":"About me","howWeWork":"How I work","ourServices":"Services","portfolio":"My work","reachUs":"Reach me","myResume":"My Resume"};
 TAPi18n._loadLangFileObject("en", translations);                                                                       // 11
                                                                                                                        // 12
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -3123,7 +3061,7 @@ if (package_name != "project") {                                                
 }                                                                                                                      // 7
 // integrate the fallback language translations                                                                        // 8
 translations = {};                                                                                                     // 9
-translations[namespace] = {"whatWeDo":"Hey, I'm Joe. Pleasure to meet you.","mission1":"Since beginning my journey as a freelance designer nearly 5 years ago, I've done remote work for businesses, consulted for startups, non-profit orgs, and collaborated with talented people to create digital products for both business and personal use. I'm quietly confident, naturally curious, and perpetually improving my chops.","koreaAdd":"","mission2":"You’ll finish with a data-driven product roadmap that outlines your path to successful launch all before a single line of code is written. Once that is done, we get to work.","innovative":"Innovative","bridging":"Bridging Mobile & Web","tailored":"Tailored For You","learnMore":"More about me","viewMore":"Want to see more?","roadTo":"Let's make you a","developDesigner":"Developer, Designer, and Coffee Addict","someOfOurWork":"SOME OF MY RECENT WORK","allOfOurWebsites":"All of the websites and hybrid applications are based on Meteor.","fastSleek":"They are all fast, sleek, and ready to make a change in their respective industries.","madeWith":"Made with ","madeWithK":"","weBuild":"Building with reactivity in mind","reactiveJavascript":"and utilizing JavaScript","fullest":"to its fullest","embrace":"Embracing the 21st century,","dynamicReactive":"dynamic reactivity is now ","21stC":"in the palm of your hands.","createProducts":"Creating the products with ","youInMind":"with YOU in mind ","createSuccess":"to create success.","insteadOf":"Instead of just handing over a set of deliverables, I work with you to achieve the results you want. We’ll test your ideas together in the marketplace, gather real data, and discover the key benefits of your concept, then create stunning visuals and a comprehensive backlog to serve as an investor-ready MVP. Setting this foundation means you’re not just walking away with a roadmap to a product","walkAway":"you’re walking away with the peace of mind that your product is what people want.","areYouGame":"ARE YOU GAME?","coffee":"First coffee is on me.","loveToHear":"Would love to hear more?","alwaysOpen":"I’m always open to discussing product design work or partnership opportunities.","getStarted":"Start a conversation"};
+translations[namespace] = {"whatWeDo":"Hey, I'm Joe. Pleasure to meet you.","mission1":"Since beginning my journey as a freelance designer nearly 5 years ago, I've done remote work for businesses, consulted for startups, non-profit orgs, and collaborated with talented people to create digital products for both business and personal use. I'm quietly confident, naturally curious, and perpetually improving my chops.","koreaAdd":"","mission2":"You’ll finish with a data-driven product roadmap that outlines your path to successful launch all before a single line of code is written. Once that is done, we get to work.","innovative":"Innovative","bridging":"Bridging Mobile & Web","tailored":"Tailored For You","learnMore":"More about me","viewMore":"Want to see more?","roadTo":"Let's make you a","developDesigner":"Developer, Designer, and Coffee Addict","someOfOurWork":"SOME OF MY RECENT WORK","allOfOurWebsites":"All of the websites and hybrid applications are based on Meteor.","fastSleek":"They are all fast, sleek, and ready to make a change in their respective industries.","madeWith":"Made with ","madeWithK":"","weBuild":"Building with reactivity in mind","reactiveJavascript":"and utilizing JavaScript","fullest":"to its fullest","embrace":"Embracing the 21st century,","dynamicReactive":"dynamic reactivity is now ","21stC":"in the palm of your hands.","createProducts":"Creating the products with ","youInMind":"with YOU in mind ","createSuccess":"to create success.","insteadOf":"Instead of just handing over a set of deliverables, I work with you to achieve the results you want. We’ll test your ideas together in the marketplace, gather real data, and discover the key benefits of your concept, then create stunning visuals and a comprehensive backlog to serve as an investor-ready MVP. Setting this foundation means you’re not just walking away with a roadmap to a product","walkAway":"you’re walking away with the peace of mind that your product is what people want.","areYouGame":"READY?","coffee":"First coffee is on me.","loveToHear":"Would love to hear more?","alwaysOpen":"I’m always open to discussing product design work or partnership opportunities.","getStarted":"Start a conversation"};
 TAPi18n._loadLangFileObject("en", translations);                                                                       // 11
                                                                                                                        // 12
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -3146,6 +3084,28 @@ if (package_name != "project") {                                                
 // integrate the fallback language translations                                                                        // 8
 translations = {};                                                                                                     // 9
 translations[namespace] = {"myWebsitesAre":"My websites are built with ","secondMyWeb":"","stateOfArt":"a state of the art native container - which increases reactivity and performance to a whole new level.","weMakeGraphics":"We make all of our graphics inhouse. Every single graphic work has been made with","aBitOf":"and a little bit of imagination.","currentProjects":"CURRENT PROJECTS"};
+TAPi18n._loadLangFileObject("en", translations);                                                                       // 11
+                                                                                                                       // 12
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+},"projects.en.i18n.json":function(){
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                                     //
+// both/i18n/en/projects.en.i18n.json                                                                                  //
+//                                                                                                                     //
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                                                                                       //
+var _ = Package.underscore._,                                                                                          // 1
+    package_name = "project",                                                                                          // 2
+    namespace = "project";                                                                                             // 3
+                                                                                                                       // 4
+if (package_name != "project") {                                                                                       // 5
+    namespace = TAPi18n.packages[package_name].namespace;                                                              // 6
+}                                                                                                                      // 7
+// integrate the fallback language translations                                                                        // 8
+translations = {};                                                                                                     // 9
+translations[namespace] = {"currentProjects":"Current Projects in Dev"};                                               // 10
 TAPi18n._loadLangFileObject("en", translations);                                                                       // 11
                                                                                                                        // 12
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -3289,6 +3249,25 @@ TAPi18n.languages_names["ko"] = ["Korean","한국어"];                         
                                                                                                                        // 9
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+},"projects.ko.i18n.json":function(){
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                                     //
+// both/i18n/ko/projects.ko.i18n.json                                                                                  //
+//                                                                                                                     //
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                                                                                       //
+var _ = Package.underscore._,                                                                                          // 1
+    package_name = "project",                                                                                          // 2
+    namespace = "project";                                                                                             // 3
+                                                                                                                       // 4
+if (package_name != "project") {                                                                                       // 5
+    namespace = TAPi18n.packages[package_name].namespace;                                                              // 6
+}                                                                                                                      // 7
+TAPi18n.languages_names["ko"] = ["Korean","한국어"];                                                                      // 8
+                                                                                                                       // 9
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 },"service.ko.i18n.json":function(){
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -3361,146 +3340,172 @@ if (Meteor.isClient) {                                                          
 //                                                                                                                     //
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                                                                                                                        //
-Rsvps = new Mongo.Collection("rsvps");                                                                                 // 1
+Recording = new Mongo.Collection("Recording");                                                                         // 1
                                                                                                                        //
-Rsvps.attachSchema(new SimpleSchema({                                                                                  // 3
-  name: {                                                                                                              // 4
-    type: String,                                                                                                      // 5
-    label: "Name *",                                                                                                   // 6
-    optional: false,                                                                                                   // 7
-    min: 2,                                                                                                            // 8
-    max: 80                                                                                                            // 9
-  },                                                                                                                   // 4
-  last: {                                                                                                              // 11
-    type: String,                                                                                                      // 12
-    label: "Last Name *",                                                                                              // 13
-    optional: false,                                                                                                   // 14
-    min: 2,                                                                                                            // 15
-    max: 80                                                                                                            // 16
-  },                                                                                                                   // 11
-  organization: {                                                                                                      // 18
-    type: String,                                                                                                      // 19
-    label: "Name of your business *",                                                                                  // 20
-    optional: false,                                                                                                   // 21
-    min: 2,                                                                                                            // 22
-    max: 80                                                                                                            // 23
-  },                                                                                                                   // 18
-  website: {                                                                                                           // 25
-    type: String,                                                                                                      // 26
-    label: "Web Address (If you have one)",                                                                            // 27
-    optional: false,                                                                                                   // 28
-    min: 4,                                                                                                            // 29
-    max: 80                                                                                                            // 30
-  },                                                                                                                   // 25
-  email: {                                                                                                             // 32
-    type: String,                                                                                                      // 33
-    label: "Email Address *",                                                                                          // 34
-    optional: false,                                                                                                   // 35
-    min: 5,                                                                                                            // 36
-    max: 80                                                                                                            // 37
-  },                                                                                                                   // 32
-  budget: {                                                                                                            // 39
-    type: String,                                                                                                      // 40
-    label: "Estimated Budget for your project",                                                                        // 41
-    optional: false,                                                                                                   // 42
-    min: 1,                                                                                                            // 43
-    max: 80                                                                                                            // 44
-  },                                                                                                                   // 39
-  phone: {                                                                                                             // 46
-    type: Number,                                                                                                      // 47
-    label: "Cellphone # *",                                                                                            // 48
-    optional: false                                                                                                    // 49
-  },                                                                                                                   // 46
-  industry: {                                                                                                          // 51
-    type: String,                                                                                                      // 52
-    label: "What industry is your business in? *",                                                                     // 53
-    optional: false                                                                                                    // 54
-  },                                                                                                                   // 51
-  Competitors: {                                                                                                       // 56
-    type: String,                                                                                                      // 57
-    label: "Competitors? *",                                                                                           // 58
-    optional: false                                                                                                    // 59
-  },                                                                                                                   // 56
-  iadSense: {                                                                                                          // 61
-    type: String,                                                                                                      // 62
-    optional: false,                                                                                                   // 63
-    label: "How did you hear about us?",                                                                               // 64
-    autoform: {                                                                                                        // 65
+Recording.attachSchema(new SimpleSchema({                                                                              // 3
                                                                                                                        //
-      options: [{                                                                                                      // 67
-        label: "Prior Client",                                                                                         // 69
-        value: "Prior Client"                                                                                          // 70
-      }, {                                                                                                             // 68
-        label: "Referral",                                                                                             // 73
-        value: "Referral"                                                                                              // 74
-      }, {                                                                                                             // 72
-        label: "Our Website",                                                                                          // 77
-        value: "Our Website"                                                                                           // 78
-      }, {                                                                                                             // 76
-        label: "Search Engine",                                                                                        // 81
-        value: "Search Engine"                                                                                         // 82
-      }, {                                                                                                             // 80
-        label: "Other",                                                                                                // 85
-        value: "Other"                                                                                                 // 86
-      }]                                                                                                               // 84
-    }                                                                                                                  // 65
-  },                                                                                                                   // 61
+   pressureTop: {                                                                                                      // 7
+      type: Number,                                                                                                    // 8
+      label: "혈압 (위)"                                                                                                  // 9
+   },                                                                                                                  // 7
+   pressureDown: {                                                                                                     // 11
+      type: Number,                                                                                                    // 12
+      label: "혈압 (아래)"                                                                                                 // 13
+   },                                                                                                                  // 11
+   pulse: {                                                                                                            // 15
+      type: Number,                                                                                                    // 16
+      label: "맥박"                                                                                                      // 17
                                                                                                                        //
-  whatElse: {                                                                                                          // 92
-    type: String,                                                                                                      // 93
-    optional: true,                                                                                                    // 94
-    label: "Anything else we might need to know?",                                                                     // 95
-    min: 20,                                                                                                           // 96
-    max: 1000,                                                                                                         // 97
-    autoform: {                                                                                                        // 98
-      rows: 5                                                                                                          // 99
-    }                                                                                                                  // 98
-  },                                                                                                                   // 92
-  another: {                                                                                                           // 102
-    type: Boolean,                                                                                                     // 103
-    optional: false,                                                                                                   // 104
-    autoform: {                                                                                                        // 105
-      type: "switch",                                                                                                  // 106
-      trueLabel: "Online",                                                                                             // 107
-      falseLabel: "Offline"                                                                                            // 108
-    }                                                                                                                  // 105
-  },                                                                                                                   // 102
+   },                                                                                                                  // 15
+   takeNote: {                                                                                                         // 20
+      type: Boolean,                                                                                                   // 21
+      defaultValue: false,                                                                                             // 22
+      label: 'important?'                                                                                              // 23
+   },                                                                                                                  // 20
+   pressureType: {                                                                                                     // 25
+      type: String,                                                                                                    // 26
+      autoform: {                                                                                                      // 27
+         options: [{                                                                                                   // 28
+            label: '저혈압',                                                                                              // 30
+            value: 'low'                                                                                               // 31
+         }, {                                                                                                          // 29
+            label: '정상',                                                                                               // 34
+            value: 'normal'                                                                                            // 35
+         }, {                                                                                                          // 33
+            label: '고혈압',                                                                                              // 38
+            value: 'high'                                                                                              // 39
+         }]                                                                                                            // 37
+      }                                                                                                                // 27
                                                                                                                        //
-  createdAt: {                                                                                                         // 112
-    type: Date,                                                                                                        // 113
-    autoValue: function () {                                                                                           // 114
-      function autoValue() {                                                                                           // 114
-        return new Date();                                                                                             // 115
-      }                                                                                                                // 116
+   },                                                                                                                  // 25
+   pulseType: {                                                                                                        // 45
+      type: String,                                                                                                    // 46
+      autoform: {                                                                                                      // 47
+         options: [{                                                                                                   // 48
+            label: '저혈압',                                                                                              // 50
+            value: 'low'                                                                                               // 51
+         }, {                                                                                                          // 49
+            label: '정상',                                                                                               // 54
+            value: 'normal'                                                                                            // 55
+         }, {                                                                                                          // 53
+            label: '고혈압',                                                                                              // 58
+            value: 'high'                                                                                              // 59
+         }]                                                                                                            // 57
+      }                                                                                                                // 47
                                                                                                                        //
-      return autoValue;                                                                                                // 114
-    }()                                                                                                                // 114
-  }                                                                                                                    // 112
+   },                                                                                                                  // 45
+   specialNote: {                                                                                                      // 65
+      type: String,                                                                                                    // 66
+                                                                                                                       //
+      label: "특정사항",                                                                                                   // 68
+      optional: true                                                                                                   // 69
+                                                                                                                       //
+   },                                                                                                                  // 65
+   createdAt: {                                                                                                        // 72
+      type: Date,                                                                                                      // 73
+      autoValue: function () {                                                                                         // 74
+         function autoValue() {                                                                                        // 74
+            return new Date();                                                                                         // 75
+         }                                                                                                             // 76
+                                                                                                                       //
+         return autoValue;                                                                                             // 74
+      }()                                                                                                              // 74
+   }                                                                                                                   // 72
 }));                                                                                                                   // 3
+Months = new Mongo.Collection("Months");                                                                               // 79
                                                                                                                        //
-Rsvps.allow({                                                                                                          // 120
-  insert: function () {                                                                                                // 121
-    function insert(userId, doc) {                                                                                     // 121
-      return true;                                                                                                     // 122
-    }                                                                                                                  // 123
+Months.attachSchema(new SimpleSchema({                                                                                 // 81
+   monthsName: {                                                                                                       // 82
+      type: String,                                                                                                    // 83
+      autoform: {                                                                                                      // 84
+         options: [{                                                                                                   // 85
+            label: '1월',                                                                                               // 87
+            value: 'January'                                                                                           // 88
+         }, {                                                                                                          // 86
+            label: '2월',                                                                                               // 91
+            value: 'February'                                                                                          // 92
+         }, {                                                                                                          // 90
+            label: '3월',                                                                                               // 95
+            value: 'March'                                                                                             // 96
+         }, {                                                                                                          // 94
+            label: '4월',                                                                                               // 99
+            value: 'April'                                                                                             // 100
+         }, {                                                                                                          // 98
+            label: '5월',                                                                                               // 103
+            value: 'May'                                                                                               // 104
+         }, {                                                                                                          // 102
+            label: '6월',                                                                                               // 107
+            value: 'June'                                                                                              // 108
+         }, {                                                                                                          // 106
+            label: '7월',                                                                                               // 111
+            value: 'July'                                                                                              // 112
+         }, {                                                                                                          // 110
+            label: '8월',                                                                                               // 115
+            value: 'August'                                                                                            // 116
+         }, {                                                                                                          // 114
+            label: '9월',                                                                                               // 119
+            value: 'September'                                                                                         // 120
+         }, {                                                                                                          // 118
+            label: '10월',                                                                                              // 123
+            value: 'October'                                                                                           // 124
+         }, {                                                                                                          // 122
+            label: '11월',                                                                                              // 127
+            value: 'November'                                                                                          // 128
+         }, {                                                                                                          // 126
+            label: '12월',                                                                                              // 131
+            value: 'December'                                                                                          // 132
+         }]                                                                                                            // 130
+      }                                                                                                                // 84
                                                                                                                        //
-    return insert;                                                                                                     // 121
-  }(),                                                                                                                 // 121
-  update: function () {                                                                                                // 124
-    function update(userId, doc, fields, modifier) {                                                                   // 124
-      return true;                                                                                                     // 125
-    }                                                                                                                  // 126
+   }                                                                                                                   // 82
+}));                                                                                                                   // 81
                                                                                                                        //
-    return update;                                                                                                     // 124
-  }(),                                                                                                                 // 124
-  remove: function () {                                                                                                // 127
-    function remove(userId, doc) {                                                                                     // 127
-      return true;                                                                                                     // 128
-    }                                                                                                                  // 129
+Months.allow({                                                                                                         // 140
+   insert: function () {                                                                                               // 141
+      function insert(userId, doc) {                                                                                   // 141
+         return true;                                                                                                  // 142
+      }                                                                                                                // 143
                                                                                                                        //
-    return remove;                                                                                                     // 127
-  }()                                                                                                                  // 127
-});                                                                                                                    // 120
+      return insert;                                                                                                   // 141
+   }(),                                                                                                                // 141
+   update: function () {                                                                                               // 144
+      function update(userId, doc, fields, modifier) {                                                                 // 144
+         return true;                                                                                                  // 145
+      }                                                                                                                // 146
+                                                                                                                       //
+      return update;                                                                                                   // 144
+   }(),                                                                                                                // 144
+   remove: function () {                                                                                               // 147
+      function remove(userId, doc) {                                                                                   // 147
+         return true;                                                                                                  // 148
+      }                                                                                                                // 149
+                                                                                                                       //
+      return remove;                                                                                                   // 147
+   }()                                                                                                                 // 147
+});                                                                                                                    // 140
+Recording.allow({                                                                                                      // 151
+   insert: function () {                                                                                               // 152
+      function insert(userId, doc) {                                                                                   // 152
+         return true;                                                                                                  // 153
+      }                                                                                                                // 154
+                                                                                                                       //
+      return insert;                                                                                                   // 152
+   }(),                                                                                                                // 152
+   update: function () {                                                                                               // 155
+      function update(userId, doc, fields, modifier) {                                                                 // 155
+         return true;                                                                                                  // 156
+      }                                                                                                                // 157
+                                                                                                                       //
+      return update;                                                                                                   // 155
+   }(),                                                                                                                // 155
+   remove: function () {                                                                                               // 158
+      function remove(userId, doc) {                                                                                   // 158
+         return true;                                                                                                  // 159
+      }                                                                                                                // 160
+                                                                                                                       //
+      return remove;                                                                                                   // 158
+   }()                                                                                                                 // 158
+});                                                                                                                    // 151
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 }},"controller":{"applicationcontroller.js":function(){
@@ -3688,6 +3693,7 @@ mainController = RouteController.extend({                                       
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 }}},{"extensions":[".js",".json",".html",".coffee",".css",".less"]});
+require("./client/templates/portfolio/works/template.work.js");
 require("./client/layout/appLayout/template.appLayout.js");
 require("./client/layout/appLayout/template.dashboard.js");
 require("./client/layout/appLayout/template.loginLayout.js");
@@ -3711,6 +3717,7 @@ require("./both/i18n/en/contact.en.i18n.json");
 require("./both/i18n/en/header.en.i18n.json");
 require("./both/i18n/en/home.en.i18n.json");
 require("./both/i18n/en/portfolio.en.i18n.json");
+require("./both/i18n/en/projects.en.i18n.json");
 require("./both/i18n/en/service.en.i18n.json");
 require("./both/i18n/en/success.en.i18n.json");
 require("./both/i18n/ko/about.ko.i18n.json");
@@ -3718,6 +3725,7 @@ require("./both/i18n/ko/contact.ko.i18n.json");
 require("./both/i18n/ko/header.ko.i18n.json");
 require("./both/i18n/ko/home.ko.i18n.json");
 require("./both/i18n/ko/portfolio.ko.i18n.json");
+require("./both/i18n/ko/projects.ko.i18n.json");
 require("./both/i18n/ko/service.ko.i18n.json");
 require("./both/i18n/ko/success.ko.i18n.json");
 require("./client/layout/appLayout/appLayout.js");

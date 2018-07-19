@@ -162,7 +162,33 @@ Router.route 'portfolio',
      'og:title': ->
       document.title
      'og:site_name': 'My Work'        
+Router.route 'someOfWork',
+  template: 'someOfWork'
+  path: '/current-projects'
+  title: 'Current Projects' 
+  meta:
+    description:
+      name: 'description'
+      itemprop: 'description'
+      property: 'og:description'
+      content:  'Check out some of the things I am working on at the moment! '
+    keywords: 
+      name: 'keywords'
+      itemprop: 'keywords'
+      content: ' web, mobile, website, mobile app, meteor, meteor.js, node.js, web development'
+     image:
+      itemprop: 'image'
+      property: 'og:image'
+      content: '/img/drawnPic.jpg'
+     url:
+      property: 'og:url'
+      itemprop: 'url'
+      content: 'http://www.jaulzlee.com/current-projects'
         
+     'og:type': 'website'
+     'og:title': ->
+      document.title
+     'og:site_name': 'Current Projects'       
 Router.route 'approach',
   template: 'approach'
   path: '/how-we-work'
@@ -277,4 +303,5 @@ Router.route 'register',
 Router.route 'policy',
   template: 'policy'
   path: '/policies'
-      
+  
+            

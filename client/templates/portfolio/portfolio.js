@@ -1,6 +1,7 @@
 Template.portfolio.rendered = function() {
   $('.materialboxed').materialbox();
      $('.scrollspy').scrollSpy();
+   
 new WOW().init({mobile: false});
 //checks if element it is called on is visible (only checks horizontally
 (function($) {
@@ -74,6 +75,7 @@ new WOW().init({mobile: false});
 
   });
 })(jQuery);
- 
+
+
  
 };

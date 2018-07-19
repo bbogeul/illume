@@ -213,14 +213,34 @@ install("meteorspark:util");                                                 // 
 install("tap:i18n");                                                         // 119
 install("less");                                                             // 120
 install("mdg:seo");                                                          // 121
-install("webapp");                                                           // 122
-install("hot-code-push");                                                    // 123
-install("launch-screen");                                                    // 124
-install("dferber:prerender");                                                // 125
-install("autoupdate");                                                       // 126
-install("mdg:validation-error");                                             // 127
-install("service-configuration");                                            // 128
-                                                                             // 129
+install("themeteorchef:bert");                                               // 122
+install("meteortoys:toykit");                                                // 123
+install("msavin:mongol");                                                    // 124
+install("msavin:jetsetter");                                                 // 125
+install("meteortoys:blueprint");                                             // 126
+install("meteortoys:authenticate");                                          // 127
+install("meteortoys:shell");                                                 // 128
+install("meteortoys:method");                                                // 129
+install("meteortoys:result");                                                // 130
+install("meteortoys:autopub");                                               // 131
+install("meteortoys:pub");                                                   // 132
+install("meteortoys:sub");                                                   // 133
+install("meteortoys:email");                                                 // 134
+install("meteortoys:listen");                                                // 135
+install("meteortoys:throttle");                                              // 136
+install("meteortoys:status");                                                // 137
+install("meteortoys:hotreload");                                             // 138
+install("meteortoys:toggle");                                                // 139
+install("meteortoys:mobile");                                                // 140
+install("meteortoys:allthings");                                             // 141
+install("webapp");                                                           // 142
+install("hot-code-push");                                                    // 143
+install("launch-screen");                                                    // 144
+install("dferber:prerender");                                                // 145
+install("autoupdate");                                                       // 146
+install("mdg:validation-error");                                             // 147
+install("service-configuration");                                            // 148
+                                                                             // 149
 ///////////////////////////////////////////////////////////////////////////////
 
 },"process.js":["process",function(require,exports,module){

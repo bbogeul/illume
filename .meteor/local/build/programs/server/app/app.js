@@ -204,7 +204,41 @@ Router.route('portfolio', {                                                     
   }                                                                                                  //
 });                                                                                                  //
                                                                                                      //
-Router.route('approach', {                                                                           // 166
+Router.route('someOfWork', {                                                                         // 165
+  template: 'someOfWork',                                                                            //
+  path: '/current-projects',                                                                         //
+  title: 'Current Projects',                                                                         //
+  meta: {                                                                                            //
+    description: {                                                                                   //
+      name: 'description',                                                                           //
+      itemprop: 'description',                                                                       //
+      property: 'og:description',                                                                    //
+      content: 'Check out some of the things I am working on at the moment! '                        //
+    },                                                                                               //
+    keywords: {                                                                                      //
+      name: 'keywords',                                                                              //
+      itemprop: 'keywords',                                                                          //
+      content: ' web, mobile, website, mobile app, meteor, meteor.js, node.js, web development'      //
+    },                                                                                               //
+    image: {                                                                                         //
+      itemprop: 'image',                                                                             //
+      property: 'og:image',                                                                          //
+      content: '/img/drawnPic.jpg'                                                                   //
+    },                                                                                               //
+    url: {                                                                                           //
+      property: 'og:url',                                                                            //
+      itemprop: 'url',                                                                               //
+      content: 'http://www.jaulzlee.com/current-projects'                                            //
+    },                                                                                               //
+    'og:type': 'website',                                                                            //
+    'og:title': function() {                                                                         //
+      return document.title;                                                                         //
+    },                                                                                               //
+    'og:site_name': 'Current Projects'                                                               //
+  }                                                                                                  //
+});                                                                                                  //
+                                                                                                     //
+Router.route('approach', {                                                                           // 192
   template: 'approach',                                                                              //
   path: '/how-we-work',                                                                              //
   title: 'How We Work',                                                                              //
@@ -233,7 +267,7 @@ Router.route('approach', {                                                      
   }                                                                                                  //
 });                                                                                                  //
                                                                                                      //
-Router.route('lessons', {                                                                            // 190
+Router.route('lessons', {                                                                            // 216
   template: 'lessons',                                                                               //
   path: '/services/web-lessons',                                                                     //
   title: 'Web Lessons',                                                                              //
@@ -267,7 +301,7 @@ Router.route('lessons', {                                                       
   }                                                                                                  //
 });                                                                                                  //
                                                                                                      //
-Router.route('applications', {                                                                       // 218
+Router.route('applications', {                                                                       // 244
   template: 'applications',                                                                          //
   layoutTemplate: 'appLayout',                                                                       //
   path: '/contact-me',                                                                               //
@@ -281,7 +315,7 @@ Router.route('applications', {                                                  
   }                                                                                                  //
 });                                                                                                  //
                                                                                                      //
-Router.route('application', {                                                                        // 229
+Router.route('application', {                                                                        // 255
   template: 'application',                                                                           //
   path: '/backend',                                                                                  //
   layoutTemplate: 'loginLayout',                                                                     //
@@ -296,14 +330,14 @@ Router.route('application', {                                                   
   }                                                                                                  //
 });                                                                                                  //
                                                                                                      //
-Router.route('rsvp', {                                                                               // 241
+Router.route('rsvp', {                                                                               // 267
   template: 'rsvp',                                                                                  //
   controller: 'RsvpController',                                                                      //
   action: 'action',                                                                                  //
   where: 'client'                                                                                    //
 });                                                                                                  //
                                                                                                      //
-Router.route('login', {                                                                              // 246
+Router.route('login', {                                                                              // 272
   template: 'login',                                                                                 //
   layoutTemplate: 'loginLayout',                                                                     //
   path: '/login',                                                                                    //
@@ -317,7 +351,7 @@ Router.route('login', {                                                         
   }                                                                                                  //
 });                                                                                                  //
                                                                                                      //
-Router.route('dashboards', {                                                                         // 256
+Router.route('dashboards', {                                                                         // 282
   template: 'dashboards',                                                                            //
   layoutTemplate: 'loginLayout',                                                                     //
   controller: 'main2Controller',                                                                     //
@@ -332,7 +366,7 @@ Router.route('dashboards', {                                                    
   }                                                                                                  //
 });                                                                                                  //
                                                                                                      //
-Router.route('register', {                                                                           // 267
+Router.route('register', {                                                                           // 293
   template: 'register',                                                                              //
   layoutTemplate: 'registerTemplate',                                                                //
   path: '/register',                                                                                 //
@@ -346,7 +380,7 @@ Router.route('register', {                                                      
   }                                                                                                  //
 });                                                                                                  //
                                                                                                      //
-Router.route('policy', {                                                                             // 277
+Router.route('policy', {                                                                             // 303
   template: 'policy',                                                                                //
   path: '/policies'                                                                                  //
 });                                                                                                  //
@@ -418,7 +452,7 @@ if (package_name != "project") {
 }
 // integrate the fallback language translations 
 translations = {};
-translations[namespace] = {"about":"About me","howWeWork":"How I work","ourServices":"Services","portfolio":"My work","reachUs":"Reach me"};
+translations[namespace] = {"about":"About me","howWeWork":"How I work","ourServices":"Services","portfolio":"My work","reachUs":"Reach me","myResume":"My Resume"};
 TAPi18n._loadLangFileObject("en", translations);
 TAPi18n._registerServerTranslator("en", namespace);
 
@@ -441,7 +475,7 @@ if (package_name != "project") {
 }
 // integrate the fallback language translations 
 translations = {};
-translations[namespace] = {"whatWeDo":"Hey, I'm Joe. Pleasure to meet you.","mission1":"Since beginning my journey as a freelance designer nearly 5 years ago, I've done remote work for businesses, consulted for startups, non-profit orgs, and collaborated with talented people to create digital products for both business and personal use. I'm quietly confident, naturally curious, and perpetually improving my chops.","koreaAdd":"","mission2":"You’ll finish with a data-driven product roadmap that outlines your path to successful launch all before a single line of code is written. Once that is done, we get to work.","innovative":"Innovative","bridging":"Bridging Mobile & Web","tailored":"Tailored For You","learnMore":"More about me","viewMore":"Want to see more?","roadTo":"Let's make you a","developDesigner":"Developer, Designer, and Coffee Addict","someOfOurWork":"SOME OF MY RECENT WORK","allOfOurWebsites":"All of the websites and hybrid applications are based on Meteor.","fastSleek":"They are all fast, sleek, and ready to make a change in their respective industries.","madeWith":"Made with ","madeWithK":"","weBuild":"Building with reactivity in mind","reactiveJavascript":"and utilizing JavaScript","fullest":"to its fullest","embrace":"Embracing the 21st century,","dynamicReactive":"dynamic reactivity is now ","21stC":"in the palm of your hands.","createProducts":"Creating the products with ","youInMind":"with YOU in mind ","createSuccess":"to create success.","insteadOf":"Instead of just handing over a set of deliverables, I work with you to achieve the results you want. We’ll test your ideas together in the marketplace, gather real data, and discover the key benefits of your concept, then create stunning visuals and a comprehensive backlog to serve as an investor-ready MVP. Setting this foundation means you’re not just walking away with a roadmap to a product","walkAway":"you’re walking away with the peace of mind that your product is what people want.","areYouGame":"ARE YOU GAME?","coffee":"First coffee is on me.","loveToHear":"Would love to hear more?","alwaysOpen":"I’m always open to discussing product design work or partnership opportunities.","getStarted":"Start a conversation"};
+translations[namespace] = {"whatWeDo":"Hey, I'm Joe. Pleasure to meet you.","mission1":"Since beginning my journey as a freelance designer nearly 5 years ago, I've done remote work for businesses, consulted for startups, non-profit orgs, and collaborated with talented people to create digital products for both business and personal use. I'm quietly confident, naturally curious, and perpetually improving my chops.","koreaAdd":"","mission2":"You’ll finish with a data-driven product roadmap that outlines your path to successful launch all before a single line of code is written. Once that is done, we get to work.","innovative":"Innovative","bridging":"Bridging Mobile & Web","tailored":"Tailored For You","learnMore":"More about me","viewMore":"Want to see more?","roadTo":"Let's make you a","developDesigner":"Developer, Designer, and Coffee Addict","someOfOurWork":"SOME OF MY RECENT WORK","allOfOurWebsites":"All of the websites and hybrid applications are based on Meteor.","fastSleek":"They are all fast, sleek, and ready to make a change in their respective industries.","madeWith":"Made with ","madeWithK":"","weBuild":"Building with reactivity in mind","reactiveJavascript":"and utilizing JavaScript","fullest":"to its fullest","embrace":"Embracing the 21st century,","dynamicReactive":"dynamic reactivity is now ","21stC":"in the palm of your hands.","createProducts":"Creating the products with ","youInMind":"with YOU in mind ","createSuccess":"to create success.","insteadOf":"Instead of just handing over a set of deliverables, I work with you to achieve the results you want. We’ll test your ideas together in the marketplace, gather real data, and discover the key benefits of your concept, then create stunning visuals and a comprehensive backlog to serve as an investor-ready MVP. Setting this foundation means you’re not just walking away with a roadmap to a product","walkAway":"you’re walking away with the peace of mind that your product is what people want.","areYouGame":"READY?","coffee":"First coffee is on me.","loveToHear":"Would love to hear more?","alwaysOpen":"I’m always open to discussing product design work or partnership opportunities.","getStarted":"Start a conversation"};
 TAPi18n._loadLangFileObject("en", translations);
 TAPi18n._registerServerTranslator("en", namespace);
 
@@ -465,6 +499,29 @@ if (package_name != "project") {
 // integrate the fallback language translations 
 translations = {};
 translations[namespace] = {"myWebsitesAre":"My websites are built with ","secondMyWeb":"","stateOfArt":"a state of the art native container - which increases reactivity and performance to a whole new level.","weMakeGraphics":"We make all of our graphics inhouse. Every single graphic work has been made with","aBitOf":"and a little bit of imagination.","currentProjects":"CURRENT PROJECTS"};
+TAPi18n._loadLangFileObject("en", translations);
+TAPi18n._registerServerTranslator("en", namespace);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+},"projects.en.i18n.json":function(){
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                   //
+// both/i18n/en/projects.en.i18n.json                                                                //
+//                                                                                                   //
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                                                                     //
+var _ = Package.underscore._,
+    package_name = "project",
+    namespace = "project";
+
+if (package_name != "project") {
+    namespace = TAPi18n.packages[package_name].namespace;
+}
+// integrate the fallback language translations 
+translations = {};
+translations[namespace] = {"currentProjects":"Current Projects in Dev"};
 TAPi18n._loadLangFileObject("en", translations);
 TAPi18n._registerServerTranslator("en", namespace);
 
@@ -540,7 +597,7 @@ if(_.isUndefined(TAPi18n.translations["ko"][namespace])) {
   TAPi18n.translations["ko"][namespace] = {};
 }
 
-_.extend(TAPi18n.translations["ko"][namespace], {"aboutIllume":"저의 목표는 간단합니다. 당신의 비즈니스 아이디어를 성공의 길을 걷게끔 도와드리는겁니다. 연구에서 해결방안까지, 성공하기 힘든 경쟁에서 저희 웹사이트로 성공할 수 있도록 끝까지 노력하는 것이 일룸의 미션입니다. 당신의 상황에 맞는 해결방안을 제시하면서 경쟁자들과 승부할 수 있는 비밀병기를 만들 수 있도록 저희 일룸이 도와드리겠습니다.","webAndMobile":"웹과 모바일을, ","intoOne":"하나로","secretWeapon":"비밀병기,","iValue":"단순한 콘텐츠 구조, 깨끗한 디자인 패턴 및 사려 깊은 상호 작용을 중시합니다.","iCode":"처음부터 끝까지 코딩하고 브라우저에다 다양한 아이디어를 현실로 만드는 것을 즐깁니다.","moreMe":"게임도 하고, 책도 읽지만, 사랑하는 사람들이랑 시간 보내는 것이 제일 좋습니다.","thingsDesign":"디자인하는 것들은:","languageSpeak":"사용할 줄 아는 프로그램잉 언어:","thingsLike":"제가 좋아하는 것들:","myTools":"제가 쓰는 도구들:","meteor":"미티어","coffeeAnd":"커피, 컴퓨터 게임, 코딩, 친구들이랑 놀기, 아 그리고 커피 ","occasionally":"가끔 사용","learnMoreHybrid":"하이브리드 어플의 대해서 더 알아보기","webDesc":"삼성 SDS는 2010년 12월, 웹의 다양성과 모바일 앱의 역학을 융합 할 수있는 네이티브 컨테이너 플랫폼이 소프트웨어 엔지니어링의 새로운 미래를 가져올 것이라고 예측했습니다. 이른바 '하이브리드 앱'은 모든 기기의 모든 플랫폼에서 아이디어를 가져옵니다. 시장을 침투하기위한 벽을 무너 뜨리며 새로운 혁신을 가져올 수 있는 기회라고 예측했습니다. 이 두 가지 장점을 모두 경험하고 아이디어를 통해 활력이 있는 어플을 만들어 봅시다.","silos":"저는 궁극적으로 실패 할 것이라는 것을 알고 있기 때문에 필요하지 않은 모든 부분들을 잘라 냈습니다. 우리는 귀하의 비즈니스를 진실하게 만드는 요소를 찾으려고 노력하므로 귀하에게 적합한 맞춤형 하이엔드 웹 사이트를 구축 할 수 있도록 최선을 다할 것입니다. Meteor는 아름답고 강력한 응용 프로그램을 만드는 데있어 강력한 유연성을 제공하는 Node.JS 플랫폼입니다. 저는 앞으로 일얼날 웹-혁명을 기꺼이 받아들이는 엔지니어 공동체의 일원임을 자랑스럽게 기여하고 있습니다. 기다리지 말고 지금 미티어를 만나보세요.","discoverMeteor":"미티어 만나보세요","leeSang":"이상준","leadDeveloper":"거의 5 년 전에 프리랜서 디자이너로서의 여정을 시작한 이래 저는 사업을위한 원격 업무를 수행하고 신생 기업, 비영리 조직과 협의했으며 재능있는 사람들과 협력하여 비즈니스 및 개인용 디지털 제품을 만들었습니다. 저는 자신감이 있으며 호기심이 많으며 끊임없이 제 실력을 개선하고 있습니다. 꾸준히 실력을 키우면서 새로운 도전을 찾으면서 자기개발에 기여하고 있습니다. 저는 간단하면서 강력한 디자인을 추구하며 웹사이트의 내용을 쉽게 파악할 수 있는 UX/UI가 웹의 미래라고 생각합니다.","aLittleAboutMeteor":"미티어 대해서 잠깐!","readySetGo":"준비~, 시작!","meteorJs":"미티어.JS"});
+_.extend(TAPi18n.translations["ko"][namespace], {"aboutIllume":"저의 목표는 간단합니다. 당신의 비즈니스 아이디어를 성공의 길을 걷게끔 도와드리는겁니다. 연구에서 해결방안까지, 성공하기 힘든 경쟁에서 저희 웹사이트로 성공할 수 있도록 끝까지 노력하는 것이 일룸의 미션입니다. 당신의 상황에 맞는 해결방안을 제시하면서 경쟁자들과 승부할 수 있는 비밀병기를 만들 수 있도록 저희 일룸이 도와드리겠습니다.","webAndMobile":"웹과 모바일을, ","intoOne":"하나로","secretWeapon":"비밀병기,","iValue":"단순한 콘텐츠 구조, 깨끗한 디자인 패턴 및 사려 깊은 상호 작용을 중시합니다.","iCode":"처음부터 끝까지 코딩하고 브라우저에다 다양한 아이디어를 현실로 만드는 것을 즐깁니다.","moreMe":"게임도 하고, 책도 읽지만, 사랑하는 사람들이랑 시간 보내는 것이 제일 좋습니다.","thingsDesign":"디자인하는 것들은:","languageSpeak":"사용할 줄 아는 프로그램잉 언어:","thingsLike":"제가 좋아하는 것들:","myTools":"제가 쓰는 도구들:","meteor":"미티어","coffeeAnd":"커피, 컴퓨터 게임, 코딩, 친구들이랑 놀기, 아 그리고 커피 ","occasionally":"가끔 사용","learnMoreHybrid":"하이브리드 어플의 대해서 더 알아보기","webDesc":"삼성 SDS는 2010년 12월, 웹의 다양성과 모바일 앱의 역학을 융합 할 수있는 네이티브 컨테이너 플랫폼이 소프트웨어 엔지니어링의 새로운 미래를 가져올 것이라고 예측했습니다. 이른바 '하이브리드 앱'은 모든 기기의 모든 플랫폼에서 아이디어를 가져옵니다. 시장을 침투하기위한 벽을 무너 뜨리며 새로운 혁신을 가져올 수 있는 기회라고 예측했습니다. 이 두 가지 장점을 모두 경험하고 아이디어를 통해 활력이 있는 어플을 만들어 봅시다.","silos":"저는 궁극적으로 실패 할 것이라는 것을 알고 있기 때문에 필요하지 않은 모든 부분들을 잘라 냈습니다. 우리는 귀하의 비즈니스를 진실하게 만드는 요소를 찾으려고 노력하므로 귀하에게 적합한 맞춤형 하이엔드 웹 사이트를 구축 할 수 있도록 최선을 다할 것입니다. Meteor는 아름답고 강력한 응용 프로그램을 만드는 데있어 강력한 유연성을 제공하는 Node.JS 플랫폼입니다. 저는 앞으로 일얼날 웹-혁명을 기꺼이 받아들이는 엔지니어 공동체의 일원임을 자랑스럽게 기여하고 있습니다. 기다리지 말고 지금 미티어를 만나보세요.","discoverMeteor":"미티어 만나보세요","leeSang":"이상준","leadDeveloper":"거의 5 년 전에 프리랜서 디자이너로서의 여정을 시작한 이래 저는 사업을 위한 원격 업무를 수행하고 신생 기업, 비영리 조직과 협의했으며 재능있는 사람들과 협력하여 비즈니스 및 개인용 디지털 제품을 만들었습니다. 저는 자신감이 있으며 호기심이 많으며 끊임없이 제 실력을 개선하고 있습니다. 꾸준히 실력을 키우면서 새로운 도전을 찾으면서 자기개발에 기여하고 있습니다. 저는 간단하면서 강력한 디자인을 추구하며 웹사이트의 내용을 쉽게 파악할 수 있는 UX/UI가 웹의 미래라고 생각합니다.","aLittleAboutMeteor":"미티어 대해서 잠깐!","readySetGo":"준비~, 시작!","meteorJs":"미티어.JS"});
 TAPi18n._registerServerTranslator("ko", namespace);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -598,7 +655,7 @@ if(_.isUndefined(TAPi18n.translations["ko"][namespace])) {
   TAPi18n.translations["ko"][namespace] = {};
 }
 
-_.extend(TAPi18n.translations["ko"][namespace], {"about":"저에 대해서","howWeWork":"성공비결","ourServices":"서비스","portfolio":"Portfolio","reachUs":"연락처"});
+_.extend(TAPi18n.translations["ko"][namespace], {"about":"저에 대해서","howWeWork":"성공비결","ourServices":"서비스","portfolio":"Portfolio","reachUs":"연락처","myResume":"이력서"});
 TAPi18n._registerServerTranslator("ko", namespace);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -657,6 +714,35 @@ if(_.isUndefined(TAPi18n.translations["ko"][namespace])) {
 }
 
 _.extend(TAPi18n.translations["ko"][namespace], {"myWebsitesAre":"제가 개발하는 웹사이트들은 모두 ","secondMyWeb":"만들어져 있습니다","stateOfArt":"새로운 수준으로 반응성과 성능을 향상시키는 최신 네이티브 컨테이너 환경.","weMakeGraphics":"모든 그래픽들은 직접 처음부터 끝까지 만들며","aBitOf":"과 상상력으로 제작합니다.","currentProjects":"현재 개발하고 있는 작품들"});
+TAPi18n._registerServerTranslator("ko", namespace);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+},"projects.ko.i18n.json":function(){
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                   //
+// both/i18n/ko/projects.ko.i18n.json                                                                //
+//                                                                                                   //
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                                                                     //
+var _ = Package.underscore._,
+    package_name = "project",
+    namespace = "project";
+
+if (package_name != "project") {
+    namespace = TAPi18n.packages[package_name].namespace;
+}
+TAPi18n.languages_names["ko"] = ["Korean","한국어"];
+if(_.isUndefined(TAPi18n.translations["ko"])) {
+  TAPi18n.translations["ko"] = {};
+}
+
+if(_.isUndefined(TAPi18n.translations["ko"][namespace])) {
+  TAPi18n.translations["ko"][namespace] = {};
+}
+
+_.extend(TAPi18n.translations["ko"][namespace], {"currentProjects":"현재 개발 중인 프로젝트"});
 TAPi18n._registerServerTranslator("ko", namespace);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -811,130 +897,144 @@ if (Meteor.isClient) {                                                          
 //                                                                                                   //
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
                                                                                                      //
-Rsvps = new Mongo.Collection("rsvps");                                                               // 1
+Recording = new Mongo.Collection("Recording");                                                       // 1
                                                                                                      //
-Rsvps.attachSchema(new SimpleSchema({                                                                // 3
-  name: {                                                                                            // 4
-    type: String,                                                                                    // 5
-    label: "Name *",                                                                                 // 6
-    optional: false,                                                                                 // 7
-    min: 2,                                                                                          // 8
-    max: 80                                                                                          // 9
-  },                                                                                                 // 4
-  last: {                                                                                            // 11
-    type: String,                                                                                    // 12
-    label: "Last Name *",                                                                            // 13
-    optional: false,                                                                                 // 14
-    min: 2,                                                                                          // 15
-    max: 80                                                                                          // 16
-  },                                                                                                 // 11
-  organization: {                                                                                    // 18
-    type: String,                                                                                    // 19
-    label: "Name of your business *",                                                                // 20
-    optional: false,                                                                                 // 21
-    min: 2,                                                                                          // 22
-    max: 80                                                                                          // 23
-  },                                                                                                 // 18
-  website: {                                                                                         // 25
-    type: String,                                                                                    // 26
-    label: "Web Address (If you have one)",                                                          // 27
-    optional: false,                                                                                 // 28
-    min: 4,                                                                                          // 29
-    max: 80                                                                                          // 30
-  },                                                                                                 // 25
-  email: {                                                                                           // 32
-    type: String,                                                                                    // 33
-    label: "Email Address *",                                                                        // 34
-    optional: false,                                                                                 // 35
-    min: 5,                                                                                          // 36
-    max: 80                                                                                          // 37
-  },                                                                                                 // 32
-  budget: {                                                                                          // 39
-    type: String,                                                                                    // 40
-    label: "Estimated Budget for your project",                                                      // 41
-    optional: false,                                                                                 // 42
-    min: 1,                                                                                          // 43
-    max: 80                                                                                          // 44
-  },                                                                                                 // 39
-  phone: {                                                                                           // 46
-    type: Number,                                                                                    // 47
-    label: "Cellphone # *",                                                                          // 48
-    optional: false                                                                                  // 49
-  },                                                                                                 // 46
-  industry: {                                                                                        // 51
-    type: String,                                                                                    // 52
-    label: "What industry is your business in? *",                                                   // 53
-    optional: false                                                                                  // 54
-  },                                                                                                 // 51
-  Competitors: {                                                                                     // 56
-    type: String,                                                                                    // 57
-    label: "Competitors? *",                                                                         // 58
-    optional: false                                                                                  // 59
-  },                                                                                                 // 56
-  iadSense: {                                                                                        // 61
-    type: String,                                                                                    // 62
-    optional: false,                                                                                 // 63
-    label: "How did you hear about us?",                                                             // 64
-    autoform: {                                                                                      // 65
+Recording.attachSchema(new SimpleSchema({                                                            // 3
                                                                                                      //
-      options: [{                                                                                    // 67
-        label: "Prior Client",                                                                       // 69
-        value: "Prior Client"                                                                        // 70
-      }, {                                                                                           // 68
-        label: "Referral",                                                                           // 73
-        value: "Referral"                                                                            // 74
-      }, {                                                                                           // 72
-        label: "Our Website",                                                                        // 77
-        value: "Our Website"                                                                         // 78
-      }, {                                                                                           // 76
-        label: "Search Engine",                                                                      // 81
-        value: "Search Engine"                                                                       // 82
-      }, {                                                                                           // 80
-        label: "Other",                                                                              // 85
-        value: "Other"                                                                               // 86
-      }]                                                                                             // 84
-    }                                                                                                // 65
-  },                                                                                                 // 61
+   pressureTop: {                                                                                    // 7
+      type: Number,                                                                                  // 8
+      label: "혈압 (위)"                                                                                // 9
+   },                                                                                                // 7
+   pressureDown: {                                                                                   // 11
+      type: Number,                                                                                  // 12
+      label: "혈압 (아래)"                                                                               // 13
+   },                                                                                                // 11
+   pulse: {                                                                                          // 15
+      type: Number,                                                                                  // 16
+      label: "맥박"                                                                                    // 17
                                                                                                      //
-  whatElse: {                                                                                        // 92
-    type: String,                                                                                    // 93
-    optional: true,                                                                                  // 94
-    label: "Anything else we might need to know?",                                                   // 95
-    min: 20,                                                                                         // 96
-    max: 1000,                                                                                       // 97
-    autoform: {                                                                                      // 98
-      rows: 5                                                                                        // 99
-    }                                                                                                // 98
-  },                                                                                                 // 92
-  another: {                                                                                         // 102
-    type: Boolean,                                                                                   // 103
-    optional: false,                                                                                 // 104
-    autoform: {                                                                                      // 105
-      type: "switch",                                                                                // 106
-      trueLabel: "Online",                                                                           // 107
-      falseLabel: "Offline"                                                                          // 108
-    }                                                                                                // 105
-  },                                                                                                 // 102
+   },                                                                                                // 15
+   takeNote: {                                                                                       // 20
+      type: Boolean,                                                                                 // 21
+      defaultValue: false,                                                                           // 22
+      label: 'important?'                                                                            // 23
+   },                                                                                                // 20
+   pressureType: {                                                                                   // 25
+      type: String,                                                                                  // 26
+      autoform: {                                                                                    // 27
+         options: [{                                                                                 // 28
+            label: '저혈압',                                                                            // 30
+            value: 'low'                                                                             // 31
+         }, {                                                                                        // 29
+            label: '정상',                                                                             // 34
+            value: 'normal'                                                                          // 35
+         }, {                                                                                        // 33
+            label: '고혈압',                                                                            // 38
+            value: 'high'                                                                            // 39
+         }]                                                                                          // 37
+      }                                                                                              // 27
                                                                                                      //
-  createdAt: {                                                                                       // 112
-    type: Date,                                                                                      // 113
-    autoValue: function autoValue() {                                                                // 114
-      return new Date();                                                                             // 115
-    }                                                                                                // 116
-  }                                                                                                  // 112
+   },                                                                                                // 25
+   pulseType: {                                                                                      // 45
+      type: String,                                                                                  // 46
+      autoform: {                                                                                    // 47
+         options: [{                                                                                 // 48
+            label: '저혈압',                                                                            // 50
+            value: 'low'                                                                             // 51
+         }, {                                                                                        // 49
+            label: '정상',                                                                             // 54
+            value: 'normal'                                                                          // 55
+         }, {                                                                                        // 53
+            label: '고혈압',                                                                            // 58
+            value: 'high'                                                                            // 59
+         }]                                                                                          // 57
+      }                                                                                              // 47
+                                                                                                     //
+   },                                                                                                // 45
+   specialNote: {                                                                                    // 65
+      type: String,                                                                                  // 66
+                                                                                                     //
+      label: "특정사항",                                                                                 // 68
+      optional: true                                                                                 // 69
+                                                                                                     //
+   },                                                                                                // 65
+   createdAt: {                                                                                      // 72
+      type: Date,                                                                                    // 73
+      autoValue: function autoValue() {                                                              // 74
+         return new Date();                                                                          // 75
+      }                                                                                              // 76
+   }                                                                                                 // 72
 }));                                                                                                 // 3
+Months = new Mongo.Collection("Months");                                                             // 79
                                                                                                      //
-Rsvps.allow({                                                                                        // 120
-  insert: function insert(userId, doc) {                                                             // 121
-    return true;                                                                                     // 122
-  },                                                                                                 // 123
-  update: function update(userId, doc, fields, modifier) {                                           // 124
-    return true;                                                                                     // 125
-  },                                                                                                 // 126
-  remove: function remove(userId, doc) {                                                             // 127
-    return true;                                                                                     // 128
-  }                                                                                                  // 129
-});                                                                                                  // 120
+Months.attachSchema(new SimpleSchema({                                                               // 81
+   monthsName: {                                                                                     // 82
+      type: String,                                                                                  // 83
+      autoform: {                                                                                    // 84
+         options: [{                                                                                 // 85
+            label: '1월',                                                                             // 87
+            value: 'January'                                                                         // 88
+         }, {                                                                                        // 86
+            label: '2월',                                                                             // 91
+            value: 'February'                                                                        // 92
+         }, {                                                                                        // 90
+            label: '3월',                                                                             // 95
+            value: 'March'                                                                           // 96
+         }, {                                                                                        // 94
+            label: '4월',                                                                             // 99
+            value: 'April'                                                                           // 100
+         }, {                                                                                        // 98
+            label: '5월',                                                                             // 103
+            value: 'May'                                                                             // 104
+         }, {                                                                                        // 102
+            label: '6월',                                                                             // 107
+            value: 'June'                                                                            // 108
+         }, {                                                                                        // 106
+            label: '7월',                                                                             // 111
+            value: 'July'                                                                            // 112
+         }, {                                                                                        // 110
+            label: '8월',                                                                             // 115
+            value: 'August'                                                                          // 116
+         }, {                                                                                        // 114
+            label: '9월',                                                                             // 119
+            value: 'September'                                                                       // 120
+         }, {                                                                                        // 118
+            label: '10월',                                                                            // 123
+            value: 'October'                                                                         // 124
+         }, {                                                                                        // 122
+            label: '11월',                                                                            // 127
+            value: 'November'                                                                        // 128
+         }, {                                                                                        // 126
+            label: '12월',                                                                            // 131
+            value: 'December'                                                                        // 132
+         }]                                                                                          // 130
+      }                                                                                              // 84
+                                                                                                     //
+   }                                                                                                 // 82
+}));                                                                                                 // 81
+                                                                                                     //
+Months.allow({                                                                                       // 140
+   insert: function insert(userId, doc) {                                                            // 141
+      return true;                                                                                   // 142
+   },                                                                                                // 143
+   update: function update(userId, doc, fields, modifier) {                                          // 144
+      return true;                                                                                   // 145
+   },                                                                                                // 146
+   remove: function remove(userId, doc) {                                                            // 147
+      return true;                                                                                   // 148
+   }                                                                                                 // 149
+});                                                                                                  // 140
+Recording.allow({                                                                                    // 151
+   insert: function insert(userId, doc) {                                                            // 152
+      return true;                                                                                   // 153
+   },                                                                                                // 154
+   update: function update(userId, doc, fields, modifier) {                                          // 155
+      return true;                                                                                   // 156
+   },                                                                                                // 157
+   remove: function remove(userId, doc) {                                                            // 158
+      return true;                                                                                   // 159
+   }                                                                                                 // 160
+});                                                                                                  // 151
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 }},"controller":{"applicationcontroller.js":function(){
@@ -1092,20 +1192,24 @@ mainController = RouteController.extend({                                       
 /*****************************************************************************/                      //
 /* Server Only Methods */                                                                            //
 /*****************************************************************************/                      //
-Meteor.methods({                                                                                     // 4
-  'submitRsvp': function submitRsvp(rsvp) {                                                          // 5
-    console.log('new RSVP:', rsvp);                                                                  // 6
-    Rsvps.insert(rsvp);                                                                              // 7
-  }                                                                                                  // 8
-});                                                                                                  // 4
+                                                                                                     //
 /**                                                                                                  //
  * Meteor.publish('items', function (param1, param2) {                                               //
  *  this.ready();                                                                                    //
  * });                                                                                               //
  */                                                                                                  //
-Meteor.publish('rsvps', function () {                                                                // 15
-  return Rsvps.find();                                                                               // 16
-});                                                                                                  // 17
+Meteor.publish('Recording', function () {                                                            // 10
+  return Recording.find();                                                                           // 11
+});                                                                                                  // 12
+Meteor.publish('Montha', function () {                                                               // 13
+  return Months.find();                                                                              // 14
+});                                                                                                  // 15
+Meteor.methods({                                                                                     // 16
+  'submitRecords': function submitRecords(rsvp) {                                                    // 17
+    Recording.insert(rsvp);                                                                          // 18
+    console.log('new record:', rsvp);                                                                // 19
+  }                                                                                                  // 21
+});                                                                                                  // 16
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 },"sitemaps.js":function(){
@@ -1131,6 +1235,7 @@ require("./both/i18n/en/contact.en.i18n.json");
 require("./both/i18n/en/header.en.i18n.json");
 require("./both/i18n/en/home.en.i18n.json");
 require("./both/i18n/en/portfolio.en.i18n.json");
+require("./both/i18n/en/projects.en.i18n.json");
 require("./both/i18n/en/service.en.i18n.json");
 require("./both/i18n/en/success.en.i18n.json");
 require("./both/i18n/ko/about.ko.i18n.json");
@@ -1138,6 +1243,7 @@ require("./both/i18n/ko/contact.ko.i18n.json");
 require("./both/i18n/ko/header.ko.i18n.json");
 require("./both/i18n/ko/home.ko.i18n.json");
 require("./both/i18n/ko/portfolio.ko.i18n.json");
+require("./both/i18n/ko/projects.ko.i18n.json");
 require("./both/i18n/ko/service.ko.i18n.json");
 require("./both/i18n/ko/success.ko.i18n.json");
 require("./backend/backend.js");

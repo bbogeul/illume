@@ -1,0 +1,10 @@
+{
+  "name": "illume",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "moment": "^2.22.2"
+  }
+}

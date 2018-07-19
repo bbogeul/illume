@@ -412,6 +412,81 @@
       "path": "packages/mdg_seo.js"
     },
     {
+      "path": "packages/themeteorchef_bert.js"
+    },
+    {
+      "sourceMap": "packages/meteortoys_toykit.js.map",
+      "path": "packages/meteortoys_toykit.js"
+    },
+    {
+      "sourceMap": "packages/msavin_mongol.js.map",
+      "path": "packages/msavin_mongol.js"
+    },
+    {
+      "path": "packages/msavin_jetsetter.js"
+    },
+    {
+      "sourceMap": "packages/meteortoys_blueprint.js.map",
+      "path": "packages/meteortoys_blueprint.js"
+    },
+    {
+      "sourceMap": "packages/meteortoys_authenticate.js.map",
+      "path": "packages/meteortoys_authenticate.js"
+    },
+    {
+      "sourceMap": "packages/meteortoys_shell.js.map",
+      "path": "packages/meteortoys_shell.js"
+    },
+    {
+      "sourceMap": "packages/meteortoys_method.js.map",
+      "path": "packages/meteortoys_method.js"
+    },
+    {
+      "sourceMap": "packages/meteortoys_result.js.map",
+      "path": "packages/meteortoys_result.js"
+    },
+    {
+      "sourceMap": "packages/meteortoys_autopub.js.map",
+      "path": "packages/meteortoys_autopub.js"
+    },
+    {
+      "sourceMap": "packages/meteortoys_pub.js.map",
+      "path": "packages/meteortoys_pub.js"
+    },
+    {
+      "sourceMap": "packages/meteortoys_sub.js.map",
+      "path": "packages/meteortoys_sub.js"
+    },
+    {
+      "sourceMap": "packages/meteortoys_email.js.map",
+      "path": "packages/meteortoys_email.js"
+    },
+    {
+      "sourceMap": "packages/meteortoys_listen.js.map",
+      "path": "packages/meteortoys_listen.js"
+    },
+    {
+      "sourceMap": "packages/meteortoys_throttle.js.map",
+      "path": "packages/meteortoys_throttle.js"
+    },
+    {
+      "sourceMap": "packages/meteortoys_status.js.map",
+      "path": "packages/meteortoys_status.js"
+    },
+    {
+      "sourceMap": "packages/meteortoys_hotreload.js.map",
+      "path": "packages/meteortoys_hotreload.js"
+    },
+    {
+      "path": "packages/meteortoys_toggle.js"
+    },
+    {
+      "path": "packages/meteortoys_mobile.js"
+    },
+    {
+      "path": "packages/meteortoys_allthings.js"
+    },
+    {
       "path": "packages/livedata.js"
     },
     {
@@ -430,9 +505,11 @@
       "path": "packages/autoupdate.js"
     },
     {
+      "node_modules": "npm/node_modules",
       "path": "packages/global-imports.js"
     },
     {
+      "node_modules": "npm/node_modules",
       "sourceMap": "app/app.js.map",
       "path": "app/app.js"
     },
