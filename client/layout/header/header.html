@@ -49,7 +49,7 @@
             <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35"  alt=""></a>
             </div>
             <a href="#" data-activates="slide-outs" class="white-text button-collapse left" style="margin-left:15px;"><i class="fas fa-bars"></i></a>
-            <a href="#" style="margin:5px 10px" data-activates="language-switcher" class="hide-on-large-only dropdown-button right white-text"><i class="fas fa-language"></i>
+            <a href="#" style="margin:0px 10px" data-activates="language-switcher" class="hide-on-large-only dropdown-button right white-text"><i class="fas fa-language"></i>
 
             </a>
            <!--dropdown for language-->
@@ -100,7 +100,7 @@
         <li class="nanum"><a href="{{pathFor 'service'}}">{{_"ourServices"}}</a></li>
              <li class="nanum"><a href="{{pathFor 'portfolio'}}">{{_"portfolio"}}</a></li>
            <li class="nanum"><a href="{{pathFor 'applications'}}">{{_"reachUs"}}</a></li>
-           {{> languageSwitcher2}}
+           
         <li class="nanum"><a href="/resume.pdf" target="blank">{{_"myResume"}}</a></li>
         </div>
   </ul>
@@ -118,7 +118,7 @@
                 <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35"  alt=""></a>
                 </div>
                 <a href="#" data-activates="slide-out2" class="red-text button-collapse left" style="margin-left:15px;"><i class="fas fa-bars"></i></a>
-                <a href="#" style="margin:5px 10px" data-activates="language-switcher1" class="hide-on-large-only dropdown-button right red-text"><i class="fas fa-language"></i>
+                <a href="#" style="margin:0px 10px" data-activates="language-switcher1" class="hide-on-large-only dropdown-button right red-text"><i class="fas fa-language"></i>
 
                 </a>
              
@@ -127,8 +127,13 @@
                     </ul>
           
           <ul   class="hide-on-med-and-down left">
-            <li class="nanum"><a href="{{pathFor 'about'}}" class="grey-text  text-darken-2 ">{{_"about"}}</a></li>
-      
+                <li class="nanum"><a class="dropdown-button grey-text  text-darken-2" data-activates="dropdown3" href="">{{_"about"}}</a></li>
+           
+                <ul id='dropdown3' class='dropdown-content'>
+                        <li><a href="{{pathFor 'about'}}">{{_"about"}}</a></li>
+                    <li><a href="/resume.pdf" target="blank">{{_"myResume"}}</a></li>
+                   
+                  </ul>
       
             <li class="nanum"><a href="{{pathFor 'service'}}"  class="grey-text text-darken-2"> {{_"ourServices"}}</a></li>
                  <li class="nanum"><a href="{{pathFor 'portfolio'}}" class="grey-text text-darken-2">{{_"portfolio"}}</a></li>
@@ -158,7 +163,8 @@
             <li class="nanum"><a href="{{pathFor 'service'}}">{{_"ourServices"}}</a></li>
                  <li class="nanum"><a href="{{pathFor 'portfolio'}}">{{_"portfolio"}}</a></li>
                <li class="nanum"><a href="{{pathFor 'applications'}}">{{_"reachUs"}}</a></li>
-               {{> languageSwitcher2}}
+               <li class="nanum"><a href="/resume.pdf" target="blank">{{_"myResume"}}</a></li>
+                
             </div>
       </ul>
      

@@ -1791,7 +1791,7 @@ Template["header"] = new Template("Template.header", (function() {              
     "class": "nav-wrapper"                                                                                             // 12
   }, "\n        ", HTML.DIV({                                                                                          // 13
     "class": " "                                                                                                       // 14
-  }, "\n        ", HTML.Raw('<div class="brand-logo center hide-on-small-only">\n            <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35" alt=""></a>\n            </div>'), "\n              ", HTML.Raw('<div class="brand-logos brand-logo show-on-small-only hide-on-med-and-up">\n            <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35" alt=""></a>\n            </div>'), "\n            ", HTML.Raw('<a href="#" data-activates="slide-outs" class="white-text button-collapse left" style="margin-left:15px;"><i class="fas fa-bars"></i></a>'), "\n            ", HTML.Raw('<a href="#" style="margin:5px 10px" data-activates="language-switcher" class="hide-on-large-only dropdown-button right white-text"><i class="fas fa-language"></i>\n\n            </a>'), "\n           ", HTML.Raw("<!--dropdown for language-->"), "\n           ", HTML.UL({
+  }, "\n        ", HTML.Raw('<div class="brand-logo center hide-on-small-only">\n            <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35" alt=""></a>\n            </div>'), "\n              ", HTML.Raw('<div class="brand-logos brand-logo show-on-small-only hide-on-med-and-up">\n            <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35" alt=""></a>\n            </div>'), "\n            ", HTML.Raw('<a href="#" data-activates="slide-outs" class="white-text button-collapse left" style="margin-left:15px;"><i class="fas fa-bars"></i></a>'), "\n            ", HTML.Raw('<a href="#" style="margin:0px 10px" data-activates="language-switcher" class="hide-on-large-only dropdown-button right white-text"><i class="fas fa-language"></i>\n\n            </a>'), "\n           ", HTML.Raw("<!--dropdown for language-->"), "\n           ", HTML.UL({
     id: "language-switcher",                                                                                           // 16
     "class": "dropdown-content"                                                                                        // 17
   }, "\n               ", Spacebars.include(view.lookupTemplate("languageSwitcher")), "\n           "), "\n         \n            \n      \n      ", HTML.UL({
@@ -1882,7 +1882,7 @@ Template["header"] = new Template("Template.header", (function() {              
     }                                                                                                                  // 103
   }, Blaze.View("lookup:_", function() {                                                                               // 104
     return Spacebars.mustache(view.lookup("_"), "reachUs");                                                            // 105
-  }))), "\n           ", Spacebars.include(view.lookupTemplate("languageSwitcher2")), "\n        ", HTML.LI({          // 106
+  }))), "\n           \n        ", HTML.LI({                                                                           // 106
     "class": "nanum"                                                                                                   // 107
   }, HTML.A({                                                                                                          // 108
     href: "/resume.pdf",                                                                                               // 109
@@ -1903,90 +1903,110 @@ Template["fixedHeader"] = new Template("Template.fixedHeader", (function() {    
     "class": "nav-wrapper"                                                                                             // 124
   }, "\n            ", HTML.DIV({                                                                                      // 125
     "class": " "                                                                                                       // 126
-  }, "\n            ", HTML.Raw('<div class="brand-logo center hide-on-small-only">\n                <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35" alt=""></a>\n                </div>'), "\n                  ", HTML.Raw('<div class="brand-logos brand-logo show-on-small-only hide-on-med-and-up">\n                <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35" alt=""></a>\n                </div>'), "\n                ", HTML.Raw('<a href="#" data-activates="slide-out2" class="red-text button-collapse left" style="margin-left:15px;"><i class="fas fa-bars"></i></a>'), "\n                ", HTML.Raw('<a href="#" style="margin:5px 10px" data-activates="language-switcher1" class="hide-on-large-only dropdown-button right red-text"><i class="fas fa-language"></i>\n\n                </a>'), "\n             \n                ", HTML.UL({
+  }, "\n            ", HTML.Raw('<div class="brand-logo center hide-on-small-only">\n                <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35" alt=""></a>\n                </div>'), "\n                  ", HTML.Raw('<div class="brand-logos brand-logo show-on-small-only hide-on-med-and-up">\n                <a href="/" class=" aspergit"><img src="/img/wlogo.png" width="35" alt=""></a>\n                </div>'), "\n                ", HTML.Raw('<a href="#" data-activates="slide-out2" class="red-text button-collapse left" style="margin-left:15px;"><i class="fas fa-bars"></i></a>'), "\n                ", HTML.Raw('<a href="#" style="margin:0px 10px" data-activates="language-switcher1" class="hide-on-large-only dropdown-button right red-text"><i class="fas fa-language"></i>\n\n                </a>'), "\n             \n                ", HTML.UL({
     id: "language-switcher1",                                                                                          // 128
     "class": "dropdown-content"                                                                                        // 129
   }, "\n                        ", Spacebars.include(view.lookupTemplate("languageSwitcher")), "\n                    "), "\n          \n          ", HTML.UL({
     "class": "hide-on-med-and-down left"                                                                               // 131
-  }, "\n            ", HTML.LI({                                                                                       // 132
+  }, "\n                ", HTML.LI({                                                                                   // 132
     "class": "nanum"                                                                                                   // 133
   }, HTML.A({                                                                                                          // 134
-    href: function() {                                                                                                 // 135
-      return Spacebars.mustache(view.lookup("pathFor"), "about");                                                      // 136
-    },                                                                                                                 // 137
-    "class": "grey-text  text-darken-2 "                                                                               // 138
-  }, Blaze.View("lookup:_", function() {                                                                               // 139
-    return Spacebars.mustache(view.lookup("_"), "about");                                                              // 140
-  }))), "\n      \n      \n            ", HTML.LI({                                                                    // 141
-    "class": "nanum"                                                                                                   // 142
-  }, HTML.A({                                                                                                          // 143
+    "class": "dropdown-button grey-text  text-darken-2",                                                               // 135
+    "data-activates": "dropdown3",                                                                                     // 136
+    href: ""                                                                                                           // 137
+  }, Blaze.View("lookup:_", function() {                                                                               // 138
+    return Spacebars.mustache(view.lookup("_"), "about");                                                              // 139
+  }))), "\n           \n                ", HTML.UL({                                                                   // 140
+    id: "dropdown3",                                                                                                   // 141
+    "class": "dropdown-content"                                                                                        // 142
+  }, "\n                        ", HTML.LI(HTML.A({                                                                    // 143
     href: function() {                                                                                                 // 144
-      return Spacebars.mustache(view.lookup("pathFor"), "service");                                                    // 145
-    },                                                                                                                 // 146
-    "class": "grey-text text-darken-2"                                                                                 // 147
-  }, " ", Blaze.View("lookup:_", function() {                                                                          // 148
-    return Spacebars.mustache(view.lookup("_"), "ourServices");                                                        // 149
-  }))), "\n                 ", HTML.LI({                                                                               // 150
-    "class": "nanum"                                                                                                   // 151
-  }, HTML.A({                                                                                                          // 152
-    href: function() {                                                                                                 // 153
-      return Spacebars.mustache(view.lookup("pathFor"), "portfolio");                                                  // 154
-    },                                                                                                                 // 155
-    "class": "grey-text text-darken-2"                                                                                 // 156
-  }, Blaze.View("lookup:_", function() {                                                                               // 157
-    return Spacebars.mustache(view.lookup("_"), "portfolio");                                                          // 158
-  }))), "\n               ", HTML.LI({                                                                                 // 159
-    "class": "nanum"                                                                                                   // 160
-  }, HTML.A({                                                                                                          // 161
-    href: function() {                                                                                                 // 162
-      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 163
-    },                                                                                                                 // 164
-    "class": "grey-text text-darken-2"                                                                                 // 165
-  }, Blaze.View("lookup:_", function() {                                                                               // 166
-    return Spacebars.mustache(view.lookup("_"), "reachUs");                                                            // 167
-  }))), "\n     \n    \n          "), "\n            ", HTML.UL({                                                      // 168
-    "class": "right hide-on-med-and-down"                                                                              // 169
+      return Spacebars.mustache(view.lookup("pathFor"), "about");                                                      // 145
+    }                                                                                                                  // 146
+  }, Blaze.View("lookup:_", function() {                                                                               // 147
+    return Spacebars.mustache(view.lookup("_"), "about");                                                              // 148
+  }))), "\n                    ", HTML.LI(HTML.A({                                                                     // 149
+    href: "/resume.pdf",                                                                                               // 150
+    target: "blank"                                                                                                    // 151
+  }, Blaze.View("lookup:_", function() {                                                                               // 152
+    return Spacebars.mustache(view.lookup("_"), "myResume");                                                           // 153
+  }))), "\n                   \n                  "), "\n      \n            ", HTML.LI({                              // 154
+    "class": "nanum"                                                                                                   // 155
+  }, HTML.A({                                                                                                          // 156
+    href: function() {                                                                                                 // 157
+      return Spacebars.mustache(view.lookup("pathFor"), "service");                                                    // 158
+    },                                                                                                                 // 159
+    "class": "grey-text text-darken-2"                                                                                 // 160
+  }, " ", Blaze.View("lookup:_", function() {                                                                          // 161
+    return Spacebars.mustache(view.lookup("_"), "ourServices");                                                        // 162
+  }))), "\n                 ", HTML.LI({                                                                               // 163
+    "class": "nanum"                                                                                                   // 164
+  }, HTML.A({                                                                                                          // 165
+    href: function() {                                                                                                 // 166
+      return Spacebars.mustache(view.lookup("pathFor"), "portfolio");                                                  // 167
+    },                                                                                                                 // 168
+    "class": "grey-text text-darken-2"                                                                                 // 169
+  }, Blaze.View("lookup:_", function() {                                                                               // 170
+    return Spacebars.mustache(view.lookup("_"), "portfolio");                                                          // 171
+  }))), "\n               ", HTML.LI({                                                                                 // 172
+    "class": "nanum"                                                                                                   // 173
+  }, HTML.A({                                                                                                          // 174
+    href: function() {                                                                                                 // 175
+      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 176
+    },                                                                                                                 // 177
+    "class": "grey-text text-darken-2"                                                                                 // 178
+  }, Blaze.View("lookup:_", function() {                                                                               // 179
+    return Spacebars.mustache(view.lookup("_"), "reachUs");                                                            // 180
+  }))), "\n     \n    \n          "), "\n            ", HTML.UL({                                                      // 181
+    "class": "right hide-on-med-and-down"                                                                              // 182
   }, "\n               ", Spacebars.include(view.lookupTemplate("languageSwitcher2")), "\n                ", HTML.Raw('<li><a class=" grey-text center" href="https://urlgeni.us/facebook/4U1B"><i class="fab fa-facebook-f  fa-2x"></i></a></li>'), "\n                             ", HTML.Raw('<li class="divider"></li>'), "\n        ", HTML.Raw('<li><a class="center grey-text" href="https://urlgeni.us/instagram/3fIn"><i class="fab fa-instagram  fa-2x"></i></a></li>'), "\n                   ", HTML.Raw('<li>  <a class="center grey-text" href="https://urlgeni.us/Uxlo"><i class="fab fa-github fa-2x"></i></a></li>'), "\n                "), "\n           \n        "), "\n          "), "\n     \n     \n      ", HTML.UL({
-    id: "slide-out2",                                                                                                  // 171
-    "class": "side-nav"                                                                                                // 172
-  }, "\n            ", HTML.DIV({                                                                                      // 173
-    "class": "center"                                                                                                  // 174
+    id: "slide-out2",                                                                                                  // 184
+    "class": "side-nav"                                                                                                // 185
+  }, "\n            ", HTML.DIV({                                                                                      // 186
+    "class": "center"                                                                                                  // 187
   }, "\n                ", HTML.Raw("<br>"), "\n                ", HTML.Raw('<img src="/img/drawnPic.jpg" width="150">'), HTML.Raw("<br>"), "\n      \n         ", HTML.LI({
-    "class": "nanum",                                                                                                  // 176
-    style: "margin-top:1em;"                                                                                           // 177
-  }, HTML.A({                                                                                                          // 178
-    href: function() {                                                                                                 // 179
-      return Spacebars.mustache(view.lookup("pathFor"), "about");                                                      // 180
-    }                                                                                                                  // 181
-  }, Blaze.View("lookup:_", function() {                                                                               // 182
-    return Spacebars.mustache(view.lookup("_"), "about");                                                              // 183
-  }))), "\n        \n            ", HTML.LI({                                                                          // 184
-    "class": "nanum"                                                                                                   // 185
-  }, HTML.A({                                                                                                          // 186
-    href: function() {                                                                                                 // 187
-      return Spacebars.mustache(view.lookup("pathFor"), "service");                                                    // 188
-    }                                                                                                                  // 189
-  }, Blaze.View("lookup:_", function() {                                                                               // 190
-    return Spacebars.mustache(view.lookup("_"), "ourServices");                                                        // 191
-  }))), "\n                 ", HTML.LI({                                                                               // 192
-    "class": "nanum"                                                                                                   // 193
-  }, HTML.A({                                                                                                          // 194
-    href: function() {                                                                                                 // 195
-      return Spacebars.mustache(view.lookup("pathFor"), "portfolio");                                                  // 196
-    }                                                                                                                  // 197
-  }, Blaze.View("lookup:_", function() {                                                                               // 198
-    return Spacebars.mustache(view.lookup("_"), "portfolio");                                                          // 199
-  }))), "\n               ", HTML.LI({                                                                                 // 200
-    "class": "nanum"                                                                                                   // 201
-  }, HTML.A({                                                                                                          // 202
-    href: function() {                                                                                                 // 203
-      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 204
-    }                                                                                                                  // 205
-  }, Blaze.View("lookup:_", function() {                                                                               // 206
-    return Spacebars.mustache(view.lookup("_"), "reachUs");                                                            // 207
-  }))), "\n               ", Spacebars.include(view.lookupTemplate("languageSwitcher2")), "\n            "), "\n      "), "\n     \n              "), "\n                ");
-}));                                                                                                                   // 209
-                                                                                                                       // 210
+    "class": "nanum",                                                                                                  // 189
+    style: "margin-top:1em;"                                                                                           // 190
+  }, HTML.A({                                                                                                          // 191
+    href: function() {                                                                                                 // 192
+      return Spacebars.mustache(view.lookup("pathFor"), "about");                                                      // 193
+    }                                                                                                                  // 194
+  }, Blaze.View("lookup:_", function() {                                                                               // 195
+    return Spacebars.mustache(view.lookup("_"), "about");                                                              // 196
+  }))), "\n        \n            ", HTML.LI({                                                                          // 197
+    "class": "nanum"                                                                                                   // 198
+  }, HTML.A({                                                                                                          // 199
+    href: function() {                                                                                                 // 200
+      return Spacebars.mustache(view.lookup("pathFor"), "service");                                                    // 201
+    }                                                                                                                  // 202
+  }, Blaze.View("lookup:_", function() {                                                                               // 203
+    return Spacebars.mustache(view.lookup("_"), "ourServices");                                                        // 204
+  }))), "\n                 ", HTML.LI({                                                                               // 205
+    "class": "nanum"                                                                                                   // 206
+  }, HTML.A({                                                                                                          // 207
+    href: function() {                                                                                                 // 208
+      return Spacebars.mustache(view.lookup("pathFor"), "portfolio");                                                  // 209
+    }                                                                                                                  // 210
+  }, Blaze.View("lookup:_", function() {                                                                               // 211
+    return Spacebars.mustache(view.lookup("_"), "portfolio");                                                          // 212
+  }))), "\n               ", HTML.LI({                                                                                 // 213
+    "class": "nanum"                                                                                                   // 214
+  }, HTML.A({                                                                                                          // 215
+    href: function() {                                                                                                 // 216
+      return Spacebars.mustache(view.lookup("pathFor"), "applications");                                               // 217
+    }                                                                                                                  // 218
+  }, Blaze.View("lookup:_", function() {                                                                               // 219
+    return Spacebars.mustache(view.lookup("_"), "reachUs");                                                            // 220
+  }))), "\n               ", HTML.LI({                                                                                 // 221
+    "class": "nanum"                                                                                                   // 222
+  }, HTML.A({                                                                                                          // 223
+    href: "/resume.pdf",                                                                                               // 224
+    target: "blank"                                                                                                    // 225
+  }, Blaze.View("lookup:_", function() {                                                                               // 226
+    return Spacebars.mustache(view.lookup("_"), "myResume");                                                           // 227
+  }))), "\n                \n            "), "\n      "), "\n     \n              "), "\n                ");           // 228
+}));                                                                                                                   // 229
+                                                                                                                       // 230
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 },"header.js":function(){
